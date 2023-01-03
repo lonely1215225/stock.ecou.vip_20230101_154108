@@ -1,0 +1,73 @@
+{extend name="base/layout"/}
+
+{block name="main"}
+<div class="content-wrapper">
+    <section class="content-header">
+        <h1>涨跌幅禁买线</h1>
+        <ol class="breadcrumb">
+            <li><a href="{:url('index/index')}"><i class="fa fa-home"></i> 首页</a></li>
+            <li><a href="#">系统设置</a></li>
+            <li class="active">涨跌幅禁买线</li>
+        </ol>
+    </section>
+    <section class="content">
+        <div class="row">
+            <!-- 交易时间 -->
+            <div class="col-sm-12">
+                <div class="box box-info">
+                    <div class="box-header"></div>
+                    <form id="buyLimitRateForm" action="" method="post" class="form-horizontal">
+                        <div class="box-body">
+                            <div class="form-group col-sm-8">
+                                <label class="col-sm-2 control-label">涨跌幅禁买线</label>
+                                <div class="input-group col-sm-8">
+                                    <input class="form-control" name="limit_rate" id="limit_rate" value="{$limit_rate?:''}">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="box-footer">
+                            <div class="col-sm-8">
+                                <div class="col-sm-offset-2">
+                                    <button type="submit" class="btn btn-primary">提交</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="box">
+                    <div class="box-header with-border">
+                        <i class="fa fa-warning text-yellow"></i>
+                        <h3 class="box-title">注：</h3>
+                    </div>
+                    <div class="box-body">
+                        <ol>
+                            <li>涨跌幅禁买线要介于<font color="#dc143c">0</font> 到<font color="#dc143c">0.1</font>之间。</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+{/block}
+{block name="js"}
+<script>
+// 提交
+$("#buyLimitRateForm").submit(function () {
+    var v = parseFloat($("#limit_rate").val());
+    if (isNaN(v) || (v > 0.1) || v <= 0) {
+        layer.msg("涨跌幅禁买线应介于0到0.1之间", {icon: 2, time: 1500, shade: .3, shadeClose: true});
+    }else{
+        $.post("{:url('stock/system/saveBuyLimitRate')}", {limit_rate:v}, function (data) {
+            if(data.code == 1) {
+                layer.msg(data.msg, {icon:1, time:1500, shade:.3, shadeClose:true});
+            } else {
+                layer.msg(data.msg, {icon:2, time:1500, shade:.3, shadeClose:true});
+            }
+        });
+    }
+
+    return false;
+});
+</script>
+{/block}

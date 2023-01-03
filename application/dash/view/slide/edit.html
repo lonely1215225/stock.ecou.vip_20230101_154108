@@ -1,0 +1,171 @@
+{extend name="base/layout"/}
+
+{block name="main"}
+<link rel="stylesheet" href="__DASH__/dropify/dist/css/demo.css">
+<link rel="stylesheet" href="__DASH__/dropify/dist/css/dropify.min.css">
+<style>
+    body{line-height: 21px;font-weight:400}
+    h1::after{height: 0px}
+    .col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12, .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12{
+        padding-bottom:0px;
+    }
+</style>
+<div class="content-wrapper">
+    <section class="content-header">
+        <h1 style="text-align: left">
+            {$id?'编辑幻灯片':'添加幻灯片'}
+            <small>Home</small>
+        </h1>
+        <ol class="breadcrumb">
+            <li><a href="{:url('index/index')}"><i class="fa fa-home"></i> 首页</a></li>
+            <li><a href="#">内容管理</a></li>
+            <li class="active">添加幻灯片</li>
+        </ol>
+    </section>
+    <section class="content">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="box box-info">
+                    <form id="addForm" action="" method="post" class="form-horizontal">
+                        <div class="box-body">
+                            <div class="form-group col-sm-8">
+                                <label class="col-sm-2 control-label">幻灯片标题</label>
+                                <div class="col-sm-8">
+                                    <input class="form-control" name="title" id="title" value="{$editInfo.title?:''}">
+                                </div>
+                            </div>
+
+                            <div class="form-group col-sm-8">
+                                <label class="col-sm-2 control-label">幻灯片上传</label>
+                                <div class="col-sm-8" id="wechat_service">
+                                    <label for="litimg"></label>
+                                    <input type="file" name="litimg" id="litimg" class="dropify-event" data-default-file="{$editInfo.litimg?:''}" value="{$editInfo.litimg?:''}"/>
+                                </div>
+                            </div>
+
+                            <div class="form-group col-sm-8">
+                                <label class="col-sm-2 control-label">外部链接</label>
+                                <div class="col-sm-8">
+                                    <input class="form-control" name="outlink" id="outlink" value="{$editInfo.outlink?:''}">
+                                </div>
+                            </div>
+
+                            <div class="form-group col-sm-8">
+                                <label class="col-sm-2 control-label">幻灯片内容</label>
+                                <div class="col-sm-8">
+                                    <textarea class="form-control"  id="intro" name="intro">{$editInfo.intro?:''}</textarea>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="box-footer">
+                            <div class="col-sm-8">
+                                <div class="col-sm-offset-2">
+                                    <input type="hidden" name="id" value="{$editInfo.id?:0}"/>
+                                    <button type="submit" class="btn btn-primary">提交</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+{/block}
+
+{block name="js"}
+<script src="__DASH__/dropify/dist/js/dropify.min.js"></script>
+<script src="__DASH__/lib/laydate/laydate.js"></script>
+<script>
+    $(document).ready(function () {
+        // Used events
+        var drEvent = $('#litimg').dropify();
+
+        drEvent.on('dropify.beforeClear', function (event, element) {
+            if (confirm("您确定要幻灯图片 \"" + element.file.name + "\" 删除吗?")) {
+                var service = "{$editInfo.litimg?:''}";
+                if (service) {
+                    deleteQrcode(service);
+					return false;
+                }
+            }
+        });
+
+        drEvent.on('dropify.afterClear', function (event, element) {
+            alert('File deleted');
+        });
+
+        drEvent.on('dropify.errors', function (event, element) {
+            console.log('Has Errors');
+        });
+
+        var drDestroy = $('#input-file-to-destroy').dropify();
+        drDestroy = drDestroy.data('dropify')
+        $('#toggleDropify').on('click', function (e) {
+            e.preventDefault();
+            if (drDestroy.isDropified()) {
+                drDestroy.destroy();
+            } else {
+                drDestroy.init();
+            }
+        })
+
+    });
+
+    function  deleteQrcode(file_path) {
+        $.ajax({
+            url: "{:url('stock/slide/deleteSlidePic')}",
+            type: 'POST',
+            data: {file_path: file_path},
+            dataType: 'json',
+            success: function (data) {
+                if (data.code == 1) {
+                    layer.msg(data.msg, {icon: 1, time: 3500, shade: .3, shadeClose: true});
+                    window.location.reload();
+                } else {
+                    layer.msg(data.msg, {icon: 2, time: 1500, shade: .3, shadeClose: true});
+                }
+            },
+            error: function (err) {
+            }
+        });
+    }
+</script>
+<script type="text/javascript">
+    $(function () {
+        $("#addForm").submit(function(){
+            var title   = $.trim($("input[name='title']").val());
+            var id      ="{$id?:0}";
+            if(title == "") {
+                layer.msg("请填写幻灯片标题", {icon:2, time:1500, shade:.3, shadeClose:true});
+                return false;
+            }else {
+                $.ajax({
+                    url: "{:url('stock/slide/saveSlide')}",
+                    type: 'POST',
+                    cache: false,
+                    data: new FormData($("#addForm")[0]),
+                    processData: false,
+                    contentType: false,
+                    success: function (data) {
+                        if (data.code == 1) {
+                            layer.msg(data.msg, {icon: 1, time: 1500, shade: .3, shadeClose: true});
+                            window.location.href = "{:url('index')}";
+                            return false;
+                        } else {
+                            layer.msg(data.msg, {icon: 2, time: 1500, shade: .3, shadeClose: true});
+                        }
+                    },
+                    error: function (err) {
+                    }
+                });
+
+                return false;
+            }
+
+            return false;
+        });
+    });
+</script>
+{/block}

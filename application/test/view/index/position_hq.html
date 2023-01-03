@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>持仓中股票行情</title>
+</head>
+<body>
+
+<table class="table">
+    <tr>
+        <th>股票代码</th>
+        <th>股票名称</th>
+        <th>现价</th>
+        <th>时间</th>
+    </tr>
+    {foreach $quotationList as $quotation}
+    <tr>
+        <td>{$quotation.market}{$quotation.stock_code}</td>
+        <td>{$quotation.stock_name}</td>
+        <td>{:sprintf("%.2f", $quotation.Price)}</td>
+        <td>{$quotation.last_date_time}</td>
+    </tr>
+    {/foreach}
+</table>
+
+<script>
+// setInterval(function () {
+//     window.location.reload();
+// }, 200)
+</script>
+
+</body>
+</html>

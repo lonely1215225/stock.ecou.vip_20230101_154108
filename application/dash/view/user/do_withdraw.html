@@ -1,0 +1,78 @@
+{extend name="base/layout"/}
+{block name="main"}
+<div class="content-wrapper">
+    <section class="content-header">
+        <h1>
+            提现处理
+            <small></small>
+        </h1>
+        <ol class="breadcrumb">
+            <li><a href="{:url('index/index')}"><i class="fa fa-home"></i> 首页</a></li>
+            <li><a href="#">我的</a></li>
+            <li class="active">提现处理</li>
+        </ol>
+    </section>
+    <section class="content">
+        <div class="row">
+            <div class="col-xs-12">
+                    <div class="box box-info">
+                        <div class="box-body">
+                            <div class="form-group col-sm-8">
+                                <label class="col-sm-2 control-label">提现金额</label>
+                                <div class="col-sm-4">
+                                    <input type="text" value="{$money}" class="form-control"  disabled>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="box-footer">
+                            <div class="col-sm-8">
+                                <div class="col-sm-offset-2">
+                                    <button  class="btn btn-primary" onclick="agreeWithdraw()">同意提现</button>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;
+                                    <button  class="btn btn-primary" onclick="refuseWithdraw()">拒绝提现</button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <input type="hidden" name="id" id="id" value="{$id}">
+            </div>
+        </div>
+    </section>
+</div>
+
+{/block}
+
+{block name="js"}
+<script>
+function agreeWithdraw(){
+    var id = $("#id").val();
+    $.post("{:url('stock/userWithdraw/withdraw_checked')}", {
+        id:id,
+    }, function (data) {
+        if (data.code == 1) {
+            layer.msg(data.msg, {icon: 1, time: 1500, shade: .3, shadeClose: true}, function () {
+                window.location.href=document.referrer;
+            });
+        } else {
+            layer.msg(data.msg, {icon: 2, time: 1500, shade: .3, shadeClose: true});
+        }
+    });
+}
+function refuseWithdraw(){
+    var id = $("#id").val();
+    $.post("{:url('stock/userWithdraw/withdraw_failed')}", {
+        id:id,
+    }, function (data) {
+        if (data.code == 1) {
+            layer.msg(data.msg, {icon: 1, time: 1500, shade: .3, shadeClose: true}, function () {
+                window.location.href=document.referrer;
+            });
+        } else {
+            layer.msg(data.msg, {icon: 2, time: 1500, shade: .3, shadeClose: true});
+        }
+    });
+}
+</script>
+{/block}

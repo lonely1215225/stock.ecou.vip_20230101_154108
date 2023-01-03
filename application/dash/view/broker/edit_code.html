@@ -1,0 +1,33 @@
+{extend name="base/pop_layout"/}
+
+{block name="main"}
+<form id="ruleForm" action="" class="form-horizontal">
+    <div class="box box-info">
+        <div class="box-body">
+            <div class="form-group col-sm-8">
+                <label class="col-sm-2 control-label">新推广码</label>
+                <div class="col-sm-4">
+                    <input type="text" name="code" id="code" value="" class="form-control">
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+{/block}
+{block name="js"}
+<script type="text/javascript">
+var callbackdata = function () {
+    var code = $("#code").val();
+    if(code == ''){
+        layer.msg("推广码不能为空", {icon: 2, time: 1500, shade: .3, shadeClose: true});
+    }else if(code.length != 4){
+        layer.msg("推广码只能为4位", {icon: 2, time: 1500, shade: .3, shadeClose: true});
+    } else{
+        var data = {
+            newcode:code
+        };
+        return data;
+    }
+}
+</script>
+{/block}

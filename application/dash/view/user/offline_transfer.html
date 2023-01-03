@@ -1,0 +1,71 @@
+{extend name="base/pop_layout"/}
+
+{block name="main"}
+<section class="content">
+    <table class="table table-middle">
+        <tbody>
+        <tr>
+            <td width="60">转入方式</td>
+            <td width="350">
+                {$payCompanyList[$oneRecharge['pay_company_id']]['name']}({$payCompanyList[$oneRecharge['pay_company_id']]['pay_type']})
+            </td>
+        </tr>
+        <tr>
+            <td width="60">转入账户</td>
+            <td width="350">
+                {$oneRecharge.offline_to_account|raw}
+            </td>
+        </tr>
+        <tr>
+            <td width="50">付款方名称</td>
+            <td width="350">
+                {$oneRecharge.offline_name}
+            </td>
+        </tr>
+        <tr>
+            <td width="50">充值金额</td>
+            <td width="350">
+                {$oneRecharge.money}
+            </td>
+        </tr>
+        <tr>
+            <td width="60">转账凭证</td>
+            <td width="350" id="layer-photos-demo">
+                <img layer-src="{$oneRecharge.offline_img}" src="{$oneRecharge.offline_img}" height="70">
+            </td>
+        </tr>
+        <tr>
+            <td width="60">实际到账金额</td>
+            <td width="350">
+                <input type="text" value="{$oneRecharge.money}" name="money" id="money" class="form-control">
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</section>
+
+{/block}
+{block name="js"}
+<script type="text/javascript">
+$(function () {
+    document.getElementById("money").focus();
+});
+var callbackdata = function () {
+    var money         = $("#money").val();
+    if(money == ""){
+        layer.msg("请填写实际到账金额", {icon:2, time:1500, shade:.3, shadeClose:true});
+    }else{
+        var data = {
+            money:money
+        };
+        return data;
+    }
+};
+
+layer.photos({
+    photos: '#layer-photos-demo'
+    ,anim: 5
+});
+
+</script>
+{/block}

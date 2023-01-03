@@ -1,0 +1,186 @@
+{extend name="base/layout"/}
+
+{block name="main"}
+<link rel="stylesheet" href="__DASH__/lib/bootstrap-datetimepicker/css/bootstrap-datetimepicker.css">
+<script src="__DASH__/lib/bootstrap-datetimepicker/js/bootstrap-datetimepicker.js"></script>
+<style type="text/css">
+    td.hewenqi, tr.hewenqi {
+        background: #ECF2F6;
+        color: red;
+    }
+    .hewenqi a {
+        color: red;
+    }
+    .hovertreeClass td, th {
+        border: solid green 1px;
+    }
+</style>
+<script type="text/javascript">
+    $(document).ready(function () {
+        var hover_index = 0;
+        $("table.table td").hover(function () {
+            hover_index = $(this).parent().find('td').index(this);
+            $("table.table tr").find("td:eq(" + hover_index + ")").addClass("hewenqi");
+            $(this).addClass("hewenqi");
+        }, function () {
+            $("table.table tr").find("td:eq(" + hover_index + ")").removeClass("hewenqi");
+            $(this).removeClass("hewenqi");
+        });
+
+        $("table.table tbody tr").hover(function () {
+            $(this).addClass("hewenqi");
+        }, function () {
+            $(this).removeClass("hewenqi");
+        });
+    });
+</script>
+<div class="content-wrapper">
+    <section class="content-header">
+        <h1>除权除息</h1>
+        <ol class="breadcrumb">
+            <li><a href="{:url('index/index')}"><i class="fa fa-home"></i> 首页</a></li>
+            <li><a href="#">风控管理</a></li>
+            <li class="active">除权除息</li>
+        </ol>
+    </section>
+    <section class="content">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="box box-info">
+                    <div class="box-header">
+                        <a href="{:url('risk/edit_xrxd')}" class="btn btn-success"><i class="fa fa-plus"></i>
+                            添加除权除息</a>
+                        <form id="searchInfo" action="{:url('xrxd')}" method="get">
+                            <div class="col-sm-12 no-padding">
+                                <div class="search-box">
+                                    <label class="text-right">股票代码</label>
+                                    <div class="search-body"><input class="form-control" type="text" id="stockCode" name="stock_code" value="{$stock_code?:''}"></div>
+                                </div>
+                                <div class="search-box">
+                                    <label class="text-right">开始日期</label>
+                                    <div class="search-body">
+                                        <div class="input-group date">
+                                            <div class="input-group-addon">
+                                                <i class="fa fa-calendar"></i>
+                                            </div>
+                                            <input type="text" name="start_date" id="startDate" value="{$start_date?:''}" class="form-control pull-right">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="search-box">
+                                    <label class="text-right">结束日期</label>
+                                    <div class="search-body">
+                                        <div class="input-group date">
+                                            <div class="input-group-addon">
+                                                <i class="fa fa-calendar"></i>
+                                            </div>
+                                            <input type="text" name="end_date" id="endDate" value="{$end_date?:''}" class="form-control pull-right">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="search-box">
+                                    <label class="text-right">状态</label>
+                                    <div class="search-body">
+                                        <select id="isFinished" name="is_finished" class="form-control">
+                                            <option value="">请选择</option>
+                                            <option value="1" {:$is_finished!="" && 1==$is_finished?'selected':''}>已分配</option>
+                                            <option value="0" {:$is_finished!="" && 0==$is_finished?'selected':''}>未分配</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="search-box">
+                                    <label class="text-right"></label>
+                                    <div class="search-body"><input type="submit" class="btn btn-primary" value="查找"></div>
+                                </div>
+                            </div>
+                            <!--div class="col-sm-12 no-padding">
+                                
+                            </div-->
+                        </form>
+                    </div>
+                    <!--div class="box-body no-padding">
+                        <table class="table table-bordered table-middle">
+                            <tr>
+                                <td>
+                                    除权除息总数：{$xrxdTotal?:'0'}
+                                </td>
+                            </tr>
+                        </table>
+                    </div-->
+                    <div class="box-body">
+                        <table class="table table-bordered table-middle table-center">
+                            <thead>
+                            <tr>
+                                <th>序号</th>
+                                <th>股票代码</th>
+                                <th>股票简称</th>
+                                <!--<th>分红方案</th>-->
+                                <th>基础股数</th>
+                                <th>送股</th>
+                                <th>转增股</th>
+                                <th>送转总数</th>
+                                <th>派息/元</th>
+                                <th>除权除息日</th>
+                                <th>备注</th>
+                                <th>状态</th>
+                                <th>操作</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            {foreach $xrxdInfo['xrxdList'] as $k=>$nl}
+                            <tr>
+                                <td>{:$page?(($page-1)*15+($k+1)):($k+1)}</td>
+                                <td>
+                                    {$nl.market}{$nl.stock_code}
+                                </td>
+                                <td>
+                                    {$xrxdInfo['stockName'][$nl['market'].$nl['stock_code']]['stock_name']?:''}
+                                </td>
+                                <td>{$nl['base_volume']}</td>
+                                <td>{$nl['give_volume']}</td>
+                                <td>{$nl['transfer_volume']}</td>
+                                <td>{$nl['account_volume']}</td>
+                                <td>{$nl['dividend']}</td>
+                                <td>{$nl['execute_date']} </td>
+                                <td>{$nl.remark}</td>
+                                <td>{$nl.is_finished?'已分配':'未分配'}</td>
+                                <td>
+                                    <a class="btn btn-sm btn-primary" href="{:url('risk/detail_xrxd', ['id' => $nl.id])}">查看策略</a>
+                                    <a class="btn btn-sm btn-primary" href="{:url('risk/edit_xrxd', ['id' => $nl.id])}">编辑</a>
+                                </td>
+                            </tr>
+                            {/foreach}
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="box-footer">
+                        <div class="col-sm-12 no-padding">{:$xrxdInfo['infoList']->render()}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+{/block}
+{block name="js"}
+<script>
+    $(function () {
+        $('#startDate').datetimepicker({
+            format: 'yyyy-mm-dd',//显示格式
+            minView: "month",//设置只显示到月份
+            initialDate: new Date(),
+            autoclose: true,//选中自动关闭
+            todayBtn: true,//显示今日按钮
+        });
+        $('#endDate').datetimepicker({
+            format: 'yyyy-mm-dd',//显示格式
+            minView: "month",//设置只显示到月份
+            initialDate: new Date(),
+            autoclose: true,//选中自动关闭
+            todayBtn: true,//显示今日按钮!
+        });
+    })
+</script>
+{/block}

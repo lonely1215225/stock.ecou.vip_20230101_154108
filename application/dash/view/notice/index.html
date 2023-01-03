@@ -1,0 +1,98 @@
+{extend name="base/layout"/}
+
+{block name="main"}
+<div class="content-wrapper">
+    <section class="content-header">
+        <h1>
+            公告列表
+            <small>Home</small>
+        </h1>
+        <ol class="breadcrumb">
+            <li><a href="{:url('index/index')}"><i class="fa fa-home"></i> 首页</a></li>
+            <li><a href="#">内容管理</a></li>
+            <li class="active">公告列表</li>
+        </ol>
+    </section>
+    <section class="content">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="box box-info">
+                    <div class="box-header">
+                        <a href="{:url('notice/notice_edit')}" class="btn btn-success"><i class="fa fa-plus"></i> 添加公告</a>
+                    </div>
+                    <div class="box-body">
+                        <table class="table table-bordered table-middle table-center">
+                            <thead>
+                            <tr>
+                                <th>编号</th>
+                                <th>公告标题</th>
+                                <th>状态</th>
+                                <th>操作</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            {foreach $noticeList as $k=>$nl}
+                                <tr>
+                                    <td>{$k+1}</td>
+                                    <td><a href="{:url('notice/notice_edit', ['id'=>$nl.id])}" class="name">{$nl.title}</a></td>
+                                    <td>{$nl.state?'已发布':'未发布'}</td>
+                                    <td>
+                                        <a class="btn btn-sm btn-primary" href="#" onclick="changeState('{$nl.id}');">{$nl.state?'取消发布':'确认发布'}</a>
+                                        <a class="btn btn-sm btn-primary" href="{:url('notice/notice_edit', ['id' => $nl.id])}">编辑</a>
+                                        <a class="btn btn-sm btn-warning" href="#" onclick="delNews({$nl.id});">删除</a>
+                                    </td>
+                                </tr>
+                            {/foreach}
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="box-footer">
+                        <div class="col-sm-12 no-padding">{:$noticeList->render()}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+{/block}
+{block name="js"}
+<script type="text/javascript">
+    function delNews(v) {
+        layer.confirm('确定要删除吗？', {
+            btn: ['确定','取消'] //按钮
+        }, function(){
+            var id = v;
+            if(id == "") {
+                layer.msg("ID不能为空", {icon:2, time:1500, shade:.3, shadeClose:true});
+            } else {
+                $.post("{:url('stock/notice/noticeDel')}", {id:id}, function(data){
+                    if(data.code == 1){
+                        layer.msg(data.msg, {icon:1, time:1500, shade:.3, shadeClose:true}, function(){
+                            window.location.href = "{:url('index')}";
+                        });
+                    } else {
+                        layer.msg(data.msg, {icon:2, time:1500, shade:.3, shadeClose:true});
+                    }
+                });
+            }
+            return false;
+        }, null);
+    }
+    function changeState(id) {
+        if (id == '') {
+            layer.msg("id不能为空", {icon: 2, time: 1500, shade: .3, shadeClose: true});
+        } else {
+            $.post("{:url('stock/notice/changeState')}", {id: id}, function (data) {
+                if (data.code == 1) {
+                    layer.msg(data.msg, {icon: 1, time: 1500, shade: .3, shadeClose: true}, function () {
+                        window.location.href = "{:url('index')}";
+                    });
+                } else {
+                    layer.msg(data.msg, {icon: 2, time: 1500, shade: .3, shadeClose: true});
+                }
+            });
+        }
+    }
+</script>
+{/block}

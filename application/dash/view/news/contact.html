@@ -1,0 +1,47 @@
+{extend name="base/layout"/}
+
+{block name="main"}
+<div class="content-wrapper">
+    <section class="content-header">
+        <h1>
+            联系方式
+            <small>Home</small>
+        </h1>
+        <ol class="breadcrumb">
+            <li><a href="{:url('index/index')}"><i class="fa fa-home"></i> 首页</a></li>
+            <li><a href="#">内容管理</a></li>
+            <li class="active">联系方式</li>
+        </ol>
+    </section>
+    <section class="content">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="box box-info">
+                    <div class="box-body">
+                        <table class="table table-bordered table-middle table-center">
+                            <thead>
+                            <tr>
+                                <th>联系方式</th>
+                                <th>操作</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td><a href="{:url('news/contact_edit', ['id'=>$contactInfo.id])}" class="name">{$contactInfo.title}</a></td>
+                                <td>
+                                    <a class="btn btn-sm btn-primary" href="{:url('news/contact_edit', ['id' => $contactInfo.id])}">编辑</a>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+{/block}
+{block name="js"}
+
+{/block}

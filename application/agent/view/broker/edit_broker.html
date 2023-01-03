@@ -1,0 +1,193 @@
+{extend name="base/layout"/}
+{block name="main"}
+<div class="content-wrapper">
+    <section class="content-header">
+        <h1>
+            {$brokerInfo?'编辑':'添加'}经纪人
+            <small></small>
+        </h1>
+        <ol class="breadcrumb">
+            <li><a href="{:url('index/index')}"><i class="fa fa-home"></i> 首页</a></li>
+            <li><a href="#">经纪人管理</a></li>
+            <li class="active">编辑经纪人</li>
+        </ol>
+    </section>
+    <section class="content">
+        <div class="row">
+            <div class="col-xs-12">
+                <form id="agentForm" action="" class="form-horizontal">
+                    <div class="box box-info">
+                        <div class="box-body">
+                            <div class="form-group col-sm-8">
+                                <label class="col-sm-2 control-label">用户名</label>
+                                <div class="input-group col-sm-4">
+                                    <input type="text" name="username" id="username" value="{$brokerInfo.username?:''}"
+                                           class="form-control" {:isset($brokerInfo) ?'disabled':''}>
+                                </div>
+                            </div>
+                        </div>
+
+                        {if !isset($brokerInfo)}
+                        <div class="box-body">
+                            <div class="form-group col-sm-8">
+                                <label class="col-sm-2 control-label">密码</label>
+                                <div class="input-group col-sm-4">
+                                    <input type="text" name="password" id="password" value="" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                        {/if}
+
+                        <div class="box-body">
+                            <div class="form-group col-sm-8">
+                                <label class="col-sm-2 control-label">代理/经济人名称</label>
+                                <div class="input-group col-sm-4">
+                                    <input type="text" name="org_name" id="orgName" value="{$brokerInfo.org_name?:''}"
+                                           class="form-control">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="box-body">
+                            <div class="form-group col-sm-8">
+                                <label class="col-sm-2 control-label">手机号</label>
+                                <div class="input-group col-sm-4">
+                                    <input type="text" name="mobile" id="mobile" value="{$brokerInfo.mobile?:''}"
+                                           class="form-control">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="box-body">
+                            <div class="form-group col-sm-8">
+                                <label class="col-sm-2 control-label">分成比例</label>
+                                <div class="input-group col-sm-4">
+                                    <input name="commission_rate" id="commissionRate" value="{$brokerInfo.commission_rate?:''}" class="form-control" placeholder="最高分成比例为{$selfInfo['commission_rate']}%">
+                                    <span class="input-group-addon">%</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="box-body">
+                            <div class="form-group col-sm-8">
+                                <label class="col-sm-2 control-label">是否禁止登陆</label>
+                                <div class="input-group col-sm-4">
+                                    <select id="isDenyLogin" name="is_deny_login" class="form-control">
+                                        <option value="0" {:isset($brokerInfo) &&
+                                                0==$brokerInfo.is_deny_login?'selected':''}>否
+                                        </option>
+                                        <option value="1" {:isset($brokerInfo) &&
+                                                1==$brokerInfo.is_deny_login?'selected':''}>是
+                                        </option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="box-body">
+                            <div class="form-group col-sm-8">
+                                <label class="col-sm-2 control-label">是否拒绝提现</label>
+                                <div class="input-group col-sm-4">
+                                    <select id="isDenyCash" name="is_deny_cash" class="form-control">
+                                        <option value="0" {:isset($brokerInfo) &&
+                                                0==$brokerInfo.is_deny_cash?'selected':''}>否
+                                        </option>
+                                        <option value="1" {:isset($brokerInfo) &&
+                                                1==$brokerInfo.is_deny_cash?'selected':''}>是
+                                        </option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="box-body">
+                            <div class="form-group col-sm-8">
+                                <label class="col-sm-2 control-label">备注</label>
+                                <div class="input-group col-sm-4">
+                                    <textarea class="form-control" name="remark" id="remark" rows="3">{$brokerInfo.remark?:''}</textarea>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="box-footer">
+                            <div class="col-sm-8">
+                                <div class="col-sm-offset-2">
+                                    <button type="submit" class="btn btn-primary">保存</button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <input type="hidden" id="selfCommissionRate" name="self_commission_rate" value="{$selfInfo['commission_rate']}">
+                </form>
+            </div>
+        </div>
+    </section>
+</div>
+
+{/block}
+
+{block name="js"}
+<script>
+$(function () {
+    $("#agentForm").submit(function () {
+        var id = "{$brokerInfo.id?:0}";
+        var username = $("#username").val();
+        var password = id == 0 ? $("#password").val() : '';
+        var orgName = $("#orgName").val();
+        var mobile = $("#mobile").val();
+        var commissionRateold = $("#commissionRate").val();
+        var dot = commissionRateold.indexOf(".");
+        var dotCnt=0;
+        if(dot !== -1){
+            dotCnt = commissionRateold.substring(dot+1,commissionRateold.length);
+        }
+        var commissionRate = parseFloat(commissionRateold);
+        var isDenyLogin = $("#isDenyLogin").val();
+        var isDenyCash = $("#isDenyCash").val();
+        var remark = $("#remark").val();
+        var selfCommissionRate=$("#selfCommissionRate").val();
+        if (username == '') {
+            layer.msg("请填写用户名称", {icon: 2, time: 1500, shade: .3, shadeClose: true});
+        } else if (id == 0 && password == '') {
+            layer.msg("请填写用户密码", {icon: 2, time: 1500, shade: .3, shadeClose: true});
+        } else if (orgName == '') {
+            layer.msg("请填写代理/经纪人名称", {icon: 2, time: 1500, shade: .3, shadeClose: true});
+        } else if (mobile == '') {
+            layer.msg("请填手机号", {icon: 2, time: 1500, shade: .3, shadeClose: true});
+        } else if (dotCnt.length > 2){
+            layer.msg("最多保留两位小数", {icon: 2, time: 1500, shade: .3, shadeClose: true});
+        }else if (commissionRate === '') {
+            layer.msg("请填写分成比例", {icon: 2, time: 1500, shade: .3, shadeClose: true});
+        } else if(commissionRate > selfCommissionRate){
+            layer.msg("最高分成比例为"+selfCommissionRate+"%", {icon: 2, time: 1500, shade: .3, shadeClose: true});
+        }
+        else if (isNaN(commissionRate) || commissionRate<0 || commissionRate>100) {
+            layer.msg("请填写正确的分成比例", {icon: 2, time: 1500, shade: .3, shadeClose: true});
+        } else {
+            $.post("{:url('stock/broker/saveBroker')}", {
+                id: id,
+                username: username,
+                password: password,
+                org_name: orgName,
+                mobile: mobile,
+                commission_rate: commissionRate,
+                is_deny_login: isDenyLogin,
+                is_deny_cash: isDenyCash,
+                remark: remark
+            }, function (data) {
+                if (data.code == 1) {
+                    layer.msg(data.msg, {icon: 1, time: 1500, shade: .3, shadeClose: true}, function () {
+                        window.location.href = "{:url('index')}";
+                    });
+                } else {
+                    layer.msg(data.msg, {icon: 2, time: 1500, shade: .3, shadeClose: true});
+                }
+            });
+        }
+
+        return false;
+    });
+});
+</script>
+{/block}

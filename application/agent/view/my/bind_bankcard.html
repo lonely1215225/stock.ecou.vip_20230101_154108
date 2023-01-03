@@ -1,0 +1,189 @@
+{extend name="base/layout" /}
+
+{block name="main"}
+<div class="content-wrapper">
+    <section class="content-header">
+        <h1>
+            绑定银行卡
+            <small>Home</small>
+        </h1>
+        <ol class="breadcrumb">
+            <li><a href="{:url('index/index')}"><i class="fa fa-home"></i> 首页</a></li>
+            <li><a href="#">我的</a></li>
+            <li><a href="#">绑定银行卡</a></li>
+        </ol>
+    </section>
+    <section class="content">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="box box-info">
+                    <form id="editForm" action="" method="post" class="form-horizontal">
+                        <div class="box-body">
+                            <div class="form-group col-sm-8">
+                                <label class="col-sm-2 control-label">持卡人</label>
+                                <div class="col-sm-8">
+                                    <label>
+                                        <input type="text" class="form-control" name="real_name" id="realName" value="">
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="box-body">
+                            <div class="form-group col-sm-8">
+                                <label class="col-sm-2 control-label">身份证号</label>
+                                <div class="col-sm-8">
+                                    <label>
+                                        <input type="text" class="form-control" name="id_card_number" id="idCardNumber" value="">
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="box-body">
+                            <div class="form-group col-sm-8">
+                                <label class="col-sm-2 control-label">手机号码</label>
+                                <div class="col-sm-8">
+                                    <label>
+                                        <input type="text" class="form-control" name="mobile" id="mobile" value="">
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="box-body">
+                            <div class="form-group col-sm-8">
+                                <label class="col-sm-2 control-label">开户银行</label>
+                                <div class="col-sm-8">
+                                    <label>
+                                        <select name="bank_id" id="bankId" class="form-control">
+                                          <option value="">请选择</option>
+                                          {foreach $banksList as $bk=>$bv}
+                                            <option value="{$bv.id}">{$bv.bank_name}</option>
+                                          {/foreach}
+                                        </select>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="box-body">
+                            <div class="form-group col-sm-8">
+                                <label class="col-sm-2 control-label">开户所在省市</label>
+                                <div class="col-sm-8">
+                                    <label>
+                                        <select name="province" id="province" class="form-control" onchange="showCity()">
+                                            <option value="">请选择</option>
+                                            {foreach $cityInfo as $k=>$v}
+                                            <option value="{$v.id}" data-key="{$k}">{$v.name}</option>
+                                            {/foreach}
+                                        </select>
+                                    </label>
+                                    <label id="showCity">
+
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="box-body">
+                            <div class="form-group col-sm-8">
+                                <label class="col-sm-2 control-label">开户行支行</label>
+                                <div class="col-sm-8">
+                                    <label>
+                                        <input type="text" class="form-control" name="branch" id="branch" value="">
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="box-body">
+                            <div class="form-group col-sm-8">
+                                <label class="col-sm-2 control-label">银行卡号</label>
+                                <div class="col-sm-8">
+                                    <label>
+                                        <input type="text" class="form-control" name="bank_number" id="bankNumber" value="">
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="box-body">
+                            <div class="form-group col-sm-8">
+                                <label class="col-sm-2 control-label">确认银行卡号</label>
+                                <div class="col-sm-8">
+                                    <label>
+                                        <input type="text" class="form-control" name="confirm_bank_number" id="confirmBankNumber" value="">
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="box-footer">
+                            <div class="col-sm-8">
+                                <div class="col-sm-offset-2">
+                                    <button type="submit" class="btn btn-primary">提交认证</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+{/block}
+
+{block name="js"}
+<script>
+function showCity() {
+    var k= $("#province").find("option:selected").attr("data-key");
+    var cityAll={:json_encode($cityInfo)};
+    var cityArr=cityAll[k];
+    var str = "<select id=\"city\" name=\"city\" class=\"form-control\">";
+    $.each(cityArr.cities, function (i, el) {
+        str +="<option value='"+el.id+"' selected>"+el.name+"</option>";
+    });
+    str +="</select>";
+    $("#showCity").html(str);
+}
+$(function () {
+    $("#editForm").submit(function () {
+        var realName          = $("#realName").val();
+        var idCardNumber      = $("#idCardNumber").val();
+        var mobile            = $("#mobile").val();
+        var bankId          = $("#bankId").val();
+        var province          = $("#province").val();
+        var city              = $("#city").val();
+        var branch            = $("#branch").val();
+        var bankNumber        = $("#bankNumber").val();
+        var confirmBankNumber = $("#confirmBankNumber").val();
+        if (realName == "") {
+            layer.msg("请填持卡人姓名", {icon: 2, time: 1500, shade: .3, shadeClose: true});
+        } else {
+            $.post("{:url('stock/orgBankCard/bindBankCard')}", {
+                real_name: realName,
+                id_card_number: idCardNumber,
+                mobile: mobile,
+                bank_id: bankId,
+                province: province,
+                city:city,
+                branch: branch,
+                bank_number: bankNumber,
+                confirm_bank_number:confirmBankNumber,
+            }, function (data) {
+                if (data.code == 1) {
+                    layer.msg(data.msg, {icon: 1, time: 1500, shade: .3, shadeClose: true}, function () {
+                        window.location.href = "{:url('bind_bankcard')}";
+                    });
+                } else {
+                    layer.msg(data.msg, {icon: 2, time: 1500, shade: .3, shadeClose: true});
+                }
+            });
+        }
+
+        return false;
+    });
+});
+</script>
+{/block}

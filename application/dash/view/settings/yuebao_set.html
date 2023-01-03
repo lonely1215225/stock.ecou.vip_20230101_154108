@@ -1,0 +1,83 @@
+{extend name="base/layout"/}
+
+{block name="main"}
+<div class="content-wrapper">
+    <section class="content-header">
+        <h1>收益宝配置</h1>
+        <ol class="breadcrumb">
+            <li><a href="{:url('index/index')}"><i class="fa fa-home"></i> 首页</a></li>
+            <li><a href="#">系统设置</a></li>
+            <li class="active">收益宝配置</li>
+        </ol>
+    </section>
+    <section class="content">
+        <div class="row">
+            <!-- 交易时间 -->
+            <div class="col-sm-12">
+                <div class="box box-info">
+                    <div class="box-header"></div>
+                    <form id="tradingFeeForm" action="" method="post" class="form-horizontal">
+                        <div class="box-body">
+
+                            <div class="form-group col-sm-8">
+                                <label class="col-sm-2 control-label">收益宝是否开启</label>
+                                <div class="col-sm-8 checkbox">
+                                    <label>
+                                        <input type="checkbox" name="is_open" id="is_open" {$yuebao.is_open==1?'checked':''} value="0">
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="form-group col-sm-8">
+                                <label class="col-sm-2 control-label">每万元收益比例</label>
+                                <div class="input-group col-sm-8">
+                                    <input class="form-control" name="yuebao_fee" id="yuebao_fee"
+                                           value="{$yuebao.yuebao_fee}">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="box-footer">
+                            <div class="col-sm-8">
+                                <div class="col-sm-offset-2">
+                                    <button type="submit" class="btn btn-primary">提交</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="box">
+                    <div class="box-header with-border">
+                        <i class="fa fa-warning text-yellow"></i>
+                        <h3 class="box-title">注：</h3>
+                    </div>
+                    <div class="box-body">
+                        <ol>
+                            <li>收益宝<span class="text-red"> = 账户资金 / 10000 * 每万元收益比例</span>。</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+{/block}
+{block name="js"}
+<script>
+    // 提交
+    $("#tradingFeeForm").submit(function () {
+        var is_open = $("#is_open").is(":checked") ? 1 : 0;
+        $('#is_open').val(is_open);
+
+        $.post("{:url('stock/system/saveYuebao')}", $(this).serializeArray(), function (data) {
+            if (data.code == 1) {
+                layer.msg(data.msg, {icon: 1, time: 1500, shade: .3, shadeClose: true});
+            } else {
+                layer.msg(data.msg, {icon: 2, time: 1500, shade: .3, shadeClose: true});
+            }
+        });
+
+        return false;
+    });
+</script>
+{/block}

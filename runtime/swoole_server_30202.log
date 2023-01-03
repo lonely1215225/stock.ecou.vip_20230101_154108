@@ -1,0 +1,6 @@
+[2022-10-12 15:44:08 #10793.1]	INFO	Server is shutdown now
+[2022-10-12 15:44:11 *10796.0]	WARNING	Worker_reactor_try_to_exit (ERRNO 9012): worker exit timeout, forced termination
+[2022-10-12 16:12:02 #17721.1]	INFO	Server is shutdown now
+[2022-10-12 16:12:05 *17724.0]	WARNING	Worker_reactor_try_to_exit (ERRNO 9012): worker exit timeout, forced termination
+[2022-10-12 16:17:49 #20649.1]	INFO	Server is shutdown now
+[2022-10-12 16:17:52 *20652.0]	WARNING	Worker_reactor_try_to_exit (ERRNO 9012): worker exit timeout, forced termination

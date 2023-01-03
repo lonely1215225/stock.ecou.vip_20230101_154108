@@ -1,0 +1,102 @@
+{extend name="base/layout"/}
+
+{block name="main"}
+<style>
+ul,li{list-style:none;}
+li{list-style-type:none}
+img{border:0;vertical-align:middle}
+a{text-decoration:none;outline:0;blr:expression(this.onFocus=this.blur())}
+.clear{clear:both}
+.ce{display:block;width:100%;padding:0;font-size: 13px;}
+.ce li{border-bottom:1px solid #dee3ea;line-height: 50px;}
+.more{margin-left:36px}
+.ce li .dqian{background:0 0}
+.ce li span{cursor: pointer;width: 50px;display: block;float: left;margin-right: 30px;}
+.muleft input{margin-top: -4px;margin-right: 5px;}
+.muleft{width: 70%;float: left;}
+.muright{width:20%;float: left;}
+.er{display:none;width:100%;}
+.er li{width:100%;border:solid #dee3ea;border-width:1px 0 0;padding-left: 20px;}
+.er li .muleft{width: 67.3%;}
+.thr li .muleft{width: 65.5%;}
+.thr{display:none}
+.thr li{margin-bottom:1px;border-top:1px solid #dee3ea;position:relative}
+.er .e_li .thr li a{background:0 0}
+.more1{margin-left:28px;margin-top:-4px}
+.thr_nr{width:300px;position:absolute;top:0;left:150px;z-index:10;border:1px solid #c9c9c9;display:none}
+.thr_nr h3{font-weight:400;font-size:18px;display:block;text-align:center;width:100%;padding:10px 0}
+.thr_nr img{width:100%}
+</style>
+
+<div class="content-wrapper">
+    <section class="content-header">
+        <h1>
+            栏目管理
+            <small>Home</small>
+        </h1>
+        <ol class="breadcrumb">
+            <li><a href="{:url('index/index')}"><i class="fa fa-home"></i> 首页</a></li>
+            <li><a href="#">内容管理</a></li>
+            <li class="active">栏目管理</li>
+        </ol>
+    </section>
+    <section class="content">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="box box-info">
+                    <div class="box-header">
+                        <a href="{:url('cat_add')}" class="btn btn-success">
+                            <i class="fa fa-plus"></i>
+                            添加栏目
+                        </a>
+                    </div>
+                    <div class="box-body">
+                        <ul class="ce">
+                            {foreach $catList as $k=>$tl}
+                                <li class="mulu_list">
+                                    <span class="open">{$k+1}</span>
+                                    <div class="muleft">
+                                        <!--<input type="checkbox" name="">-->
+                                        {$tl.title}
+                                    </div>
+                                    <div class="muright">
+                                        <a href="{:url('news/cat_edit', ['id'=>$tl.id])}">更改</a>
+                                        <!--a href="#" onclick="delCat({$tl.id});">删除</a-->
+                                    </div>
+                                    <div class="clear"></div>
+                                </li>
+                            {/foreach}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+{/block}
+
+{block name="js"}
+<script type="text/javascript">
+  function delCat(v) {
+      layer.confirm('确定要删除吗？', {
+          btn: ['确定','取消'] //按钮
+      }, function(){
+          var id = v;
+          if(id == "") {
+              layer.msg("ID不能为空", {icon:2, time:1500, shade:.3, shadeClose:true});
+          } else {
+              $.post("{:url('stock/article/catDel')}", {id:id}, function(data){
+                  if(data.code == 1){
+                      layer.msg(data.msg, {icon:1, time:1500, shade:.3, shadeClose:true}, function(){
+                          window.location.href = "{:url('cat_list')}";
+                      });
+                  } else {
+                      layer.msg(data.msg, {icon:2, time:1500, shade:.3, shadeClose:true});
+                  }
+              });
+          }
+          return false;
+      }, null);
+  }
+</script>
+{/block}

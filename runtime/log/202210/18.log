@@ -1,0 +1,222 @@
+---------------------------------------------------------------
+
+[2022-10-18T21:21:34+08:00] 107.148.13.159 GET stock.ecou.vip/account?token=cfb15be0d3eea2bf3da6bee079d54d72&page=1
+[运行时间：0.280084s] [吞吐率：3.57req/s] [内存消耗：3,572.66kb] [文件加载：143]
+[ info ] [ LANG ] /www/wwwroot/stock.ecou.vip/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'account',
+  'route' => 'index/account/index',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+    'complete_match' => true,
+    'cross_domain' => true,
+    'header' => 
+    array (
+      'Access-Control-Allow-Credentials' => 'true',
+      'Access-Control-Allow-Methods' => 'GET, POST, PATCH, PUT, DELETE',
+      'Access-Control-Allow-Headers' => 'Authorization, Content-Type, If-Match, If-Modified-Since, If-None-Match, If-Unmodified-Since, X-Requested-With',
+      'Access-Control-Allow-Origin' => '*',
+    ),
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'https://app.ecou.vip/',
+  'sec-fetch-dest' => 'empty',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-site' => 'same-site',
+  'origin' => 'https://app.ecou.vip',
+  'accept' => '*/*',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 10_3_1 like Mac OS X) AppleWebKit/603.1.30 (KHTML, like Gecko) Version/10.0 Mobile/14E304 Safari/602.1',
+  'host' => 'stock.ecou.vip',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'token' => 'cfb15be0d3eea2bf3da6bee079d54d72',
+  'page' => '1',
+)
+[ info ] [ DB ] INIT pgsql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.004147s ] pgsql:dbname=postgres;host=127.0.0.1;port=5432
+[ sql ] [ SQL ] select fields_name as "field",fields_type as "type",fields_not_null as "null",fields_key_name as "key",fields_default as "default",fields_default as "extra" from table_msg('md_user_account'); [ RunTime:0.078673s ]
+[ sql ] [ SQL ] SELECT wallet_balance,strategy_balance,deposit,frozen,cash_coupon,cash_coupon_time,cash_coupon_frozen FROM md_user_account WHERE  user_id = 567 LIMIT 1 [ RunTime:0.001551s ]
+[ sql ] [ SQL ] select fields_name as "field",fields_type as "type",fields_not_null as "null",fields_key_name as "key",fields_default as "default",fields_default as "extra" from table_msg('md_order_position'); [ RunTime:0.117202s ]
+[ sql ] [ SQL ] SELECT SUM(s_pal) AS tp_sum FROM md_order_position WHERE  user_id = 567  AND is_finished = 1 [ RunTime:0.002586s ]
+[ sql ] [ SQL ] SELECT id,volume_position,position_price,market,stock_code,sum_sell_pal,sum_buy_value_cost,sum_sell_value_in,is_suspended,is_monthly FROM md_order_position WHERE  user_id = 567  AND is_finished =   AND market IS NOT NULL  AND stock_code IS NOT NULL [ RunTime:0.001857s ]
+[ sql ] [ SQL ] SELECT cash_coupon,cash_coupon_time,cash_coupon_frozen,cash_coupon_uptime FROM md_user_account WHERE  user_id = 567 LIMIT 1 [ RunTime:0.001250s ]
+---------------------------------------------------------------
+
+[2022-10-18T21:21:34+08:00] 107.148.13.159 GET stock.ecou.vip/order/position?token=cfb15be0d3eea2bf3da6bee079d54d72
+[运行时间：0.228864s] [吞吐率：4.37req/s] [内存消耗：3,559.19kb] [文件加载：143]
+[ info ] [ LANG ] /www/wwwroot/stock.ecou.vip/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'order/position',
+  'route' => 'index/OrderPosition/index',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+    'complete_match' => true,
+    'cross_domain' => true,
+    'header' => 
+    array (
+      'Access-Control-Allow-Credentials' => 'true',
+      'Access-Control-Allow-Methods' => 'GET, POST, PATCH, PUT, DELETE',
+      'Access-Control-Allow-Headers' => 'Authorization, Content-Type, If-Match, If-Modified-Since, If-None-Match, If-Unmodified-Since, X-Requested-With',
+      'Access-Control-Allow-Origin' => '*',
+    ),
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'https://app.ecou.vip/',
+  'sec-fetch-dest' => 'empty',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-site' => 'same-site',
+  'origin' => 'https://app.ecou.vip',
+  'accept' => '*/*',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 10_3_1 like Mac OS X) AppleWebKit/603.1.30 (KHTML, like Gecko) Version/10.0 Mobile/14E304 Safari/602.1',
+  'host' => 'stock.ecou.vip',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'token' => 'cfb15be0d3eea2bf3da6bee079d54d72',
+)
+[ info ] [ DB ] INIT pgsql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.004192s ] pgsql:dbname=postgres;host=127.0.0.1;port=5432
+[ sql ] [ SQL ] select fields_name as "field",fields_type as "type",fields_not_null as "null",fields_key_name as "key",fields_default as "default",fields_default as "extra" from table_msg('md_order_position'); [ RunTime:0.149168s ]
+[ sql ] [ SQL ] SELECT id,market,stock_code,stock_id,volume_position,volume_for_sell,position_price,stop_loss_price,sum_sell_pal,sum_buy_value_cost,sum_sell_value_in,is_monthly,monthly_expire_date,is_cash_coupon FROM md_order_position WHERE  user_id = 567  AND is_finished =   AND market IS NOT NULL  AND stock_code IS NOT NULL ORDER BY id ASC [ RunTime:0.003268s ]
+---------------------------------------------------------------
+
+[2022-10-18T21:21:35+08:00] 107.148.13.159 GET stock.ecou.vip/account?token=cfb15be0d3eea2bf3da6bee079d54d72&page=1
+[运行时间：0.301518s] [吞吐率：3.32req/s] [内存消耗：3,572.71kb] [文件加载：143]
+[ info ] [ LANG ] /www/wwwroot/stock.ecou.vip/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'account',
+  'route' => 'index/account/index',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+    'complete_match' => true,
+    'cross_domain' => true,
+    'header' => 
+    array (
+      'Access-Control-Allow-Credentials' => 'true',
+      'Access-Control-Allow-Methods' => 'GET, POST, PATCH, PUT, DELETE',
+      'Access-Control-Allow-Headers' => 'Authorization, Content-Type, If-Match, If-Modified-Since, If-None-Match, If-Unmodified-Since, X-Requested-With',
+      'Access-Control-Allow-Origin' => '*',
+    ),
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'https://app.ecou.vip/',
+  'sec-fetch-dest' => 'empty',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-site' => 'same-site',
+  'origin' => 'https://app.ecou.vip',
+  'accept' => '*/*',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 10_3_1 like Mac OS X) AppleWebKit/603.1.30 (KHTML, like Gecko) Version/10.0 Mobile/14E304 Safari/602.1',
+  'host' => 'stock.ecou.vip',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'token' => 'cfb15be0d3eea2bf3da6bee079d54d72',
+  'page' => '1',
+)
+[ info ] [ DB ] INIT pgsql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.004102s ] pgsql:dbname=postgres;host=127.0.0.1;port=5432
+[ sql ] [ SQL ] select fields_name as "field",fields_type as "type",fields_not_null as "null",fields_key_name as "key",fields_default as "default",fields_default as "extra" from table_msg('md_user_account'); [ RunTime:0.082624s ]
+[ sql ] [ SQL ] SELECT wallet_balance,strategy_balance,deposit,frozen,cash_coupon,cash_coupon_time,cash_coupon_frozen FROM md_user_account WHERE  user_id = 567 LIMIT 1 [ RunTime:0.001664s ]
+[ sql ] [ SQL ] select fields_name as "field",fields_type as "type",fields_not_null as "null",fields_key_name as "key",fields_default as "default",fields_default as "extra" from table_msg('md_order_position'); [ RunTime:0.129360s ]
+[ sql ] [ SQL ] SELECT SUM(s_pal) AS tp_sum FROM md_order_position WHERE  user_id = 567  AND is_finished = 1 [ RunTime:0.002725s ]
+[ sql ] [ SQL ] SELECT id,volume_position,position_price,market,stock_code,sum_sell_pal,sum_buy_value_cost,sum_sell_value_in,is_suspended,is_monthly FROM md_order_position WHERE  user_id = 567  AND is_finished =   AND market IS NOT NULL  AND stock_code IS NOT NULL [ RunTime:0.001994s ]
+[ sql ] [ SQL ] SELECT cash_coupon,cash_coupon_time,cash_coupon_frozen,cash_coupon_uptime FROM md_user_account WHERE  user_id = 567 LIMIT 1 [ RunTime:0.001217s ]
+---------------------------------------------------------------
+
+[2022-10-18T23:19:46+08:00] 54.221.154.62 GET stock.ecou.vip/
+[运行时间：0.043535s] [吞吐率：22.97req/s] [内存消耗：2,221.50kb] [文件加载：127]
+[ info ] [ LANG ] /www/wwwroot/stock.ecou.vip/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'Apache-HttpClient/5.1.3 (Java/11.0.16.1)',
+  'connection' => 'keep-alive',
+  'host' => 'stock.ecou.vip',
+  'accept-encoding' => 'gzip, x-gzip, deflate',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+---------------------------------------------------------------
+
+[2022-10-18T23:19:49+08:00] 3.80.220.219 GET stock.ecou.vip/
+[运行时间：0.044456s] [吞吐率：22.49req/s] [内存消耗：2,221.69kb] [文件加载：127]
+[ info ] [ LANG ] /www/wwwroot/stock.ecou.vip/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'host' => 'stock.ecou.vip',
+  'accept-encoding' => 'gzip, x-gzip, deflate',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.106 Safari/537.36',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+---------------------------------------------------------------
+
+[2022-10-18T23:19:49+08:00] 3.80.220.219 GET stock.ecou.vip/dash/index/index.html
+[运行时间：0.044058s] [吞吐率：22.70req/s] [内存消耗：2,231.14kb] [文件加载：129]
+[ info ] [ LANG ] /www/wwwroot/stock.ecou.vip/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'host' => 'stock.ecou.vip',
+  'accept-encoding' => 'gzip, x-gzip, deflate',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.106 Safari/537.36',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+---------------------------------------------------------------
+
+[2022-10-18T23:19:49+08:00] 3.80.220.219 GET stock.ecou.vip/dash/passport/index.html
+[运行时间：0.044294s] [吞吐率：22.58req/s] [内存消耗：2,227.76kb] [文件加载：130]
+[ info ] [ LANG ] /www/wwwroot/stock.ecou.vip/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=i45a01kskl2l81hvichqh4uf1j',
+  'connection' => 'keep-alive',
+  'host' => 'stock.ecou.vip',
+  'accept-encoding' => 'gzip, x-gzip, deflate',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.106 Safari/537.36',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] /www/wwwroot/stock.ecou.vip/application/dash/view/passport/index.html [ array (
+  0 => 'controller',
+  1 => 'action',
+  2 => 'hostip',
+) ]

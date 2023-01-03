@@ -1,0 +1,597 @@
+{extend name="base/layout"/}
+{block name="main"}
+<style>
+.detail-table{width:100%;}
+.detail-table tr{border-top:1px solid #ddd;border-bottom:1px solid #ddd;}
+.detail-table tr th,.detail-table tr td{padding:8px 15px;}
+.detail-table tr th{text-align:right;}
+.detail-table tr td{border-left:1px solid #ddd !important;}
+</style>
+<div class="content-wrapper">
+    <section class="content-header">
+        <h1>
+            用户详情
+            <small></small>
+        </h1>
+        <ol class="breadcrumb">
+            <li><a href="{:url('index/index')}"><i class="fa fa-home"></i> 首页</a></li>
+            <li><a href="#">用户管理</a></li>
+            <li class="active">用户详情</li>
+        </ol>
+    </section>
+    <section class="content">
+        <div class="row">
+            <!-- 用户账户信息 -->
+            <div class="col-sm-6">
+                <div class="box box-info">
+                    <div class="box-header"><strong>用户账户信息</strong></div>
+                    <div class="box-body no-padding">
+                        <table class="detail-table">
+                            <tr>
+                                <th width="170">钱包余额</th>
+                                <td>{$userList['userAccountList']['wallet_balance']?:''}</td>
+                            </tr>
+                            <tr>
+                                <th>策略金金额</th>
+                                <td>{$userList['userAccountList']['strategy_balance']?:''}</td>
+                            </tr>
+                            <tr>
+                                <th>累计充值</th>
+                                <td>{$userList['userAccountList']['total_recharge']?:''}</td>
+                            </tr>
+                            <tr>
+                                <th>累计提现</th>
+                                <td>{$userList['userAccountList']['total_withdraw']?:''}</td>
+                            </tr>
+                            <tr>
+                                <th>累计盈亏</th>
+                                <td>{$userList['userAccountList']['total_pal']?:''}</td>
+                            </tr>
+                            <tr>
+                                <th>创建时间</th>
+                                <td>{$userList['userAccountList']['create_time']?:''}</td>
+                            </tr>
+                            <tr>
+                                <th>更新时间</th>
+                                <td>{$userList['userAccountList']['update_time']?:''}</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 调整策略金金额 -->
+            <div class="col-sm-6">
+                <div class="box box-info">
+                    <form id="editForm" action="" class="form-horizontal">
+                        <div class="box-header"><strong>调整账户资金</strong></div>
+                        <div class="box-body no-padding">
+                            <table class="detail-table">
+                                <tr>
+                                    <th width="170">调整类型</th>
+                                    <td>
+                                        <select class="form-control" id="ctype" name="ctype" onchange="setreamrk(this.value);" style="">
+                                            <option value="">请选择</option>
+                                            <option value="1">增加</option>
+                                            <option value="2">减少</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th width="170">账户资金</th>
+                                    <td>
+                                        <input type="text" value="" name="change_money" id="changeMoney" class="form-control" style="">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th width="170">备注</th>
+                                    <td>
+                                        <textarea class="form-control"  id="remark" name="remark" style="height:89px;"></textarea>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th width="170"></th>
+                                    <td>
+                                        <button type="submit" class="btn btn-primary">提交</button>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-6 no-padding">
+                <!-- 用户信息 -->
+                <div class="col-sm-12">
+                    <div class="box box-info">
+                        <div class="box-header"><strong>用户信息</strong></div>
+                        <div class="box-body no-padding">
+                            <table class="detail-table">
+                                <tr>
+                                    <th width="170">手机号</th>
+                                    <td>{$userList['userList']['mobile']}</td>
+                                </tr>
+                                <tr>
+                                    <th>是否禁止登陆</th>
+                                    <td>{$userList['userList']['is_deny_login']?'是':'否'}</td>
+                                </tr>
+                                <tr>
+                                    <th>是否禁止提现</th>
+                                    <td>{$userList['userList']['is_deny_cash']?'是':'否'}</td>
+                                </tr>
+                                <tr>
+                                    <th>备注</th>
+                                    <td>{$userList['userList']['remark']}</td>
+                                </tr>
+                                <tr>
+                                    <th>注册IP/登录IP</th>
+                                    <td>{$userList['userList']['reg_ip']} —— {$userList['userList']['login_ip']}</td>
+                                </tr>
+                                <tr>
+                                    <th>创建时间</th>
+                                    <td>{$userList['userList']['create_time']}</td>
+                                </tr>
+                                <tr>
+                                    <th>更新时间</th>
+                                    <td>{$userList['userList']['update_time']}</td>
+                                </tr>
+                                <tr>
+                                    <th>是否绑定银行卡</th>
+                                    <td>{$userList['userList']['is_bound_bank_card']?'是':'否'}</td>
+                                </tr>
+                                <tr>
+                                    <th>代理商</th>
+                                    <td>{$userList['adminUser']['agent']?:''}</td>
+                                <tr>
+                                <tr>
+                                    <th>经济人</th>
+                                    <td>{$userList['adminUser']['broker']?:''}</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 绑定银行卡信息 -->
+                <div class="col-sm-12">
+                    <div class="box box-info">
+                        <div class="box-header">
+                            <strong>银行卡{if !$userList['userBankCardList']}（未绑定）管理员绑定{/if}</strong>
+                        </div>
+                        <div class="box-body no-padding">
+                            <table class="detail-table">
+                                {if $userList['userBankCardList']}{/if}
+                                <tr>
+                                    <th width="170">持卡人姓名</th>
+                                    <td><input type="text" value="{$userList['userBankCardList']['real_name']?:''}" name="real_name" id="real_name" class="form-control" /></td>
+                                </tr>
+                                <tr>
+                                    <th>开户行名称</th>
+                                    <td>
+                                        <select class="form-control" id="bank_id" name="bank_id">
+                                            <option value="">请选择</option>
+                                            {foreach $banksList as $v}
+                                            <option value="{$v['id']}" {$userList['userBankCardList']['bank_name']==$v['bank_name']?'selected':''}>{$v['bank_name']}</option>
+                                            {/foreach}
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>开户支行名称</th>
+                                    <td><input type="text" value="{$userList['userBankCardList']['branch']?:''}" name="branch" id="branch" class="form-control" /></td>
+                                </tr>
+                                <tr>
+                                    <th>开户行所在省</th>
+                                    <td>
+                                        <select class="form-control" id="province" name="province" onchange="showCity();">
+                                            <option value="">请选择</option>
+                                            {foreach $city as $k=>$v}
+                                            <option value="{$v['id']}" {$userList['userBankCardList']['province']?($cityInfo[$userList['userBankCardList']['province']]==$v['name']?'selected':''):''} data-key="{$k}">{$v['name']}</option>
+                                            {/foreach}
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>开户行所在市</th>
+                                    <td>
+                                        <select id="city" name="city" class="form-control" >
+                                            <option value="{$userList['userBankCardList']['city']}" selected>{$userList['userBankCardList']['city']?$cityInfo[$userList['userBankCardList']['city']]:''}</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>银行卡号</th>
+                                    <td><input type="text" value="{$userList['userBankCardList']['bank_number']?:''}" name="bank_number" id="bank_number" class="form-control" /></td>
+                                </tr>
+                                <tr>
+                                    <th>身份证号</th>
+                                    <td><input type="text" value="{$userList['userBankCardList']['id_card_number']?:''}" name="id_card_number" id="id_card_number" class="form-control" /></td>
+                                </tr>
+                                <tr>
+                                    <th>银行预留电话</th>
+                                    <td><input type="text" value="{$userList['userBankCardList']['mobile']?:''}" name="mobile" id="mobile" class="form-control" /></td>
+                                </tr>
+                                <tr>
+                                    <th>创建时间</th>
+                                    <td>{$userList['userBankCardList']['create_time']?:''}</td>
+                                </tr>
+                                <tr>
+                                    <th>更新时间</th>
+                                    <td>{$userList['userBankCardList']['update_time']?:''}</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>
+                                        <a class="btn btn-sm btn-primary" href="#" onclick="editBankCard()">{if $userList['userBankCardList']}修改{else /}绑定{/if}银行卡</a>
+                                        <a class="btn btn-sm btn-primary" href="#" onclick="delBankNUm('{$userList[\'userList\'][\'id\']}')">删除银行卡</a>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 调整账户策略资金 -->
+            <div class="col-sm-6">
+                <div class="box box-info">
+                    <form id="editStrategyForm" action="" class="form-horizontal">
+                        <div class="box-header"><strong>调整账户策略资金</strong></div>
+                        <div class="box-body no-padding">
+                            <table class="detail-table">
+                                <tr>
+                                    <th width="170">调整类型</th>
+                                    <td>
+                                        <select class="form-control" id="ctypeStrategy" name="ctypeStrategy" onchange="setreamrk(this.value);" style="">
+                                            <option value="">请选择</option>
+                                            <option value="3">增加</option>
+                                            <option value="4">减少</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th width="170">账户策略资金</th>
+                                    <td>
+                                        <input type="text" value="" name="change_strategy" id="changeStrategy" class="form-control" style="">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th width="170">备注</th>
+                                    <td>
+                                        <textarea class="form-control"  id="remarkStrategy" name="remarkStrategy" style="height:89px;"></textarea>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th width="170"></th>
+                                    <td>
+                                        <button type="submit" class="btn btn-primary">提交</button>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- 转移经济人 -->
+            <div class="col-sm-6">
+                <div class="box box-info">
+                    <div class="box-header"><strong>重置密码</strong></div>
+                    <div class="box-body no-padding">
+                        <table class="detail-table">
+                            <tr>
+                                <th width="170">密码</th>
+                                <td>
+                                    <input type="password" value="" name="password" id="password" class="form-control" style="">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>确认密码</th>
+                                <td>
+                                    <input type="password" value="" name="rePassword" id="rePassword" class="form-control" style="">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th></th>
+                                <th><button id="changePwd" type="button" class="btn btn-primary pull-left">提交</button></th>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-6">
+                <!-- 转移经济人 -->
+                <div class="box box-info">
+                    <div class="box-header"><strong>转移经济人</strong></div>
+                    <div class="box-body no-padding">
+                        <table class="detail-table">
+                            <tr>
+                                <th width="170">代理商</th>
+                                <td>
+                                    <select class="form-control" id="agentID" name="agent_id" onchange="showBroker(this.value);">
+                                        <option value="">请选择</option>
+                                        {foreach $agentList as $k=>$v}
+                                        <option value="{$k}" {:isset($agent_id) && $k==$agent_id?'selected':''}>{$v}</option>
+                                        {/foreach}
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>经济人</th>
+                                <td>
+                                    <select id="brokerID" name="broker_id" class="form-control" ></select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th></th>
+                                <th><button id="changeBroker" type="button" class="btn btn-primary pull-left">转移</button></th>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+</div>
+
+{/block}
+
+{block name="js"}
+<script>
+function setreamrk(v)
+{
+    if(v==1){
+        $("#remark").text("转入");
+    }else if(v==2){
+        $("#remark").text("转出");
+    }
+    if(v==3){
+        $("#remarkStrategy").text("系统退款");
+    }else if(v==4){
+        $("#remarkStrategy").text("系统追加扣费");
+    }
+}
+
+function showCity() {
+    var k= $("#province").find("option:selected").attr("data-key");
+    var cityAll={:json_encode($city)};
+    var cityArr=cityAll[k];
+    var str = "";
+    $.each(cityArr.cities, function (i, el) {
+        str +="<option value='"+el.id+"' selected>"+el.name+"</option>";
+    });
+
+    $("#city").html(str);
+}
+
+//修改银行卡信息
+function editBankCard() {
+    var real_name      = $("#real_name").val();
+    var bank_id        = $("#bank_id").val();
+    var bank_name      = $("#bank_id").find("option:selected").text();
+    var branch         = $("#branch").val();
+    var province       = $("#province").val();
+    var city           = $("#city").val();
+    var bank_number    = $("#bank_number").val();
+    var re_bank_number = $("#re_bank_number").val();
+    var id_card_number = $("#id_card_number").val();
+    var mobile         = $("#mobile").val();
+    var userId          = "{$userList['userAccountList']['user_id']?:0}";
+
+    if (real_name == "") {
+        layer.msg("请填写持卡人姓名", {icon: 2, time: 1500, shade: .3, shadeClose: true});
+        return;
+    }
+    if (bank_name == "") {
+        layer.msg("请填写开户行名称", {icon: 2, time: 1500, shade: .3, shadeClose: true});
+        return;
+    }
+    if (branch == "") {
+        layer.msg("开户支行名称", {icon: 2, time: 1500, shade: .3, shadeClose: true});
+        return;
+    }
+    if (isNaN(bank_number)) {
+        layer.msg("请填写正确的银行卡号", {icon: 2, time: 1500, shade: .3, shadeClose: true});
+        return;
+    }
+    if (isNaN(bank_number)) {
+        layer.msg("请填写正确的银行卡号", {icon: 2, time: 1500, shade: .3, shadeClose: true});
+        return;
+    }
+    if (id_card_number == '') {
+        layer.msg("请填写身份证号", {icon: 2, time: 1500, shade: .3, shadeClose: true});
+        return;
+    }
+    if (mobile == "") {
+        layer.msg("请填写银行预留电话", {icon: 2, time: 1500, shade: .3, shadeClose: true});
+        return;
+    } else {
+        $.post("{:url('stock/user/edit_bank_card')}", {
+            user_id: userId,
+            real_name: real_name,
+            bank_id: bank_id,
+            bank_name: bank_name,
+            branch: branch,
+            province: province,
+            city: city,
+            bank_number: bank_number,
+            id_card_number: id_card_number,
+            mobile: mobile
+        }, function (data) {
+            if (data.code == 1) {
+                layer.msg(data.msg, {icon: 1, time: 1500, shade: .3, shadeClose: true}, function () {
+                    window.location.reload();
+                });
+            } else {
+                layer.msg(data.msg, {icon: 2, time: 1500, shade: .3, shadeClose: true});
+            }
+        });
+    }
+    return false;
+}
+
+// 删除银行卡
+function delBankNUm(userId) {
+    layer.confirm('确定要删除银行卡吗？', {
+        btn: ['确定','取消'] //按钮
+    }, function(){
+        if (userId == "") {
+            layer.msg("用户id不能为空", {icon: 2, time: 1500, shade: .3, shadeClose: true});
+        }else{
+            $.post("{:url('stock/user/delete_bank_card')}", {
+                user_id: userId,
+            }, function (data) {
+                if (data.code == 1) {
+                    layer.msg(data.msg, {icon: 1, time: 1500, shade: .3, shadeClose: true}, function () {
+                        window.location.href = "{:url('user_detail', ['id' =>$id])}";
+                    });
+                } else {
+                    layer.msg(data.msg, {icon: 2, time: 1500, shade: .3, shadeClose: true});
+                }
+            });
+        }
+        return false;
+    }, null);
+
+}
+
+function showBroker(v) {
+    var brokerId=0;
+    $.post("{:url('stock/orgFilter/broker')}", {agent_id:v,brokerId:brokerId}, function(data){
+        if(data.code == 1){
+            $("#brokerInfo").empty();
+            var str = "<select id=\"brokerId\" name=\"broker_id\" class=\"form-control\"><option value=''>请选择</option>";
+            $.each(data.data, function (i, el) {
+                str +="<option value='"+i+"'>"+el+"</option>";
+            });
+            str +="</select>";
+            $("#brokerID").html(str);
+        }
+    });
+}
+
+$(function () {
+    $("#editForm").submit(function () {
+        var changeMoney = parseFloat($("#changeMoney").val());
+        var ctype       = $("#ctype").val();
+        var remark      = $("#remark").val();
+        var userId      = "{$userList['userAccountList']['user_id']?:0}";
+        if (ctype == "") {
+            layer.msg("请选择调整类型", {icon: 2, time: 1500, shade: .3, shadeClose: true});
+            return;
+        }
+        if (isNaN(changeMoney)) {
+            layer.msg("请填写正确的账户资金金额", {icon: 2, time: 1500, shade: .3, shadeClose: true});
+            return;
+        }
+        if (remark == "") {
+            layer.msg("请填写备注信息", {icon: 2, time: 1500, shade: .3, shadeClose: true});
+            return;
+        } else {
+            $.post("{:url('stock/userAccount/changeWallet')}", {
+                user_id: userId,
+                change_money: changeMoney,
+                remark: remark,
+                ctype:ctype,
+            }, function (data) {
+                if (data.code == 1) {
+                    layer.msg(data.msg, {icon: 1, time: 1500, shade: .3, shadeClose: true}, function () {
+                        window.location.reload();
+                    });
+                } else {
+                    layer.msg(data.msg, {icon: 2, time: 1500, shade: .3, shadeClose: true});
+                }
+            });
+        }
+        return false;
+    });
+
+    $("#editStrategyForm").submit(function () {
+        var changeStrategy = parseFloat($("#changeStrategy").val());
+        var ctypeStrategy  = $("#ctypeStrategy").val();
+        var remarkStrategy = $("#remarkStrategy").val();
+        var userId         = "{$userList['userAccountList']['user_id']?:0}";
+        if (ctypeStrategy == "") {
+            layer.msg("请选择调整类型", {icon: 2, time: 1500, shade: .3, shadeClose: true});
+            return;
+        }
+        if (isNaN(changeStrategy)) {
+            layer.msg("请填写正确的账户策略金金额", {icon: 2, time: 1500, shade: .3, shadeClose: true});
+            return;
+        }
+        if (remarkStrategy == "") {
+            layer.msg("请填写备注信息", {icon: 2, time: 1500, shade: .3, shadeClose: true});
+            return;
+        } else {
+            $.post("{:url('stock/userAccount/changeStrategy')}", {
+                user_id: userId,
+                change_money: changeStrategy,
+                remark: remarkStrategy,
+                ctype:ctypeStrategy,
+            }, function (data) {
+                if (data.code == 1) {
+                    layer.msg(data.msg, {icon: 1, time: 1500, shade: .3, shadeClose: true}, function () {
+                        window.location.reload();
+                    });
+                } else {
+                    layer.msg(data.msg, {icon: 2, time: 1500, shade: .3, shadeClose: true});
+                }
+            });
+        }
+        return false;
+    });
+
+    // 转移用户
+    $("#changePwd").on("click", function () {
+        var password = $("#password").val();
+        var rePassword = $("#rePassword").val();
+        var userID = "{$userList['userAccountList']['user_id']?:0}";
+
+        if (!password) {
+            layer.msg("请填写您的密码", {icon: 2, time: 1500, shade: .3, shadeClose: true});
+        } else if(!rePassword) {
+            layer.msg("请填写确认密码", {icon: 2, time: 1500, shade: .3, shadeClose: true});
+        } else {
+            $.post("{:url('stock/user/change_pwd')}", {password:password,rePassword:rePassword, userID:userID}, function (data) {
+                if (data.code == 1) {
+                    layer.msg(data.msg, {icon: 1, time: 1500, shade: .3, shadeClose: true}, function () {
+                        window.location.reload();
+                    });
+                } else {
+                    layer.msg(data.msg, {icon: 2, time: 1500, shade: .3, shadeClose: true});
+                }
+            });
+        }
+    });
+
+    // 转移用户
+    $("#changeBroker").on("click", function () {
+        console.log("dddd");
+        var agentID = $("#agentID").val();
+        var brokerID = $("#brokerID").val();
+        var userID = "{$userList['userAccountList']['user_id']?:0}";
+
+        if (!agentID) {
+            layer.msg("请选择代理商", {icon: 2, time: 1500, shade: .3, shadeClose: true});
+        } else if(!brokerID) {
+            layer.msg("请选择经纪人", {icon: 2, time: 1500, shade: .3, shadeClose: true});
+        } else {
+            $.post("{:url('stock/user/change_broker')}", {userID:userID,agentID:agentID, brokerID:brokerID}, function (data) {
+                if (data.code == 1) {
+                    layer.msg(data.msg, {icon: 1, time: 1500, shade: .3, shadeClose: true}, function () {
+                        window.location.reload();
+                    });
+                } else {
+                    layer.msg(data.msg, {icon: 2, time: 1500, shade: .3, shadeClose: true});
+                }
+            });
+        }
+    });
+});
+</script>
+{/block}

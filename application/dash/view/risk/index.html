@@ -1,0 +1,199 @@
+{extend name="base/layout"/}
+
+{block name="main"}
+<div class="content-wrapper">
+    <section class="content-header">
+        <h1>个股列表</h1>
+        <ol class="breadcrumb">
+            <li><a href="{:url('index/index')}"><i class="fa fa-home"></i> 首页</a></li>
+            <li><a href="#">股票管理</a></li>
+            <li class="active">个股列表</li>
+        </ol>
+    </section>
+    <section class="content">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="box box-info">
+                    <div class="box-header">
+                        <a href="{:url('risk/edit_stock')}" class="btn btn-success"><i class="fa fa-plus"></i>添加个股</a>
+                        <a href="#" onclick="openDialog();" class="btn btn-success"><i class="fa fa-plus"></i>更新全部</a>
+                    </div>
+                    <div class="box-header with-border">
+                        <form id="searchInfo" action="{:url('index')}" method="get">
+                            <div class="col-sm-12 no-padding">
+                                <div class="search-box">
+                                    <label class="text-right">股票代码</label>
+                                    <div class="search-body"><input class="form-control" type="text" id="stockCode" name="stock_code" value="{:isset($stockCode)?$stockCode:''}"></div>
+                                </div>
+                                <div class="search-box">
+                                    <label class="text-right">股票名称</label>
+                                    <div class="search-body"><input class="form-control" type="text" id="stockName" name="stock_name" value="{:isset($stockName)?$stockName:''}"></div>
+                                </div>
+                                <div class="search-box">
+                                    <label class="text-right">证券公司</label>
+                                    <div class="search-body">
+                                        <select id="market" name="market" class="form-control">
+                                            <option value="">请选择</option>
+                                            {foreach $marketList as $mk=>$mv}
+                                            <option value="{$mk}" {:isset($market) && $mk==$market?'selected':''}>{$mv}</option>
+                                            {/foreach}
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="search-box">
+                                    <label class="text-right">是否科创板</label>
+                                    <div class="search-body">
+                                        <select id="is_kechuang" name="is_kechuang" class="form-control">
+                                            <option value="">请选择</option>
+                                            <option value="true"  {$is_kechuang=='true' ?'selected':''}>是</option>
+                                            <option value="false" {$is_kechuang=='false'?'selected':''}>否</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="search-box">
+                                    <label class="text-right"></label>
+                                    <div class="search-body"><input type="submit" class="btn btn-primary" value="查找"></div>
+                                </div>
+                            </div>
+                            <div class="col-sm-12 no-padding">
+                                <div class="search-box">
+                                    <label class="text-right">今日优选</label>
+                                    <div class="search-body">
+                                        <select id="is_selective" name="is_selective" class="form-control">
+                                            <option value="">请选择</option>
+                                            <option value="true"  {$is_selective=='true' ?'selected':''}>是</option>
+                                            <option value="false" {$is_selective=='false'?'selected':''}>否</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="search-box">
+                                    <label class="text-right">是否黑名单</label>
+                                    <div class="search-body">
+                                        <select id="is_black" name="is_black" class="form-control">
+                                            <option value="">请选择</option>
+                                            <option value="true"  {$is_black=='true' ?'selected':''}>是</option>
+                                            <option value="false" {$is_black=='false'?'selected':''}>否</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            <!--div class="col-sm-12 no-padding">
+                                
+                            </div-->
+                        </form>
+                    </div>
+                    <div class="box-body no-padding">
+                        <table class="table table-bordered table-middle">
+                            <tr>
+                                <td>
+                                    当前个股总数：{$stockTotal?:'0'}&nbsp;&nbsp;&nbsp;&nbsp;
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="box-body no-padding">
+                        <table class="table table-bordered table-middle table-center">
+                            <thead>
+                            <tr>
+                                <th>股票代码</th>
+                                <th>股票名称</th>
+                                <th>证券公司</th>
+                                <th>拼音简称</th>
+                                <th>是否停牌</th>
+                                <th>是否禁买</th>
+                                <th>风险等级</th>
+                                <th>交易单位</th>
+                                <th>优选</th>
+                                <th>操作</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            {foreach $stockInfo as $k => $nl}
+                            <tr>
+                                <td>{$nl.stock_code}</td>
+                                <td>{$nl.stock_name}</td>
+                                <td>{$marketList[$nl['market']]}</td>
+                                <td>{$nl.initial}</td>
+                                <td>{$nl.is_suspended ? '是' : '否'}</td>
+                                <td>{$nl.is_black ? '是' : '否'}</td>
+                                <td>{$riskList[$nl['risk_level']]??""}</td>
+                                <td>{$nl.board_lot}</td>
+                                <td>{$nl.is_selective ? '是' : '否'}</td>
+                                <td>
+                                    <a class="btn btn-sm btn-primary" href="{:url('risk/edit_stock', ['id' => $nl.id])}">编辑</a>
+                                    <a class="btn btn-sm btn-primary" href="#" onclick="delStock('{$nl.id}');">删除</a>
+                                </td>
+                            </tr>
+                            {/foreach}
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="box-footer">
+                        <div class="col-sm-12 no-padding">{:$stockInfo->render()}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+{/block}
+{block name="js"}
+<script type="text/javascript">
+function openDialog() {
+    layer.open({
+        type: 2,
+        title: '更新全部股票',
+        shadeClose: true,
+        shade: 0.4,
+        area: ['750px', '600px'],
+        content: 'updata_all_stock',
+        btn: ['开始更新','关闭'],
+        yes: function(index){
+            var res = window["layui-layer-iframe" + index].callbackdata();
+            updataAllStock(res);
+            //layer.close(index);
+        },
+        cancel: function(){
+            //右上角关闭回调
+        }
+    });
+}
+function updataAllStock(res) {
+    $.post("{:url('stock/stock/updataDBstock')}", {res}, function (data) {
+        if (data.code == 1) {
+            layer.msg(data.msg, {icon: 1, time: 1500, shade: .3, shadeClose: true}, function () {
+                window.location.href = "{:url('index')}";
+            });
+        }else if (data.code == 301) {
+            layer.msg(data.msg, {icon: 1, time: 300, shade: .3, shadeClose: true}, function () {
+                updataAllStock(res);
+            });
+        } else {
+            layer.msg(data.msg, {icon: 2, time: 1500, shade: .3, shadeClose: true});
+        }
+    });
+}
+function delStock(id) {
+    layer.confirm('确定要删除吗？', {
+        btn: ['确定', '取消'] //按钮
+    }, function () {
+        if (id == '') {
+            layer.msg("id不能为空", {icon: 2, time: 1500, shade: .3, shadeClose: true});
+        } else {
+            $.post("{:url('stock/stock/delStock')}", {id: id}, function (data) {
+                if (data.code == 1) {
+                    layer.msg(data.msg, {icon: 1, time: 1500, shade: .3, shadeClose: true}, function () {
+                        window.location.reload();
+                    });
+                } else {
+                    layer.msg(data.msg, {icon: 2, time: 1500, shade: .3, shadeClose: true});
+                }
+            });
+        }
+        return false;
+    }, null);
+}
+</script>
+{/block}

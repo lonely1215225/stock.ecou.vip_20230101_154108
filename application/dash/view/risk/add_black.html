@@ -1,0 +1,71 @@
+{extend name="base/pop_layout"/}
+
+{block name="main"}
+<form id="ruleForm" action="" class="form-horizontal">
+    <div class="content-wrapper">
+        <div class="box box-info">
+            <div class="box-header with-border">
+                <form id="searchInfo" action="{:url('add_black')}" method="get">
+                    <div class="col-sm-12 no-padding">
+                        <div class="search-box">
+                            <label class="text-right">股票代码</label>
+                            <div class="search-body"><input class="form-control" type="text" id="stockCode"
+                                                            name="stock_code" value=""></div>
+                        </div>
+                        <div class="search-box">
+                            <label class="text-right"></label>
+                            <div class="search-body"><input type="submit" class="btn btn-primary" value="查找"></div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="box-body">
+                <table class="table table-bordered table-middle table-center">
+                    <thead>
+                    <tr>
+                        <th>选择</th>
+                        <th>股票编号</th>
+                        <th>股票名称</th>
+                        <th>证券公司</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {foreach $codeInfo as $k=>$v}
+                    <tr>
+                        <td><input type="checkbox" name="ids" class="check-item" value="{$v.market}"
+                                   data-key="{$v.stock_code}" data-id="{$v.stock_id}"></td>
+                        <td>{$v.stock_code}</td>
+                        <td>{$v.stock_name}</td>
+                        <td>{$marketList[$v['market']]}</td>
+                    </tr>
+                    {/foreach}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</form>
+{/block}
+{block name="js"}
+<script type="text/javascript">
+    var callbackdata = function () {
+        if ($("input[type='checkbox']:checked").length == 0) {
+            layer.msg("请选择股票信息", {icon: 2, time: 1500, shade: .3, shadeClose: true});
+            return;
+        } else if ($("input[type='checkbox']:checked").length > 1) {
+            layer.msg("股票信息只能选择一个", {icon: 2, time: 1500, shade: .3, shadeClose: true});
+            return;
+        } else {
+            var checkmarket = $("input[type='checkbox']:checked").val();
+            var checkcode = $("input[type='checkbox']:checked").attr("data-key");
+            var checkid = $("input[type='checkbox']:checked").attr("data-id");
+            var data = {
+                checkmarket: checkmarket,
+                checkcode: checkcode,
+                checkid: checkid,
+            };
+            return data;
+        }
+    }
+</script>
+{/block}

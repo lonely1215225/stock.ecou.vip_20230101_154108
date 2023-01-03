@@ -1,0 +1,260 @@
+{extend name="base/layout"/}
+
+{block name="main"}
+<style>
+    .buy {
+        color: #f66;
+    }
+
+    .buy a {
+        color: #f66;
+        border-bottom: 1px dotted #f66;
+    }
+
+    .sell {
+        color: #0384ec;
+    }
+
+    .sell a {
+        color: #0384ec;
+        border-bottom: 1px dotted #0384ec;
+    }
+
+    .tj {
+        background-color: #ecf0f5;
+        font-weight: bold;
+    }
+</style>
+<link rel="stylesheet" href="__DASH__/lib/bootstrap-datetimepicker/css/bootstrap-datetimepicker.css">
+<script src="__DASH__/lib/bootstrap-datetimepicker/js/bootstrap-datetimepicker.js"></script>
+<script src="__DASH__/lib/tinyselect/tinyselect.min.js"></script>
+<link rel="stylesheet" type="text/css" href="__DASH__/lib/tinyselect/tinyselect.min.css"/>
+<div class="content-wrapper">
+    <section class="content-header">
+        <h1>条件单列表</h1>
+        <ol class="breadcrumb">
+            <li><a href="{:url('index/index')}"><i class="fa fa-home"></i> 首页</a></li>
+            <li><a href="#">订单管理</a></li>
+            <li class="active">条件单列表</li>
+        </ol>
+    </section>
+    <section class="content">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="box box-info">
+                    <div class="box-header with-border">
+                        <form id="searchInfo" action="{:url('condition')}" method="get" autocomplete="off">
+                            <div class="col-sm-12 no-padding">
+                                <div class="search-box">
+                                    <label class="text-right">股票代码</label>
+                                    <div class="search-body">
+                                        <input class="form-control" id="stockCode" name="stock_code" type="text"
+                                               value="{$stock_code?:''}">
+                                    </div>
+                                </div>
+                                <div class="search-box">
+                                    <label class="text-right">手机号</label>
+                                    <div class="search-body">
+                                        <input class="form-control" type="text" name="mobile" id="mobile"
+                                               value="{$mobile?:''}">
+                                    </div>
+                                </div>
+                                <div class="search-box">
+                                    <label class="text-right">交易日</label>
+                                    <div class="search-body">
+                                        <input type="text" name="trading_date" id="tradingDate"
+                                               value="{$trading_date?:''}" class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-12 no-padding">
+                                <div class="search-box">
+                                    <label class="text-right">方向</label>
+                                    <div class="search-body">
+                                        <select class="form-control" name="direction" id="direction">
+                                            <option value="">请选择</option>
+                                            {foreach $directionList as $k=>$v}
+                                            <option value="{$k}" {:isset($direction) && $k==$direction?'selected':''}>
+                                                {$v}
+                                            </option>
+                                            {/foreach}
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="search-box">
+                                    <label class="text-right">持仓编号</label>
+                                    <div class="search-body">
+                                        <input class="form-control" name="order_position_id" id="orderPositionId"
+                                               type="text" value="{$order_position_id?:''}">
+                                    </div>
+                                </div>
+                                <div class="search-box">
+                                    <label class="text-right">状态</label>
+                                    <div class="search-body">
+                                        <select class="form-control" name="state" id="state">
+                                            <option value="">请选择</option>
+                                            {foreach $stateList as $k=>$v}
+                                            <option value="{$k}" {:isset($state) && $k==$state?'selected':''}>
+                                                {$v}
+                                            </option>
+                                            {/foreach}
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-12 no-padding">
+                                <div class="search-box">
+                                    <label class="text-right">代理商</label>
+                                    <div class="search-body">
+                                        <select class="form-control" id="agentId" name="agent_id" onchange="showBroker(this.value);">
+                                            <option value="">请选择</option>
+                                            {foreach $agentList as $k=>$v}
+                                            <option value="{$k}" {:isset($agent_id) && $k==$agent_id?'selected':''}>{$v}</option>
+                                            {/foreach}
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="search-box">
+                                    <label class="text-right">经纪人</label>
+                                    <div class="search-body"id="brokerInfo">
+                                        <select id="brokerId" name="broker_id" class="form-control" >
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="search-box">
+                                    <label class="text-right">排除代理商</label>
+                                    <div class="search-body">
+                                        <select id="noAgentId" name="no_agent_id[]" multiple="multiple">
+                                            {foreach $agentList as $k=>$v}
+                                            <option value="{$k}" {:$no_agent_id && in_array($k,$no_agent_id)?'selected':''}>{$v}</option>
+                                            {/foreach}
+                                        </select>
+                                    </div>
+                                    <input type="hidden" name="submit_flag" id="submitFlag" value="2">
+                                </div>
+                                <div class="search-box">
+                                    <label class="text-right"></label>
+                                    <div class="search-body">
+                                        <input type="submit" class="btn btn-primary" value="查找">
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="box-body no-padding">
+                        <table class="table table-bordered table-middle table-center">
+                            <thead>
+                            <tr>
+                                <th>用户信息</th>
+                                <th>股票信息</th>
+                                <th>委托方向</th>
+                                <th>持仓编号</th>
+                                <th>状态</th>
+                                <th>触发条件</th>
+                                <th>委托价</th>
+                                <th>委托单编号</th>
+                                <th>委托数量</th>
+                                <th>创建时间</th>
+                                <th>触发时间</th>
+                                <th>备注</th>
+                            </tr>
+                            </thead>
+                            {foreach $list['list'] as $k=>$v}
+                            <tr>
+                                <td>
+                                    <a href="{:url('user/index', ['mobile' => $v.mobile])}" target="_blank" style="cursor: pointer" title="点击查看用户详情">
+                                        {$v.real_name}<br>{$v.mobile}
+                                    </a>
+                                </td>
+                                <td>
+                                    {$v.market}{$v.stock_code}
+                                    <br>
+                                    {$v.stock_code?$list['stockInfo'][$v['market'].$v['stock_code']]['stock_name']:''}
+                                </td>
+                                <td {$v.direction=='buy'?"class='buy'":"class='sell'"}>{$v.direction?$directionList[$v.direction]:''}</td>
+                                <td>{$v.order_position_id?:''}</td>
+                                <td {$v.state=='ing'?"class='text-green'":""}>
+                                    {$v.state?$stateList[$v.state]:''}
+                                </td>
+                                <td>现价 {$v.trigger_compare=='egt'?'>=':'<='} {$v.trigger_price}</td>
+                                <td>{$v.price!=0?$v.price:''}
+                                    {if $v.price_type=='market_price'}
+                                    {$priceType[$v.price_type]}
+                                    {/if}
+                                </td>
+                                <td>{$v.order_id?:''}</td>
+                                <td>{$v.volume}</td>
+                                <td>{$v.create_time}</td>
+                                <td>{$v.trigger_time}</td>
+                                <td>{$v.remark}</td>
+                            </tr>
+                            {/foreach}
+                        </table>
+                    </div>
+
+                    <div class="box-footer">
+                        <div class="col-sm-12 no-padding">{:$list['list']->render()}</div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+</div>
+{/block}
+{block name="js"}
+<script>
+    tinyselect('#noAgentId',{
+        result: {
+            style: {
+                height: '34px',
+                border: '1px solid #ccc'
+            }
+        }
+    });
+    $(function () {
+        $('#tradingDate').datetimepicker({
+            format: 'yyyy-mm-dd',//显示格式
+            minView: "month",//设置只显示到月份
+            initialDate: new Date(),
+            autoclose: true,//选中自动关闭
+            todayBtn: true,//显示今日按钮
+        });
+    })
+    $(function(){
+        var agentId  = "{:$agent_id}";
+        var brokerId = "{:$broker_id}";
+        if (agentId) {
+            $.post("{:url('stock/orgFilter/broker')}", {agent_id:agentId,brokerId:brokerId}, function(data){
+                if(data.code == 1){
+                    var str = "<select id=\"brokerId\" name=\"broker_id\" class=\"form-control\"><option value=''>请选择</option>";
+                    $.each(data.data, function (i, el) {
+                        if(i == brokerId){
+                            str +="<option value='"+i+"' selected>"+el+"</option>";
+                        }else{
+                            str +="<option value='"+i+"'>"+el+"</option>";
+                        }
+                    });
+                    str +="</select>";
+                    $("#brokerInfo").html(str);
+                }
+            });
+        }
+    });
+    function showBroker(v) {
+        var brokerId=0;
+        $.post("{:url('stock/orgFilter/broker')}", {agent_id:v,brokerId:brokerId}, function(data){
+            if(data.code == 1){
+                $("#brokerInfo").empty();
+                var str = "<select id=\"brokerId\" name=\"broker_id\" class=\"form-control\"><option value=''>请选择</option>";
+                $.each(data.data, function (i, el) {
+                    str +="<option value='"+i+"'>"+el+"</option>";
+                });
+                str +="</select>";
+                $("#brokerInfo").html(str);
+            }
+        });
+    }
+</script>
+{/block}

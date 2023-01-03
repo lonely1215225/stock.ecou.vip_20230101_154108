@@ -1,0 +1,96 @@
+{extend name="base/layout"/}
+
+{block name="main"}
+<style>
+.tj{
+    background-color: #ecf0f5;
+    font-weight:bold;
+}
+</style>
+<div class="content-wrapper">
+    <section class="content-header">
+        <h1>支付方式</h1>
+        <ol class="breadcrumb">
+            <li><a href="{:url('index/index')}"><i class="fa fa-home"></i> 首页</a></li>
+            <li><a href="#">系统设置</a></li>
+            <li class="active">支付方式</li>
+        </ol>
+    </section>
+    <section class="content">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="box box-info">
+                    <div class="box-body no-padding">
+                        <table class="table table-bordered table-middle table-center">
+                            <thead>
+                            <tr>
+                                <th>支付公司名称</th>
+                                <th>是否开启</th>
+                                <th>支付通道</th>
+                                <th>转入账号</th>
+                                <th>二维码</th>
+                                <th>操作</th>
+                            </tr>
+                            </thead>
+                            {if isset($list)}
+                            {foreach $list as $k=>$nl}
+                            <tr>
+                                <td>{$nl.name}</td>
+                                <td>
+                                    {$nl.is_open?'是':'否'}
+                                    <br>
+                                    <a href="#" onclick="isOpen('{$nl.id}');" title="编辑是否开启">编辑</a>
+                                </td>
+                                <td>{$payment_way[$nl['pay_channel']]}</td>
+                                <td>
+                                    {$nl.to_name}
+                                    <br>
+                                    {$nl.to_org_name}
+                                    <br>
+                                    {$nl.to_branch}
+                                    <br>
+                                    {$nl.to_account}
+                                </td>
+                                <td><img layer-src="{$nl.to_qrcode}" src="{$nl.to_qrcode}" height="70"></td>
+                                <td>
+                                    <a class="btn btn-sm btn-primary mb5" href="{:url('settings/edit_payment_way', ['id' => $nl.id])}">编辑</a>
+                                </td>
+                            </tr>
+                            {/foreach}
+                            {/if}
+                        </table>
+                    </div>
+
+                    <div class="box-footer">
+                        <div class="col-sm-12 no-padding">{:$list->render()}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+{/block}
+{block name="js"}
+<script>
+function isOpen(v) {
+    layer.confirm('确定要更改开启状态吗？', {
+        btn: ['确定','取消'] //按钮
+    }, function(){
+        if(v == "") {
+            layer.msg("ID不能为空", {icon:2, time:1500, shade:.3, shadeClose:true});
+        } else {
+            $.post("{:url('stock/payCompany/isOpen')}", {id:v}, function(data){
+                if(data.code == 1){
+                    layer.msg(data.msg, {icon:1, time:1500, shade:.3, shadeClose:true}, function(){
+                        window.location.href = "{:url('payment_way')}";
+                    });
+                } else {
+                    layer.msg(data.msg, {icon:2, time:1500, shade:.3, shadeClose:true});
+                }
+            });
+        }
+        return false;
+    }, null);
+}
+</script>
+{/block}

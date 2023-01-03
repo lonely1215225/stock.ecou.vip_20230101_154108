@@ -1,0 +1,776 @@
+---------------------------------------------------------------
+
+[2022-10-13T23:38:54+08:00] 175.6.99.94 GET stock.ecou.vip/config
+[运行时间：0.043923s] [吞吐率：22.77req/s] [内存消耗：2,270.30kb] [文件加载：127]
+[ info ] [ LANG ] /www/wwwroot/stock.ecou.vip/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'config',
+  'route' => 'index/index/config',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+    'complete_match' => true,
+    'cross_domain' => true,
+    'header' => 
+    array (
+      'Access-Control-Allow-Credentials' => 'true',
+      'Access-Control-Allow-Methods' => 'GET, POST, PATCH, PUT, DELETE',
+      'Access-Control-Allow-Headers' => 'Authorization, Content-Type, If-Match, If-Modified-Since, If-None-Match, If-Unmodified-Since, X-Requested-With',
+      'Access-Control-Allow-Origin' => '*',
+    ),
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'https://45.132.239.94/',
+  'sec-fetch-dest' => 'empty',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-site' => 'cross-site',
+  'origin' => 'https://45.132.239.94',
+  'accept' => '*/*',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.1 (KHTML, like Gecko) Chrome/21.0.1180.71 Safari/537.1 LBBROWSER',
+  'sec-ch-ua-mobile' => '?0',
+  'sec-ch-ua' => '',
+  'host' => 'stock.ecou.vip',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+---------------------------------------------------------------
+
+[2022-10-13T23:38:54+08:00] 175.6.99.94 GET stock.ecou.vip/slide/show
+[运行时间：0.096464s] [吞吐率：10.37req/s] [内存消耗：3,353.31kb] [文件加载：139]
+[ info ] [ LANG ] /www/wwwroot/stock.ecou.vip/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'slide/show',
+  'route' => 'index/index/slideshow',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+    'complete_match' => true,
+    'cross_domain' => true,
+    'header' => 
+    array (
+      'Access-Control-Allow-Credentials' => 'true',
+      'Access-Control-Allow-Methods' => 'GET, POST, PATCH, PUT, DELETE',
+      'Access-Control-Allow-Headers' => 'Authorization, Content-Type, If-Match, If-Modified-Since, If-None-Match, If-Unmodified-Since, X-Requested-With',
+      'Access-Control-Allow-Origin' => '*',
+    ),
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'https://45.132.239.94/',
+  'sec-fetch-dest' => 'empty',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-site' => 'cross-site',
+  'origin' => 'https://45.132.239.94',
+  'accept' => '*/*',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.1 (KHTML, like Gecko) Chrome/21.0.1180.71 Safari/537.1 LBBROWSER',
+  'sec-ch-ua-mobile' => '?0',
+  'sec-ch-ua' => '',
+  'host' => 'stock.ecou.vip',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT pgsql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.004126s ] pgsql:dbname=postgres;host=127.0.0.1;port=5432
+[ sql ] [ SQL ] select fields_name as "field",fields_type as "type",fields_not_null as "null",fields_key_name as "key",fields_default as "default",fields_default as "extra" from table_msg('md_slide'); [ RunTime:0.027783s ]
+[ sql ] [ SQL ] SELECT id,title,litimg,outlink FROM md_slide ORDER BY create_time DESC,id DESC [ RunTime:0.001375s ]
+---------------------------------------------------------------
+
+[2022-10-13T23:38:54+08:00] 175.6.99.94 GET stock.ecou.vip/article/notice
+[运行时间：0.122078s] [吞吐率：8.19req/s] [内存消耗：3,408.99kb] [文件加载：142]
+[ info ] [ LANG ] /www/wwwroot/stock.ecou.vip/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'article/notice',
+  'route' => 'index/news/notice',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+    'complete_match' => true,
+    'cross_domain' => true,
+    'header' => 
+    array (
+      'Access-Control-Allow-Credentials' => 'true',
+      'Access-Control-Allow-Methods' => 'GET, POST, PATCH, PUT, DELETE',
+      'Access-Control-Allow-Headers' => 'Authorization, Content-Type, If-Match, If-Modified-Since, If-None-Match, If-Unmodified-Since, X-Requested-With',
+      'Access-Control-Allow-Origin' => '*',
+    ),
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'https://45.132.239.94/',
+  'sec-fetch-dest' => 'empty',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-site' => 'cross-site',
+  'origin' => 'https://45.132.239.94',
+  'accept' => '*/*',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.1 (KHTML, like Gecko) Chrome/21.0.1180.71 Safari/537.1 LBBROWSER',
+  'sec-ch-ua-mobile' => '?0',
+  'sec-ch-ua' => '',
+  'host' => 'stock.ecou.vip',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT pgsql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.004123s ] pgsql:dbname=postgres;host=127.0.0.1;port=5432
+[ sql ] [ SQL ] select fields_name as "field",fields_type as "type",fields_not_null as "null",fields_key_name as "key",fields_default as "default",fields_default as "extra" from table_msg('md_notice'); [ RunTime:0.051685s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM md_notice WHERE  state = 1 [ RunTime:0.001381s ]
+[ sql ] [ SQL ] SELECT * FROM md_notice WHERE  state = 1 ORDER BY create_time DESC,id DESC LIMIT 15 OFFSET 0 [ RunTime:0.001059s ]
+---------------------------------------------------------------
+
+[2022-10-13T23:46:09+08:00] 42.248.77.51 GET stock.ecou.vip/config
+[运行时间：0.041400s] [吞吐率：24.15req/s] [内存消耗：2,270.36kb] [文件加载：127]
+[ info ] [ LANG ] /www/wwwroot/stock.ecou.vip/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'config',
+  'route' => 'index/index/config',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+    'complete_match' => true,
+    'cross_domain' => true,
+    'header' => 
+    array (
+      'Access-Control-Allow-Credentials' => 'true',
+      'Access-Control-Allow-Methods' => 'GET, POST, PATCH, PUT, DELETE',
+      'Access-Control-Allow-Headers' => 'Authorization, Content-Type, If-Match, If-Modified-Since, If-None-Match, If-Unmodified-Since, X-Requested-With',
+      'Access-Control-Allow-Origin' => '*',
+    ),
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'https://45.132.239.92/',
+  'sec-fetch-dest' => 'empty',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-site' => 'cross-site',
+  'origin' => 'https://45.132.239.92',
+  'accept' => '*/*',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'user-agent' => 'Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; QQDownload 732; .NET4.0C; .NET4.0E; LBBROWSER)',
+  'sec-ch-ua-mobile' => '?0',
+  'sec-ch-ua' => '',
+  'host' => 'stock.ecou.vip',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+---------------------------------------------------------------
+
+[2022-10-13T23:46:09+08:00] 42.248.77.51 GET stock.ecou.vip/slide/show
+[运行时间：0.095018s] [吞吐率：10.52req/s] [内存消耗：3,353.31kb] [文件加载：139]
+[ info ] [ LANG ] /www/wwwroot/stock.ecou.vip/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'slide/show',
+  'route' => 'index/index/slideshow',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+    'complete_match' => true,
+    'cross_domain' => true,
+    'header' => 
+    array (
+      'Access-Control-Allow-Credentials' => 'true',
+      'Access-Control-Allow-Methods' => 'GET, POST, PATCH, PUT, DELETE',
+      'Access-Control-Allow-Headers' => 'Authorization, Content-Type, If-Match, If-Modified-Since, If-None-Match, If-Unmodified-Since, X-Requested-With',
+      'Access-Control-Allow-Origin' => '*',
+    ),
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'https://45.132.239.92/',
+  'sec-fetch-dest' => 'empty',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-site' => 'cross-site',
+  'origin' => 'https://45.132.239.92',
+  'accept' => '*/*',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'user-agent' => 'Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; QQDownload 732; .NET4.0C; .NET4.0E; LBBROWSER)',
+  'sec-ch-ua-mobile' => '?0',
+  'sec-ch-ua' => '',
+  'host' => 'stock.ecou.vip',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT pgsql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.004214s ] pgsql:dbname=postgres;host=127.0.0.1;port=5432
+[ sql ] [ SQL ] select fields_name as "field",fields_type as "type",fields_not_null as "null",fields_key_name as "key",fields_default as "default",fields_default as "extra" from table_msg('md_slide'); [ RunTime:0.027342s ]
+[ sql ] [ SQL ] SELECT id,title,litimg,outlink FROM md_slide ORDER BY create_time DESC,id DESC [ RunTime:0.001307s ]
+---------------------------------------------------------------
+
+[2022-10-13T23:46:09+08:00] 42.248.77.51 GET stock.ecou.vip/article/notice
+[运行时间：0.120663s] [吞吐率：8.29req/s] [内存消耗：3,408.99kb] [文件加载：142]
+[ info ] [ LANG ] /www/wwwroot/stock.ecou.vip/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'article/notice',
+  'route' => 'index/news/notice',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+    'complete_match' => true,
+    'cross_domain' => true,
+    'header' => 
+    array (
+      'Access-Control-Allow-Credentials' => 'true',
+      'Access-Control-Allow-Methods' => 'GET, POST, PATCH, PUT, DELETE',
+      'Access-Control-Allow-Headers' => 'Authorization, Content-Type, If-Match, If-Modified-Since, If-None-Match, If-Unmodified-Since, X-Requested-With',
+      'Access-Control-Allow-Origin' => '*',
+    ),
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'https://45.132.239.92/',
+  'sec-fetch-dest' => 'empty',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-site' => 'cross-site',
+  'origin' => 'https://45.132.239.92',
+  'accept' => '*/*',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'user-agent' => 'Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; QQDownload 732; .NET4.0C; .NET4.0E; LBBROWSER)',
+  'sec-ch-ua-mobile' => '?0',
+  'sec-ch-ua' => '',
+  'host' => 'stock.ecou.vip',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT pgsql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.004033s ] pgsql:dbname=postgres;host=127.0.0.1;port=5432
+[ sql ] [ SQL ] select fields_name as "field",fields_type as "type",fields_not_null as "null",fields_key_name as "key",fields_default as "default",fields_default as "extra" from table_msg('md_notice'); [ RunTime:0.048777s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM md_notice WHERE  state = 1 [ RunTime:0.001289s ]
+[ sql ] [ SQL ] SELECT * FROM md_notice WHERE  state = 1 ORDER BY create_time DESC,id DESC LIMIT 15 OFFSET 0 [ RunTime:0.001086s ]
+---------------------------------------------------------------
+
+[2022-10-13T23:46:10+08:00] 42.248.77.51 GET stock.ecou.vip/config
+[运行时间：0.044251s] [吞吐率：22.60req/s] [内存消耗：2,270.36kb] [文件加载：127]
+[ info ] [ LANG ] /www/wwwroot/stock.ecou.vip/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'config',
+  'route' => 'index/index/config',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+    'complete_match' => true,
+    'cross_domain' => true,
+    'header' => 
+    array (
+      'Access-Control-Allow-Credentials' => 'true',
+      'Access-Control-Allow-Methods' => 'GET, POST, PATCH, PUT, DELETE',
+      'Access-Control-Allow-Headers' => 'Authorization, Content-Type, If-Match, If-Modified-Since, If-None-Match, If-Unmodified-Since, X-Requested-With',
+      'Access-Control-Allow-Origin' => '*',
+    ),
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'https://45.132.239.92/',
+  'sec-fetch-dest' => 'empty',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-site' => 'cross-site',
+  'origin' => 'https://45.132.239.92',
+  'accept' => '*/*',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/536.11 (KHTML, like Gecko) Chrome/20.0.1132.11 TaoBrowser/2.0 Safari/536.11',
+  'sec-ch-ua-mobile' => '?0',
+  'sec-ch-ua' => '',
+  'host' => 'stock.ecou.vip',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+---------------------------------------------------------------
+
+[2022-10-13T23:46:10+08:00] 42.248.77.51 GET stock.ecou.vip/slide/show
+[运行时间：0.097201s] [吞吐率：10.29req/s] [内存消耗：3,353.31kb] [文件加载：139]
+[ info ] [ LANG ] /www/wwwroot/stock.ecou.vip/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'slide/show',
+  'route' => 'index/index/slideshow',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+    'complete_match' => true,
+    'cross_domain' => true,
+    'header' => 
+    array (
+      'Access-Control-Allow-Credentials' => 'true',
+      'Access-Control-Allow-Methods' => 'GET, POST, PATCH, PUT, DELETE',
+      'Access-Control-Allow-Headers' => 'Authorization, Content-Type, If-Match, If-Modified-Since, If-None-Match, If-Unmodified-Since, X-Requested-With',
+      'Access-Control-Allow-Origin' => '*',
+    ),
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'https://45.132.239.92/',
+  'sec-fetch-dest' => 'empty',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-site' => 'cross-site',
+  'origin' => 'https://45.132.239.92',
+  'accept' => '*/*',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/536.11 (KHTML, like Gecko) Chrome/20.0.1132.11 TaoBrowser/2.0 Safari/536.11',
+  'sec-ch-ua-mobile' => '?0',
+  'sec-ch-ua' => '',
+  'host' => 'stock.ecou.vip',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT pgsql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.004202s ] pgsql:dbname=postgres;host=127.0.0.1;port=5432
+[ sql ] [ SQL ] select fields_name as "field",fields_type as "type",fields_not_null as "null",fields_key_name as "key",fields_default as "default",fields_default as "extra" from table_msg('md_slide'); [ RunTime:0.028773s ]
+[ sql ] [ SQL ] SELECT id,title,litimg,outlink FROM md_slide ORDER BY create_time DESC,id DESC [ RunTime:0.001369s ]
+---------------------------------------------------------------
+
+[2022-10-13T23:46:10+08:00] 42.248.77.51 GET stock.ecou.vip/article/notice
+[运行时间：0.121226s] [吞吐率：8.25req/s] [内存消耗：3,408.99kb] [文件加载：142]
+[ info ] [ LANG ] /www/wwwroot/stock.ecou.vip/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'article/notice',
+  'route' => 'index/news/notice',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+    'complete_match' => true,
+    'cross_domain' => true,
+    'header' => 
+    array (
+      'Access-Control-Allow-Credentials' => 'true',
+      'Access-Control-Allow-Methods' => 'GET, POST, PATCH, PUT, DELETE',
+      'Access-Control-Allow-Headers' => 'Authorization, Content-Type, If-Match, If-Modified-Since, If-None-Match, If-Unmodified-Since, X-Requested-With',
+      'Access-Control-Allow-Origin' => '*',
+    ),
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'https://45.132.239.92/',
+  'sec-fetch-dest' => 'empty',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-site' => 'cross-site',
+  'origin' => 'https://45.132.239.92',
+  'accept' => '*/*',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/536.11 (KHTML, like Gecko) Chrome/20.0.1132.11 TaoBrowser/2.0 Safari/536.11',
+  'sec-ch-ua-mobile' => '?0',
+  'sec-ch-ua' => '',
+  'host' => 'stock.ecou.vip',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT pgsql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003747s ] pgsql:dbname=postgres;host=127.0.0.1;port=5432
+[ sql ] [ SQL ] select fields_name as "field",fields_type as "type",fields_not_null as "null",fields_key_name as "key",fields_default as "default",fields_default as "extra" from table_msg('md_notice'); [ RunTime:0.051431s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM md_notice WHERE  state = 1 [ RunTime:0.001294s ]
+[ sql ] [ SQL ] SELECT * FROM md_notice WHERE  state = 1 ORDER BY create_time DESC,id DESC LIMIT 15 OFFSET 0 [ RunTime:0.001066s ]
+---------------------------------------------------------------
+
+[2022-10-13T23:55:12+08:00] 107.148.13.159 GET stock.ecou.vip/account/myAccount?token=f6a0d3563b61aeab6dbb0966420d8d49&page=1
+[运行时间：0.155461s] [吞吐率：6.43req/s] [内存消耗：3,400.06kb] [文件加载：139]
+[ info ] [ LANG ] /www/wwwroot/stock.ecou.vip/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'account/myAccount',
+  'route' => 'index/account/myAccount',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+    'complete_match' => true,
+    'cross_domain' => true,
+    'header' => 
+    array (
+      'Access-Control-Allow-Credentials' => 'true',
+      'Access-Control-Allow-Methods' => 'GET, POST, PATCH, PUT, DELETE',
+      'Access-Control-Allow-Headers' => 'Authorization, Content-Type, If-Match, If-Modified-Since, If-None-Match, If-Unmodified-Since, X-Requested-With',
+      'Access-Control-Allow-Origin' => '*',
+    ),
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'https://app.ecou.vip/',
+  'sec-fetch-dest' => 'empty',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-site' => 'same-site',
+  'origin' => 'https://app.ecou.vip',
+  'accept' => '*/*',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 10_3_1 like Mac OS X) AppleWebKit/603.1.30 (KHTML, like Gecko) Version/10.0 Mobile/14E304 Safari/602.1',
+  'host' => 'stock.ecou.vip',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'token' => 'f6a0d3563b61aeab6dbb0966420d8d49',
+  'page' => '1',
+)
+[ info ] [ DB ] INIT pgsql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.004287s ] pgsql:dbname=postgres;host=127.0.0.1;port=5432
+[ sql ] [ SQL ] select fields_name as "field",fields_type as "type",fields_not_null as "null",fields_key_name as "key",fields_default as "default",fields_default as "extra" from table_msg('md_user_account'); [ RunTime:0.082603s ]
+[ sql ] [ SQL ] SELECT wallet_balance FROM md_user_account WHERE  user_id = 614 LIMIT 1 [ RunTime:0.001256s ]
+---------------------------------------------------------------
+
+[2022-10-13T23:55:12+08:00] 107.148.13.159 GET stock.ecou.vip/bank?token=f6a0d3563b61aeab6dbb0966420d8d49
+[运行时间：0.144375s] [吞吐率：6.93req/s] [内存消耗：3,352.20kb] [文件加载：139]
+[ info ] [ LANG ] /www/wwwroot/stock.ecou.vip/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'bank',
+  'route' => 'index/bank_card/read',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+    'complete_match' => true,
+    'cross_domain' => true,
+    'header' => 
+    array (
+      'Access-Control-Allow-Credentials' => 'true',
+      'Access-Control-Allow-Methods' => 'GET, POST, PATCH, PUT, DELETE',
+      'Access-Control-Allow-Headers' => 'Authorization, Content-Type, If-Match, If-Modified-Since, If-None-Match, If-Unmodified-Since, X-Requested-With',
+      'Access-Control-Allow-Origin' => '*',
+    ),
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'https://app.ecou.vip/',
+  'sec-fetch-dest' => 'empty',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-site' => 'same-site',
+  'origin' => 'https://app.ecou.vip',
+  'accept' => '*/*',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 10_3_1 like Mac OS X) AppleWebKit/603.1.30 (KHTML, like Gecko) Version/10.0 Mobile/14E304 Safari/602.1',
+  'host' => 'stock.ecou.vip',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'token' => 'f6a0d3563b61aeab6dbb0966420d8d49',
+)
+[ info ] [ DB ] INIT pgsql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.004320s ] pgsql:dbname=postgres;host=127.0.0.1;port=5432
+[ sql ] [ SQL ] select fields_name as "field",fields_type as "type",fields_not_null as "null",fields_key_name as "key",fields_default as "default",fields_default as "extra" from table_msg('md_user_bank_card'); [ RunTime:0.072645s ]
+[ sql ] [ SQL ] SELECT bank_number,bank_name,state FROM md_user_bank_card WHERE  user_id = 614 LIMIT 1 [ RunTime:0.001269s ]
+---------------------------------------------------------------
+
+[2022-10-13T23:55:12+08:00] 107.148.13.159 GET stock.ecou.vip/income?token=f6a0d3563b61aeab6dbb0966420d8d49&page=1
+[运行时间：0.130308s] [吞吐率：7.67req/s] [内存消耗：3,443.27kb] [文件加载：140]
+[ info ] [ LANG ] /www/wwwroot/stock.ecou.vip/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'income',
+  'route' => 'index/My/yuebao',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+    'complete_match' => true,
+    'cross_domain' => true,
+    'header' => 
+    array (
+      'Access-Control-Allow-Credentials' => 'true',
+      'Access-Control-Allow-Methods' => 'GET, POST, PATCH, PUT, DELETE',
+      'Access-Control-Allow-Headers' => 'Authorization, Content-Type, If-Match, If-Modified-Since, If-None-Match, If-Unmodified-Since, X-Requested-With',
+      'Access-Control-Allow-Origin' => '*',
+    ),
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'https://app.ecou.vip/',
+  'sec-fetch-dest' => 'empty',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-site' => 'same-site',
+  'origin' => 'https://app.ecou.vip',
+  'accept' => '*/*',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 10_3_1 like Mac OS X) AppleWebKit/603.1.30 (KHTML, like Gecko) Version/10.0 Mobile/14E304 Safari/602.1',
+  'host' => 'stock.ecou.vip',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'token' => 'f6a0d3563b61aeab6dbb0966420d8d49',
+  'page' => '1',
+)
+[ info ] [ DB ] INIT pgsql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.004228s ] pgsql:dbname=postgres;host=127.0.0.1;port=5432
+[ sql ] [ SQL ] select fields_name as "field",fields_type as "type",fields_not_null as "null",fields_key_name as "key",fields_default as "default",fields_default as "extra" from table_msg('md_yuebao'); [ RunTime:0.056367s ]
+[ sql ] [ SQL ] SELECT a.income,a.income_time,a.base_income,b.total_yuebao FROM md_yuebao a INNER JOIN md_user_account b ON a.user_id=b.user_id WHERE  a.user_id = '614' ORDER BY a.income_time DESC,a.id DESC LIMIT 1 [ RunTime:0.003871s ]
+---------------------------------------------------------------
+
+[2022-10-13T23:55:12+08:00] 107.148.13.159 GET stock.ecou.vip/config
+[运行时间：0.045885s] [吞吐率：21.79req/s] [内存消耗：2,270.27kb] [文件加载：127]
+[ info ] [ LANG ] /www/wwwroot/stock.ecou.vip/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'config',
+  'route' => 'index/index/config',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+    'complete_match' => true,
+    'cross_domain' => true,
+    'header' => 
+    array (
+      'Access-Control-Allow-Credentials' => 'true',
+      'Access-Control-Allow-Methods' => 'GET, POST, PATCH, PUT, DELETE',
+      'Access-Control-Allow-Headers' => 'Authorization, Content-Type, If-Match, If-Modified-Since, If-None-Match, If-Unmodified-Since, X-Requested-With',
+      'Access-Control-Allow-Origin' => '*',
+    ),
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'https://app.ecou.vip/',
+  'sec-fetch-dest' => 'empty',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-site' => 'same-site',
+  'origin' => 'https://app.ecou.vip',
+  'accept' => '*/*',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 10_3_1 like Mac OS X) AppleWebKit/603.1.30 (KHTML, like Gecko) Version/10.0 Mobile/14E304 Safari/602.1',
+  'host' => 'stock.ecou.vip',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+---------------------------------------------------------------
+
+[2022-10-13T23:56:11+08:00] 107.148.13.159 GET stock.ecou.vip/account/myAccount?token=f6a0d3563b61aeab6dbb0966420d8d49&page=1
+[运行时间：0.155392s] [吞吐率：6.44req/s] [内存消耗：3,400.06kb] [文件加载：139]
+[ info ] [ LANG ] /www/wwwroot/stock.ecou.vip/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'account/myAccount',
+  'route' => 'index/account/myAccount',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+    'complete_match' => true,
+    'cross_domain' => true,
+    'header' => 
+    array (
+      'Access-Control-Allow-Credentials' => 'true',
+      'Access-Control-Allow-Methods' => 'GET, POST, PATCH, PUT, DELETE',
+      'Access-Control-Allow-Headers' => 'Authorization, Content-Type, If-Match, If-Modified-Since, If-None-Match, If-Unmodified-Since, X-Requested-With',
+      'Access-Control-Allow-Origin' => '*',
+    ),
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'https://app.ecou.vip/',
+  'sec-fetch-dest' => 'empty',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-site' => 'same-site',
+  'origin' => 'https://app.ecou.vip',
+  'accept' => '*/*',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 10_3_1 like Mac OS X) AppleWebKit/603.1.30 (KHTML, like Gecko) Version/10.0 Mobile/14E304 Safari/602.1',
+  'host' => 'stock.ecou.vip',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'token' => 'f6a0d3563b61aeab6dbb0966420d8d49',
+  'page' => '1',
+)
+[ info ] [ DB ] INIT pgsql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.004284s ] pgsql:dbname=postgres;host=127.0.0.1;port=5432
+[ sql ] [ SQL ] select fields_name as "field",fields_type as "type",fields_not_null as "null",fields_key_name as "key",fields_default as "default",fields_default as "extra" from table_msg('md_user_account'); [ RunTime:0.083089s ]
+[ sql ] [ SQL ] SELECT wallet_balance FROM md_user_account WHERE  user_id = 614 LIMIT 1 [ RunTime:0.001280s ]
+---------------------------------------------------------------
+
+[2022-10-13T23:56:11+08:00] 107.148.13.159 GET stock.ecou.vip/bank?token=f6a0d3563b61aeab6dbb0966420d8d49
+[运行时间：0.146462s] [吞吐率：6.83req/s] [内存消耗：3,352.20kb] [文件加载：139]
+[ info ] [ LANG ] /www/wwwroot/stock.ecou.vip/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'bank',
+  'route' => 'index/bank_card/read',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+    'complete_match' => true,
+    'cross_domain' => true,
+    'header' => 
+    array (
+      'Access-Control-Allow-Credentials' => 'true',
+      'Access-Control-Allow-Methods' => 'GET, POST, PATCH, PUT, DELETE',
+      'Access-Control-Allow-Headers' => 'Authorization, Content-Type, If-Match, If-Modified-Since, If-None-Match, If-Unmodified-Since, X-Requested-With',
+      'Access-Control-Allow-Origin' => '*',
+    ),
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'https://app.ecou.vip/',
+  'sec-fetch-dest' => 'empty',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-site' => 'same-site',
+  'origin' => 'https://app.ecou.vip',
+  'accept' => '*/*',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 10_3_1 like Mac OS X) AppleWebKit/603.1.30 (KHTML, like Gecko) Version/10.0 Mobile/14E304 Safari/602.1',
+  'host' => 'stock.ecou.vip',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'token' => 'f6a0d3563b61aeab6dbb0966420d8d49',
+)
+[ info ] [ DB ] INIT pgsql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.004199s ] pgsql:dbname=postgres;host=127.0.0.1;port=5432
+[ sql ] [ SQL ] select fields_name as "field",fields_type as "type",fields_not_null as "null",fields_key_name as "key",fields_default as "default",fields_default as "extra" from table_msg('md_user_bank_card'); [ RunTime:0.073125s ]
+[ sql ] [ SQL ] SELECT bank_number,bank_name,state FROM md_user_bank_card WHERE  user_id = 614 LIMIT 1 [ RunTime:0.001321s ]
+---------------------------------------------------------------
+
+[2022-10-13T23:56:11+08:00] 107.148.13.159 GET stock.ecou.vip/income?token=f6a0d3563b61aeab6dbb0966420d8d49&page=1
+[运行时间：0.130531s] [吞吐率：7.66req/s] [内存消耗：3,443.27kb] [文件加载：140]
+[ info ] [ LANG ] /www/wwwroot/stock.ecou.vip/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'income',
+  'route' => 'index/My/yuebao',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+    'complete_match' => true,
+    'cross_domain' => true,
+    'header' => 
+    array (
+      'Access-Control-Allow-Credentials' => 'true',
+      'Access-Control-Allow-Methods' => 'GET, POST, PATCH, PUT, DELETE',
+      'Access-Control-Allow-Headers' => 'Authorization, Content-Type, If-Match, If-Modified-Since, If-None-Match, If-Unmodified-Since, X-Requested-With',
+      'Access-Control-Allow-Origin' => '*',
+    ),
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'https://app.ecou.vip/',
+  'sec-fetch-dest' => 'empty',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-site' => 'same-site',
+  'origin' => 'https://app.ecou.vip',
+  'accept' => '*/*',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 10_3_1 like Mac OS X) AppleWebKit/603.1.30 (KHTML, like Gecko) Version/10.0 Mobile/14E304 Safari/602.1',
+  'host' => 'stock.ecou.vip',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'token' => 'f6a0d3563b61aeab6dbb0966420d8d49',
+  'page' => '1',
+)
+[ info ] [ DB ] INIT pgsql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.004222s ] pgsql:dbname=postgres;host=127.0.0.1;port=5432
+[ sql ] [ SQL ] select fields_name as "field",fields_type as "type",fields_not_null as "null",fields_key_name as "key",fields_default as "default",fields_default as "extra" from table_msg('md_yuebao'); [ RunTime:0.056679s ]
+[ sql ] [ SQL ] SELECT a.income,a.income_time,a.base_income,b.total_yuebao FROM md_yuebao a INNER JOIN md_user_account b ON a.user_id=b.user_id WHERE  a.user_id = '614' ORDER BY a.income_time DESC,a.id DESC LIMIT 1 [ RunTime:0.003900s ]
+---------------------------------------------------------------
+
+[2022-10-13T23:56:11+08:00] 107.148.13.159 GET stock.ecou.vip/config
+[运行时间：0.043906s] [吞吐率：22.78req/s] [内存消耗：2,270.27kb] [文件加载：127]
+[ info ] [ LANG ] /www/wwwroot/stock.ecou.vip/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'config',
+  'route' => 'index/index/config',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+    'complete_match' => true,
+    'cross_domain' => true,
+    'header' => 
+    array (
+      'Access-Control-Allow-Credentials' => 'true',
+      'Access-Control-Allow-Methods' => 'GET, POST, PATCH, PUT, DELETE',
+      'Access-Control-Allow-Headers' => 'Authorization, Content-Type, If-Match, If-Modified-Since, If-None-Match, If-Unmodified-Since, X-Requested-With',
+      'Access-Control-Allow-Origin' => '*',
+    ),
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'https://app.ecou.vip/',
+  'sec-fetch-dest' => 'empty',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-site' => 'same-site',
+  'origin' => 'https://app.ecou.vip',
+  'accept' => '*/*',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 10_3_1 like Mac OS X) AppleWebKit/603.1.30 (KHTML, like Gecko) Version/10.0 Mobile/14E304 Safari/602.1',
+  'host' => 'stock.ecou.vip',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)

@@ -1,0 +1,218 @@
+{extend name="base/layout"/}
+
+{block name="main"}
+<style>
+.tj{
+    background-color: #ecf0f5;
+    font-weight:bold;
+}
+</style>
+<div class="content-wrapper">
+    <section class="content-header">
+        <h1>【{$username}】推广用户列表</h1>
+        <ol class="breadcrumb">
+            <li><a href="{:url('index/index')}"><i class="fa fa-home"></i> 首页</a></li>
+            <li><a href="{:url('user/index')}">用户管理</a></li>
+            <li class="active">推广用户列表</li>
+        </ol>
+    </section>
+    <section class="content">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="box box-info">
+                    <div class="box-header with-border">
+                        <form id="searchInfo" action="{:url('generalize_user_list')}" method="get">
+                            <div class="col-sm-12 no-padding">
+                                <div class="search-box">
+                                    <label class="text-right">手机号</label>
+                                    <div class="search-body"><input class="form-control" type="text" id="mobile" name="mobile" value="{:isset($mobile)?$mobile:''}"></div>
+                                </div>
+                                <div class="search-box">
+                                    <label class="text-right">代理商</label>
+                                    <div class="search-body">
+                                        <select class="form-control" id="agentId" name="agent_id" onchange="showBroker(this.value);">
+                                            <option value="">请选择</option>
+                                            {foreach $agentList as $k=>$v}
+                                            <option value="{$k}" {:isset($agent_id) && $k==$agent_id?'selected':''}>{$v}</option>
+                                            {/foreach}
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="search-box">
+                                    <label class="text-right">经纪人</label>
+                                    <div class="search-body"id="brokerInfo">
+                                        <select id="brokerId" name="broker_id" class="form-control" >
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="search-box">
+                                    <label class="text-right"></label>
+                                    <div class="search-body">
+                                        <input type="hidden" name="pid" value="{$pid}">
+                                        <input type="submit" class="btn btn-primary" value="查找">
+                                        <a href="#" class="btn btn-primary" onclick="exportExcel();" style="margin-left: 10px">导出excel</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <!--div class="box-body no-padding">
+                        <table class="table table-bordered table-middle">
+                            <tr>
+                                <td>
+                                    总推广用户数量:{$userTotal.userTotal?:''}&nbsp;&nbsp;&nbsp;&nbsp;
+                                    总策略金额:{$userTotal.totalAccount.totalstrategy?:''}&nbsp;&nbsp;&nbsp;&nbsp;
+                                    总钱包余额:{$userTotal.totalAccount.totalwallet?:''}&nbsp;&nbsp;&nbsp;&nbsp;
+                                    总累计保证金:{$userTotal.totalAccount.totaldeposit?:''}&nbsp;&nbsp;&nbsp;&nbsp;
+                                    总充值余额:{$userTotal.totalAccount.totalrecharge?:''}&nbsp;&nbsp;&nbsp;&nbsp;
+                                    总累计提现:{$successWithdrawMoney['money']?:''}
+                                </td>
+                            </tr>
+                        </table>
+                    </div-->
+                    <div class="box-body no-padding">
+                        <table class="table table-bordered table-middle table-center">
+                            <thead>
+                            <tr class="tj">
+                                <td>总计</td>
+                                <td></td>
+                                <td>{$userTotal.totalAccount.totalwallet?:0}</td>
+                                <td>{$userTotal.totalAccount.totalstrategy?:0}</td>
+                                <td>{$userTotal.totalAccount.frozen?:0}</td>
+                                <td>{$userTotal.totalSpal.totalspal?:0}</td>
+                                <td>{$userTotal.totalAccount.totalrecharge?:0}</td>
+                                <td>{$userTotal.successWithdraw.money?:0}</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            </thead>
+                            <tr>
+                                <th>推广用户ID</th>
+                                <th>推广用户信息</th>
+                                <th>账户资金</th>
+                                <th>策略金余额(含冻结)</th>
+                                <th>冻结资金</th>
+                                <th>平仓结算盈亏</th>
+                                <th>累计充值</th>
+                                <th>累计提现</th>
+                                <th>银行卡</th>
+                                <th>代理商/经纪人</th>
+                                <th>是否禁止买入</th>
+                                <th>操作</th>
+                            </tr>
+                            {if isset($userList['userList'])}
+                            {foreach $userList['userList'] as $k=>$nl}
+                                <tr>
+                                    <td>{$nl['id']}</td>
+                                    <td>{$nl.mobile}<br>{$nl.real_name?:''}</td>
+                                    <td>
+                                        <a  href="{:url('wallet_log', ['mobile' => $nl.mobile])}" target="_blank" title="点击打开推广用户钱包流水">
+                                            {$userList['userAccountList'][$nl['id']]['wallet_balance']?:''}
+                                            <br>
+                                            查看流水
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a  href="{:url('strategy_log', ['mobile' => $nl.mobile])}" target="_blank" title="点击打开推广用户策略流水">
+                                            {$userList['userAccountList'][$nl['id']]['strategy_balance']?:''}
+                                            <br>
+                                            查看流水
+                                        </a>
+                                    </td>
+                                    <td>{$userList['userAccountList'][$nl['id']]['frozen']?:''}</td>
+                                    <td>{$userList['spalList'][$nl['id']]?$userList['spalList'][$nl['id']]:0}</td>
+                                    <td>{$userList['userAccountList'][$nl['id']]['total_recharge']?:''}</td>
+                                    <td>
+                                        {$userList['totalWithdraw'][$nl['id']]?:0}
+                                    </td>
+                                    <td>{$nl.is_bound_bank_card?'已绑定':'未绑定'}</td>
+                                    <td>{$userList['agentInfo'][$nl['agent_id']]?:''}
+                                        <br>{$userList['brokerInfo'][$nl['broker_id']]?:''}
+                                    </td>
+                                    <td>
+                                        {$nl.is_deny_buy=='0'?'否':'是'}
+                                        <br>
+                                        <a href="#" onclick="saveDenyBuy('{$nl.id}');">编辑</a>
+                                    </td>
+                                    <td>
+                                        <a class="btn btn-sm btn-primary mb5" href="{:url('user_detail', ['id' => $nl.id])}">详情</a>
+                                    </td>
+                                </tr>
+                            {/foreach}
+                            {/if}
+                        </table>
+                    </div>
+
+                    <div class="box-footer">
+                        <div class="col-sm-12 no-padding">{:$userList['userList']->render()}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+{/block}
+{block name="js"}
+<script>
+$(function(){
+    var agentId  = "{:$agent_id}";
+    var brokerId = "{:$broker_id}";
+    if (agentId) {
+        $.post("{:url('stock/orgFilter/broker')}", {agent_id:agentId,brokerId:brokerId}, function(data){
+            if(data.code == 1){
+                var str = "<select id=\"brokerId\" name=\"broker_id\" class=\"form-control\"><option value=''>请选择</option>";
+                $.each(data.data, function (i, el) {
+                    if(i == brokerId){
+                        str +="<option value='"+i+"' selected>"+el+"</option>";
+                    }else{
+                        str +="<option value='"+i+"'>"+el+"</option>";
+                    }
+                });
+                str +="</select>";
+                $("#brokerInfo").html(str);
+            }
+        });
+    }
+});
+function showBroker(v) {
+    var brokerId=0;
+    $.post("{:url('stock/orgFilter/broker')}", {agent_id:v,brokerId:brokerId}, function(data){
+        if(data.code == 1){
+            $("#brokerInfo").empty();
+            var str = "<select id=\"brokerId\" name=\"broker_id\" class=\"form-control\"><option value=''>请选择</option>";
+            $.each(data.data, function (i, el) {
+                str +="<option value='"+i+"'>"+el+"</option>";
+            });
+            str +="</select>";
+            $("#brokerInfo").html(str);
+        }
+    });
+}
+function saveDenyBuy(id) {
+    layer.confirm('确定要更改禁止买入状态？', {
+        btn: ['确定','取消'] //按钮
+    }, function(){
+        if (id == '') {
+            layer.msg("id不能为空", {icon:2, time:1500, shade:.3, shadeClose:true});
+        } else {
+            $.post("{:url('stock/user/is_deny_buy')}",{id:id}, function(data){
+                if(data.code == 1){
+                    layer.msg(data.msg, {icon:1, time:1500, shade:.3, shadeClose:true}, function(){
+                        window.location.reload();
+                    });
+                } else {
+                    layer.msg(data.msg, {icon:2, time:1500, shade:.3, shadeClose:true});
+                }
+            });
+        }
+        return false;
+    }, null);
+}
+function exportExcel() {
+    window.location.href="{:url('stock/user/exportUser', ['agent_id' => $agent_id,'broker_id'=>$broker_id,'mobile'=>$mobile])}";
+}
+</script>
+{/block}

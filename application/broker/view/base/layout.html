@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>经纪人后台</title>
+
+    <!-- Bootstrap 3.3.7 -->
+    <link rel="stylesheet" href="__ADMIN_LTE__/components/bootstrap/css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="__ADMIN_LTE__/components/font-awesome/css/font-awesome.min.css">
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="__ADMIN_LTE__/components/Ionicons/css/ionicons.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="__ADMIN_LTE__/dist/css/AdminLTE.min.css">
+    <!-- AdminLTE Skins. Choose a skin from the css/skins folder instead of downloading all of them to reduce the load. -->
+    <link rel="stylesheet" href="__ADMIN_LTE__/dist/css/skins/_all-skins.min.css">
+
+    <!--自定义样式-->
+    <link rel="stylesheet" href="__DASH__/css/app.css">
+
+    <!-- bootstrap wysihtml5 - text editor -->
+    <!--<link rel="stylesheet" href="plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">-->
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="http://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
+    <script src="http://cdn.staticfile.org/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- jQuery 3 -->
+    <script src="__DASH__/lib/jquery-3.3.1.min.js"></script>
+    <!-- Layer -->
+    <script src="__DASH__/lib/layer/layer.js"></script>
+</head>
+<body class="hold-transition skin-blue sidebar-mini">
+<div class="wrapper">
+    <header class="main-header">
+        <!-- Logo -->
+        <a href="index2.html" class="logo">
+            <!-- mini logo for sidebar mini 50x50 pixels -->
+            <span class="logo-mini"><b>A</b>LT</span>
+            <!-- logo for regular state and mobile devices -->
+            <span class="logo-lg">经纪人后台</span>
+        </a>
+        <!-- Header Navbar: style can be found in header.less -->
+        <nav class="navbar navbar-static-top">
+            <!-- Sidebar toggle button-->
+            <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
+                <span class="sr-only">Toggle navigation</span>
+            </a>
+
+            <div class="navbar-custom-menu">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="javascript:" class="dropdown-toggle" data-toggle="dropdown">
+                            <i class="fa fa-user"></i>
+                            <span class="hidden-xs">{$Think.session.username}</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:signOut();"><i class="fa fa-power-off"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- 左侧菜单  -->
+    <aside class="main-sidebar">
+        <section class="sidebar">
+            <ul class="sidebar-menu" data-widget="tree">
+                <li class="{$controller=='Index'?'active':''}">
+                    <a href="{:url('index/index')}" class="{$action=='index'?'active':''}"><i class="fa fa-home"></i> <span>系统首页</span></a>
+                </li>
+
+                <li class="treeview {$controller=='My'?'active':''}">
+                    <a href="#">
+                        <i class="fa fa-user"></i> <span>我的</span>
+                        <span class="pull-right-container">
+                            <i class="fa fa-angle-left pull-right"></i>
+                        </span>
+                    </a>
+                    <ul class="treeview-menu">
+                        <li class="{$action=='modify_password'?'active':''}"><a href="{:url('my/modify_password')}"><i class="fa fa-circle-o"></i> 修改密码</a></li>
+                        <li class="{$action=='promotion_code'?'active':''}"><a href="{:url('my/promotion_code')}"><i class="fa fa-circle-o"></i> 推广码</a></li>
+                        <li class="{$action=='bind_bankcard'?'active':''}"><a href="{:url('my/bind_bankcard')}"><i class="fa fa-circle-o"></i> 绑定银行卡</a></li>
+                        <li class="{$action=='do_withdraw'?'active':''}"><a href="{:url('my/do_withdraw')}"><i class="fa fa-circle-o"></i> 提现申请</a></li>
+                        <li class="{$action=='account_log'?'active':''}"><a href="{:url('my/account_log')}"><i class="fa fa-circle-o"></i> 资金明细</a></li>
+                    </ul>
+                </li>
+
+                <li class="treeview {$controller=='Order'?'active':''}">
+                    <a href="#">
+                        <i class="fa fa-edit"></i> <span>订单管理</span>
+                        <span class="pull-right-container">
+                            <i class="fa fa-angle-left pull-right"></i>
+                        </span>
+                    </a>
+                    <ul class="treeview-menu">
+                        <li class="{$action=='position'?'active':''}"><a href="{:url('order/position')}"><i class="fa fa-circle-o"></i> 持仓列表</a></li>
+                        <li class="{$action=='order'?'active':''}"><a href="{:url('order/order')}"><i class="fa fa-circle-o"></i> 委托列表</a></li>
+                        <li class="{$action=='traded'?'active':''}"><a href="{:url('order/traded')}"><i class="fa fa-circle-o"></i> 成交明细</a></li>
+                        <li class="{$action=='close_position'?'active':''}"><a href="{:url('order/close_position')}"><i class="fa fa-circle-o"></i> 平仓结算</a></li>
+                    </ul>
+                </li>
+
+                <li class="treeview {$controller=='User'?'active':''}">
+                    <a href="#">
+                        <i class="fa fa-user"></i> <span>用户管理</span>
+                        <span class="pull-right-container">
+                            <i class="fa fa-angle-left pull-right"></i>
+                        </span>
+                    </a>
+                    <ul class="treeview-menu">
+                        <li class="{$action=='index'?'active':''}"><a href="{:url('user/index')}"><i class="fa fa-circle-o"></i> 用户列表</a></li>
+                    </ul>
+                </li>
+
+                <li class="treeview {$controller=='Income'?'active':''}">
+                    <a href="#">
+                        <i class="fa fa-money"></i> <span>佣金管理</span>
+                        <span class="pull-right-container">
+                            <i class="fa fa-angle-left pull-right"></i>
+                        </span>
+                    </a>
+                    <ul class="treeview-menu">
+                        <li class="{$action=='index'?'active':''}"><a href="{:url('income/index')}"><i class="fa fa-circle-o"></i> 佣金明细</a></li>
+                    </ul>
+                </li>
+
+            </ul>
+        </section>
+    </aside>
+
+    <!--  内容主体 -->
+    {block name="main"}{/block}
+</div>
+
+<!-- Bootstrap 3.3.7 -->
+<script src="__ADMIN_LTE__/components/bootstrap/js/bootstrap.min.js"></script>
+<!-- FastClick -->
+<script src="__ADMIN_LTE__/components/fastclick/lib/fastclick.js"></script>
+<!-- AdminLTE App -->
+<script src="__ADMIN_LTE__/dist/js/adminlte.min.js"></script>
+<!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+<!--<script src="__ADMIN_LTE__/dist/js/pages/dashboard.js"></script>-->
+<!-- AdminLTE for demo purposes -->
+<!--<script src="__ADMIN_LTE__/dist/js/demo.js"></script>-->
+
+<!-- 页面自定义JS内容部分 -->
+{block name="js"}{/block}
+<script type="text/javascript">
+    function signOut() {
+        $.post("{:url('stock/auth/signOut')}", function(data){
+            if(data.code == 1){
+                layer.msg(data.msg, {icon:1, time:1500, shade:.3, shadeClose:true}, function(){
+                    window.location.href = "{:url('index/index')}";
+                });
+            } else {
+                layer.msg(data.msg, {icon:2, time:1500, shade:.3, shadeClose:true});
+            }
+        });
+    }
+</script>
+</body>
+</html>

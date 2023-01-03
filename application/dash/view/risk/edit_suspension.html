@@ -1,0 +1,162 @@
+{extend name="base/layout"/}
+{block name="main"}
+<link rel="stylesheet" href="__DASH__/lib/bootstrap-datetimepicker/css/bootstrap-datetimepicker.css">
+<script src="__DASH__/lib/bootstrap-datetimepicker/js/bootstrap-datetimepicker.js"></script>
+<div class="content-wrapper">
+    <section class="content-header">
+        <h1>
+            {$susInfo?'编辑':'添加'}停牌复牌
+            <small></small>
+        </h1>
+        <ol class="breadcrumb">
+            <li><a href="{:url('index/index')}"><i class="fa fa-home"></i> 首页</a></li>
+            <li><a href="#">风控管理</a></li>
+            <li class="active">编辑停牌复牌</li>
+        </ol>
+    </section>
+    <section class="content">
+        <div class="row">
+            <div class="col-xs-12">
+                <form id="ruleForm" action="" class="form-horizontal">
+                    <div class="box box-info">
+                        <div class="box-body">
+                            <div class="form-group col-sm-8">
+                                <label class="col-sm-2 control-label">股票代码</label>
+                                <div class="col-sm-4">
+                                    <input type="text" name="stock_code " id="stockCode"
+                                           value="{$susInfo.stock_code?:''}" class="form-control">
+                                    <input type="hidden" name="market" id="market" value="{$susInfo.market?:''}">
+                                </div>
+                                {if !isset($susInfo)}
+                                <a  class="btn btn-primary" onclick="openDialog();">查询</a>
+                                {/if}
+                            </div>
+                        </div>
+
+                        <div class="box-body">
+                            <div class="form-group col-sm-8">
+                                <label class="col-sm-2 control-label">停牌日期</label>
+                                <div class="col-sm-4">
+                                    <div class="input-group date">
+                                        <div class="input-group-addon">
+                                            <i class="fa fa-calendar"></i>
+                                        </div>
+                                        <input type="text" name="suspension_date" id="suspensionDate"
+                                               value="{$susInfo.suspension_date?:''}" class="form-control pull-right">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="box-body">
+                            <div class="form-group col-sm-8">
+                                <label class="col-sm-2 control-label">复牌日期</label>
+                                <div class="col-sm-4">
+                                    <div class="input-group date">
+                                        <div class="input-group-addon">
+                                            <i class="fa fa-calendar"></i>
+                                        </div>
+                                        <input type="text" name="resumption_date" id="resumptionDate"
+                                               value="{$susInfo.resumption_date?:''}" class="form-control pull-right">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="box-footer">
+                            <div class="col-sm-8">
+                                <div class="col-sm-offset-2">
+                                    <button type="submit" class="btn btn-primary">保存</button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+</div>
+
+{/block}
+
+{block name="js"}
+<script>
+$(function () {
+    $('#suspensionDate').datetimepicker({
+        format: 'yyyy-mm-dd h:i:s',//显示格式
+        minView: "month",//设置只显示到月份
+        initialDate: new Date(),
+        autoclose: true,//选中自动关闭
+        todayBtn: true,//显示今日按钮
+        startDate: new Date(),//之前的日期不能选
+    });
+    $('#resumptionDate').datetimepicker({
+        format: 'yyyy-mm-dd h:i:s',//显示格式
+        minView: "month",//设置只显示到月份
+        initialDate: new Date(),
+        autoclose: true,//选中自动关闭
+        todayBtn: true,//显示今日按钮
+        startDate: new Date(),//之前的日期不能选
+    });
+    $("#ruleForm").submit(function () {
+        var market         = $("#market").val();
+        var stockCode      = $("#stockCode").val();
+        var suspensionDate = $("#suspensionDate").val();
+        var resumptionDate = $("#resumptionDate").val();
+        var sdate= "{:date('Y-m-d 00:00:00')}";
+        var id = "{$susInfo.id?:0}";
+        if (market == "") {
+            layer.msg("请点击查询选择股票信息", {icon: 2, time: 1500, shade: .3, shadeClose: true});
+        }else if (stockCode == "") {
+            layer.msg("请填写股票代码", {icon: 2, time: 1500, shade: .3, shadeClose: true});
+        }else if(suspensionDate !='' && suspensionDate <= sdate){
+            layer.msg("停牌时间不能为昨天", {icon: 2, time: 1500, shade: .3, shadeClose: true});
+        }else if(resumptionDate <= sdate){
+            layer.msg("复牌时间不能为昨天", {icon: 2, time: 1500, shade: .3, shadeClose: true});
+        } else if(resumptionDate == ''){
+            layer.msg("复牌时间不能为空", {icon: 2, time: 1500, shade: .3, shadeClose: true});
+        }else {
+            $.post("{:url('stock/suspension/saveSuspension')}", {
+                id: id,
+                stock_code: stockCode,
+                suspension_date: suspensionDate,
+                resumption_date: resumptionDate,
+                market:market
+            }, function (data) {
+                if (data.code == 1) {
+                    layer.msg(data.msg, {icon: 1, time: 1500, shade: .3, shadeClose: true}, function () {
+                        window.location.href = "{:url('suspension')}";
+                    });
+                } else {
+                    layer.msg(data.msg, {icon: 2, time: 1500, shade: .3, shadeClose: true});
+                }
+            });
+        }
+
+        return false;
+    });
+});
+function openDialog() {
+    var code=$("#stockCode").val();
+    layer.open({
+        type: 2,
+        title: '股票信息',
+        shadeClose: true,
+        shade: 0.4,
+        area: ['700px', '600px'],
+        content: 'search_code/?stock_code='+code,
+        btn: ['确定','关闭'],
+        yes: function(index){
+            var res = window["layui-layer-iframe" + index].callbackdata();
+            $("#stockCode").val(res.checkcode);
+            $("#market").val(res.checkmarket);
+            layer.close(index);
+        },
+        cancel: function(){
+            //右上角关闭回调
+        }
+    });
+}
+</script>
+{/block}

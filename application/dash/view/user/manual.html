@@ -1,0 +1,36 @@
+{extend name="base/pop_layout"/}
+
+{block name="main"}
+        <div class="row">
+            <div class="col-xs-12">
+                    <div class="box box-info">
+                        <div class="box-body">
+                            <div class="form-group col-sm-12">
+                                <label class="col-sm-2 control-label">充值金额</label>
+                                <div class="col-sm-4">
+                                    <input type="text" name="money" id="money" value="{$oneRecharge.money}" class="form-control">
+                                </div>
+                                <label class="col-sm-2 control-label">第三方流水号</label>
+                                <div class="col-sm-4">
+                                    <input type="text" name="third_order_sn" id="thirdOrderSn" value="{$oneRecharge.third_order_sn}" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+
+{/block}
+{block name="js"}
+<script type="text/javascript">
+var callbackdata = function () {
+        var money        = $("#money").val();
+        var thirdOrderSn = $("#thirdOrderSn").attr("data-key");
+        var data = {
+            money: money,
+            thirdOrderSn:thirdOrderSn
+        };
+        return data;
+}
+</script>
+{/block}

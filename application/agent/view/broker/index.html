@@ -1,0 +1,113 @@
+{extend name="base/layout"/}
+
+{block name="main"}
+<style>
+.tj{
+    background-color: #ecf0f5;
+    font-weight:bold;
+}
+</style>
+<div class="content-wrapper">
+    <section class="content-header">
+        <h1>经济人管理</h1>
+        <ol class="breadcrumb">
+            <li><a href="{:url('index/index')}"><i class="fa fa-home"></i> 首页</a></li>
+            <li><a href="#">经济人列表</a></li>
+            <li class="active">经济人管理</li>
+        </ol>
+    </section>
+    <section class="content">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="box box-info">
+                    <div class="box-header with-border">
+                        <a href="{:url('broker/edit_broker')}" class="btn btn-success"><i class="fa fa-plus"></i> 添加经济人</a>
+                    </div>
+                    <div class="box-header with-border">
+                        <form id="searchInfo" action="{:url('index')}" method="get">
+                            <div class="col-sm-12 no-padding">
+                                <div class="search-box">
+                                    <label class="text-right">用户名</label>
+                                    <div class="search-body">
+                                        <select class="form-control" name="broker_id" id="brokerId">
+                                            <option value="">请选择</option>
+                                            {foreach $brokerList as $k=>$v}
+                                            <option value="{$k}" {:isset($broker_id) && $k==$broker_id?'selected':''}>{$v}</option>
+                                            {/foreach}
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="search-box">
+                                    <label class="text-right">手机号</label>
+                                    <div class="search-body"><input class="form-control" type="text" id="mobile" name="mobile" value="{:isset($mobile)?$mobile:''}"></div>
+                                </div>
+                                <div class="search-box">
+                                    <label class="text-right"></label>
+                                    <div class="search-body"><input type="submit" class="btn btn-primary" value="查找"></div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="box-body no-padding">
+                        <table class="table table-bordered table-middle table-center">
+                            <thead>
+                            <tr class="tj">
+                                <td>总计</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td>{$brokerDetail.totalbalance?:0}</td>
+                                <td>{$brokerDetail.totalcommission?:0}</td>
+                                <td>{$brokerDetail.totalwithdraw?:0}</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            </thead>
+                            <tr>
+                                <th>用户名称</th>
+                                <th>经济人名称</th>
+                                <th>手机号</th>
+                                <th>分成比例</th>
+                                <th>是否禁止登陆</th>
+                                <th>是否拒绝提现</th>
+                                <th>账户余额</th>
+                                <th>总佣金</th>
+                                <th>总提现</th>
+                                <th>推广码</th>
+                                <th>操作</th>
+                            </tr>
+                            {foreach $brokerInfo as $k=>$nl}
+                            <tr>
+                                    <td>{$nl.username}</td>
+                                    <td>{$nl.org_name}</td>
+                                    <td>{$nl.mobile}</td>
+                                    <td>{$nl.commission_rate}%</td>
+                                    <td>{$nl.is_deny_login ? '是' : '否'}</td>
+                                    <td>{$nl.is_deny_cash ? '是' : '否'}</td>
+                                    <td>{$orgAccount[$nl['id']]['balance']?:''}</td>
+                                    <td>{$orgAccount[$nl['id']]['total_commission']?:''}</td>
+                                    <td>{$orgAccount[$nl['id']]['total_withdraw']?:''}</td>
+                                    <td>{$nl.code?:''}</td>
+                                    <td>
+                                        <a class="btn btn-sm btn-primary" href="{:url('broker/edit_broker', ['id' => $nl.id])}">编辑</a>
+                                        <a class="btn btn-sm btn-primary" href="{:url('broker/reset_pwd', ['id' => $nl.id])}">重置密码</a>
+                                    </td>
+                            </tr>
+                            {/foreach}
+                        </table>
+                    </div>
+
+                    <div class="box-footer">
+                        <div class="col-sm-12 no-padding">{:$brokerInfo->render()}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+{/block}
+{block name="js"}
+
+{/block}

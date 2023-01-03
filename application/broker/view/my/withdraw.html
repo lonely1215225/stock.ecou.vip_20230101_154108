@@ -1,0 +1,89 @@
+{extend name="base/layout"/}
+{block name="main"}
+<div class="content-wrapper">
+    <section class="content-header">
+        <h1>
+            用户提现
+            <small></small>
+        </h1>
+        <ol class="breadcrumb">
+            <li><a href="{:url('index/index')}"><i class="fa fa-home"></i> 首页</a></li>
+            <li><a href="#">我的</a></li>
+            <li class="active">用户提现</li>
+        </ol>
+    </section>
+    <section class="content">
+        <div class="row">
+            <div class="col-xs-12">
+                <form id="ruleForm" action="" class="form-horizontal">
+                    <div class="box box-info">
+                        <div class="box-body">
+                            <div class="form-group col-sm-8">
+                                <label class="col-sm-2 control-label">账户余额</label>
+                                <div class="col-sm-4">
+                                    <input type="text" value="{$accountInfo.balance?:''}" class="form-control" id="balance" disabled>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="box-body">
+                            <div class="form-group col-sm-8">
+                                <label class="col-sm-2 control-label">提现金额</label>
+                                <div class="col-sm-4">
+                                    <input type="text" name="total_withdraw" id="totalWithdraw"
+                                           value="" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="box-footer">
+                            <div class="col-sm-8">
+                                <div class="col-sm-offset-2">
+                                    <button type="submit" class="btn btn-primary">提现申请</button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+</div>
+
+{/block}
+
+{block name="js"}
+<script>
+$(function () {
+    $("#ruleForm").submit(function () {
+        if ($("#balance").hasClass('flag')) {
+            return;
+        }
+        var totalWithdraw = parseFloat($("#totalWithdraw").val());
+        var balance       = parseFloat($("#balance").val());
+        var id = "{$accountInfo.id}";
+        if (isNaN(totalWithdraw) || (totalWithdraw > balance) || totalWithdraw <= 0) {
+            layer.msg("请填写正确提现金额", {icon: 2, time: 1500, shade: .3, shadeClose: true});
+        }else {
+            $("#balance").addClass('flag');
+            $.post("{:url('stock/orgAccount/withdraw')}", {
+                total_withdraw: totalWithdraw,
+                id:id,
+            }, function (data) {
+                if (data.code == 1) {
+                    layer.msg(data.msg, {icon: 1, time: 1500, shade: .3, shadeClose: true}, function () {
+                        window.location.href = "{:url('account_log')}";
+                    });
+                } else {
+                    layer.msg(data.msg, {icon: 2, time: 1500, shade: .3, shadeClose: true});
+                }
+            });
+        }
+
+        return false;
+    });
+});
+</script>
+{/block}

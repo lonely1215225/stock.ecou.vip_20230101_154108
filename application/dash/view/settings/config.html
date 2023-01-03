@@ -1,0 +1,142 @@
+{extend name="base/layout"/}
+
+{block name="main"}
+<div class="content-wrapper">
+    <section class="content-header">
+        <h1>基础设置</h1>
+        <ol class="breadcrumb">
+            <li><a href="{:url('index/index')}"><i class="fa fa-home"></i> 首页</a></li>
+            <li><a href="#">系统设置</a></li>
+            <li class="active">基础设置</li>
+        </ol>
+    </section>
+    <section class="content">
+        <div class="row">
+            <!-- 交易时间 -->
+            <div class="col-sm-12">
+                <div class="box box-info">
+                    <div class="box-header"></div>
+                    <form id="appConfigForm" action="" method="post" class="form-horizontal">
+                        <div class="box-body">
+                            <div class="form-group col-sm-8">
+                                <label class="col-sm-2 control-label">APP分发网址</label>
+                                <div class="input-group col-sm-4" style="float:left;">
+                                    <input class="form-control" name="h5_url" id="h5_url" value="{$config.h5_url}">
+                                </div>
+                                <div style="float:left;height:34px;line-height:34px;color:#777;margin-left:20px;">用于生成推广二维码，默认(H5网址/#/pages/down/index)</div>
+                            </div>
+                            <div class="form-group col-sm-8">
+                                <label class="col-sm-2 control-label">用户推广</label>
+                                <div class="col-sm-1 checkbox">
+                                    <label><input type="checkbox" name="is_share" id="is_share" {$config.is_share==1?'checked':''} value="0"></label>
+                                </div>
+                                <div style="float:left;height:34px;line-height:34px;color:#777">是否允许会员推广，关闭后前台将不显示</div>
+                            </div>
+                            <div class="form-group col-sm-8">
+                                <label class="col-sm-2 control-label">推广海报网址</label>
+                                <div class="input-group col-sm-4" style="float:left;">
+                                    <input class="form-control" name="banner_url" id="banner_url" value="{$config.banner_url}">
+                                </div>
+                                <div style="float:left;height:34px;line-height:34px;color:#777;margin-left:20px;">用于生成推广海报</div>
+                            </div>
+                            <div class="form-group col-sm-8">
+                                <label class="col-sm-2 control-label">客服链接</label>
+                                <div class="input-group col-sm-4">
+                                    <input class="form-control" name="kefu_link" id="kefu_link" value="{$config.kefu_link}">
+                                </div>
+                            </div>
+                            <div class="form-group col-sm-8">
+                                <label class="col-sm-2 control-label">客服电话</label>
+                                <div class="input-group col-sm-4">
+                                    <input class="form-control" name="kefuphone" id="kefuphone" value="{$config.kefuphone}">
+                                </div>
+                            </div>
+                            <div class="form-group col-sm-8">
+                                <label class="col-sm-2 control-label">允许注册</label>
+                                <div class="col-sm-1 checkbox">
+                                    <label><input type="checkbox" name="is_regist" id="is_regist" {$config.is_regist==1?'checked':''} value="0"></label>
+                                </div>
+                                <div style="float:left;height:34px;line-height:34px;color:#777">注册功能是否开启</div>
+                            </div>
+                            <div class="form-group col-sm-8">
+                                <label class="col-sm-2 control-label">邀请注册</label>
+                                <div class="col-sm-1 checkbox">
+                                    <label><input type="checkbox" name="is_invita" id="is_invita" {$config.is_invita==1?'checked':''} value="0"></label>
+                                </div>
+                                <div style="float:left;height:34px;line-height:34px;color:#777">邀请码是否为必填</div>
+                            </div>
+                            <div class="form-group col-sm-8">
+                                <label class="col-sm-2 control-label">短信注册</label>
+                                <div class="col-sm-1 checkbox">
+                                    <label><input type="checkbox" name="is_smsreg" id="is_smsreg" {$config.is_smsreg==1?'checked':''} value="0"></label>
+                                </div>
+                                <div style="float:left;height:34px;line-height:34px;color:#777">短信功能是否开启</div>
+                            </div>
+                            <div class="form-group col-sm-8">
+                                <label class="col-sm-2 control-label">短信平台账号</label>
+                                <div class="input-group col-sm-4">
+                                    <input class="form-control" name="sms_use" id="sms_use" value="{$config.sms_use}">
+                                </div>
+                            </div>
+                            <div class="form-group col-sm-8">
+                                <label class="col-sm-2 control-label">短信平台密码</label>
+                                <div class="input-group col-sm-4">
+                                    <input class="form-control" type="password" name="sms_pwd" id="sms_pwd" value="{$config.sms_pwd}">
+                                </div>
+                            </div>
+                            <div class="form-group col-sm-8">
+                                <label class="col-sm-2 control-label">短信平台签名</label>
+                                <div class="input-group col-sm-4" style="float:left;">
+                                    <input class="form-control" name="sms_name" id="sms_name" value="{$config.sms_name}">
+                                </div>
+                                <div style="float:left;height:34px;line-height:34px;color:#777;margin-left:20px;">控制在3-8个字以内</div>
+                            </div>
+                            
+                        </div>
+                        <div class="box-footer">
+                            <div class="col-sm-8">
+                                <div class="col-sm-offset-2">
+                                    <button type="submit" class="btn btn-primary">提交</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="box">
+                    <div class="box-header with-border">
+                        <i class="fa fa-warning text-yellow"></i>
+                        <h3 class="box-title">注意：</h3>
+                    </div>
+                    <div class="box-body">
+                        <ol>
+                            <li>短信平台：https://www.smsbao.com/</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+{/block}
+{block name="js"}
+<script>
+    // 提交
+    $("#appConfigForm").submit(function () {
+        var is_regist = $("#is_regist").is(":checked") ? 1 : 0;$('#is_regist').val(is_regist);
+        var is_invita = $("#is_invita").is(":checked") ? 1 : 0;$('#is_invita').val(is_invita);
+        var is_smsreg = $("#is_smsreg").is(":checked") ? 1 : 0;$('#is_smsreg').val(is_smsreg);
+        var is_share  = $("#is_share").is(":checked") ? 1 : 0;$('#is_share').val(is_share);
+        
+        $.post("{:url('stock/system/saveConfig')}", $(this).serializeArray(), function (data) {
+            if (data.code == 1) {
+                layer.msg(data.msg, {icon: 1, time: 1500, shade: .3, shadeClose: true});
+            } else {
+                layer.msg(data.msg, {icon: 2, time: 1500, shade: .3, shadeClose: true});
+            }
+        });
+
+        return false;
+    });
+</script>
+{/block}

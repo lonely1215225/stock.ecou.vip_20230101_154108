@@ -1,0 +1,50 @@
+[2022-10-13T16:20:02+08:00][ info ] [ LANG ] /www/wwwroot/stock.ecou.vip/thinkphp/lang/zh-cn.php
+info
+[2022-10-13T16:20:52+08:00][ info ] [ LANG ] /www/wwwroot/stock.ecou.vip/thinkphp/lang/zh-cn.php
+info
+[2022-10-13T16:21:41+08:00][ info ] [ LANG ] /www/wwwroot/stock.ecou.vip/thinkphp/lang/zh-cn.php
+info
+[2022-10-13T16:21:52+08:00][ info ] [ DB ] INIT pgsql
+info
+[2022-10-13T16:21:52+08:00][ sql ] [ DB ] CONNECT:[ UseTime:0.005340s ] pgsql:dbname=postgres;host=127.0.0.1;port=5432
+sql
+[2022-10-13T16:21:52+08:00][ sql ] [ SQL ] select fields_name as "field",fields_type as "type",fields_not_null as "null",fields_key_name as "key",fields_default as "default",fields_default as "extra" from table_msg('md_trading_calendar'); [ RunTime:0.032980s ]
+sql
+[2022-10-13T16:21:52+08:00][ sql ] [ SQL ] SELECT trading_date FROM md_trading_calendar WHERE  is_disabled = 1  AND trading_date >= '2022-10-01'  AND trading_date < '2022-12-01' [ RunTime:0.001531s ]
+sql
+[2022-10-13T16:21:52+08:00][ sql ] [ SQL ] select fields_name as "field",fields_type as "type",fields_not_null as "null",fields_key_name as "key",fields_default as "default",fields_default as "extra" from table_msg('md_order_position'); [ RunTime:0.071675s ]
+sql
+[2022-10-13T16:21:52+08:00][ sql ] [ SQL ] SELECT id,user_id,market,stock_id,stock_code,volume_position,sum_sell_value,sum_sell_value_in,sum_buy_value_cost,sum_deposit,sum_back_profit FROM md_order_position WHERE  is_finished =   AND is_suspended = [ RunTime:0.001486s ]
+sql
+[2022-10-13T16:21:55+08:00][ info ] [ LANG ] /www/wwwroot/stock.ecou.vip/thinkphp/lang/zh-cn.php
+info
+[2022-10-13T16:22:25+08:00][ info ] [ DB ] INIT pgsql
+info
+[2022-10-13T16:22:25+08:00][ sql ] [ DB ] CONNECT:[ UseTime:0.004424s ] pgsql:dbname=postgres;host=127.0.0.1;port=5432
+sql
+[2022-10-13T16:22:25+08:00][ sql ] [ SQL ] select fields_name as "field",fields_type as "type",fields_not_null as "null",fields_key_name as "key",fields_default as "default",fields_default as "extra" from table_msg('md_system'); [ RunTime:0.041867s ]
+sql
+[2022-10-13T16:22:25+08:00][ sql ] [ SQL ] SELECT v FROM md_system WHERE  k = 'SYSTEM_TRADING_TIME' LIMIT 1 [ RunTime:0.001160s ]
+sql
+[2022-10-13T16:22:31+08:00][ info ] [ LANG ] /www/wwwroot/stock.ecou.vip/thinkphp/lang/zh-cn.php
+info
+[2022-10-13T16:23:02+08:00][ info ] [ LANG ] /www/wwwroot/stock.ecou.vip/thinkphp/lang/zh-cn.php
+info
+[2022-10-13T16:24:02+08:00][ info ] [ DB ] INIT pgsql
+info
+[2022-10-13T16:24:02+08:00][ sql ] [ DB ] CONNECT:[ UseTime:0.004433s ] pgsql:dbname=postgres;host=127.0.0.1;port=5432
+sql
+[2022-10-13T16:24:02+08:00][ sql ] [ SQL ] select fields_name as "field",fields_type as "type",fields_not_null as "null",fields_key_name as "key",fields_default as "default",fields_default as "extra" from table_msg('md_order_position'); [ RunTime:0.145916s ]
+sql
+[2022-10-13T16:24:02+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 , update_time = 1665649442 WHERE  is_finished = [ RunTime:0.005077s ]
+sql
+[2022-10-13T16:24:02+08:00][ sql ] [ SQL ] select fields_name as "field",fields_type as "type",fields_not_null as "null",fields_key_name as "key",fields_default as "default",fields_default as "extra" from table_msg('md_condition'); [ RunTime:0.072957s ]
+sql
+[2022-10-13T16:24:02+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1665649442 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-10-13' [ RunTime:0.003005s ]
+sql
+[2022-10-13T16:24:02+08:00][ sql ] [ SQL ] select fields_name as "field",fields_type as "type",fields_not_null as "null",fields_key_name as "key",fields_default as "default",fields_default as "extra" from table_msg('md_order'); [ RunTime:0.098046s ]
+sql
+[2022-10-13T16:24:02+08:00][ sql ] [ SQL ] UPDATE md_order SET cancel_state = 'success' , cancel_time = 1665649442 , cancel_type = 'close' , is_finished = 1 , update_time = 1665649442 WHERE  trading_date = '2022-10-13'  AND direction = 'sell'  AND is_finished = [ RunTime:0.004548s ]
+sql
+[2022-10-13T16:24:02+08:00][ sql ] [ SQL ] SELECT id,user_id,market,stock_code,stock_id,price,volume,volume_success,deposit100 FROM md_order WHERE  trading_date = '2022-10-13'  AND direction = 'buy'  AND is_finished = [ RunTime:0.003407s ]
+sql

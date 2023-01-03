@@ -1,0 +1,284 @@
+{extend name="base/layout" /}
+
+{block name="main"}
+<style>
+.std{
+    font-size: 16px;
+    color: #00a65a;
+    padding-right: 10px;
+    text-align: center
+}
+</style>
+<div class="content-wrapper">
+    <section class="content-header">
+        <h1>
+            系统首页
+            <small>Home</small>
+        </h1>
+        <ol class="breadcrumb">
+            <li><a href="{:url('index/index')}"><i class="fa fa-home"></i> 首页</a></li>
+        </ol>
+    </section>
+    <section class="content">
+        <div class="row">
+            <div class="col-sm-12 no-padding">
+                <div class="search-box">
+                    <label class="text-right">手机号</label>
+                    <div class="search-body"><input class="form-control" type="text" id="mobile" name="mobile" value=""></div>
+                </div>
+                <div class="search-box">
+                    <label class="text-right"></label>
+                    <div class="search-body">
+                        <a href="#" class="btn btn-primary" onclick="exportExcel();">导出用户信息</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-sm-6">
+                <div class="box box-info">
+                    <div class="box-body no-padding">
+                        <table style="width: 100%;height: 90px;">
+                            <tr>
+                                <td style="font-size: 22px;padding-left: 10px;" valign="top" colspan="2">今日充值</td>
+                            </tr>
+                            <tr>
+                                <td style="float: right;font-size: 16px;color: #00c0ef;padding-right: 10px; text-align: right">
+                                    <span style="color: #00c0ef; font-weight: bold">{$userRechargeToday['real_money']?:0}</span>
+                                    <p></p>
+                                    <span style="color: #999999">今日累计充值总金额</span>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="box box-info">
+                    <div class="box-body no-padding">
+                        <table style="width: 100%;height: 90px;">
+                            <tr>
+                                <td style="font-size: 22px;padding-left: 10px;" valign="top" colspan="2">今日提现</td>
+                            </tr>
+                            <tr>
+                                <td style="float: right;font-size: 16px;padding-right: 10px;text-align: right">
+                                    <span style="color: #00c0ef; font-weight: bold">{$userWithdrawToday['money']?:0}</span>
+                                    <p></p>
+                                    <span style="color: #999999">今日累计提现总金额</span>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="box box-info">
+                    <div class="box-body no-padding">
+                        <table style="width: 100%;height: 90px;">
+                            <tr>
+                                <td style="font-size: 22px;padding-left: 10px;" valign="top" colspan="2">今日注册</td>
+                            </tr>
+                            <tr>
+                                <td style="float: right;font-size: 16px;padding-right: 10px;text-align: right">
+                                    <span style="color: #00c0ef; font-weight: bold">{$registeredToday?:0}</span>
+                                    <p></p>
+                                    <span style="color: #999999">今日累计注册总人数</span>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="box box-info">
+                    <div class="box-body no-padding">
+                        <table style="width: 100%;height: 90px;">
+                            <tr>
+                                <td style="font-size: 22px;padding-left: 10px;" valign="top" colspan="2">今日收入</td>
+                            </tr>
+                            <tr>
+                                <td style="float: right;font-size: 16px;padding-right: 10px; text-align: right">
+                                    <span style="color: #00c0ef; font-weight: bold">{$tradedStatistics['total_fee']?:0}</span>
+                                    <p></p>
+                                    <span style="color: #999999;">今日综合费用收入</span>
+                                </td>
+                                <td style="float: right;font-size: 16px;padding-right: 10px; text-align: right">
+                                    <span style="color: #00c0ef; font-weight: bold">{$incomeStatistics['money']?:0}</span>
+                                    <p></p>
+                                    <span style="color: #999999">今日管理费总收入</span>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-6">
+                <div class="box box-info" style="border-color: #61ce3c">
+                    <div class="box-body no-padding">
+                        <table style="width: 100%;height: 90px;">
+                            <tr>
+                                <td style="font-size: 22px;padding-left: 10px;" valign="top" colspan="2">累计注册</td>
+                            </tr>
+                            <tr>
+                                <td style="float: right;font-size: 16px;padding-right: 10px;text-align: right">
+                                    <span style="color: #61ce3c; font-weight: bold">{$registeredTotal?:0}</span>
+                                    <p></p>
+                                    <span style="color: #999999">累计注册总人数</span>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="box box-info" style="border-color: #61ce3c">
+                    <div class="box-body no-padding">
+                        <table style="width: 100%;height: 90px;">
+                            <tr>
+                                <td style="font-size: 22px;padding-left: 10px;" valign="top" colspan="2">累计收入</td>
+                            </tr>
+                            <tr>
+                                <td style="float: right;font-size: 16px;padding-right: 10px; text-align: right">
+                                    <span style="color: #61ce3c; font-weight: bold">{$tradedTotal['total_fee']?:0}</span>
+                                    <p></p>
+                                    <span style="color: #999999;">累计综合费用收入</span>
+                                </td>
+                                <td style="float: right;font-size: 16px;padding-right: 10px; text-align: right">
+                                    <span style="color: #61ce3c; font-weight: bold">{$incomeTotal['money']?:0}</span>
+                                    <p></p>
+                                    <span style="color: #999999">累计管理费总收入</span>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-6">
+                <div class="box box-info" style="border-color: #61ce3c">
+                    <div class="box-body no-padding">
+                        <table style="width: 100%;height: 90px;">
+                            <tr>
+                                <td style="font-size: 22px;padding-left: 10px;" valign="top" colspan="2">累计充值</td>
+                            </tr>
+                            <tr>
+                                <td style="float: right;font-size: 16px;padding-right: 10px;text-align: right">
+                                    <span style="color: #61ce3c; font-weight: bold">{$totalRecharge['real_money']?:0}</span>
+                                    <p></p>
+                                    <span style="color: #999999">累计充值金额</span>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="box box-info" style="border-color: #61ce3c">
+                    <div class="box-body no-padding">
+                        <table style="width: 100%;height: 90px;">
+                            <tr>
+                                <td style="font-size: 22px;padding-left: 10px;" valign="top" colspan="2">累计提现</td>
+                            </tr>
+                            <tr>
+                                <td style="float: right;font-size: 16px;padding-right: 10px;text-align: right">
+                                    <span style="color: #61ce3c; font-weight: bold">{$totalWithdraw['money']?:0}</span>
+                                    <p></p>
+                                    <span style="color: #999999">累计提现金额</span>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="box box-info" style="border-color: #dd4b39">
+                    <div class="box-body no-padding">
+                        <table style="width: 100%;height: 90px;">
+                            <tr>
+                                <td style="font-size: 22px;padding-left: 10px;" valign="top" colspan="2">客户钱包余额</td>
+                            </tr>
+                            <tr>
+                                <td style="float: right;font-size: 16px;padding-right: 10px; text-align: right">
+                                    <span style="color: #dd4b39; font-weight: bold">{$userAccount['totalwallet']?:0}</span>
+                                    <p></p>
+                                    <span style="color: #999999">客户累计钱包余额</span>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="box box-info" style="border-color: #dd4b39">
+                    <div class="box-body no-padding">
+                        <table style="width: 100%;height: 90px;">
+                            <tr>
+                                <td style="font-size: 22px;padding-left: 10px;" valign="top" colspan="2">客户策略金余额</td>
+                            </tr>
+                            <tr>
+                                <td style="float: right;font-size: 16px;color: #dd4b39;padding-right: 10px; text-align: right">
+                                    <span style="color: #dd4b39; font-weight: bold">{$userAccount['totalstrategy']?:0}</span>
+                                    <p></p>
+                                    <span style="color: #999999">客户累计策略金余额（含冻结）</span>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12">
+                <div class="box box-info" style="border-color: #00a65a">
+                    <div class="box-body no-padding">
+                        <table style="width: 100%;">
+                            <tr>
+                                <td style="font-size: 22px;padding-left: 10px;" valign="top" colspan="4">当前持仓统计</td>
+                            </tr>
+                            {foreach $positionStatistics as $key=>$item}
+                            <tr style="height: 60px;">
+                                <!--<td class="std">
+                                    <span style="font-weight: bold">{$key}</span><br><span style="color: #999999">主账号</span>
+                                </td>-->
+                                <td class="std">
+                                    <span style="font-weight: bold">{$item.sum_buy_value_cost?:0}</span><br><span style="color: #999999">总买入市值</span>
+                                </td>
+                                <td class="std">
+                                    <span style="font-weight: bold">{$item.sum_sell_value_in?:0}</span><br><span style="color: #999999">总卖出市值</span>
+                                </td>
+                                <td class="std">
+                                    <span style="font-weight: bold">{$item.sum_deposit?:0}</span><br><span style="color: #999999">
+                                    持仓保证金
+                                </span>
+                                </td>
+                            </tr>
+                            {/foreach}
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+</div>
+{/block}
+{block name="js"}
+<script>
+function exportExcel() {
+    var mobile=$("#mobile").val();
+    if(mobile == ''){
+        layer.msg("请输入手机号", {icon:2, time:1500, shade:.3, shadeClose:true});
+    }else if(!isPoneAvailable(mobile)){
+        layer.msg("请输入正确的手机号", {icon:2, time:1500, shade:.3, shadeClose:true});
+    } else{
+        window.location.href="{:url('stock/indexStatistics/exportUserInfo')}?mobile="+mobile;
+    }
+}
+function isPoneAvailable(str) {
+    var myreg=/^[1][3,4,5,7,8][0-9]{9}$/;
+    if (!myreg.test(str)) {
+        return false;
+    } else {
+        return true;
+    }
+}
+</script>
+{/block}

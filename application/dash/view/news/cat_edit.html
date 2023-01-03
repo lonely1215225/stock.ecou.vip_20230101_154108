@@ -1,0 +1,83 @@
+{extend name="base/layout" /}
+
+{block name="main"}
+<div class="content-wrapper">
+	<section class="content-header">
+		<h1>
+			修改栏目
+			<small>Home</small>
+		</h1>
+		<ol class="breadcrumb">
+			<li><a href="{:url('index/index')}"><i class="fa fa-home"></i> 首页</a></li>
+			<li><a href="#">内容管理</a></li>
+			<li><a href="#">栏目管理</a></li>
+			<li class="active">修改栏目</li>
+		</ol>
+	</section>
+	<section class="content">
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="box box-info">
+					<form id="editForm" action="" method="post" class="form-horizontal">
+						<div class="box-body">
+							<div class="form-group col-sm-8">
+								<label class="col-sm-2 control-label">栏目名称</label>
+								<div class="col-sm-8">
+									<input class="form-control" name="title" value="{$catInfo.title}">
+								</div>
+							</div>
+						</div>
+						<div class="box-body">
+							<div class="form-group col-sm-8">
+								<label class="col-sm-2 control-label">是否显示</label>
+								<div class="col-sm-8 checkbox">
+									<label>
+										<input type="checkbox" name="is_show" id="is_show" {$catInfo.is_show==1?'checked':''}>
+									</label>
+								</div>
+							</div>
+						</div>
+
+						<div class="box-footer">
+							<div class="col-sm-8">
+								<div class="col-sm-offset-2">
+									<input type="hidden" name="id" id="id" value="{$catInfo.id}">
+									<button type="submit" class="btn btn-primary">提交</button>
+								</div>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</section>
+</div>
+{/block}
+
+{block name="js"}
+<script>
+$(function(){
+    $("#editForm").submit(function(){
+        var id    = $("#id").val();
+        var title = $.trim($("input[name='title']").val());
+        var is_show = $("#is_show").is(":checked") ? 1 : 0;
+
+        if(title == "") {
+            layer.msg("请填写栏目名称", {icon:2, time:1500, shade:.3, shadeClose:true});
+        } else {
+            $.post("{:url('stock/article/saveCat')}", {id:id,title:title,is_show:is_show}, function(data){
+                if(data.code == 1){
+                    layer.msg(data.msg, {icon:1, time:1500, shade:.3, shadeClose:true}, function(){
+                        window.location.href = "{:url('cat_list')}";
+                    });
+                } else {
+                    layer.msg(data.msg, {icon:2, time:1500, shade:.3, shadeClose:true});
+                }
+            });
+        }
+
+        return false;
+    });
+});
+</script>
+{/block}

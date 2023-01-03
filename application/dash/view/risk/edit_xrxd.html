@@ -1,0 +1,197 @@
+{extend name="base/layout"/}
+{block name="main"}
+<link rel="stylesheet" href="__DASH__/lib/bootstrap-datetimepicker/css/bootstrap-datetimepicker.css">
+<script src="__DASH__/lib/bootstrap-datetimepicker/js/bootstrap-datetimepicker.js"></script>
+<div class="content-wrapper">
+    <section class="content-header">
+        <h1>
+            {$xrxdInfo?'编辑':'添加'}除权除息
+            <small></small>
+        </h1>
+        <ol class="breadcrumb">
+            <li><a href="{:url('index/index')}"><i class="fa fa-home"></i> 首页</a></li>
+            <li><a href="#">风控管理</a></li>
+            <li class="active">编辑除权除息</li>
+        </ol>
+    </section>
+    <section class="content">
+        <div class="row">
+            <div class="col-xs-12">
+                <form id="ruleForm" action="" class="form-horizontal">
+                    <div class="box box-info">
+                        <div class="box-body">
+                            <div class="form-group col-sm-8">
+                                <label class="col-sm-2 control-label">股票代码</label>
+                                <div class="col-sm-4">
+                                    <input type="text" name="stock_code " id="stockCode"
+                                           value="{$xrxdInfo.stock_code?:''}" class="form-control">
+                                    <input type="hidden" name="market" id="market" value="{$xrxdInfo.market?:''}">
+                                </div>
+                                {if !isset($xrxdInfo)}
+                                <a  class="btn btn-primary" onclick="openDialog();">查询</a>
+                                <div style="margin-left:18%;">（<span style="color: red">股票代码填好后，请点击查询并选中相应的股票信息</span>）</div>
+                                {/if}
+                            </div>
+                        </div>
+
+
+                        <div class="box-body">
+                            <div class="form-group col-sm-8">
+                                <label class="col-sm-2 control-label">基础股票</label>
+                                <div class="col-sm-4">
+                                    <input type="text" name="base_volume" id="baseStockVolume" value="{$xrxdInfo.base_volume|default=10}" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="box-body">
+                            <div class="form-group col-sm-8">
+                                <label class="col-sm-2 control-label">送股股数</label>
+                                <div class="col-sm-4">
+                                    <input type="text" name="give_volume" id="giveStockVolume"
+                                           value="{$xrxdInfo.give_volume?:''}" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="box-body">
+                            <div class="form-group col-sm-8">
+                                <label class="col-sm-2 control-label">转股股数</label>
+                                <div class="col-sm-4">
+                                    <input type="text" name="transfer_volume" id="transferStockVolume"
+                                           value="{$xrxdInfo.transfer_volume?:''}" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="box-body">
+                            <div class="form-group col-sm-8">
+                                <label class="col-sm-2 control-label">股利金额</label>
+                                <div class="col-sm-4">
+                                    <input type="text" name="dividend" id="dividend"
+                                           value="{$xrxdInfo.dividend?:''}" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="box-body">
+                            <div class="form-group col-sm-8">
+                                <label class="col-sm-2 control-label">除权除息日</label>
+                                <div class="col-sm-4">
+                                    <div class="input-group date">
+                                        <div class="input-group-addon">
+                                            <i class="fa fa-calendar"></i>
+                                        </div>
+                                        <input type="text" name="execute_date" id="executeDate" value="{$xrxdInfo.execute_date?:''}" class="form-control pull-right">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="box-body">
+                            <div class="form-group col-sm-8">
+                                <label class="col-sm-2 control-label">备注</label>
+                                <div class="col-sm-4">
+                                    <textarea class="form-control" name="remark" id="remark" rows="3">{$xrxdInfo.remark?:''}</textarea>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="box-footer">
+                            <div class="col-sm-8">
+                                <div class="col-sm-offset-2">
+                                    <button type="submit" class="btn btn-primary">保存</button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+</div>
+
+{/block}
+
+{block name="js"}
+<script>
+    $(function () {
+        $('#executeDate').datetimepicker({
+            format: 'yyyy-mm-dd',//显示格式
+            minView: "month",//设置只显示到月份
+            initialDate: new Date(),
+            autoclose: true,//选中自动关闭
+            todayBtn: true,//显示今日按钮
+            startDate: new Date(),//之前的日期不能选
+        });
+
+        $("#ruleForm").submit(function () {
+            var stockCode = $("#stockCode").val();
+            var market    = $("#market").val();
+            var baseStockVolume = $("#baseStockVolume").val();
+            var giveStockVolume = $("#giveStockVolume").val();
+            var transferStockVolume = $("#transferStockVolume").val();
+            var dividend = $("#dividend").val();
+            var executeDate = $("#executeDate").val();
+            var remark = $("#remark").val();
+            var id = "{$xrxdInfo.id?:0}";
+            var sdate= "{:date('Y-m-d',strtotime('-1 day'))}";
+            if (stockCode == "") {
+                layer.msg("请填写股票代码", {icon: 2, time: 1500, shade: .3, shadeClose: true});
+            } else if(baseStockVolume == "" ){
+                layer.msg("基础股票不能为空", {icon: 2, time: 1500, shade: .3, shadeClose: true});
+            } else if (giveStockVolume == "" && transferStockVolume == "" && dividend == '') {
+                layer.msg("送股股数、转股股数、股利金，至少有一项不能为空", {icon: 2, time: 1500, shade: .3, shadeClose: true});
+            } else if (market == ""){
+                layer.msg("请选择证券公司", {icon: 2, time: 1500, shade: .3, shadeClose: true});
+            } else if(executeDate != '' && executeDate <= sdate) {
+                layer.msg("除权除息日不能为昨天", {icon: 2, time: 1500, shade: .3, shadeClose: true});
+            } else {
+                $.post("{:url('stock/xrxd/saveXrxd')}", {
+                    id: id,
+                    stock_code: stockCode,
+                    base_volume: baseStockVolume,
+                    give_volume: giveStockVolume,
+                    transfer_volume: transferStockVolume,
+                    dividend: dividend,
+                    execute_date: executeDate,
+                    market:market,
+                    remark: remark
+                }, function (data) {
+                    if (data.code == 1) {
+                        layer.msg(data.msg, {icon: 1, time: 1500, shade: .3, shadeClose: true}, function () {
+                            window.history.go(-1);
+                        });
+                    } else {
+                        layer.msg(data.msg, {icon: 2, time: 1500, shade: .3, shadeClose: true});
+                    }
+                });
+            }
+
+            return false;
+        });
+    });
+    function openDialog() {
+        var code=$("#stockCode").val();
+        layer.open({
+            type: 2,
+            title: '股票信息',
+            shadeClose: true,
+            shade: 0.4,
+            area: ['700px', '600px'],
+            content: 'search_code/?stock_code='+code,
+            btn: ['确定','关闭'],
+            yes: function(index){
+                var res = window["layui-layer-iframe" + index].callbackdata();
+                $("#stockCode").val(res.checkcode);
+                $("#market").val(res.checkmarket);
+                layer.close(index);
+            },
+            cancel: function(){
+                //右上角关闭回调
+            }
+        });
+    }
+</script>
+{/block}

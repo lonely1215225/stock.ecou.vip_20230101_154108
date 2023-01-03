@@ -1,0 +1,144 @@
+{extend name="base/layout"/}
+
+{block name="main"}
+<div class="content-wrapper">
+    <section class="content-header">
+        <h1>个股黑名单</h1>
+        <ol class="breadcrumb">
+            <li><a href="{:url('index/index')}"><i class="fa fa-home"></i> 首页</a></li>
+            <li><a href="#">股票管理</a></li>
+            <li class="active">禁买个股列表</li>
+        </ol>
+    </section>
+    <section class="content">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="box box-info">
+                    <div class="box-header">
+                        <a href="#" onclick="openDialog();" class="btn btn-success"><i class="fa fa-plus"></i>
+                            添加禁买个股</a>
+                    </div>
+                    <div class="box-header with-border">
+                        <form id="searchInfo" action="{:url('black_list')}" method="get">
+                            <div class="col-sm-12 no-padding">
+                                <div class="search-box">
+                                    <label class="text-right">股票代码</label>
+                                    <div class="search-body"><input class="form-control" type="text" id="stockCode" name="stock_code" value="{:isset($stockCode)?$stockCode:''}"></div>
+                                </div>
+                                <div class="search-box">
+                                    <label class="text-right">股票名称</label>
+                                    <div class="search-body"><input class="form-control" type="text" id="stockName" name="stock_name" value="{:isset($stockName)?$stockName:''}"></div>
+                                </div>
+                                <div class="search-box">
+                                    <label class="text-right">证券公司</label>
+                                    <div class="search-body">
+                                        <select id="market" name="market" class="form-control">
+                                            <option value="">请选择</option>
+                                            {foreach $marketList as $mk=>$mv}
+                                            <option value="{$mk}" {:isset($market) && $mk==$market?'selected':''}>{$mv}</option>
+                                            {/foreach}
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="search-box">
+                                    <label class="text-right"></label>
+                                    <div class="search-body"><input type="submit" class="btn btn-primary" value="查找"></div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="box-body no-padding">
+                        <table class="table table-bordered table-middle table-center">
+                            <thead>
+                            <tr>
+                                <th>股票代码</th>
+                                <th>股票名称</th>
+                                <th>证券公司</th>
+                                <!--th>是否融资融券</th-->
+                                <th>是否禁买</th>
+                                <!--th>风险等级</th-->
+                                <th>交易单位</th>
+                                <th>操作</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            {foreach $stockInfo as $k=>$nl}
+                            <tr>
+                                    <td>{$nl.stock_code}</td>
+                                    <td>{$nl.stock_name}</td>
+                                    <td>{$marketList[$nl['market']]}</td>
+                                    <!--td>{$nl.is_margin ? '是' : '否'}</td-->
+                                    <td>{$nl.is_black ? '是' : '否'}</td>
+                                    <!--td>{$riskList[$nl['risk_level']]}</td-->
+                                    <td>{$nl.board_lot}</td>
+                                    <td>
+                                        <a class="btn btn-sm btn-primary" href="#" onclick="toggleIsBlack('{$nl.id}','{$nl.stock_code}','{$nl.market}');">{$nl.is_black?'取消禁买':'加入禁买'}</a>
+                                    </td>
+                            </tr>
+                            {/foreach}
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="box-footer">
+                        <div class="col-sm-12 no-padding">{:$stockInfo->render()}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+{/block}
+{block name="js"}
+<script type="text/javascript">
+function toggleIsBlack(id,stockCode,market, fname) {
+    if (id == '') {
+        layer.msg("id不能为空", {icon: 2, time: 1500, shade: .3, shadeClose: true});
+    } else {
+        $.post("{:url('stock/stock/editBlack')}", {id: id,stock_code:stockCode,market:market}, function (data) {
+            if (data.code == 1) {
+                layer.msg(data.msg, {icon: 1, time: 1500, shade: .3, shadeClose: true}, function () {
+                    window.location.href = "{:url('black_list')}";
+                });
+            } else {
+                layer.msg(data.msg, {icon: 2, time: 1500, shade: .3, shadeClose: true});
+            }
+        });
+    }
+}
+function openDialog() {
+    layer.open({
+        type: 2,
+        title: '加入黑名单',
+        shadeClose: true,
+        shade: 0.4,
+        area: ['750px', '600px'],
+        content: 'add_black',
+        btn: ['加入黑名单','关闭'],
+        yes: function(index){
+            var res = window["layui-layer-iframe" + index].callbackdata();
+            addBlack(res.checkmarket,res.checkcode,res.checkid);
+            layer.close(index);
+        },
+        cancel: function(){
+            //右上角关闭回调
+        }
+    });
+}
+function addBlack(checkmarket,checkcode,checkid) {
+    if (checkcode == '') {
+        layer.msg("股票代码不能为空", {icon: 2, time: 1500, shade: .3, shadeClose: true});
+    } else {
+        $.post("{:url('stock/stock/addBlack')}", {id:checkid,stock_code: checkcode,market:checkmarket}, function (data) {
+            if (data.code == 1) {
+                layer.msg(data.msg, {icon: 1, time: 1500, shade: .3, shadeClose: true}, function () {
+                    window.location.href = "{:url('black_list')}";
+                });
+            } else {
+                layer.msg(data.msg, {icon: 2, time: 1500, shade: .3, shadeClose: true});
+            }
+        });
+    }
+}
+</script>
+{/block}

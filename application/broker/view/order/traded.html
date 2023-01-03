@@ -1,0 +1,214 @@
+{extend name="base/layout"/}
+
+{block name="main"}
+<style>
+.buy{color: #f66;}
+.buy a{color: #f66;border-bottom:1px dotted #f66;}
+.sell{color: #0384ec;}
+.sell a{color: #0384ec;border-bottom:1px dotted #0384ec;}
+ .tj{
+     background-color: #ecf0f5;
+     font-weight:bold;
+ }
+</style>
+<link rel="stylesheet" href="__DASH__/lib/bootstrap-datetimepicker/css/bootstrap-datetimepicker.css">
+<script src="__DASH__/lib/bootstrap-datetimepicker/js/bootstrap-datetimepicker.js"></script>
+<div class="content-wrapper">
+    <section class="content-header">
+        <h1>成交明细</h1>
+        <ol class="breadcrumb">
+            <li><a href="{:url('index/index')}"><i class="fa fa-home"></i> 首页</a></li>
+            <li><a href="#">订单管理</a></li>
+            <li class="active">成交明细</li>
+        </ol>
+    </section>
+    <section class="content">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="box box-info">
+                    <div class="box-header with-border">
+                        <form id="searchInfo" action="{:url('traded')}" method="get">
+                            <div class="col-sm-12 no-padding">
+                                <div class="search-box">
+                                    <label class="text-right">股票代码</label>
+                                    <div class="search-body">
+                                        <input class="form-control" id="stockCode" name="stock_code" type="text"  value="{$stock_code?:''}">
+                                    </div>
+                                </div>
+                                <div class="search-box">
+                                    <label class="text-right">手机号</label>
+                                    <div class="search-body">
+                                        <input class="form-control" type="text" name="mobile" id="mobile"  value="{$mobile?:''}">
+                                    </div>
+                                </div>
+                                <div class="search-box">
+                                    <label class="text-right">交易日</label>
+                                    <div class="search-body">
+                                        <input type="text" name="trading_date" id="tradingDate" value="{$trading_date?:''}" class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-12 no-padding">
+                                <div class="search-box">
+                                    <label class="text-right">方向</label>
+                                    <div class="search-body">
+                                        <select class="form-control" name="direction" id="direction">
+                                            <option value="">请选择</option>
+                                            {foreach $tradeDirectionList as $k=>$v}
+                                            <option value="{$k}" {:isset($direction) && $k==$direction?'selected':''}>{$v}</option>
+                                            {/foreach}
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="search-box">
+                                    <label class="text-right">开始成交时间</label>
+                                    <div class="search-body">
+                                        <input class="form-control" id="startTime" name="start_time" type="text"  value="{$start_time?:''}">
+                                    </div>
+                                </div>
+                                <div class="search-box">
+                                    <label class="text-right">最后成交时间</label>
+                                    <div class="search-body">
+                                        <input class="form-control" id="endTime" name="end_time" type="text"  value="{$end_time?:''}">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-12 no-padding">
+                                <div class="search-box">
+                                    <label class="text-right">持仓编号</label>
+                                    <div class="search-body">
+                                        <input class="form-control" name="order_position_id" id="orderPositionId" type="text"  value="{$order_position_id?:''}">
+                                    </div>
+                                </div>
+                                <div class="search-box">
+                                    <label class="text-right">资金账号</label>
+                                    <div class="search-body"><input class="form-control" name="primary_account" id="primaryAccount" type="text"  value="{$primary_account?:''}"></div>
+                                </div>
+                                <div class="search-box">
+                                    <label class="text-right"></label>
+                                    <div class="search-body"><input type="submit" class="btn btn-primary" value="查找"></div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="box-body no-padding">
+                        <table class="table table-bordered table-middle table-center">
+                            <thead>
+                            <tr class="tj">
+                                <td>总计</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td>{$tradedStatistic.volume?:0}</td>
+                                <td></td>
+                                <td></td>
+                                <td>{$tradedStatistic.traded_value?:0}</td>
+                                <td>{$tradedStatistic.sell_value_in+$tradedStatistic.buy_value_cost}</td>
+                                <td>{$tradedStatistic.total_fee?:0}</td>
+                                <td>{$tradedStatistic.management_fee?:0}</td>
+                                <td>{$tradedStatistic.deposit?:0}</td>
+                            </tr>
+                            </thead>
+                            <tr>
+                                <th>持仓编号</th>
+                                <th>委托编号</th>
+                                <th>用户信息</th>
+                                <th>成交时间</th>
+                                <th>股票详情</th>
+                                <th>方向</th>
+                                <th>成交数量</th>
+                                <th>成交价</th>
+                                <th>成本价</th>
+                                <th>成交市值</th>
+                                <th>总成交市值</th>
+                                <th>综合费用</th>
+                                <th>管理费</th>
+                                <th>履约保证金</th>
+                            </tr>
+                            {foreach $tradedList['orderTradedList'] as $k=>$v}
+                            <tr {$v.direction=='buy'?"class='buy'":"class='sell'"}>
+                                <td>{$v.order_position_id}</td>
+                                <td>{$v.order_id}</td>
+                                <td>
+                                    <a href="{:url('user/index',['mobile'=>$v.mobile])}" target="_blank" style="cursor: pointer" title="点击打开用户详情">
+                                        <font {$v.direction=='buy'?"class='buy'":"class='sell'"}>
+                                            {$v.mobile}
+                                            <br>
+                                            {$v['real_name']?:'未实名'}
+                                        </font>
+                                    </a>
+                                </td>
+                                <td>{$v.trading_date}&nbsp;{$v.trading_time}</td>
+                                <td>
+                                    {$v.market}{$v.stock_code}
+                                    <br>
+                                    {$tradedList['stockInfo'][$v['market'].$v['stock_code']] ? $tradedList['stockInfo'][$v['market'].$v['stock_code']]['stock_name']:''}
+                                    <br>
+                                    {$v.primary_account}
+                                </td>
+                                <td>{$v.direction ? $tradeDirectionList[$v['direction']]:''}</td>
+                                <td>{$v.volume}</td>
+                                <td>{$v.price}</td>
+                                <td>{$v.cost_price}</td>
+                                <td>{$v.traded_value}</td>
+                                <td>{$v.direction=='buy'?$v.buy_value_cost:$v.sell_value_in}</td>
+                                <td>
+                                    手续费：{$v.service_fee}
+                                    <br>
+                                    印花税：{$v.stamp_tax}
+                                    <br>
+                                    过户费：{$v.transfer_fee}
+                                </td>
+                                <td>{$v.management_fee}</td>
+                                <td>{$v.deposit}</td>
+                            </tr>
+                            {/foreach}
+                        </table>
+                    </div>
+
+                    <div class="box-footer">
+                        <div class="col-sm-12 no-padding">{:$tradedList['orderTradedList']->render()}</div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+</div>
+{/block}
+{block name="js"}
+<script src="__DASH__/lib/laydate/laydate.js"></script>
+<script>
+$(function () {
+    $('#tradingDate').datetimepicker({
+        format: 'yyyy-mm-dd',//显示格式
+        minView: "month",//设置只显示到月份
+        initialDate: new Date(),
+        autoclose: true,//选中自动关闭
+        todayBtn: true,//显示今日按钮
+    });
+    // 开始成交时间
+    var amo = laydate.render({
+        elem: '#startTime'
+        ,type: 'time'
+        ,min: '00:00:00'
+        ,max: '23:59:59'
+        ,format: 'HH:mm:ss'
+        ,btns: ['confirm']
+    });
+
+    // 最后成交时间
+    var amc = laydate.render({
+        elem: '#endTime'
+        ,type: 'time'
+        ,min: '00:00:00'
+        ,max: '23:59:59'
+        ,format: 'HH:mm:ss'
+        ,btns: ['confirm']
+    });
+})
+</script>
+{/block}

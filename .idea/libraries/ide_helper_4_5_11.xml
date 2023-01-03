@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="ide-helper-4.5.11">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/vendor/swoft/ide-helper-4.5.11.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

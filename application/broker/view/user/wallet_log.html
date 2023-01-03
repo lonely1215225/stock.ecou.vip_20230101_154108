@@ -1,0 +1,119 @@
+{extend name="base/layout"/}
+
+{block name="main"}
+<link rel="stylesheet" href="__DASH__/lib/bootstrap-datetimepicker/css/bootstrap-datetimepicker.css">
+<script src="__DASH__/lib/bootstrap-datetimepicker/js/bootstrap-datetimepicker.js"></script>
+<div class="content-wrapper">
+    <section class="content-header">
+        <h1>账户资金流水</h1>
+        <ol class="breadcrumb">
+            <li><a href="{:url('index/index')}"><i class="fa fa-home"></i> 首页</a></li>
+            <li><a href="#">用户管理</a></li>
+            <li class="active">账户资金流水</li>
+        </ol>
+    </section>
+    <section class="content">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="box box-info">
+                    <div class="box-body no-padding">
+                        <table class="table table-bordered table-middle table-center">
+                            <thead>
+                            <tr>
+                                <th>流水号</th>
+                                <th>姓名</th>
+                                <th>手机号</th>
+                                <th>变动类型</th>
+                                <th>变动时间</th>
+                                <th>发生前</th>
+                                <th>发生金额</th>
+                                <th>发生后</th>
+                                <th>代理商/经济人</th>
+                            </tr>
+                            </thead>
+                            {foreach $walletLogAll['walletLogInfo'] as $k=>$v}
+                            <tr>
+                                <td>{$v.id}</td>
+                                <td>
+                                    <a href="{:url('user/index',['mobile'=>$v.mobile])}" target="_blank"  title="点击打开用户详情">
+                                        {$v.mobile}<br>{$v.real_name?:''}
+                                    </a>
+                                </td>
+                                <td>{$v.mobile}</td>
+                                <td>{$v['change_type']?$walletChangeType[$v['change_type']]:''}</td>
+                                <td>{$v.change_time}</td>
+                                <td>{$v.before_balance}</td>
+                                <td>{$v.change_money}</td>
+                                <td>{$v.after_balance}</td>
+                                <td>{$walletLogAll['agentInfo'][$v['agent_id']]?:''}
+                                    <br>{$walletLogAll['brokerInfo'][$v['broker_id']]?:''}
+                                </td>
+                            </tr>
+                            {/foreach}
+                        </table>
+                    </div>
+
+                    <div class="box-footer">
+                        <div class="col-sm-12 no-padding">{:$walletLogAll['walletLogInfo']->render()}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+{/block}
+{block name="js"}
+<script>
+$(function () {
+    $('#startDate').datetimepicker({
+        format: 'yyyy-mm-dd 00:00:00',//显示格式
+        minView: "month",//设置只显示到月份
+        initialDate: new Date(),
+        autoclose: true,//选中自动关闭
+        todayBtn: true,//显示今日按钮
+    });
+    $('#endDate').datetimepicker({
+        format: 'yyyy-mm-dd 23:59:59',//显示格式
+        minView: "month",//设置只显示到月份
+        initialDate: new Date(),
+        autoclose: true,//选中自动关闭
+        todayBtn: true,//显示今日按钮!
+    });
+})
+$(function(){
+    var agentId  = "{:$agentId}";
+    var brokerId = "{:$brokerId}";
+    if (agentId) {
+        $.post("{:url('stock/user/getBrokerInfo')}", {pid:agentId,brokerId:brokerId}, function(data){
+            if(data.code == 1){
+                var str = "<select id=\"brokerId\" name=\"broker_id\" class=\"form-control\"><option value=''>请选择</option>";
+                $.each(data.data, function (i, el) {
+                    if(el.id == brokerId){
+                        str +="<option value='"+el.id+"' selected>"+el.username+"</option>";
+                    }else{
+                        str +="<option value='"+el.id+"'>"+el.username+"</option>";
+                    }
+                });
+                str +="</select>";
+                $("#brokerInfo").html(str);
+            }
+        });
+    }
+});
+
+function showBroker(v) {
+    var brokerId=0;
+    $.post("{:url('stock/user/getBrokerInfo')}", {pid:v,brokerId:brokerId}, function(data){
+        if(data.code == 1){
+            $("#brokerInfo").empty();
+            var str = "<select id=\"brokerId\" name=\"broker_id\" class=\"form-control\"><option value=''>请选择</option>";
+            $.each(data.data, function (i, el) {
+                str +="<option value='"+el.id+"'>"+el.username+"</option>";
+            });
+            str +="</select>";
+            $("#brokerInfo").html(str);
+        }
+    });
+}
+</script>
+{/block}

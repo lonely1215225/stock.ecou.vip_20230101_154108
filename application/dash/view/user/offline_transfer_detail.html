@@ -1,0 +1,52 @@
+{extend name="base/pop_layout"/}
+
+{block name="main"}
+<section class="content">
+    <table class="table table-middle">
+        <tbody>
+        <tr>
+            <td width="60">转入方式</td>
+            <td width="350">
+                {$payCompanyList[$oneRecharge['pay_company_id']]['name']}({$payCompanyList[$oneRecharge['pay_company_id']]['pay_type']})
+            </td>
+        </tr>
+        <tr>
+            <td width="60">转入账户</td>
+            <td width="350">
+                {$oneRecharge.offline_to_account|raw}
+            </td>
+        </tr>
+        <tr>
+            <td width="50">充值金额</td>
+            <td width="350">
+                {$oneRecharge.money}
+            </td>
+        </tr>
+        <tr>
+            <td width="60">实际到账金额</td>
+            <td width="350">
+                {$oneRecharge.real_money}
+            </td>
+        </tr>
+        <!--tr>
+            <td width="60">转账凭证</td>
+            <td width="350" id="layer-photos-demo">
+                <img  layer-src="{$oneRecharge.offline_img}" src="{$oneRecharge.offline_img}" height="70">
+            </td>
+        </tr-->
+        </tbody>
+    </table>
+</section>
+
+{/block}
+{block name="js"}
+<script type="text/javascript">
+layer.photos({
+    photos: '#layer-photos-demo'
+    ,anim: 5
+});
+var callbackdata = function () {
+return true;
+}
+</script>
+{/block}

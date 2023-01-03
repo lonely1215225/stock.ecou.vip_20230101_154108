@@ -1,0 +1,153 @@
+{extend name="base/layout"/}
+
+{block name="main"}
+<style>
+.tj{
+    background-color: #ecf0f5;
+    font-weight:bold;
+}
+</style>
+<link rel="stylesheet" href="__DASH__/lib/bootstrap-datetimepicker/css/bootstrap-datetimepicker.css">
+<script src="__DASH__/lib/bootstrap-datetimepicker/js/bootstrap-datetimepicker.js"></script>
+<div class="content-wrapper">
+    <section class="content-header">
+        <h1>佣金明细</h1>
+        <ol class="breadcrumb">
+            <li><a href="{:url('index/index')}"><i class="fa fa-home"></i> 首页</a></li>
+            <li><a href="#">用户管理</a></li>
+            <li class="active">佣金明细</li>
+        </ol>
+    </section>
+    <section class="content">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="box box-info">
+                    <div class="box-header with-border">
+                        <form id="searchInfo" action="{:url('index')}" method="get">
+                            <div class="col-sm-12 no-padding">
+                                <div class="search-box">
+                                    <label class="text-right">手机号</label>
+                                    <div class="search-body">
+                                        <input class="form-control" type="text" id="mobile" name="mobile" value="{$mobile?:''}">
+                                    </div>
+                                </div>
+
+                                <div class="search-box">
+                                    <label class="text-right">开始时间</label>
+                                    <div class="search-body">
+                                        <div class="input-group date">
+                                            <div class="input-group-addon">
+                                                <i class="fa fa-calendar"></i>
+                                            </div>
+                                            <input type="text" name="start_date" id="startDate" value="{$start_date?:''}" class="form-control pull-right">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="search-box">
+                                    <label class="text-right">结束时间</label>
+                                    <div class="search-body">
+                                        <div class="input-group date">
+                                            <div class="input-group-addon">
+                                                <i class="fa fa-calendar"></i>
+                                            </div>
+                                            <input type="text" name="end_date" id="endDate" value="{$end_date?:''}" class="form-control pull-right">
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="col-sm-12 no-padding">
+                                <div class="search-box">
+                                    <label class="text-right">收入类型</label>
+                                    <div class="search-body">
+                                        <select id="incomeType" name="income_type" class="form-control">
+                                            <option value="">请选择</option>
+                                            {foreach $incomeType as $ik=>$iv}
+                                            <option value="{$ik}" {:isset($income_type) && $ik==$income_type?'selected':''}>{$iv}</option>
+                                            {/foreach}
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="search-box">
+                                    <label class="text-right"></label>
+                                    <div class="search-body"><input type="submit" class="btn btn-primary" value="查找"></div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="box-body no-padding">
+                        <table class="table table-bordered table-middle table-center">
+                            <thead>
+                            <tr class="tj">
+                                <td>总计</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td>{$brokerStatistic?$brokerStatistic['broker_money']:0}</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            </thead>
+                            <thead>
+                            <tr>
+                                <th>用户手机号</th>
+                                <th>收入类型</th>
+                                <th>股票详情</th>
+                                <th>股票市值</th>
+                                <th>经济人收入</th>
+                                <th>是否已返佣金</th>
+                                <th>执行时间</th>
+                            </tr>
+                            </thead>
+                            {foreach $incomeList['list'] as $k=>$nl}
+                            <tr>
+                                <td>
+                                    <a href="{:url('user/index',['mobile'=>$nl.mobile])}" target="_blank"  title="点击打开用户详情">
+                                    {$nl.mobile}<br>{$nl.real_name?:'未实名'}
+                                    </a>
+                                </td>
+                                <td>{$nl['income_type']?$incomeType[$nl['income_type']]:''}</td>
+                                <td>
+                                    {$nl['market']}{$nl['stock_code']}
+                                    <br>
+                                    {$nl['stock_code']?$incomeList['stockInfo'][$nl['market'].$nl['stock_code']]['stock_name']:''}
+                                </td>
+                                <td>{$nl['stock_value']?:''}</td>
+                                <td>{$nl['broker_money']?:''}</td>
+                                <td>{$nl['is_return']?'是':'否'}</td>
+                                <td>{$nl['income_time']?:''}</td>
+                            </tr>
+                            {/foreach}
+                        </table>
+                    </div>
+
+                    <div class="box-footer">
+                        <div class="col-sm-12 no-padding">{:$incomeList['list']->render()}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+{/block}
+{block name="js"}
+<script>
+$(function () {
+    $('#startDate').datetimepicker({
+        format: 'yyyy-mm-dd 00:00:00',//显示格式
+        minView: "month",//设置只显示到月份
+        initialDate: new Date(),
+        autoclose: true,//选中自动关闭
+        todayBtn: true,//显示今日按钮
+    });
+    $('#endDate').datetimepicker({
+        format: 'yyyy-mm-dd 23:59:59',//显示格式
+        minView: "month",//设置只显示到月份
+        initialDate: new Date(),
+        autoclose: true,//选中自动关闭
+        todayBtn: true,//显示今日按钮!
+    });
+})
+</script>
+{/block}

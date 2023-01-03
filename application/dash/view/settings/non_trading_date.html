@@ -1,0 +1,127 @@
+{extend name="base/layout"/}
+
+{block name="main"}
+<style>
+tbody td {height: 70px;}
+</style>
+<div class="content-wrapper">
+    <section class="content-header">
+        <h1>非交易日管理</h1>
+        <ol class="breadcrumb">
+            <li><a href="{:url('index/index')}"><i class="fa fa-home"></i> 首页</a></li>
+            <li><a href="#">系统设置</a></li>
+            <li class="active">非交易日管理</li>
+        </ol>
+    </section>
+    <section class="content">
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="box box-info">
+                    <div class="box-header with-border"><b>{$month.thisTitle}</b></div>
+                    <div class="box-body no-padding">
+                        <table class="table table-bordered table-middle table-center">
+                            <thead>
+                            <tr>
+                                <th>周一</th>
+                                <th>周二</th>
+                                <th>周三</th>
+                                <th>周四</th>
+                                <th>周五</th>
+                                <th>周六</th>
+                                <th>周日</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                {php}
+                                $thisCount = count($month['this']);
+                                {/php}
+                                {volist name="month.this" id="d"}
+                                <td data-id="{$d.trading_date}" class="{$d.trading_date=='' ? 'disabled' : ($d.is_disabled ? 'selected' : 'editable')}">
+                                    {:substr($d.trading_date, 8)}
+                                </td>
+                                {if $i % 7 == 0 && $i < $thisCount}
+                            </tr>
+                            <tr>
+                                {/if}
+                                {/volist}
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-6">
+                <div class="box box-info">
+                    <div class="box-header with-border"><b>{$month.nextTitle}</b></div>
+                    <div class="box-body no-padding">
+                        <table class="table table-bordered table-middle table-center">
+                            <thead>
+                            <tr>
+                                <th>周一</th>
+                                <th>周二</th>
+                                <th>周三</th>
+                                <th>周四</th>
+                                <th>周五</th>
+                                <th>周六</th>
+                                <th>周日</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                {php}
+                                $nextCount = count($month['next']);
+                                {/php}
+                                {volist name="month.next" id="d"}
+                                <td data-id="{$d.trading_date}" class="{$d.trading_date=='' ? 'disabled' : ($d.is_disabled ? 'selected' : 'editable')}">
+                                    {:substr($d.trading_date, 8)}
+                                </td>
+                                {if $i % 7 == 0 && $i < $nextCount}
+                            </tr>
+                            <tr>
+                                {/if}
+                                {/volist}
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+{/block}
+{block name="js"}
+<script>
+$(".selected,.editable").on("click", function () {
+    // 防止多次点击
+    if ($(this).hasClass('ing')) {
+        return;
+    }
+
+    var date = $(this).attr("data-id");
+    if (date == "{:date('Y-m-d')}") {
+        layer.msg('今日不能操作', {icon: 2, time: 1500, shade: .3, shadeClose: true});
+        return;
+    }
+    $(this).addClass('flag');
+    $.post("{:url('stock/nonTradingDate/setNonTradingDate')}", {non_trading_date: date}, function (data) {
+        $(this).removeClass('ing');
+        if (data.code == 1) {
+            $("[data-id=" + date + "]").toggleClass(function () {
+                if ($(this).hasClass('selected')) {
+                    $(this).removeClass('selected');
+                    return 'editable';
+                } else {
+                    $(this).removeClass('editable');
+                    return 'selected';
+                }
+            });
+        } else {
+            layer.msg(data.msg, {icon: 2, time: 1500, shade: .3, shadeClose: true});
+        }
+    });
+});
+</script>
+{/block}

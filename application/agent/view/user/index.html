@@ -1,0 +1,132 @@
+{extend name="base/layout"/}
+
+{block name="main"}
+<style>
+.tj{
+    background-color: #ecf0f5;
+    font-weight:bold;
+}
+</style>
+<div class="content-wrapper">
+    <section class="content-header">
+        <h1>用户列表</h1>
+        <ol class="breadcrumb">
+            <li><a href="{:url('index/index')}"><i class="fa fa-home"></i> 首页</a></li>
+            <li><a href="#">用户管理</a></li>
+            <li class="active">用户列表</li>
+        </ol>
+    </section>
+    <section class="content">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="box box-info">
+                    <div class="box-header with-border">
+                        <form id="searchInfo" action="{:url('index')}" method="get">
+                            <div class="col-sm-12 no-padding">
+                                <div class="search-box">
+                                    <label class="text-right">手机号</label>
+                                    <div class="search-body"><input class="form-control" type="text" id="mobile" name="mobile" value="{:isset($mobile)?$mobile:''}"></div>
+                                </div>
+                                <div class="search-box">
+                                    <label class="text-right">经济人</label>
+                                    <div class="search-body">
+                                        <select id="brokerId" name="broker_id" class="form-control">
+                                            <option value="">请选择</option>
+                                            {foreach $brokerInfo as $bk=>$bv}
+                                            <option value="{$bk}" {:isset($broker_id) && $bk==$broker_id?'selected':''}>{$bv}</option>
+                                            {/foreach}
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="search-box">
+                                    <label class="text-right"></label>
+                                    <div class="search-body"><input type="submit" class="btn btn-primary" value="查找"></div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="box-body no-padding">
+                        <table class="table table-bordered table-middle table-center">
+                            <thead>
+                            <tr class="tj">
+                                <td>总计</td>
+                                <td>{$userTotal.userTotal?:''}</td>
+                                <td></td>
+                                <td>{$userTotal.totalAccount.totalwallet?:0}</td>
+                                <td>{$userTotal.totalAccount.totalstrategy?:0}</td>
+                                <td>{$userTotal.totalAccount.frozen?:0}</td>
+                                <td>{$userTotal.totalSpal.totalspal?:0}
+                                <td>{$userTotal.totalAccount.deposit?:0}</td>
+                                <td>{$userTotal.totalAccount.totalrecharge?:0}</td>
+                                <td>{$userTotal.successWithdraw.money?:0}</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            </thead>
+                            <tr>
+                                <th>用户ID</th>
+                                <th>姓名</th>
+                                <th>手机号</th>
+                                <th>账户资金</th>
+                                <th>策略金余额(含冻结)</th>
+                                <th>冻结资金</th>
+                                <th>平仓结算盈亏</th>
+                                <th>持仓总保证金</th>
+                                <th>累计充值</th>
+                                <th>累计提现</th>
+                                <th>银行卡</th>
+                                <th>经纪人</th>
+                                <th>操作</th>
+                            </tr>
+                            {if isset($userList['userList'])}
+                            {foreach $userList['userList'] as $k=>$nl}
+                            <tr>
+                                <td>{$nl['id']}</td>
+                                <td>{$nl['real_name']?:'未实名'}</td>
+                                <td>{$nl.mobile}</td>
+                                <td>
+                                    <a  href="{:url('wallet_log', ['mobile' => $nl.mobile])}" target="_blank" style="cursor: pointer;border-bottom:1px dotted #333333;" title="点击打开用户钱包流水">
+                                        <font color="#333333">
+                                            {$userList['userAccountList'][$nl['id']]['wallet_balance']?:''}
+                                        </font>
+                                    </a>
+                                </td>
+                                <td>
+                                    <a  href="{:url('strategy_log', ['mobile' => $nl.mobile])}" target="_blank" style="cursor: pointer;border-bottom:1px dotted #333333;" title="点击打开用户钱包流水">
+                                        <font color="#333333">
+                                            {$userList['userAccountList'][$nl['id']]['strategy_balance']?:''}
+                                        </font>
+                                    </a>
+                                </td>
+                                <td>{$userList['userAccountList'][$nl['id']]['frozen']?:''}</td>
+                                <td>{$userList['spalList'][$nl['id']]?$userList['spalList'][$nl['id']]:0}</td>
+                                <td>{$userList['userAccountList'][$nl['id']]['deposit']?:''}</td>
+                                <td>{$userList['userAccountList'][$nl['id']]['total_recharge']?:''}</td>
+                                <td>
+                                    已提现:{$userList['totalWithdraw'][$nl['id']]?:0}
+                                </td>
+                                <td>{$nl.is_bound_bank_card?'已绑定':'未绑定'}</td>
+                                <td>{$userList['brokerInfo'][$nl['broker_id']]?:''}</td>
+                                <td>
+                                    <a class="btn btn-sm btn-primary mb5" href="{:url('user_detail', ['id' => $nl.id])}">详情</a>
+                                </td>
+                            </tr>
+                            {/foreach}
+                            {/if}
+                        </table>
+                    </div>
+
+                    <div class="box-footer">
+                        <div class="col-sm-12 no-padding">{:$userList['userList']->render()}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+{/block}
+{block name="js"}
+
+{/block}

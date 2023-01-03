@@ -1,0 +1,56 @@
+{extend name="base/layout"/}
+
+{block name="main"}
+<div class="content-wrapper">
+    <section class="content-header">
+        <h1>提现申请</h1>
+        <ol class="breadcrumb">
+            <li><a href="{:url('index/index')}"><i class="fa fa-home"></i> 首页</a></li>
+            <li><a href="#">我的</a></li>
+            <li class="active">佣金明细</li>
+        </ol>
+    </section>
+    <section class="content">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="box box-info">
+                    <div class="box-body">
+                        <table class="table table-bordered table-middle table-center">
+                            <thead>
+                            <tr>
+                                <th colspan="5">账户信息</th>
+                            </tr>
+                            <tr>
+                                <th>账户余额</th>
+                                <th>总佣金</th>
+                                <th>总提现</th>
+                                <th>更新时间</th>
+                                <th>操作</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            {if $accountInfo}
+                            <tr>
+                                <td>{$accountInfo.balance?:''}</td>
+                                <td>{$accountInfo.total_commission?:''}</td>
+                                <td>{$accountInfo.total_withdraw?:''}</td>
+                                <td>{$accountInfo.update_time?:''}</td>
+                                <td>
+                                    <a class="btn btn-sm btn-primary mb5" href="{:url('withdraw')}">提现</a>
+                                </td>
+                            </tr>
+                            {/if}
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+</div>
+{/block}
+{block name="js"}
+
+{/block}

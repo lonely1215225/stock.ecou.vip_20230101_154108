@@ -1,0 +1,196 @@
+{extend name="base/layout"/}
+
+{block name="main"}
+<style>
+.buy {
+    color: #f66;
+}
+
+.buy a {
+    color: #f66;
+    border-bottom: 1px dotted #f66;
+}
+
+.sell {
+    color: #0384ec;
+}
+
+.sell a {
+    color: #0384ec;
+    border-bottom: 1px dotted #0384ec;
+}
+
+.tj {
+    background-color: #ecf0f5;
+    font-weight: bold;
+}
+.table-scroll-x {
+    box-sizing: border-box;
+    width: 100%;
+    overflow-x: scroll;
+    white-space:nowrap;
+}
+.table-scroll-x-top {
+    overflow-x: scroll;
+    height: 14px;
+}
+</style>
+<link rel="stylesheet" href="__DASH__/lib/bootstrap-datetimepicker/css/bootstrap-datetimepicker.css">
+<script src="__DASH__/lib/bootstrap-datetimepicker/js/bootstrap-datetimepicker.js"></script>
+<div class="content-wrapper">
+    <section class="content-header">
+        <h1>强平日志</h1>
+        <ol class="breadcrumb">
+            <li><a href="{:url('index/index')}"><i class="fa fa-home"></i> 首页</a></li>
+            <li><a href="#">订单管理</a></li>
+            <li class="active">强平日志</li>
+        </ol>
+    </section>
+    <section class="content">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="box box-info">
+                    <div class="box-header with-border">
+                        <form id="searchInfo" action="{:url('forced_sell_log')}" method="get" autocomplete="off">
+                            <div class="col-sm-12 no-padding">
+                                <div class="search-box">
+                                    <label class="text-right">手机号</label>
+                                    <div class="search-body">
+                                        <input class="form-control" id="mobile" name="mobile" type="text" value="{$mobile?:''}">
+                                    </div>
+                                </div>
+                                <div class="search-box">
+                                    <label class="text-right">触发日期</label>
+                                    <div class="search-body">
+                                        <input type="text" name="trading_date" id="tradingDate"
+                                               value="{$trading_date?:''}" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="search-box">
+                                    <label class="text-right">触发持仓编号</label>
+                                    <div class="search-body">
+                                        <input class="form-control" name="position_id" id="positionId"
+                                               type="text" value="{$position_id?:''}">
+                                    </div>
+                                </div>
+                                <div class="search-box">
+                                    <label class="text-right"></label>
+                                    <div class="search-body">
+                                        <input type="submit" class="btn btn-primary" value="查找">
+                                    </div>
+                                </div>
+                            </div>
+
+                        </form>
+                    </div>
+                    <script type="text/javascript">
+                        function scrollWindow(obj,id)
+                        {
+                            document.getElementById(id).scrollLeft=obj.scrollLeft
+                        }
+                    </script>
+                    <div id="div1" class="table-scroll-x-top" onscroll="scrollWindow(this,'scroll_tab')">
+                        <div class="table-scroll-x-top2"></div>
+                    </div>
+                    <div class="box-body no-padding table-scroll-x" id="scroll_tab"  onscroll="scrollWindow(this,'div1')">
+                        <table class="table table-bordered table-middle table-center" style="width: 130%">
+                            <thead>
+                            <tr class="tj">
+                                <td colspan="4"></td>
+                                <td colspan="3">触发时资金状况</td>
+                                <td colspan="6">触发时持仓状况</td>
+                                <td colspan="3">被强平持仓状况</td>
+                                <td colspan="2"></td>
+                            </tr>
+                            </thead>
+                            <tr>
+                                <th>用户信息</th>
+                                <th>强平类型</th>
+                                <th>强平顺序</th>
+                                <th>触发时间</th>
+                                <th>策略金（含冻结）</th>
+                                <th>冻结资金</th>
+                                <th>可用策略金</th>
+                                <th>触发持仓</th>
+                                <th>补仓价</th>
+                                <th>现价</th>
+                                <th>市值</th>
+                                <th>应追加保证金</th>
+                                <th>持仓/可卖数量</th>
+                                <th>被强平持仓</th>
+                                <th>强平股数</th>
+                                <th>强平委托单编号</th>
+                                <th>月管理费</th>
+                                <th>月管理到期时间</th>
+                            </tr>
+                            {foreach $list['list'] as $k=>$v}
+                            <tr>
+                                <td>
+                                    <a href="{:url('user/index', ['mobile' => $v.mobile])}" target="_blank" style="cursor: pointer" title="点击查看用户详情">
+                                        {$v.real_name}<br>{$v.mobile}
+                                    </a>
+                                </td>
+                                <td>
+                                    {$typeList[$v.trigger_type]?:''}
+                                    {if $v.trigger_type == 'realtime'}
+                                    <br>
+                                    ({:bcadd(bcmul($v.stock_value,0.06,2),$v.strategy_balance,2)})
+                                    {/if}
+                                </td>
+                                <td>{$v.sell_order?$sellOrder[$v.sell_order]:''}</td>
+                                <td>{$v.trigger_time}</td>
+                                <td>{$v.strategy_balance}</td>
+                                <td>{$v.frozen}</td>
+                                <td>{$v.strategy}</td>
+                                <td>
+                                    {$v.position_id}
+                                    <br>
+                                    {$v.stock}
+                                    <br>
+                                    {$v.stock?$list['stockInfo'][$v['stock']]['stock_name']:''}
+                                </td>
+                                <td>{$v.stop_loss_price}</td>
+                                <td>{$v.price}</td>
+                                <td>{$v.stock_value}</td>
+                                <td>{$v.additional_deposit}</td>
+                                <td>{$v.volume_position}/{$v.volume_for_sell}</td>
+                                <td>
+                                    {$v.target_position_id}
+                                    <br>
+                                    {$v.target_stock}
+                                    <br>
+                                    {$v.target_stock?$list['targetStock'][$v['target_stock']]['stock_name']:''}
+                                </td>
+                                <td>{$v.sell_volume}</td>
+                                <td>{$v.order_id}</td>
+                                <td>{$v.is_monthly?'是':'否'}</td>
+                                <td>{$v.monthly_expire_date}</td>
+                            </tr>
+                            {/foreach}
+                        </table>
+                    </div>
+
+                    <div class="box-footer">
+                        <div class="col-sm-12 no-padding">{:$list['list']->render()}</div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+</div>
+{/block}
+{block name="js"}
+<script>
+$(function () {
+    $('#tradingDate').datetimepicker({
+        format: 'yyyy-mm-dd',//显示格式
+        minView: "month",//设置只显示到月份
+        initialDate: new Date(),
+        autoclose: true,//选中自动关闭
+        todayBtn: true,//显示今日按钮
+    });
+})
+</script>
+{/block}

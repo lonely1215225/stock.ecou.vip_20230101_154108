@@ -1,0 +1,61 @@
+{extend name="base/layout"/}
+
+{block name="main"}
+<div class="content-wrapper">
+    <section class="content-header">
+        <h1>经济人管理</h1>
+        <ol class="breadcrumb">
+            <li><a href="{:url('index/index')}"><i class="fa fa-home"></i> 首页</a></li>
+            <li><a href="#">代理商</a></li>
+            <li class="active">经纪人管理</li>
+        </ol>
+    </section>
+    <section class="content">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="box box-info">
+                    <div class="box-header with-border">
+                    </div>
+                    <div class="box-body no-padding">
+                        <table class="table table-bordered table-middle table-center">
+                            <thead>
+                            <tr>
+                                <th>用户名称</th>
+                                <th>代理商名称</th>
+                                <th>手机号</th>
+                                <th>分成比例</th>
+                                <th>是否禁止登陆</th>
+                                <th>是否拒绝提现</th>
+                                <th>操作</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            {foreach $brokerInfo as $k=>$nl}
+                            <tr>
+                                    <td>{$nl.username}</td>
+                                    <td>{$nl.org_name}</td>
+                                    <td>{$nl.mobile}</td>
+                                    <td>{$nl.commission_rate}%</td>
+                                    <td>{$nl.is_deny_login ? '是' : '否'}</td>
+                                    <td>{$nl.is_deny_cash ? '是' : '否'}</td>
+                                    <td>
+                                        <a class="btn btn-sm btn-primary" href="{:url('agent/reset_pwd', ['id' => $nl.id])}">重置密码</a>
+                                    </td>
+                            </tr>
+                            {/foreach}
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="box-footer">
+                        <div class="col-sm-12 no-padding">{:$brokerInfo->render()}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+{/block}
+{block name="js"}
+
+{/block}

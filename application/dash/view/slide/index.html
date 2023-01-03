@@ -1,0 +1,133 @@
+{extend name="base/layout"/}
+
+{block name="main"}
+<div class="content-wrapper">
+    <section class="content-header">
+        <h1>
+            幻灯片列表
+            <small>Home</small>
+        </h1>
+        <ol class="breadcrumb">
+            <li><a href="{:url('index/index')}"><i class="fa fa-home"></i> 首页</a></li>
+            <li><a href="#">内容管理</a></li>
+            <li class="active">幻灯片列表</li>
+        </ol>
+    </section>
+    <section class="content">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="box box-info">
+                    <div class="box-header">
+                        <a href="{:url('slide/edit')}" class="btn btn-success"><i class="fa fa-plus"></i> 添加幻灯片</a>
+                        <a href="#" class="btn btn-success" style="width: 100px;display: none;" id="delAll" onclick="delAllSlide();">删除</a>
+                        <input type="checkbox" class="check-all">全选/全不选
+                    </div>
+                    <div class="box-body">
+                        <table class="table table-bordered table-middle table-center">
+                            <thead>
+                            <tr>
+                                <th>选择</th>
+                                <th>编号</th>
+                                <th>幻灯片标题</th>
+                                <th>更新时间</th>
+                                <th>外部链接</th>
+                                <th>操作</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            {foreach $slideList as $k=>$nl}
+                                <tr>
+                                    <td><input type="checkbox" name="ids" class="check-item" value="{$nl.id}"></td>
+                                    <td>{$k+1}</td>
+                                    <td><a href="{:url('slide/edit', ['id'=>$nl.id])}" class="name">{$nl.title}</a></td>
+                                    <td>{$nl.update_time}</td>
+                                    <td>{$nl.outlink}</td>
+                                    <td>
+                                        <a class="btn btn-sm btn-primary" href="{:url('slide/edit', ['id' => $nl.id])}">编辑</a>
+                                        <a class="btn btn-sm btn-warning" href="#" onclick="delSlide({$nl.id});">删除</a>
+                                    </td>
+                                </tr>
+                            {/foreach}
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="box-footer">
+                        <div class="col-sm-12 no-padding">{:$slideList->render()}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+{/block}
+{block name="js"}
+<script type="text/javascript">
+    $(function(){
+        //实现全选与反选
+        $(".check-all").click(function () {
+            if (this.checked){
+                $("#delAll").show();
+            }else {
+                $("#delAll").hide();
+            }
+            $(".check-item").prop("checked", $(this).prop("checked"));
+        });
+        $("input[name='ids']").click(function () {
+            var isChecked = $("input[type='checkbox']").is(':checked');
+            if (isChecked) {
+              $("#delAll").show();
+            }else {
+              $("#delAll").hide();
+            }
+        })
+    });
+    function delSlide(v) {
+        layer.confirm('确定要删除吗？', {
+            btn: ['确定','取消'] //按钮
+        }, function(){
+            var id = v;
+            if(id == "") {
+                layer.msg("ID不能为空", {icon:2, time:1500, shade:.3, shadeClose:true});
+            } else {
+                $.post("{:url('stock/slide/delete')}", {id:id}, function(data){
+                    if(data.code == 1){
+                        layer.msg(data.msg, {icon:1, time:1500, shade:.3, shadeClose:true}, function(){
+                            window.location.href = "{:url('index')}";
+                        });
+                    } else {
+                        layer.msg(data.msg, {icon:2, time:1500, shade:.3, shadeClose:true});
+                    }
+                });
+            }
+            return false;
+        }, null);
+    }
+    function delAllSlide() {
+        layer.confirm('确定要删除吗？', {
+            btn: ['确定','取消'] //按钮
+        }, function(){
+            var pid_array = new Array();
+            $("input[name='ids']:checked").each(function(){
+                pid_array.push($(this).val());//向数组中添加元素
+            });
+            var id=pid_array.join(",");
+            if(id == "") {
+                layer.msg("ID不能为空", {icon:2, time:1500, shade:.3, shadeClose:true});
+            } else {
+                $.post("{:url('stock/slide/delete')}", {id:id}, function(data){
+                    if(data.code == 1){
+                        layer.msg(data.msg, {icon:1, time:1500, shade:.3, shadeClose:true}, function(){
+                            window.location.href = "{:url('index')}";
+                        });
+                    } else {
+                        layer.msg(data.msg, {icon:2, time:1500, shade:.3, shadeClose:true});
+                    }
+                });
+            }
+
+            return false;
+        }, null);
+    }
+</script>
+{/block}

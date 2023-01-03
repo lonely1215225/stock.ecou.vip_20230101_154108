@@ -1,0 +1,54 @@
+{extend name="base/pop_layout"/}
+
+{block name="main"}
+<form id="ruleForm" action="" class="form-horizontal">
+    <div class="content-wrapper">
+        <div class="box box-info">
+            <div class="box-header with-border">
+                <div class="col-sm-12 no-padding">
+                    <div class="search-box">
+                        <label class="text-right">获取到股票数量：</label>
+                        <div class="search-body">{$count}</div>
+                    </div>
+                    <div class="search-box">
+                        <label class="text-right">更新现有数据：</label>
+                        <label><input type="checkbox" name="is_updata" id="is_updata" value="0"></label>
+                    </div>
+                </div>
+            </div>
+            <div class="box-body">
+                <table class="table table-bordered table-middle table-center">
+                    <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>股票编号</th>
+                        <th>股票名称</th>
+                        <th>证券公司</th>
+                        <th>简称</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {foreach $items as $k=>$v}
+                    <tr>
+                        <td>{$k+1}</td>
+                        <td>{$v.code}</td>
+                        <td>{$v.name}</td>
+                        <td>{$v.market}</td>
+                        <td>{$v.pinyin}</td>
+                    </tr>
+                    {/foreach}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</form>
+{/block}
+{block name="js"}
+<script>
+    var callbackdata = function () {
+        var is_updata = $("#is_updata").is(":checked") ? 1 : 0;
+        return is_updata;
+    }
+</script>
+{/block}

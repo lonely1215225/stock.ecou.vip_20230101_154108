@@ -1,0 +1,1092 @@
+[2022-10-15T11:30:09+08:00][ sql ] [ SQL ] SELECT id,user_id,market,stock_code,stock_id,primary_account,volume_position,volume_for_sell,sum_buy_value_cost,sum_sell_value,sum_deposit,stop_loss_price,is_finished,is_suspended,is_monthly,is_cash_coupon FROM md_order_position WHERE  user_id = 524  AND is_finished =   AND is_suspended =   AND volume_for_sell > 0 ORDER BY id ASC LIMIT 1 [ RunTime:0.001423s ]
+sql
+[2022-10-15T11:30:14+08:00][ sql ] [ SQL ] SELECT strategy_balance,frozen FROM md_user_account WHERE  user_id = 524 LIMIT 1 [ RunTime:0.001119s ]
+sql
+[2022-10-15T11:30:14+08:00][ sql ] [ SQL ] SELECT id,user_id,market,stock_code,volume_position,volume_for_sell,is_suspended,stop_loss_price FROM md_order_position WHERE  id = 105809  AND is_finished =  LIMIT 1 [ RunTime:0.000813s ]
+sql
+[2022-10-15T11:30:14+08:00][ sql ] [ SQL ] SELECT id,user_id,market,stock_code,stock_id,primary_account,volume_position,volume_for_sell,sum_buy_value_cost,sum_sell_value,sum_deposit,stop_loss_price,is_finished,is_suspended,is_monthly,is_cash_coupon FROM md_order_position WHERE  id = 105809  AND is_finished =  LIMIT 1 [ RunTime:0.000884s ]
+sql
+[2022-10-15T11:30:14+08:00][ sql ] [ SQL ] SELECT id,user_id,market,stock_code,stock_id,primary_account,volume_position,volume_for_sell,sum_buy_value_cost,sum_sell_value,sum_deposit,stop_loss_price,is_finished,is_suspended,is_monthly,is_cash_coupon FROM md_order_position WHERE  user_id = 524  AND is_finished =   AND is_suspended =   AND volume_for_sell > 0 ORDER BY id ASC LIMIT 1 [ RunTime:0.001473s ]
+sql
+[2022-10-15T11:30:19+08:00][ sql ] [ SQL ] SELECT strategy_balance,frozen FROM md_user_account WHERE  user_id = 524 LIMIT 1 [ RunTime:0.001020s ]
+sql
+[2022-10-15T11:30:19+08:00][ sql ] [ SQL ] SELECT id,user_id,market,stock_code,volume_position,volume_for_sell,is_suspended,stop_loss_price FROM md_order_position WHERE  id = 105809  AND is_finished =  LIMIT 1 [ RunTime:0.000780s ]
+sql
+[2022-10-15T11:30:19+08:00][ sql ] [ SQL ] SELECT id,user_id,market,stock_code,stock_id,primary_account,volume_position,volume_for_sell,sum_buy_value_cost,sum_sell_value,sum_deposit,stop_loss_price,is_finished,is_suspended,is_monthly,is_cash_coupon FROM md_order_position WHERE  id = 105809  AND is_finished =  LIMIT 1 [ RunTime:0.000930s ]
+sql
+[2022-10-15T11:30:19+08:00][ sql ] [ SQL ] SELECT id,user_id,market,stock_code,stock_id,primary_account,volume_position,volume_for_sell,sum_buy_value_cost,sum_sell_value,sum_deposit,stop_loss_price,is_finished,is_suspended,is_monthly,is_cash_coupon FROM md_order_position WHERE  user_id = 524  AND is_finished =   AND is_suspended =   AND volume_for_sell > 0 ORDER BY id ASC LIMIT 1 [ RunTime:0.001374s ]
+sql
+[2022-10-15T11:30:24+08:00][ sql ] [ SQL ] SELECT strategy_balance,frozen FROM md_user_account WHERE  user_id = 524 LIMIT 1 [ RunTime:0.000977s ]
+sql
+[2022-10-15T11:30:24+08:00][ sql ] [ SQL ] SELECT id,user_id,market,stock_code,volume_position,volume_for_sell,is_suspended,stop_loss_price FROM md_order_position WHERE  id = 105809  AND is_finished =  LIMIT 1 [ RunTime:0.000898s ]
+sql
+[2022-10-15T11:30:24+08:00][ sql ] [ SQL ] SELECT id,user_id,market,stock_code,stock_id,primary_account,volume_position,volume_for_sell,sum_buy_value_cost,sum_sell_value,sum_deposit,stop_loss_price,is_finished,is_suspended,is_monthly,is_cash_coupon FROM md_order_position WHERE  id = 105809  AND is_finished =  LIMIT 1 [ RunTime:0.001000s ]
+sql
+[2022-10-15T11:30:24+08:00][ sql ] [ SQL ] SELECT id,user_id,market,stock_code,stock_id,primary_account,volume_position,volume_for_sell,sum_buy_value_cost,sum_sell_value,sum_deposit,stop_loss_price,is_finished,is_suspended,is_monthly,is_cash_coupon FROM md_order_position WHERE  user_id = 524  AND is_finished =   AND is_suspended =   AND volume_for_sell > 0 ORDER BY id ASC LIMIT 1 [ RunTime:0.001616s ]
+sql
+[2022-10-15T11:30:29+08:00][ sql ] [ SQL ] SELECT strategy_balance,frozen FROM md_user_account WHERE  user_id = 524 LIMIT 1 [ RunTime:0.000973s ]
+sql
+[2022-10-15T11:30:29+08:00][ sql ] [ SQL ] SELECT id,user_id,market,stock_code,volume_position,volume_for_sell,is_suspended,stop_loss_price FROM md_order_position WHERE  id = 105809  AND is_finished =  LIMIT 1 [ RunTime:0.000814s ]
+sql
+[2022-10-15T11:30:29+08:00][ sql ] [ SQL ] SELECT id,user_id,market,stock_code,stock_id,primary_account,volume_position,volume_for_sell,sum_buy_value_cost,sum_sell_value,sum_deposit,stop_loss_price,is_finished,is_suspended,is_monthly,is_cash_coupon FROM md_order_position WHERE  id = 105809  AND is_finished =  LIMIT 1 [ RunTime:0.000949s ]
+sql
+[2022-10-15T11:30:29+08:00][ sql ] [ SQL ] SELECT id,user_id,market,stock_code,stock_id,primary_account,volume_position,volume_for_sell,sum_buy_value_cost,sum_sell_value,sum_deposit,stop_loss_price,is_finished,is_suspended,is_monthly,is_cash_coupon FROM md_order_position WHERE  user_id = 524  AND is_finished =   AND is_suspended =   AND volume_for_sell > 0 ORDER BY id ASC LIMIT 1 [ RunTime:0.001393s ]
+sql
+[2022-10-15T11:30:34+08:00][ sql ] [ SQL ] SELECT strategy_balance,frozen FROM md_user_account WHERE  user_id = 524 LIMIT 1 [ RunTime:0.001031s ]
+sql
+[2022-10-15T11:30:34+08:00][ sql ] [ SQL ] SELECT id,user_id,market,stock_code,volume_position,volume_for_sell,is_suspended,stop_loss_price FROM md_order_position WHERE  id = 105809  AND is_finished =  LIMIT 1 [ RunTime:0.000839s ]
+sql
+[2022-10-15T11:30:34+08:00][ sql ] [ SQL ] SELECT id,user_id,market,stock_code,stock_id,primary_account,volume_position,volume_for_sell,sum_buy_value_cost,sum_sell_value,sum_deposit,stop_loss_price,is_finished,is_suspended,is_monthly,is_cash_coupon FROM md_order_position WHERE  id = 105809  AND is_finished =  LIMIT 1 [ RunTime:0.000892s ]
+sql
+[2022-10-15T11:30:34+08:00][ sql ] [ SQL ] SELECT id,user_id,market,stock_code,stock_id,primary_account,volume_position,volume_for_sell,sum_buy_value_cost,sum_sell_value,sum_deposit,stop_loss_price,is_finished,is_suspended,is_monthly,is_cash_coupon FROM md_order_position WHERE  user_id = 524  AND is_finished =   AND is_suspended =   AND volume_for_sell > 0 ORDER BY id ASC LIMIT 1 [ RunTime:0.001418s ]
+sql
+[2022-10-15T11:30:39+08:00][ sql ] [ SQL ] SELECT strategy_balance,frozen FROM md_user_account WHERE  user_id = 524 LIMIT 1 [ RunTime:0.001010s ]
+sql
+[2022-10-15T11:30:39+08:00][ sql ] [ SQL ] SELECT id,user_id,market,stock_code,volume_position,volume_for_sell,is_suspended,stop_loss_price FROM md_order_position WHERE  id = 105809  AND is_finished =  LIMIT 1 [ RunTime:0.000801s ]
+sql
+[2022-10-15T11:30:39+08:00][ sql ] [ SQL ] SELECT id,user_id,market,stock_code,stock_id,primary_account,volume_position,volume_for_sell,sum_buy_value_cost,sum_sell_value,sum_deposit,stop_loss_price,is_finished,is_suspended,is_monthly,is_cash_coupon FROM md_order_position WHERE  id = 105809  AND is_finished =  LIMIT 1 [ RunTime:0.000984s ]
+sql
+[2022-10-15T11:30:39+08:00][ sql ] [ SQL ] SELECT id,user_id,market,stock_code,stock_id,primary_account,volume_position,volume_for_sell,sum_buy_value_cost,sum_sell_value,sum_deposit,stop_loss_price,is_finished,is_suspended,is_monthly,is_cash_coupon FROM md_order_position WHERE  user_id = 524  AND is_finished =   AND is_suspended =   AND volume_for_sell > 0 ORDER BY id ASC LIMIT 1 [ RunTime:0.001389s ]
+sql
+[2022-10-15T11:30:44+08:00][ sql ] [ SQL ] SELECT strategy_balance,frozen FROM md_user_account WHERE  user_id = 524 LIMIT 1 [ RunTime:0.001037s ]
+sql
+[2022-10-15T11:30:44+08:00][ sql ] [ SQL ] SELECT id,user_id,market,stock_code,volume_position,volume_for_sell,is_suspended,stop_loss_price FROM md_order_position WHERE  id = 105809  AND is_finished =  LIMIT 1 [ RunTime:0.000809s ]
+sql
+[2022-10-15T11:30:44+08:00][ sql ] [ SQL ] SELECT id,user_id,market,stock_code,stock_id,primary_account,volume_position,volume_for_sell,sum_buy_value_cost,sum_sell_value,sum_deposit,stop_loss_price,is_finished,is_suspended,is_monthly,is_cash_coupon FROM md_order_position WHERE  id = 105809  AND is_finished =  LIMIT 1 [ RunTime:0.000910s ]
+sql
+[2022-10-15T11:30:44+08:00][ sql ] [ SQL ] SELECT id,user_id,market,stock_code,stock_id,primary_account,volume_position,volume_for_sell,sum_buy_value_cost,sum_sell_value,sum_deposit,stop_loss_price,is_finished,is_suspended,is_monthly,is_cash_coupon FROM md_order_position WHERE  user_id = 524  AND is_finished =   AND is_suspended =   AND volume_for_sell > 0 ORDER BY id ASC LIMIT 1 [ RunTime:0.001453s ]
+sql
+[2022-10-15T11:30:49+08:00][ sql ] [ SQL ] SELECT strategy_balance,frozen FROM md_user_account WHERE  user_id = 524 LIMIT 1 [ RunTime:0.001041s ]
+sql
+[2022-10-15T11:30:49+08:00][ sql ] [ SQL ] SELECT id,user_id,market,stock_code,volume_position,volume_for_sell,is_suspended,stop_loss_price FROM md_order_position WHERE  id = 105809  AND is_finished =  LIMIT 1 [ RunTime:0.000812s ]
+sql
+[2022-10-15T11:30:49+08:00][ sql ] [ SQL ] SELECT id,user_id,market,stock_code,stock_id,primary_account,volume_position,volume_for_sell,sum_buy_value_cost,sum_sell_value,sum_deposit,stop_loss_price,is_finished,is_suspended,is_monthly,is_cash_coupon FROM md_order_position WHERE  id = 105809  AND is_finished =  LIMIT 1 [ RunTime:0.000916s ]
+sql
+[2022-10-15T11:30:49+08:00][ sql ] [ SQL ] SELECT id,user_id,market,stock_code,stock_id,primary_account,volume_position,volume_for_sell,sum_buy_value_cost,sum_sell_value,sum_deposit,stop_loss_price,is_finished,is_suspended,is_monthly,is_cash_coupon FROM md_order_position WHERE  user_id = 524  AND is_finished =   AND is_suspended =   AND volume_for_sell > 0 ORDER BY id ASC LIMIT 1 [ RunTime:0.001435s ]
+sql
+[2022-10-15T11:30:54+08:00][ sql ] [ SQL ] SELECT strategy_balance,frozen FROM md_user_account WHERE  user_id = 524 LIMIT 1 [ RunTime:0.001025s ]
+sql
+[2022-10-15T11:30:54+08:00][ sql ] [ SQL ] SELECT id,user_id,market,stock_code,volume_position,volume_for_sell,is_suspended,stop_loss_price FROM md_order_position WHERE  id = 105809  AND is_finished =  LIMIT 1 [ RunTime:0.000871s ]
+sql
+[2022-10-15T11:30:54+08:00][ sql ] [ SQL ] SELECT id,user_id,market,stock_code,stock_id,primary_account,volume_position,volume_for_sell,sum_buy_value_cost,sum_sell_value,sum_deposit,stop_loss_price,is_finished,is_suspended,is_monthly,is_cash_coupon FROM md_order_position WHERE  id = 105809  AND is_finished =  LIMIT 1 [ RunTime:0.000815s ]
+sql
+[2022-10-15T11:30:54+08:00][ sql ] [ SQL ] SELECT id,user_id,market,stock_code,stock_id,primary_account,volume_position,volume_for_sell,sum_buy_value_cost,sum_sell_value,sum_deposit,stop_loss_price,is_finished,is_suspended,is_monthly,is_cash_coupon FROM md_order_position WHERE  user_id = 524  AND is_finished =   AND is_suspended =   AND volume_for_sell > 0 ORDER BY id ASC LIMIT 1 [ RunTime:0.001497s ]
+sql
+[2022-10-15T11:30:59+08:00][ sql ] [ SQL ] SELECT strategy_balance,frozen FROM md_user_account WHERE  user_id = 524 LIMIT 1 [ RunTime:0.001038s ]
+sql
+[2022-10-15T11:30:59+08:00][ sql ] [ SQL ] SELECT id,user_id,market,stock_code,volume_position,volume_for_sell,is_suspended,stop_loss_price FROM md_order_position WHERE  id = 105809  AND is_finished =  LIMIT 1 [ RunTime:0.000830s ]
+sql
+[2022-10-15T11:30:59+08:00][ sql ] [ SQL ] SELECT id,user_id,market,stock_code,stock_id,primary_account,volume_position,volume_for_sell,sum_buy_value_cost,sum_sell_value,sum_deposit,stop_loss_price,is_finished,is_suspended,is_monthly,is_cash_coupon FROM md_order_position WHERE  id = 105809  AND is_finished =  LIMIT 1 [ RunTime:0.000893s ]
+sql
+[2022-10-15T11:30:59+08:00][ sql ] [ SQL ] SELECT id,user_id,market,stock_code,stock_id,primary_account,volume_position,volume_for_sell,sum_buy_value_cost,sum_sell_value,sum_deposit,stop_loss_price,is_finished,is_suspended,is_monthly,is_cash_coupon FROM md_order_position WHERE  user_id = 524  AND is_finished =   AND is_suspended =   AND volume_for_sell > 0 ORDER BY id ASC LIMIT 1 [ RunTime:0.001436s ]
+sql
+[2022-10-15T13:00:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665809425  AND trading_date = '2022-10-15' [ RunTime:0.003391s ]
+sql
+[2022-10-15T13:00:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665809425  AND trading_date = '2022-10-15' [ RunTime:0.003224s ]
+sql
+[2022-10-15T13:00:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665809455  AND trading_date = '2022-10-15' [ RunTime:0.003438s ]
+sql
+[2022-10-15T13:00:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665809455  AND trading_date = '2022-10-15' [ RunTime:0.003289s ]
+sql
+[2022-10-15T13:01:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665809485  AND trading_date = '2022-10-15' [ RunTime:0.003543s ]
+sql
+[2022-10-15T13:01:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665809485  AND trading_date = '2022-10-15' [ RunTime:0.003336s ]
+sql
+[2022-10-15T13:01:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665809515  AND trading_date = '2022-10-15' [ RunTime:0.003420s ]
+sql
+[2022-10-15T13:01:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665809515  AND trading_date = '2022-10-15' [ RunTime:0.003187s ]
+sql
+[2022-10-15T13:02:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665809545  AND trading_date = '2022-10-15' [ RunTime:0.003511s ]
+sql
+[2022-10-15T13:02:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665809545  AND trading_date = '2022-10-15' [ RunTime:0.003339s ]
+sql
+[2022-10-15T13:02:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665809575  AND trading_date = '2022-10-15' [ RunTime:0.003502s ]
+sql
+[2022-10-15T13:02:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665809575  AND trading_date = '2022-10-15' [ RunTime:0.003273s ]
+sql
+[2022-10-15T13:03:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665809605  AND trading_date = '2022-10-15' [ RunTime:0.003527s ]
+sql
+[2022-10-15T13:03:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665809605  AND trading_date = '2022-10-15' [ RunTime:0.003292s ]
+sql
+[2022-10-15T13:03:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665809635  AND trading_date = '2022-10-15' [ RunTime:0.003342s ]
+sql
+[2022-10-15T13:03:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665809635  AND trading_date = '2022-10-15' [ RunTime:0.003145s ]
+sql
+[2022-10-15T13:04:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665809665  AND trading_date = '2022-10-15' [ RunTime:0.003293s ]
+sql
+[2022-10-15T13:04:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665809665  AND trading_date = '2022-10-15' [ RunTime:0.003170s ]
+sql
+[2022-10-15T13:04:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665809695  AND trading_date = '2022-10-15' [ RunTime:0.003360s ]
+sql
+[2022-10-15T13:04:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665809695  AND trading_date = '2022-10-15' [ RunTime:0.003222s ]
+sql
+[2022-10-15T13:05:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665809725  AND trading_date = '2022-10-15' [ RunTime:0.003414s ]
+sql
+[2022-10-15T13:05:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665809725  AND trading_date = '2022-10-15' [ RunTime:0.003247s ]
+sql
+[2022-10-15T13:05:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665809755  AND trading_date = '2022-10-15' [ RunTime:0.003393s ]
+sql
+[2022-10-15T13:05:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665809755  AND trading_date = '2022-10-15' [ RunTime:0.003213s ]
+sql
+[2022-10-15T13:06:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665809785  AND trading_date = '2022-10-15' [ RunTime:0.003449s ]
+sql
+[2022-10-15T13:06:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665809785  AND trading_date = '2022-10-15' [ RunTime:0.003271s ]
+sql
+[2022-10-15T13:06:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665809815  AND trading_date = '2022-10-15' [ RunTime:0.003399s ]
+sql
+[2022-10-15T13:06:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665809815  AND trading_date = '2022-10-15' [ RunTime:0.003209s ]
+sql
+[2022-10-15T13:07:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665809845  AND trading_date = '2022-10-15' [ RunTime:0.003478s ]
+sql
+[2022-10-15T13:07:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665809845  AND trading_date = '2022-10-15' [ RunTime:0.003363s ]
+sql
+[2022-10-15T13:07:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665809875  AND trading_date = '2022-10-15' [ RunTime:0.003465s ]
+sql
+[2022-10-15T13:07:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665809875  AND trading_date = '2022-10-15' [ RunTime:0.003331s ]
+sql
+[2022-10-15T13:08:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665809905  AND trading_date = '2022-10-15' [ RunTime:0.003439s ]
+sql
+[2022-10-15T13:08:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665809905  AND trading_date = '2022-10-15' [ RunTime:0.003308s ]
+sql
+[2022-10-15T13:08:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665809935  AND trading_date = '2022-10-15' [ RunTime:0.003499s ]
+sql
+[2022-10-15T13:08:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665809935  AND trading_date = '2022-10-15' [ RunTime:0.003241s ]
+sql
+[2022-10-15T13:09:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665809965  AND trading_date = '2022-10-15' [ RunTime:0.003512s ]
+sql
+[2022-10-15T13:09:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665809965  AND trading_date = '2022-10-15' [ RunTime:0.003321s ]
+sql
+[2022-10-15T13:09:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665809995  AND trading_date = '2022-10-15' [ RunTime:0.003367s ]
+sql
+[2022-10-15T13:09:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665809995  AND trading_date = '2022-10-15' [ RunTime:0.003230s ]
+sql
+[2022-10-15T13:10:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665810025  AND trading_date = '2022-10-15' [ RunTime:0.003530s ]
+sql
+[2022-10-15T13:10:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665810025  AND trading_date = '2022-10-15' [ RunTime:0.003318s ]
+sql
+[2022-10-15T13:10:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665810055  AND trading_date = '2022-10-15' [ RunTime:0.003379s ]
+sql
+[2022-10-15T13:10:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665810055  AND trading_date = '2022-10-15' [ RunTime:0.003191s ]
+sql
+[2022-10-15T13:11:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665810085  AND trading_date = '2022-10-15' [ RunTime:0.003427s ]
+sql
+[2022-10-15T13:11:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665810085  AND trading_date = '2022-10-15' [ RunTime:0.003222s ]
+sql
+[2022-10-15T13:11:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665810115  AND trading_date = '2022-10-15' [ RunTime:0.003501s ]
+sql
+[2022-10-15T13:11:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665810115  AND trading_date = '2022-10-15' [ RunTime:0.003305s ]
+sql
+[2022-10-15T13:12:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665810145  AND trading_date = '2022-10-15' [ RunTime:0.003571s ]
+sql
+[2022-10-15T13:12:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665810145  AND trading_date = '2022-10-15' [ RunTime:0.003426s ]
+sql
+[2022-10-15T13:12:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665810175  AND trading_date = '2022-10-15' [ RunTime:0.003511s ]
+sql
+[2022-10-15T13:12:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665810175  AND trading_date = '2022-10-15' [ RunTime:0.003398s ]
+sql
+[2022-10-15T13:13:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665810205  AND trading_date = '2022-10-15' [ RunTime:0.003531s ]
+sql
+[2022-10-15T13:13:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665810205  AND trading_date = '2022-10-15' [ RunTime:0.003433s ]
+sql
+[2022-10-15T13:13:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665810235  AND trading_date = '2022-10-15' [ RunTime:0.003602s ]
+sql
+[2022-10-15T13:13:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665810235  AND trading_date = '2022-10-15' [ RunTime:0.003423s ]
+sql
+[2022-10-15T13:14:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665810265  AND trading_date = '2022-10-15' [ RunTime:0.003505s ]
+sql
+[2022-10-15T13:14:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665810265  AND trading_date = '2022-10-15' [ RunTime:0.003301s ]
+sql
+[2022-10-15T13:14:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665810295  AND trading_date = '2022-10-15' [ RunTime:0.003573s ]
+sql
+[2022-10-15T13:14:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665810295  AND trading_date = '2022-10-15' [ RunTime:0.003338s ]
+sql
+[2022-10-15T13:15:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665810325  AND trading_date = '2022-10-15' [ RunTime:0.003560s ]
+sql
+[2022-10-15T13:15:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665810325  AND trading_date = '2022-10-15' [ RunTime:0.003355s ]
+sql
+[2022-10-15T13:15:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665810355  AND trading_date = '2022-10-15' [ RunTime:0.003377s ]
+sql
+[2022-10-15T13:15:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665810355  AND trading_date = '2022-10-15' [ RunTime:0.003160s ]
+sql
+[2022-10-15T13:16:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665810385  AND trading_date = '2022-10-15' [ RunTime:0.003449s ]
+sql
+[2022-10-15T13:16:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665810385  AND trading_date = '2022-10-15' [ RunTime:0.003210s ]
+sql
+[2022-10-15T13:16:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665810415  AND trading_date = '2022-10-15' [ RunTime:0.003429s ]
+sql
+[2022-10-15T13:16:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665810415  AND trading_date = '2022-10-15' [ RunTime:0.003258s ]
+sql
+[2022-10-15T13:17:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665810445  AND trading_date = '2022-10-15' [ RunTime:0.003446s ]
+sql
+[2022-10-15T13:17:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665810445  AND trading_date = '2022-10-15' [ RunTime:0.003183s ]
+sql
+[2022-10-15T13:17:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665810475  AND trading_date = '2022-10-15' [ RunTime:0.003330s ]
+sql
+[2022-10-15T13:17:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665810475  AND trading_date = '2022-10-15' [ RunTime:0.003217s ]
+sql
+[2022-10-15T13:18:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665810505  AND trading_date = '2022-10-15' [ RunTime:0.003424s ]
+sql
+[2022-10-15T13:18:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665810505  AND trading_date = '2022-10-15' [ RunTime:0.003157s ]
+sql
+[2022-10-15T13:18:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665810535  AND trading_date = '2022-10-15' [ RunTime:0.003505s ]
+sql
+[2022-10-15T13:18:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665810535  AND trading_date = '2022-10-15' [ RunTime:0.003223s ]
+sql
+[2022-10-15T13:19:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665810565  AND trading_date = '2022-10-15' [ RunTime:0.003526s ]
+sql
+[2022-10-15T13:19:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665810565  AND trading_date = '2022-10-15' [ RunTime:0.003260s ]
+sql
+[2022-10-15T13:19:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665810595  AND trading_date = '2022-10-15' [ RunTime:0.003322s ]
+sql
+[2022-10-15T13:19:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665810595  AND trading_date = '2022-10-15' [ RunTime:0.003049s ]
+sql
+[2022-10-15T13:20:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665810625  AND trading_date = '2022-10-15' [ RunTime:0.003208s ]
+sql
+[2022-10-15T13:20:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665810625  AND trading_date = '2022-10-15' [ RunTime:0.003196s ]
+sql
+[2022-10-15T13:20:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665810655  AND trading_date = '2022-10-15' [ RunTime:0.003236s ]
+sql
+[2022-10-15T13:20:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665810655  AND trading_date = '2022-10-15' [ RunTime:0.003217s ]
+sql
+[2022-10-15T13:21:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665810685  AND trading_date = '2022-10-15' [ RunTime:0.003274s ]
+sql
+[2022-10-15T13:21:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665810685  AND trading_date = '2022-10-15' [ RunTime:0.003083s ]
+sql
+[2022-10-15T13:21:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665810715  AND trading_date = '2022-10-15' [ RunTime:0.003277s ]
+sql
+[2022-10-15T13:21:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665810715  AND trading_date = '2022-10-15' [ RunTime:0.003305s ]
+sql
+[2022-10-15T13:22:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665810745  AND trading_date = '2022-10-15' [ RunTime:0.003395s ]
+sql
+[2022-10-15T13:22:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665810745  AND trading_date = '2022-10-15' [ RunTime:0.003193s ]
+sql
+[2022-10-15T13:22:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665810775  AND trading_date = '2022-10-15' [ RunTime:0.003374s ]
+sql
+[2022-10-15T13:22:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665810775  AND trading_date = '2022-10-15' [ RunTime:0.003131s ]
+sql
+[2022-10-15T13:23:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665810805  AND trading_date = '2022-10-15' [ RunTime:0.003298s ]
+sql
+[2022-10-15T13:23:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665810805  AND trading_date = '2022-10-15' [ RunTime:0.003185s ]
+sql
+[2022-10-15T13:23:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665810835  AND trading_date = '2022-10-15' [ RunTime:0.003300s ]
+sql
+[2022-10-15T13:23:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665810835  AND trading_date = '2022-10-15' [ RunTime:0.003078s ]
+sql
+[2022-10-15T13:24:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665810865  AND trading_date = '2022-10-15' [ RunTime:0.003319s ]
+sql
+[2022-10-15T13:24:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665810865  AND trading_date = '2022-10-15' [ RunTime:0.003181s ]
+sql
+[2022-10-15T13:24:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665810895  AND trading_date = '2022-10-15' [ RunTime:0.003256s ]
+sql
+[2022-10-15T13:24:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665810895  AND trading_date = '2022-10-15' [ RunTime:0.003237s ]
+sql
+[2022-10-15T13:25:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665810925  AND trading_date = '2022-10-15' [ RunTime:0.003374s ]
+sql
+[2022-10-15T13:25:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665810925  AND trading_date = '2022-10-15' [ RunTime:0.003181s ]
+sql
+[2022-10-15T13:25:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665810955  AND trading_date = '2022-10-15' [ RunTime:0.003315s ]
+sql
+[2022-10-15T13:25:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665810955  AND trading_date = '2022-10-15' [ RunTime:0.003209s ]
+sql
+[2022-10-15T13:26:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665810985  AND trading_date = '2022-10-15' [ RunTime:0.003328s ]
+sql
+[2022-10-15T13:26:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665810985  AND trading_date = '2022-10-15' [ RunTime:0.003103s ]
+sql
+[2022-10-15T13:26:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665811015  AND trading_date = '2022-10-15' [ RunTime:0.003353s ]
+sql
+[2022-10-15T13:26:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665811015  AND trading_date = '2022-10-15' [ RunTime:0.003174s ]
+sql
+[2022-10-15T13:27:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665811045  AND trading_date = '2022-10-15' [ RunTime:0.003355s ]
+sql
+[2022-10-15T13:27:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665811045  AND trading_date = '2022-10-15' [ RunTime:0.003153s ]
+sql
+[2022-10-15T13:27:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665811075  AND trading_date = '2022-10-15' [ RunTime:0.004095s ]
+sql
+[2022-10-15T13:27:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665811075  AND trading_date = '2022-10-15' [ RunTime:0.003380s ]
+sql
+[2022-10-15T13:28:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665811105  AND trading_date = '2022-10-15' [ RunTime:0.003680s ]
+sql
+[2022-10-15T13:28:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665811105  AND trading_date = '2022-10-15' [ RunTime:0.003248s ]
+sql
+[2022-10-15T13:28:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665811135  AND trading_date = '2022-10-15' [ RunTime:0.003384s ]
+sql
+[2022-10-15T13:28:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665811135  AND trading_date = '2022-10-15' [ RunTime:0.003104s ]
+sql
+[2022-10-15T13:29:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665811165  AND trading_date = '2022-10-15' [ RunTime:0.003260s ]
+sql
+[2022-10-15T13:29:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665811165  AND trading_date = '2022-10-15' [ RunTime:0.003204s ]
+sql
+[2022-10-15T13:29:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665811195  AND trading_date = '2022-10-15' [ RunTime:0.003352s ]
+sql
+[2022-10-15T13:29:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665811195  AND trading_date = '2022-10-15' [ RunTime:0.003146s ]
+sql
+[2022-10-15T13:30:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665811225  AND trading_date = '2022-10-15' [ RunTime:0.003481s ]
+sql
+[2022-10-15T13:30:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665811225  AND trading_date = '2022-10-15' [ RunTime:0.003180s ]
+sql
+[2022-10-15T13:30:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665811255  AND trading_date = '2022-10-15' [ RunTime:0.003396s ]
+sql
+[2022-10-15T13:30:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665811255  AND trading_date = '2022-10-15' [ RunTime:0.003162s ]
+sql
+[2022-10-15T13:31:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665811285  AND trading_date = '2022-10-15' [ RunTime:0.003361s ]
+sql
+[2022-10-15T13:31:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665811285  AND trading_date = '2022-10-15' [ RunTime:0.003089s ]
+sql
+[2022-10-15T13:31:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665811315  AND trading_date = '2022-10-15' [ RunTime:0.003332s ]
+sql
+[2022-10-15T13:31:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665811315  AND trading_date = '2022-10-15' [ RunTime:0.003123s ]
+sql
+[2022-10-15T13:32:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665811345  AND trading_date = '2022-10-15' [ RunTime:0.003366s ]
+sql
+[2022-10-15T13:32:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665811345  AND trading_date = '2022-10-15' [ RunTime:0.003212s ]
+sql
+[2022-10-15T13:32:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665811375  AND trading_date = '2022-10-15' [ RunTime:0.003387s ]
+sql
+[2022-10-15T13:32:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665811375  AND trading_date = '2022-10-15' [ RunTime:0.003171s ]
+sql
+[2022-10-15T13:33:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665811405  AND trading_date = '2022-10-15' [ RunTime:0.003370s ]
+sql
+[2022-10-15T13:33:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665811405  AND trading_date = '2022-10-15' [ RunTime:0.003193s ]
+sql
+[2022-10-15T13:33:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665811435  AND trading_date = '2022-10-15' [ RunTime:0.003404s ]
+sql
+[2022-10-15T13:33:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665811435  AND trading_date = '2022-10-15' [ RunTime:0.003179s ]
+sql
+[2022-10-15T13:34:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665811465  AND trading_date = '2022-10-15' [ RunTime:0.003403s ]
+sql
+[2022-10-15T13:34:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665811465  AND trading_date = '2022-10-15' [ RunTime:0.003180s ]
+sql
+[2022-10-15T13:34:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665811495  AND trading_date = '2022-10-15' [ RunTime:0.003402s ]
+sql
+[2022-10-15T13:34:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665811495  AND trading_date = '2022-10-15' [ RunTime:0.003256s ]
+sql
+[2022-10-15T13:35:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665811525  AND trading_date = '2022-10-15' [ RunTime:0.003330s ]
+sql
+[2022-10-15T13:35:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665811525  AND trading_date = '2022-10-15' [ RunTime:0.003190s ]
+sql
+[2022-10-15T13:35:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665811555  AND trading_date = '2022-10-15' [ RunTime:0.003358s ]
+sql
+[2022-10-15T13:35:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665811555  AND trading_date = '2022-10-15' [ RunTime:0.003167s ]
+sql
+[2022-10-15T13:36:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665811585  AND trading_date = '2022-10-15' [ RunTime:0.003442s ]
+sql
+[2022-10-15T13:36:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665811585  AND trading_date = '2022-10-15' [ RunTime:0.003139s ]
+sql
+[2022-10-15T13:36:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665811615  AND trading_date = '2022-10-15' [ RunTime:0.003407s ]
+sql
+[2022-10-15T13:36:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665811615  AND trading_date = '2022-10-15' [ RunTime:0.003099s ]
+sql
+[2022-10-15T13:37:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665811645  AND trading_date = '2022-10-15' [ RunTime:0.003382s ]
+sql
+[2022-10-15T13:37:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665811645  AND trading_date = '2022-10-15' [ RunTime:0.003157s ]
+sql
+[2022-10-15T13:37:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665811675  AND trading_date = '2022-10-15' [ RunTime:0.003336s ]
+sql
+[2022-10-15T13:37:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665811675  AND trading_date = '2022-10-15' [ RunTime:0.003098s ]
+sql
+[2022-10-15T13:38:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665811705  AND trading_date = '2022-10-15' [ RunTime:0.003413s ]
+sql
+[2022-10-15T13:38:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665811705  AND trading_date = '2022-10-15' [ RunTime:0.003344s ]
+sql
+[2022-10-15T13:38:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665811735  AND trading_date = '2022-10-15' [ RunTime:0.003392s ]
+sql
+[2022-10-15T13:38:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665811735  AND trading_date = '2022-10-15' [ RunTime:0.003282s ]
+sql
+[2022-10-15T13:39:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665811765  AND trading_date = '2022-10-15' [ RunTime:0.003368s ]
+sql
+[2022-10-15T13:39:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665811765  AND trading_date = '2022-10-15' [ RunTime:0.003194s ]
+sql
+[2022-10-15T13:39:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665811795  AND trading_date = '2022-10-15' [ RunTime:0.003318s ]
+sql
+[2022-10-15T13:39:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665811795  AND trading_date = '2022-10-15' [ RunTime:0.003190s ]
+sql
+[2022-10-15T13:40:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665811825  AND trading_date = '2022-10-15' [ RunTime:0.003336s ]
+sql
+[2022-10-15T13:40:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665811825  AND trading_date = '2022-10-15' [ RunTime:0.003175s ]
+sql
+[2022-10-15T13:40:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665811855  AND trading_date = '2022-10-15' [ RunTime:0.003470s ]
+sql
+[2022-10-15T13:40:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665811855  AND trading_date = '2022-10-15' [ RunTime:0.003187s ]
+sql
+[2022-10-15T13:41:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665811885  AND trading_date = '2022-10-15' [ RunTime:0.003403s ]
+sql
+[2022-10-15T13:41:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665811885  AND trading_date = '2022-10-15' [ RunTime:0.003209s ]
+sql
+[2022-10-15T13:41:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665811915  AND trading_date = '2022-10-15' [ RunTime:0.003411s ]
+sql
+[2022-10-15T13:41:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665811915  AND trading_date = '2022-10-15' [ RunTime:0.003215s ]
+sql
+[2022-10-15T13:42:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665811945  AND trading_date = '2022-10-15' [ RunTime:0.003395s ]
+sql
+[2022-10-15T13:42:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665811945  AND trading_date = '2022-10-15' [ RunTime:0.003208s ]
+sql
+[2022-10-15T13:42:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665811975  AND trading_date = '2022-10-15' [ RunTime:0.003256s ]
+sql
+[2022-10-15T13:42:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665811975  AND trading_date = '2022-10-15' [ RunTime:0.003114s ]
+sql
+[2022-10-15T13:43:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665812005  AND trading_date = '2022-10-15' [ RunTime:0.003394s ]
+sql
+[2022-10-15T13:43:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665812005  AND trading_date = '2022-10-15' [ RunTime:0.003195s ]
+sql
+[2022-10-15T13:43:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665812035  AND trading_date = '2022-10-15' [ RunTime:0.003308s ]
+sql
+[2022-10-15T13:43:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665812035  AND trading_date = '2022-10-15' [ RunTime:0.003246s ]
+sql
+[2022-10-15T13:44:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665812065  AND trading_date = '2022-10-15' [ RunTime:0.003348s ]
+sql
+[2022-10-15T13:44:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665812065  AND trading_date = '2022-10-15' [ RunTime:0.003209s ]
+sql
+[2022-10-15T13:44:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665812095  AND trading_date = '2022-10-15' [ RunTime:0.003315s ]
+sql
+[2022-10-15T13:44:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665812095  AND trading_date = '2022-10-15' [ RunTime:0.003174s ]
+sql
+[2022-10-15T13:45:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665812125  AND trading_date = '2022-10-15' [ RunTime:0.003441s ]
+sql
+[2022-10-15T13:45:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665812125  AND trading_date = '2022-10-15' [ RunTime:0.003202s ]
+sql
+[2022-10-15T13:45:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665812155  AND trading_date = '2022-10-15' [ RunTime:0.003451s ]
+sql
+[2022-10-15T13:45:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665812155  AND trading_date = '2022-10-15' [ RunTime:0.003162s ]
+sql
+[2022-10-15T13:46:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665812185  AND trading_date = '2022-10-15' [ RunTime:0.003383s ]
+sql
+[2022-10-15T13:46:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665812185  AND trading_date = '2022-10-15' [ RunTime:0.003175s ]
+sql
+[2022-10-15T13:46:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665812215  AND trading_date = '2022-10-15' [ RunTime:0.003357s ]
+sql
+[2022-10-15T13:46:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665812215  AND trading_date = '2022-10-15' [ RunTime:0.003189s ]
+sql
+[2022-10-15T13:47:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665812245  AND trading_date = '2022-10-15' [ RunTime:0.003443s ]
+sql
+[2022-10-15T13:47:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665812245  AND trading_date = '2022-10-15' [ RunTime:0.003291s ]
+sql
+[2022-10-15T13:47:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665812275  AND trading_date = '2022-10-15' [ RunTime:0.003400s ]
+sql
+[2022-10-15T13:47:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665812275  AND trading_date = '2022-10-15' [ RunTime:0.003260s ]
+sql
+[2022-10-15T13:48:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665812305  AND trading_date = '2022-10-15' [ RunTime:0.003391s ]
+sql
+[2022-10-15T13:48:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665812305  AND trading_date = '2022-10-15' [ RunTime:0.003182s ]
+sql
+[2022-10-15T13:48:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665812335  AND trading_date = '2022-10-15' [ RunTime:0.003418s ]
+sql
+[2022-10-15T13:48:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665812335  AND trading_date = '2022-10-15' [ RunTime:0.003215s ]
+sql
+[2022-10-15T13:49:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665812365  AND trading_date = '2022-10-15' [ RunTime:0.003411s ]
+sql
+[2022-10-15T13:49:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665812365  AND trading_date = '2022-10-15' [ RunTime:0.003238s ]
+sql
+[2022-10-15T13:49:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665812395  AND trading_date = '2022-10-15' [ RunTime:0.003423s ]
+sql
+[2022-10-15T13:49:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665812395  AND trading_date = '2022-10-15' [ RunTime:0.003274s ]
+sql
+[2022-10-15T13:50:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665812425  AND trading_date = '2022-10-15' [ RunTime:0.003403s ]
+sql
+[2022-10-15T13:50:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665812425  AND trading_date = '2022-10-15' [ RunTime:0.003173s ]
+sql
+[2022-10-15T13:50:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665812455  AND trading_date = '2022-10-15' [ RunTime:0.003366s ]
+sql
+[2022-10-15T13:50:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665812455  AND trading_date = '2022-10-15' [ RunTime:0.003226s ]
+sql
+[2022-10-15T13:51:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665812485  AND trading_date = '2022-10-15' [ RunTime:0.003318s ]
+sql
+[2022-10-15T13:51:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665812485  AND trading_date = '2022-10-15' [ RunTime:0.003198s ]
+sql
+[2022-10-15T13:51:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665812515  AND trading_date = '2022-10-15' [ RunTime:0.003396s ]
+sql
+[2022-10-15T13:51:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665812515  AND trading_date = '2022-10-15' [ RunTime:0.003232s ]
+sql
+[2022-10-15T13:52:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665812545  AND trading_date = '2022-10-15' [ RunTime:0.003365s ]
+sql
+[2022-10-15T13:52:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665812545  AND trading_date = '2022-10-15' [ RunTime:0.003218s ]
+sql
+[2022-10-15T13:52:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665812575  AND trading_date = '2022-10-15' [ RunTime:0.003379s ]
+sql
+[2022-10-15T13:52:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665812575  AND trading_date = '2022-10-15' [ RunTime:0.003217s ]
+sql
+[2022-10-15T13:53:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665812605  AND trading_date = '2022-10-15' [ RunTime:0.003384s ]
+sql
+[2022-10-15T13:53:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665812605  AND trading_date = '2022-10-15' [ RunTime:0.003171s ]
+sql
+[2022-10-15T13:53:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665812635  AND trading_date = '2022-10-15' [ RunTime:0.003337s ]
+sql
+[2022-10-15T13:53:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665812635  AND trading_date = '2022-10-15' [ RunTime:0.003230s ]
+sql
+[2022-10-15T13:54:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665812665  AND trading_date = '2022-10-15' [ RunTime:0.003374s ]
+sql
+[2022-10-15T13:54:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665812665  AND trading_date = '2022-10-15' [ RunTime:0.003183s ]
+sql
+[2022-10-15T13:54:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665812695  AND trading_date = '2022-10-15' [ RunTime:0.003416s ]
+sql
+[2022-10-15T13:54:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665812695  AND trading_date = '2022-10-15' [ RunTime:0.003295s ]
+sql
+[2022-10-15T13:55:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665812725  AND trading_date = '2022-10-15' [ RunTime:0.003465s ]
+sql
+[2022-10-15T13:55:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665812725  AND trading_date = '2022-10-15' [ RunTime:0.003150s ]
+sql
+[2022-10-15T13:55:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665812755  AND trading_date = '2022-10-15' [ RunTime:0.003459s ]
+sql
+[2022-10-15T13:55:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665812755  AND trading_date = '2022-10-15' [ RunTime:0.003174s ]
+sql
+[2022-10-15T13:56:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665812785  AND trading_date = '2022-10-15' [ RunTime:0.003378s ]
+sql
+[2022-10-15T13:56:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665812785  AND trading_date = '2022-10-15' [ RunTime:0.003199s ]
+sql
+[2022-10-15T13:56:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665812815  AND trading_date = '2022-10-15' [ RunTime:0.003354s ]
+sql
+[2022-10-15T13:56:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665812815  AND trading_date = '2022-10-15' [ RunTime:0.003235s ]
+sql
+[2022-10-15T13:57:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665812845  AND trading_date = '2022-10-15' [ RunTime:0.003309s ]
+sql
+[2022-10-15T13:57:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665812845  AND trading_date = '2022-10-15' [ RunTime:0.003246s ]
+sql
+[2022-10-15T13:57:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665812875  AND trading_date = '2022-10-15' [ RunTime:0.003495s ]
+sql
+[2022-10-15T13:57:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665812875  AND trading_date = '2022-10-15' [ RunTime:0.003207s ]
+sql
+[2022-10-15T13:58:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665812905  AND trading_date = '2022-10-15' [ RunTime:0.003421s ]
+sql
+[2022-10-15T13:58:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665812905  AND trading_date = '2022-10-15' [ RunTime:0.003203s ]
+sql
+[2022-10-15T13:58:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665812935  AND trading_date = '2022-10-15' [ RunTime:0.003346s ]
+sql
+[2022-10-15T13:58:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665812935  AND trading_date = '2022-10-15' [ RunTime:0.003188s ]
+sql
+[2022-10-15T13:59:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665812965  AND trading_date = '2022-10-15' [ RunTime:0.003469s ]
+sql
+[2022-10-15T13:59:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665812965  AND trading_date = '2022-10-15' [ RunTime:0.003244s ]
+sql
+[2022-10-15T13:59:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665812995  AND trading_date = '2022-10-15' [ RunTime:0.003416s ]
+sql
+[2022-10-15T13:59:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665812995  AND trading_date = '2022-10-15' [ RunTime:0.003225s ]
+sql
+[2022-10-15T14:00:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665813025  AND trading_date = '2022-10-15' [ RunTime:0.003551s ]
+sql
+[2022-10-15T14:00:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665813025  AND trading_date = '2022-10-15' [ RunTime:0.003179s ]
+sql
+[2022-10-15T14:00:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665813055  AND trading_date = '2022-10-15' [ RunTime:0.003395s ]
+sql
+[2022-10-15T14:00:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665813055  AND trading_date = '2022-10-15' [ RunTime:0.003264s ]
+sql
+[2022-10-15T14:01:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665813085  AND trading_date = '2022-10-15' [ RunTime:0.003426s ]
+sql
+[2022-10-15T14:01:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665813085  AND trading_date = '2022-10-15' [ RunTime:0.003212s ]
+sql
+[2022-10-15T14:01:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665813115  AND trading_date = '2022-10-15' [ RunTime:0.003480s ]
+sql
+[2022-10-15T14:01:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665813115  AND trading_date = '2022-10-15' [ RunTime:0.003194s ]
+sql
+[2022-10-15T14:02:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665813145  AND trading_date = '2022-10-15' [ RunTime:0.003450s ]
+sql
+[2022-10-15T14:02:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665813145  AND trading_date = '2022-10-15' [ RunTime:0.003215s ]
+sql
+[2022-10-15T14:02:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665813175  AND trading_date = '2022-10-15' [ RunTime:0.003409s ]
+sql
+[2022-10-15T14:02:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665813175  AND trading_date = '2022-10-15' [ RunTime:0.003246s ]
+sql
+[2022-10-15T14:03:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665813205  AND trading_date = '2022-10-15' [ RunTime:0.003396s ]
+sql
+[2022-10-15T14:03:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665813205  AND trading_date = '2022-10-15' [ RunTime:0.003185s ]
+sql
+[2022-10-15T14:03:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665813235  AND trading_date = '2022-10-15' [ RunTime:0.003287s ]
+sql
+[2022-10-15T14:03:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665813235  AND trading_date = '2022-10-15' [ RunTime:0.003296s ]
+sql
+[2022-10-15T14:04:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665813265  AND trading_date = '2022-10-15' [ RunTime:0.003317s ]
+sql
+[2022-10-15T14:04:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665813265  AND trading_date = '2022-10-15' [ RunTime:0.003182s ]
+sql
+[2022-10-15T14:04:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665813295  AND trading_date = '2022-10-15' [ RunTime:0.003460s ]
+sql
+[2022-10-15T14:04:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665813295  AND trading_date = '2022-10-15' [ RunTime:0.003165s ]
+sql
+[2022-10-15T14:05:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665813325  AND trading_date = '2022-10-15' [ RunTime:0.003432s ]
+sql
+[2022-10-15T14:05:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665813325  AND trading_date = '2022-10-15' [ RunTime:0.003227s ]
+sql
+[2022-10-15T14:05:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665813355  AND trading_date = '2022-10-15' [ RunTime:0.003351s ]
+sql
+[2022-10-15T14:05:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665813355  AND trading_date = '2022-10-15' [ RunTime:0.003231s ]
+sql
+[2022-10-15T14:06:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665813385  AND trading_date = '2022-10-15' [ RunTime:0.003306s ]
+sql
+[2022-10-15T14:06:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665813385  AND trading_date = '2022-10-15' [ RunTime:0.003180s ]
+sql
+[2022-10-15T14:06:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665813415  AND trading_date = '2022-10-15' [ RunTime:0.003375s ]
+sql
+[2022-10-15T14:06:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665813415  AND trading_date = '2022-10-15' [ RunTime:0.003205s ]
+sql
+[2022-10-15T14:07:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665813445  AND trading_date = '2022-10-15' [ RunTime:0.003322s ]
+sql
+[2022-10-15T14:07:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665813445  AND trading_date = '2022-10-15' [ RunTime:0.003153s ]
+sql
+[2022-10-15T14:07:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665813475  AND trading_date = '2022-10-15' [ RunTime:0.003355s ]
+sql
+[2022-10-15T14:07:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665813475  AND trading_date = '2022-10-15' [ RunTime:0.003151s ]
+sql
+[2022-10-15T14:08:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665813505  AND trading_date = '2022-10-15' [ RunTime:0.003353s ]
+sql
+[2022-10-15T14:08:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665813505  AND trading_date = '2022-10-15' [ RunTime:0.003237s ]
+sql
+[2022-10-15T14:08:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665813535  AND trading_date = '2022-10-15' [ RunTime:0.003345s ]
+sql
+[2022-10-15T14:08:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665813535  AND trading_date = '2022-10-15' [ RunTime:0.003204s ]
+sql
+[2022-10-15T14:09:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665813565  AND trading_date = '2022-10-15' [ RunTime:0.003427s ]
+sql
+[2022-10-15T14:09:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665813565  AND trading_date = '2022-10-15' [ RunTime:0.003237s ]
+sql
+[2022-10-15T14:09:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665813595  AND trading_date = '2022-10-15' [ RunTime:0.003339s ]
+sql
+[2022-10-15T14:09:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665813595  AND trading_date = '2022-10-15' [ RunTime:0.003197s ]
+sql
+[2022-10-15T14:10:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665813625  AND trading_date = '2022-10-15' [ RunTime:0.003459s ]
+sql
+[2022-10-15T14:10:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665813625  AND trading_date = '2022-10-15' [ RunTime:0.003273s ]
+sql
+[2022-10-15T14:10:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665813655  AND trading_date = '2022-10-15' [ RunTime:0.003378s ]
+sql
+[2022-10-15T14:10:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665813655  AND trading_date = '2022-10-15' [ RunTime:0.003155s ]
+sql
+[2022-10-15T14:11:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665813685  AND trading_date = '2022-10-15' [ RunTime:0.003419s ]
+sql
+[2022-10-15T14:11:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665813685  AND trading_date = '2022-10-15' [ RunTime:0.003201s ]
+sql
+[2022-10-15T14:11:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665813715  AND trading_date = '2022-10-15' [ RunTime:0.003347s ]
+sql
+[2022-10-15T14:11:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665813715  AND trading_date = '2022-10-15' [ RunTime:0.003165s ]
+sql
+[2022-10-15T14:12:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665813745  AND trading_date = '2022-10-15' [ RunTime:0.003386s ]
+sql
+[2022-10-15T14:12:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665813745  AND trading_date = '2022-10-15' [ RunTime:0.003286s ]
+sql
+[2022-10-15T14:12:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665813775  AND trading_date = '2022-10-15' [ RunTime:0.003342s ]
+sql
+[2022-10-15T14:12:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665813775  AND trading_date = '2022-10-15' [ RunTime:0.003190s ]
+sql
+[2022-10-15T14:13:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665813805  AND trading_date = '2022-10-15' [ RunTime:0.003342s ]
+sql
+[2022-10-15T14:13:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665813805  AND trading_date = '2022-10-15' [ RunTime:0.003229s ]
+sql
+[2022-10-15T14:13:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665813835  AND trading_date = '2022-10-15' [ RunTime:0.003344s ]
+sql
+[2022-10-15T14:13:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665813835  AND trading_date = '2022-10-15' [ RunTime:0.003255s ]
+sql
+[2022-10-15T14:14:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665813865  AND trading_date = '2022-10-15' [ RunTime:0.003364s ]
+sql
+[2022-10-15T14:14:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665813865  AND trading_date = '2022-10-15' [ RunTime:0.003197s ]
+sql
+[2022-10-15T14:14:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665813895  AND trading_date = '2022-10-15' [ RunTime:0.003488s ]
+sql
+[2022-10-15T14:14:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665813895  AND trading_date = '2022-10-15' [ RunTime:0.003170s ]
+sql
+[2022-10-15T14:15:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665813925  AND trading_date = '2022-10-15' [ RunTime:0.003412s ]
+sql
+[2022-10-15T14:15:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665813925  AND trading_date = '2022-10-15' [ RunTime:0.003243s ]
+sql
+[2022-10-15T14:15:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665813955  AND trading_date = '2022-10-15' [ RunTime:0.003477s ]
+sql
+[2022-10-15T14:15:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665813955  AND trading_date = '2022-10-15' [ RunTime:0.003331s ]
+sql
+[2022-10-15T14:16:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665813985  AND trading_date = '2022-10-15' [ RunTime:0.003426s ]
+sql
+[2022-10-15T14:16:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665813985  AND trading_date = '2022-10-15' [ RunTime:0.003232s ]
+sql
+[2022-10-15T14:16:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665814015  AND trading_date = '2022-10-15' [ RunTime:0.003342s ]
+sql
+[2022-10-15T14:16:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665814015  AND trading_date = '2022-10-15' [ RunTime:0.003171s ]
+sql
+[2022-10-15T14:17:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665814045  AND trading_date = '2022-10-15' [ RunTime:0.003385s ]
+sql
+[2022-10-15T14:17:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665814045  AND trading_date = '2022-10-15' [ RunTime:0.003147s ]
+sql
+[2022-10-15T14:17:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665814075  AND trading_date = '2022-10-15' [ RunTime:0.003309s ]
+sql
+[2022-10-15T14:17:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665814075  AND trading_date = '2022-10-15' [ RunTime:0.003144s ]
+sql
+[2022-10-15T14:18:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665814105  AND trading_date = '2022-10-15' [ RunTime:0.003396s ]
+sql
+[2022-10-15T14:18:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665814105  AND trading_date = '2022-10-15' [ RunTime:0.003237s ]
+sql
+[2022-10-15T14:18:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665814135  AND trading_date = '2022-10-15' [ RunTime:0.003478s ]
+sql
+[2022-10-15T14:18:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665814135  AND trading_date = '2022-10-15' [ RunTime:0.003205s ]
+sql
+[2022-10-15T14:19:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665814165  AND trading_date = '2022-10-15' [ RunTime:0.003416s ]
+sql
+[2022-10-15T14:19:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665814165  AND trading_date = '2022-10-15' [ RunTime:0.003160s ]
+sql
+[2022-10-15T14:19:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665814195  AND trading_date = '2022-10-15' [ RunTime:0.003412s ]
+sql
+[2022-10-15T14:19:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665814195  AND trading_date = '2022-10-15' [ RunTime:0.003209s ]
+sql
+[2022-10-15T14:20:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665814225  AND trading_date = '2022-10-15' [ RunTime:0.003373s ]
+sql
+[2022-10-15T14:20:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665814225  AND trading_date = '2022-10-15' [ RunTime:0.003203s ]
+sql
+[2022-10-15T14:20:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665814255  AND trading_date = '2022-10-15' [ RunTime:0.003340s ]
+sql
+[2022-10-15T14:20:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665814255  AND trading_date = '2022-10-15' [ RunTime:0.003249s ]
+sql
+[2022-10-15T14:21:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665814285  AND trading_date = '2022-10-15' [ RunTime:0.003271s ]
+sql
+[2022-10-15T14:21:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665814285  AND trading_date = '2022-10-15' [ RunTime:0.003240s ]
+sql
+[2022-10-15T14:21:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665814315  AND trading_date = '2022-10-15' [ RunTime:0.003396s ]
+sql
+[2022-10-15T14:21:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665814315  AND trading_date = '2022-10-15' [ RunTime:0.003204s ]
+sql
+[2022-10-15T14:22:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665814345  AND trading_date = '2022-10-15' [ RunTime:0.003407s ]
+sql
+[2022-10-15T14:22:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665814345  AND trading_date = '2022-10-15' [ RunTime:0.003256s ]
+sql
+[2022-10-15T14:22:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665814375  AND trading_date = '2022-10-15' [ RunTime:0.003393s ]
+sql
+[2022-10-15T14:22:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665814375  AND trading_date = '2022-10-15' [ RunTime:0.003230s ]
+sql
+[2022-10-15T14:23:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665814405  AND trading_date = '2022-10-15' [ RunTime:0.003274s ]
+sql
+[2022-10-15T14:23:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665814405  AND trading_date = '2022-10-15' [ RunTime:0.003183s ]
+sql
+[2022-10-15T14:23:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665814435  AND trading_date = '2022-10-15' [ RunTime:0.003358s ]
+sql
+[2022-10-15T14:23:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665814435  AND trading_date = '2022-10-15' [ RunTime:0.003217s ]
+sql
+[2022-10-15T14:24:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665814465  AND trading_date = '2022-10-15' [ RunTime:0.003387s ]
+sql
+[2022-10-15T14:24:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665814465  AND trading_date = '2022-10-15' [ RunTime:0.003166s ]
+sql
+[2022-10-15T14:24:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665814495  AND trading_date = '2022-10-15' [ RunTime:0.003447s ]
+sql
+[2022-10-15T14:24:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665814495  AND trading_date = '2022-10-15' [ RunTime:0.003132s ]
+sql
+[2022-10-15T14:25:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665814525  AND trading_date = '2022-10-15' [ RunTime:0.003383s ]
+sql
+[2022-10-15T14:25:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665814525  AND trading_date = '2022-10-15' [ RunTime:0.003185s ]
+sql
+[2022-10-15T14:25:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665814555  AND trading_date = '2022-10-15' [ RunTime:0.003371s ]
+sql
+[2022-10-15T14:25:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665814555  AND trading_date = '2022-10-15' [ RunTime:0.003195s ]
+sql
+[2022-10-15T14:26:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665814585  AND trading_date = '2022-10-15' [ RunTime:0.003358s ]
+sql
+[2022-10-15T14:26:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665814585  AND trading_date = '2022-10-15' [ RunTime:0.003173s ]
+sql
+[2022-10-15T14:26:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665814615  AND trading_date = '2022-10-15' [ RunTime:0.003379s ]
+sql
+[2022-10-15T14:26:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665814615  AND trading_date = '2022-10-15' [ RunTime:0.003143s ]
+sql
+[2022-10-15T14:27:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665814645  AND trading_date = '2022-10-15' [ RunTime:0.003396s ]
+sql
+[2022-10-15T14:27:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665814645  AND trading_date = '2022-10-15' [ RunTime:0.003134s ]
+sql
+[2022-10-15T14:27:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665814675  AND trading_date = '2022-10-15' [ RunTime:0.003319s ]
+sql
+[2022-10-15T14:27:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665814675  AND trading_date = '2022-10-15' [ RunTime:0.003213s ]
+sql
+[2022-10-15T14:28:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665814705  AND trading_date = '2022-10-15' [ RunTime:0.003307s ]
+sql
+[2022-10-15T14:28:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665814705  AND trading_date = '2022-10-15' [ RunTime:0.003255s ]
+sql
+[2022-10-15T14:28:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665814735  AND trading_date = '2022-10-15' [ RunTime:0.003423s ]
+sql
+[2022-10-15T14:28:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665814735  AND trading_date = '2022-10-15' [ RunTime:0.003155s ]
+sql
+[2022-10-15T14:29:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665814765  AND trading_date = '2022-10-15' [ RunTime:0.003393s ]
+sql
+[2022-10-15T14:29:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665814765  AND trading_date = '2022-10-15' [ RunTime:0.003150s ]
+sql
+[2022-10-15T14:29:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665814795  AND trading_date = '2022-10-15' [ RunTime:0.003393s ]
+sql
+[2022-10-15T14:29:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665814795  AND trading_date = '2022-10-15' [ RunTime:0.003257s ]
+sql
+[2022-10-15T14:30:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665814825  AND trading_date = '2022-10-15' [ RunTime:0.003379s ]
+sql
+[2022-10-15T14:30:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665814825  AND trading_date = '2022-10-15' [ RunTime:0.003241s ]
+sql
+[2022-10-15T14:30:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665814855  AND trading_date = '2022-10-15' [ RunTime:0.003319s ]
+sql
+[2022-10-15T14:30:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665814855  AND trading_date = '2022-10-15' [ RunTime:0.003209s ]
+sql
+[2022-10-15T14:31:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665814885  AND trading_date = '2022-10-15' [ RunTime:0.003350s ]
+sql
+[2022-10-15T14:31:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665814885  AND trading_date = '2022-10-15' [ RunTime:0.003150s ]
+sql
+[2022-10-15T14:31:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665814915  AND trading_date = '2022-10-15' [ RunTime:0.003374s ]
+sql
+[2022-10-15T14:31:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665814915  AND trading_date = '2022-10-15' [ RunTime:0.003205s ]
+sql
+[2022-10-15T14:32:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665814945  AND trading_date = '2022-10-15' [ RunTime:0.003378s ]
+sql
+[2022-10-15T14:32:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665814945  AND trading_date = '2022-10-15' [ RunTime:0.003207s ]
+sql
+[2022-10-15T14:32:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665814975  AND trading_date = '2022-10-15' [ RunTime:0.003382s ]
+sql
+[2022-10-15T14:32:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665814975  AND trading_date = '2022-10-15' [ RunTime:0.003221s ]
+sql
+[2022-10-15T14:33:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665815005  AND trading_date = '2022-10-15' [ RunTime:0.003430s ]
+sql
+[2022-10-15T14:33:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665815005  AND trading_date = '2022-10-15' [ RunTime:0.003224s ]
+sql
+[2022-10-15T14:33:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665815035  AND trading_date = '2022-10-15' [ RunTime:0.003391s ]
+sql
+[2022-10-15T14:33:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665815035  AND trading_date = '2022-10-15' [ RunTime:0.003216s ]
+sql
+[2022-10-15T14:34:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665815065  AND trading_date = '2022-10-15' [ RunTime:0.003313s ]
+sql
+[2022-10-15T14:34:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665815065  AND trading_date = '2022-10-15' [ RunTime:0.003184s ]
+sql
+[2022-10-15T14:34:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665815095  AND trading_date = '2022-10-15' [ RunTime:0.003323s ]
+sql
+[2022-10-15T14:34:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665815095  AND trading_date = '2022-10-15' [ RunTime:0.003285s ]
+sql
+[2022-10-15T14:35:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665815125  AND trading_date = '2022-10-15' [ RunTime:0.003390s ]
+sql
+[2022-10-15T14:35:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665815125  AND trading_date = '2022-10-15' [ RunTime:0.003212s ]
+sql
+[2022-10-15T14:35:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665815155  AND trading_date = '2022-10-15' [ RunTime:0.003294s ]
+sql
+[2022-10-15T14:35:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665815155  AND trading_date = '2022-10-15' [ RunTime:0.003141s ]
+sql
+[2022-10-15T14:36:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665815185  AND trading_date = '2022-10-15' [ RunTime:0.003273s ]
+sql
+[2022-10-15T14:36:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665815185  AND trading_date = '2022-10-15' [ RunTime:0.003184s ]
+sql
+[2022-10-15T14:36:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665815215  AND trading_date = '2022-10-15' [ RunTime:0.003453s ]
+sql
+[2022-10-15T14:36:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665815215  AND trading_date = '2022-10-15' [ RunTime:0.003253s ]
+sql
+[2022-10-15T14:37:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665815245  AND trading_date = '2022-10-15' [ RunTime:0.003369s ]
+sql
+[2022-10-15T14:37:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665815245  AND trading_date = '2022-10-15' [ RunTime:0.003251s ]
+sql
+[2022-10-15T14:37:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665815275  AND trading_date = '2022-10-15' [ RunTime:0.003280s ]
+sql
+[2022-10-15T14:37:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665815275  AND trading_date = '2022-10-15' [ RunTime:0.003301s ]
+sql
+[2022-10-15T14:38:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665815305  AND trading_date = '2022-10-15' [ RunTime:0.003297s ]
+sql
+[2022-10-15T14:38:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665815305  AND trading_date = '2022-10-15' [ RunTime:0.003207s ]
+sql
+[2022-10-15T14:38:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665815335  AND trading_date = '2022-10-15' [ RunTime:0.003329s ]
+sql
+[2022-10-15T14:38:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665815335  AND trading_date = '2022-10-15' [ RunTime:0.003191s ]
+sql
+[2022-10-15T14:39:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665815365  AND trading_date = '2022-10-15' [ RunTime:0.003421s ]
+sql
+[2022-10-15T14:39:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665815365  AND trading_date = '2022-10-15' [ RunTime:0.003256s ]
+sql
+[2022-10-15T14:39:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665815395  AND trading_date = '2022-10-15' [ RunTime:0.003377s ]
+sql
+[2022-10-15T14:39:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665815395  AND trading_date = '2022-10-15' [ RunTime:0.003313s ]
+sql
+[2022-10-15T14:40:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665815425  AND trading_date = '2022-10-15' [ RunTime:0.003449s ]
+sql
+[2022-10-15T14:40:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665815425  AND trading_date = '2022-10-15' [ RunTime:0.003239s ]
+sql
+[2022-10-15T14:40:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665815455  AND trading_date = '2022-10-15' [ RunTime:0.003291s ]
+sql
+[2022-10-15T14:40:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665815455  AND trading_date = '2022-10-15' [ RunTime:0.003196s ]
+sql
+[2022-10-15T14:41:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665815485  AND trading_date = '2022-10-15' [ RunTime:0.003387s ]
+sql
+[2022-10-15T14:41:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665815485  AND trading_date = '2022-10-15' [ RunTime:0.003179s ]
+sql
+[2022-10-15T14:41:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665815515  AND trading_date = '2022-10-15' [ RunTime:0.003225s ]
+sql
+[2022-10-15T14:41:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665815515  AND trading_date = '2022-10-15' [ RunTime:0.003242s ]
+sql
+[2022-10-15T14:42:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665815545  AND trading_date = '2022-10-15' [ RunTime:0.003284s ]
+sql
+[2022-10-15T14:42:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665815545  AND trading_date = '2022-10-15' [ RunTime:0.003197s ]
+sql
+[2022-10-15T14:42:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665815575  AND trading_date = '2022-10-15' [ RunTime:0.003307s ]
+sql
+[2022-10-15T14:42:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665815575  AND trading_date = '2022-10-15' [ RunTime:0.003143s ]
+sql
+[2022-10-15T14:43:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665815605  AND trading_date = '2022-10-15' [ RunTime:0.003456s ]
+sql
+[2022-10-15T14:43:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665815605  AND trading_date = '2022-10-15' [ RunTime:0.003184s ]
+sql
+[2022-10-15T14:43:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665815635  AND trading_date = '2022-10-15' [ RunTime:0.003409s ]
+sql
+[2022-10-15T14:43:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665815635  AND trading_date = '2022-10-15' [ RunTime:0.003211s ]
+sql
+[2022-10-15T14:44:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665815665  AND trading_date = '2022-10-15' [ RunTime:0.003372s ]
+sql
+[2022-10-15T14:44:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665815665  AND trading_date = '2022-10-15' [ RunTime:0.003202s ]
+sql
+[2022-10-15T14:44:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665815695  AND trading_date = '2022-10-15' [ RunTime:0.003269s ]
+sql
+[2022-10-15T14:44:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665815695  AND trading_date = '2022-10-15' [ RunTime:0.003182s ]
+sql
+[2022-10-15T14:45:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665815725  AND trading_date = '2022-10-15' [ RunTime:0.003356s ]
+sql
+[2022-10-15T14:45:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665815725  AND trading_date = '2022-10-15' [ RunTime:0.003200s ]
+sql
+[2022-10-15T14:45:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665815755  AND trading_date = '2022-10-15' [ RunTime:0.003378s ]
+sql
+[2022-10-15T14:45:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665815755  AND trading_date = '2022-10-15' [ RunTime:0.003089s ]
+sql
+[2022-10-15T14:46:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665815785  AND trading_date = '2022-10-15' [ RunTime:0.003366s ]
+sql
+[2022-10-15T14:46:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665815785  AND trading_date = '2022-10-15' [ RunTime:0.003309s ]
+sql
+[2022-10-15T14:46:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665815815  AND trading_date = '2022-10-15' [ RunTime:0.003356s ]
+sql
+[2022-10-15T14:46:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665815815  AND trading_date = '2022-10-15' [ RunTime:0.003319s ]
+sql
+[2022-10-15T14:47:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665815845  AND trading_date = '2022-10-15' [ RunTime:0.003423s ]
+sql
+[2022-10-15T14:47:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665815845  AND trading_date = '2022-10-15' [ RunTime:0.003237s ]
+sql
+[2022-10-15T14:47:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665815875  AND trading_date = '2022-10-15' [ RunTime:0.003418s ]
+sql
+[2022-10-15T14:47:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665815875  AND trading_date = '2022-10-15' [ RunTime:0.003276s ]
+sql
+[2022-10-15T14:48:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665815905  AND trading_date = '2022-10-15' [ RunTime:0.003406s ]
+sql
+[2022-10-15T14:48:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665815905  AND trading_date = '2022-10-15' [ RunTime:0.003179s ]
+sql
+[2022-10-15T14:48:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665815935  AND trading_date = '2022-10-15' [ RunTime:0.003363s ]
+sql
+[2022-10-15T14:48:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665815935  AND trading_date = '2022-10-15' [ RunTime:0.003188s ]
+sql
+[2022-10-15T14:49:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665815965  AND trading_date = '2022-10-15' [ RunTime:0.003394s ]
+sql
+[2022-10-15T14:49:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665815965  AND trading_date = '2022-10-15' [ RunTime:0.003167s ]
+sql
+[2022-10-15T14:49:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665815995  AND trading_date = '2022-10-15' [ RunTime:0.003282s ]
+sql
+[2022-10-15T14:49:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665815995  AND trading_date = '2022-10-15' [ RunTime:0.003186s ]
+sql
+[2022-10-15T14:50:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665816025  AND trading_date = '2022-10-15' [ RunTime:0.003217s ]
+sql
+[2022-10-15T14:50:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665816025  AND trading_date = '2022-10-15' [ RunTime:0.003096s ]
+sql
+[2022-10-15T14:50:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665816055  AND trading_date = '2022-10-15' [ RunTime:0.003277s ]
+sql
+[2022-10-15T14:50:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665816055  AND trading_date = '2022-10-15' [ RunTime:0.003146s ]
+sql
+[2022-10-15T14:51:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665816085  AND trading_date = '2022-10-15' [ RunTime:0.003219s ]
+sql
+[2022-10-15T14:51:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665816085  AND trading_date = '2022-10-15' [ RunTime:0.003126s ]
+sql
+[2022-10-15T14:51:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665816115  AND trading_date = '2022-10-15' [ RunTime:0.003369s ]
+sql
+[2022-10-15T14:51:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665816115  AND trading_date = '2022-10-15' [ RunTime:0.003229s ]
+sql
+[2022-10-15T14:52:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665816145  AND trading_date = '2022-10-15' [ RunTime:0.003383s ]
+sql
+[2022-10-15T14:52:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665816145  AND trading_date = '2022-10-15' [ RunTime:0.003224s ]
+sql
+[2022-10-15T14:52:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665816175  AND trading_date = '2022-10-15' [ RunTime:0.003329s ]
+sql
+[2022-10-15T14:52:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665816175  AND trading_date = '2022-10-15' [ RunTime:0.003285s ]
+sql
+[2022-10-15T14:53:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665816205  AND trading_date = '2022-10-15' [ RunTime:0.003366s ]
+sql
+[2022-10-15T14:53:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665816205  AND trading_date = '2022-10-15' [ RunTime:0.003202s ]
+sql
+[2022-10-15T14:53:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665816235  AND trading_date = '2022-10-15' [ RunTime:0.003413s ]
+sql
+[2022-10-15T14:53:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665816235  AND trading_date = '2022-10-15' [ RunTime:0.003177s ]
+sql
+[2022-10-15T14:54:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665816265  AND trading_date = '2022-10-15' [ RunTime:0.003391s ]
+sql
+[2022-10-15T14:54:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665816265  AND trading_date = '2022-10-15' [ RunTime:0.003195s ]
+sql
+[2022-10-15T14:54:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665816295  AND trading_date = '2022-10-15' [ RunTime:0.003405s ]
+sql
+[2022-10-15T14:54:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665816295  AND trading_date = '2022-10-15' [ RunTime:0.003176s ]
+sql
+[2022-10-15T14:55:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665816325  AND trading_date = '2022-10-15' [ RunTime:0.003406s ]
+sql
+[2022-10-15T14:55:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665816325  AND trading_date = '2022-10-15' [ RunTime:0.003212s ]
+sql
+[2022-10-15T14:55:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665816355  AND trading_date = '2022-10-15' [ RunTime:0.003374s ]
+sql
+[2022-10-15T14:55:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665816355  AND trading_date = '2022-10-15' [ RunTime:0.003299s ]
+sql
+[2022-10-15T14:56:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665816385  AND trading_date = '2022-10-15' [ RunTime:0.003460s ]
+sql
+[2022-10-15T14:56:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665816385  AND trading_date = '2022-10-15' [ RunTime:0.003169s ]
+sql
+[2022-10-15T14:56:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665816415  AND trading_date = '2022-10-15' [ RunTime:0.003427s ]
+sql
+[2022-10-15T14:56:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665816415  AND trading_date = '2022-10-15' [ RunTime:0.003161s ]
+sql
+[2022-10-15T14:57:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665816445  AND trading_date = '2022-10-15' [ RunTime:0.003399s ]
+sql
+[2022-10-15T14:57:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665816445  AND trading_date = '2022-10-15' [ RunTime:0.003200s ]
+sql
+[2022-10-15T14:57:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665816475  AND trading_date = '2022-10-15' [ RunTime:0.003246s ]
+sql
+[2022-10-15T14:57:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665816475  AND trading_date = '2022-10-15' [ RunTime:0.003184s ]
+sql
+[2022-10-15T14:58:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665816505  AND trading_date = '2022-10-15' [ RunTime:0.003405s ]
+sql
+[2022-10-15T14:58:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665816505  AND trading_date = '2022-10-15' [ RunTime:0.003199s ]
+sql
+[2022-10-15T14:58:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665816535  AND trading_date = '2022-10-15' [ RunTime:0.003425s ]
+sql
+[2022-10-15T14:58:55+08:00][ sql ] [ SQL ] SELECT id,create_time,user_id,market,stock_id,stock_code,direction,order_position_id,volume,volume_success,is_finished,state,trading_date,deposit100,is_monthly,cancel_state,is_cash_coupon FROM md_order WHERE  id = 136683 LIMIT 1 [ RunTime:0.001110s ]
+sql
+[2022-10-15T14:58:55+08:00][ sql ] [ SQL ] SELECT id,user_id,market,stock_id,stock_code,volume_position,volume_today,sum_buy_volume,position_price,sum_buy_value,sum_buy_value_cost,sum_deposit,sum_management_fee,sum_sell_volume,sum_sell_value,sum_sell_value_in,sum_back_profit,stop_loss_price,sum_sell_pal FROM md_order_position WHERE  stock_code = '301300'  AND market = 'SZ'  AND user_id = 567  AND is_monthly =   AND monthly_expire_date IS NULL  AND is_finished =   AND is_cash_coupon =  LIMIT 1 [ RunTime:0.001921s ]
+sql
+[2022-10-15T14:58:55+08:00][ sql ] [ SQL ] INSERT INTO md_order_position (user_id , market , stock_id , stock_code , volume_position , volume_today , sum_buy_volume , position_price , sum_buy_value , sum_buy_value_cost , sum_sell_value , sum_sell_value_in , sum_management_fee , sum_deposit , sum_back_profit , create_time , update_time) VALUES (567 , 'SZ' , 5185 , '301300' , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 1665817135 , 1665817135) [ RunTime:0.001296s ]
+sql
+[2022-10-15T14:58:55+08:00][ sql ] [ SQL ] INSERT INTO md_order_traded (order_position_id , order_id , user_id , direction , market , stock_id , stock_code , trading_date , trading_time , volume , price , cost_price , traded_value , buy_value_cost , sell_value_in , deposit , total_fee , service_fee , stamp_tax , transfer_fee , management_fee , is_monthly , is_cash_coupon , create_time , update_time) VALUES (106567 , 136683 , 567 , 'buy' , 'SZ' , 5185 , '301300' , '2022-10-15' , '14:58:55' , 200 , '36.22' , '36.3286' , '7244.00' , 7265.73 , 0 , 7244 , 21.73 , 21.73 , 0 , 0 , 7.24 ,  ,  , 1665817135 , 1665817135) [ RunTime:0.001292s ]
+sql
+[2022-10-15T14:58:55+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_position = 200 , volume_today = volume_today+200 , sum_buy_volume = 200 , position_price = '36.3286' , sum_buy_value = sum_buy_value+7244.00 , sum_buy_value_cost = '7265.73' , sum_management_fee = sum_management_fee+7.24 , sum_deposit = '7244.00' , stop_loss_price = 0.11 , b_cost_price = '36.3286' , is_monthly =  , is_cash_coupon =  , update_time = 1665817135 WHERE  id = 106567 [ RunTime:0.001198s ]
+sql
+[2022-10-15T14:58:55+08:00][ sql ] [ SQL ] UPDATE md_order SET order_position_id = 106567 , volume_success = 200 , is_finished = 1 , state = 'all_traded' , update_time = 1665817135 WHERE  id = 136683 [ RunTime:0.000933s ]
+sql
+[2022-10-15T14:58:55+08:00][ sql ] [ SQL ] SELECT strategy_balance,frozen,cash_coupon,cash_coupon_frozen FROM md_user_account WHERE  user_id = 567 LIMIT 1 [ RunTime:0.000768s ]
+sql
+[2022-10-15T14:58:55+08:00][ sql ] [ SQL ] UPDATE md_user_account SET strategy_balance = strategy_balance-7.24-7244 , frozen = frozen-7244.00 , update_time = 1665817135 WHERE  user_id = 567 [ RunTime:0.001034s ]
+sql
+[2022-10-15T14:58:55+08:00][ sql ] [ SQL ] INSERT INTO md_user_strategy_log (user_id , market , stock_id , stock_code , order_position_id , order_traded_id , change_time , change_type , change_money , before_balance , after_balance , remark , create_time) VALUES (567 , 'SZ' , 5185 , '301300' , 106567 , 130156 , '2022-10-15 14:58:55' , 'buy' , -7244 , '1060028.98' , '1052784.98' , '买入股票：买入(SZ301300)(支出保证金:36.22*200*1=7244) （止损参数：0.11）' , 1665817135) [ RunTime:0.001042s ]
+sql
+[2022-10-15T14:58:55+08:00][ sql ] [ SQL ] INSERT INTO md_user_strategy_log (user_id , market , stock_id , stock_code , order_position_id , order_traded_id , change_time , change_type , change_money , before_balance , after_balance , remark , create_time) VALUES (567 , 'SZ' , 5185 , '301300' , 106567 , 130156 , '2022-10-15 14:58:55' , 'management_fee' , -7.24 , '1052784.98' , '1052777.74' , '管理费。买入SZ301300（当前价36.22*股数200*0.001=7.24）' , 1665817135) [ RunTime:0.000989s ]
+sql
+[2022-10-15T14:58:55+08:00][ sql ] [ SQL ] INSERT INTO md_user_cash_coupon_frozen_log (user_id , order_id , order_position_id , order_traded_id , market , stock_id , stock_code , change_type , change_time , change_money , before_money , after_money) VALUES (567 , 136683 , 106567 , 130156 , 'SZ' , 5185 , '301300' , 'traded' , '2022-10-15 14:58:55' , -7244 , '7730.50' , '486.50') [ RunTime:0.000864s ]
+sql
+[2022-10-15T14:58:55+08:00][ sql ] [ SQL ] SELECT platform_id,agent_id,broker_id,pid FROM md_user WHERE  id = 567 LIMIT 1 [ RunTime:0.000891s ]
+sql
+[2022-10-15T14:58:55+08:00][ sql ] [ SQL ] SELECT id,commission_rate,user_rate FROM md_admin_user WHERE  id IN (97,98) [ RunTime:0.000712s ]
+sql
+[2022-10-15T14:58:55+08:00][ sql ] [ SQL ] INSERT INTO md_admin_income (user_id , order_position_id , order_traded_id , income_type , market , stock_code , stock_value , money , platform_id , platform_money , agent_id , agent_money , broker_id , broker_money , up_user_id , up_user_money , is_return , income_time) VALUES (567 , 106567 , 130156 , 'management_buy' , 'SZ' , '301300' , '7244.00' , 7.24 , 1 , '-1.4500' , 97 , '0.0000' , 98 , '7.2400' , 560 , 1.45 ,  , '2022-10-15 14:58:55') [ RunTime:0.000979s ]
+sql
+[2022-10-15T14:58:55+08:00][ sql ] [ SQL ] SELECT id,user_id,market,stock_code,stock_id,volume_position,volume_for_sell,stop_loss_price,position_price,sum_deposit,is_monthly,monthly_expire_date,is_cash_coupon FROM md_order_position WHERE  id = 106567 LIMIT 1 [ RunTime:0.000901s ]
+sql
+[2022-10-15T14:58:55+08:00][ sql ] [ SQL ] SELECT SUM(sum_deposit) AS tp_sum FROM md_order_position WHERE  user_id = 567  AND is_finished = [ RunTime:0.001488s ]
+sql
+[2022-10-15T14:58:55+08:00][ sql ] [ SQL ] UPDATE md_user_account SET deposit = 49341 , update_time = 1665817135 WHERE  user_id = 567 [ RunTime:0.000813s ]
+sql
+[2022-10-15T14:58:55+08:00][ sql ] [ SQL ] SELECT strategy_balance-frozen AS strategy FROM md_user_account WHERE  user_id = 567 LIMIT 1 [ RunTime:0.000725s ]
+sql
+[2022-10-15T14:58:55+08:00][ sql ] [ SQL ] UPDATE md_order SET is_finished = 1 , update_time = 1665817135 WHERE  is_finished =   AND trading_date = '2022-10-15'  AND (  state = 'all_traded' OR cancel_state = 'success' ) [ RunTime:0.002711s ]
+sql
+[2022-10-15T14:58:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665816535  AND trading_date = '2022-10-15' [ RunTime:0.003244s ]
+sql
+[2022-10-15T14:59:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665816565  AND trading_date = '2022-10-15' [ RunTime:0.003495s ]
+sql
+[2022-10-15T14:59:25+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665816565  AND trading_date = '2022-10-15' [ RunTime:0.003243s ]
+sql
+[2022-10-15T14:59:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time >= 1665816595  AND trading_date = '2022-10-15' [ RunTime:0.003446s ]
+sql
+[2022-10-15T14:59:55+08:00][ sql ] [ SQL ] SELECT * FROM md_order WHERE  state IN ('submitted','part_traded')  AND cancel_state = 'none'  AND is_system =   AND create_time < 1665816595  AND trading_date = '2022-10-15' [ RunTime:0.003240s ]
+sql
+[2022-10-15T15:00:02+08:00][ sql ] [ SQL ] INSERT INTO md_yuebao (user_id,income_time,wallet_balance,income,base_income,is_received,create_time,update_time) SELECT user_id,now(),wallet_balance,wallet_balance/10000*3,3,false,floor(extract(epoch from(now()))),floor(extract(epoch from(now()))) FROM md_user_account [ RunTime:0.004537s ]
+sql
+[2022-10-15T15:05:02+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 , update_time = 1665817502 WHERE  is_finished = [ RunTime:0.003807s ]
+sql
+[2022-10-15T15:05:02+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1665817502 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-10-15' [ RunTime:0.001016s ]
+sql
+[2022-10-15T15:10:02+08:00][ sql ] [ SQL ] UPDATE md_order SET cancel_state = 'success' , cancel_time = 1665817802 , cancel_type = 'close' , is_finished = 1 , update_time = 1665817802 WHERE  trading_date = '2022-10-15'  AND direction = 'sell'  AND is_finished = [ RunTime:0.002895s ]
+sql
+[2022-10-15T15:10:02+08:00][ sql ] [ SQL ] SELECT id,user_id,market,stock_code,stock_id,price,volume,volume_success,deposit100 FROM md_order WHERE  trading_date = '2022-10-15'  AND direction = 'buy'  AND is_finished = [ RunTime:0.002948s ]
+sql
+[2022-10-15T15:20:52+08:00][ sql ] [ SQL ] SELECT id,user_id,market,stock_id,stock_code,volume_position,sum_sell_value,sum_sell_value_in,sum_buy_value_cost,sum_deposit,sum_back_profit FROM md_order_position WHERE  is_finished =   AND is_suspended = [ RunTime:0.001807s ]
+sql

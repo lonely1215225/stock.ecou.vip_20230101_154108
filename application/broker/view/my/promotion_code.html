@@ -1,0 +1,50 @@
+{extend name="base/layout"/}
+{block name="main"}
+<div class="content-wrapper">
+    <section class="content-header">
+        <h1>
+            推广码
+            <small></small>
+        </h1>
+        <ol class="breadcrumb">
+            <li><a href="{:url('index/index')}"><i class="fa fa-home"></i> 首页</a></li>
+            <li><a href="#">我的</a></li>
+            <li class="active">推广码</li>
+        </ol>
+    </section>
+    <section class="content">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="box box-info">
+                    <div class="box-body">
+                        <table class="table table-bordered table-middle">
+                            <tr>
+                                <td colspan="2" align="center"><strong>推广信息</strong></td>
+                            </tr>
+                            <tr>
+                                <th width="15%">推广码</th>
+                                <td>{$code?:''}</td>
+                            </tr>
+                            <tr>
+                                <th>推广链接</th>
+                                <td>{$url}</td>
+                            </tr>
+                            <tr>
+                                <th>二维码</th>
+                                <td>
+                                    <img src="{$img}" width="320" height="320">
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+{/block}
+
+{block name="js"}
+
+{/block}

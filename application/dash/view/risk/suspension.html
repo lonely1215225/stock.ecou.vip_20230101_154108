@@ -1,0 +1,93 @@
+{extend name="base/layout"/}
+
+{block name="main"}
+<div class="content-wrapper">
+    <section class="content-header">
+        <h1>停牌复牌</h1>
+        <ol class="breadcrumb">
+            <li><a href="{:url('index/index')}"><i class="fa fa-home"></i> 首页</a></li>
+            <li><a href="#">风控管理</a></li>
+            <li class="active">停牌复牌</li>
+        </ol>
+    </section>
+    <section class="content">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="box box-info">
+                    <div class="box-header">
+                        <a href="{:url('risk/edit_suspension')}" class="btn btn-success"><i class="fa fa-plus"></i>
+                            添加停牌复牌</a>
+                        <form id="searchInfo" action="{:url('suspension')}" method="get">
+                            <div class="col-sm-12 no-padding">
+                                <div class="search-box">
+                                    <label class="text-right">股票代码</label>
+                                    <div class="search-body"><input class="form-control" type="text" id="stockCode" name="stock_code" value="{$stock_code?:''}"></div>
+                                </div>
+                                <div class="search-box">
+                                    <label class="text-right">状态</label>
+                                    <div class="search-body">
+                                        <select id="isSuspension" name="is_suspension" class="form-control">
+                                            <option value="">请选择</option>
+                                            <option value="1" {:$is_suspension!="" && 1==$is_suspension?'selected':''}>未复牌</option>
+                                            <option value="2" {:$is_suspension!="" && 2==$is_suspension?'selected':''}>已复牌</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="search-box">
+                                    <label class="text-right"></label>
+                                    <div class="search-body"><input type="submit" class="btn btn-primary" value="查找"></div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <!--div class="box-body no-padding">
+                        <table class="table table-bordered table-middle">
+                            <tr>
+                                <td>
+                                    停牌复牌总数：{$suspensionTotal?:'0'}
+                                </td>
+                            </tr>
+                        </table>
+                    </div-->
+                    <div class="box-body">
+                        <table class="table table-bordered table-middle table-center">
+                            <thead>
+                            <tr>
+                                <th>股票详情</th>
+                                <th>股票名称</th>
+                                <th>停牌时间</th>
+                                <th>复牌时间</th>
+                                <th>操作</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            {foreach $susInfo['infoList'] as $k=>$nl}
+                            <tr>
+                                    <td>
+                                        {$nl.market}{$nl.stock_code}
+                                    </td>
+                                    <td>
+                                        {$susInfo['stockName'][$nl['market'].$nl['stock_code']]['stock_name']?:''}
+                                    </td>
+                                    <td>{$nl.suspension_date == '0000-00-00' ? '' : $nl.suspension_date}</td>
+                                    <td>{$nl.resumption_date == '0000-00-00' ? '' : $nl.resumption_date}</td>
+                                    <td><a class="btn btn-sm btn-primary"
+                                           href="{:url('risk/edit_suspension', ['id' => $nl.id])}">编辑</a></td>
+                            </tr>
+                            {/foreach}
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="box-footer">
+                        <div class="col-sm-12 no-padding">{:$susInfo['infoList']->render()}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+{/block}
+{block name="js"}
+
+{/block}

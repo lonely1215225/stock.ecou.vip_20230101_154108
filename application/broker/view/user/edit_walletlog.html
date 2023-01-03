@@ -1,0 +1,138 @@
+{extend name="base/layout"/}
+{block name="main"}
+<link rel="stylesheet" href="__DASH__/lib/bootstrap-datetimepicker/css/bootstrap-datetimepicker.css">
+<script src="__DASH__/lib/bootstrap-datetimepicker/js/bootstrap-datetimepicker.js"></script>
+<div class="content-wrapper">
+    <section class="content-header">
+        <h1>
+            {$id?'编辑':'添加'}钱包流水
+            <small></small>
+        </h1>
+        <ol class="breadcrumb">
+            <li><a href="{:url('index/index')}"><i class="fa fa-home"></i> 首页</a></li>
+            <li><a href="#">用户管理</a></li>
+            <li class="active">钱包流水</li>
+        </ol>
+    </section>
+    <section class="content">
+        <div class="row">
+            <div class="col-xs-12">
+                <form id="ruleForm" action="" class="form-horizontal">
+                    <div class="box box-info">
+                        <div class="box-body">
+                            <div class="form-group col-sm-8">
+                                <label class="col-sm-2 control-label">股票代码</label>
+                                <div class="col-sm-4">
+                                    <input type="text" name="stock_code" id="stockCode"
+                                           value="{$editWalletInfo.stock_code?:''}" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="box-body">
+                            <div class="form-group col-sm-8">
+                                <label class="col-sm-2 control-label">变动金额</label>
+                                <div class="col-sm-4">
+                                    <input type="text" name="change_money" id="changeMoney"
+                                           value="{$editWalletInfo.change_money?:''}" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="box-body">
+                            <div class="form-group col-sm-8">
+                                <label class="col-sm-2 control-label">发生前金额</label>
+                                <div class="col-sm-4">
+                                    <input type="text" name="before_balance" id="beforeBalance"
+                                           value="{$editWalletInfo.before_balance?:''}" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="box-body">
+                            <div class="form-group col-sm-8">
+                                <label class="col-sm-2 control-label">发生后金额</label>
+                                <div class="col-sm-4">
+                                    <input type="text" name="after_balance" id="afterBalance"
+                                           value="{$editWalletInfo.after_balance?:''}" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="box-body">
+                            <div class="form-group col-sm-8">
+                                <label class="col-sm-2 control-label">发生时间</label>
+                                <div class="col-sm-4">
+                                    <div class="input-group date">
+                                        <div class="input-group-addon">
+                                            <i class="fa fa-calendar"></i>
+                                        </div>
+                                        <input type="text" name="deal_time" id="dealTime"
+                                               value="{$editWalletInfo.deal_time?:''}" class="form-control pull-right">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="box-footer">
+                            <div class="col-sm-8">
+                                <div class="col-sm-offset-2">
+                                    <button type="submit" class="btn btn-primary">保存</button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+</div>
+
+{/block}
+
+{block name="js"}
+<script>
+$(function () {
+    $('#dealTime').datetimepicker({
+        format: 'yyyy-mm-dd h:i:s',//显示格式
+        minView: "month",//设置只显示到月份
+        initialDate: new Date(),
+        autoclose: true,//选中自动关闭
+        todayBtn: true,//显示今日按钮
+    });
+    $("#ruleForm").submit(function () {
+        var stockCode     = $("#stockCode").val();
+        var changeMoney   = $("#changeMoney").val();
+        var beforeBalance = $("#beforeBalance").val();
+        var afterBalance  = $("#afterBalance").val();
+        var dealTime      = $("#dealTime").val();
+        var userId        = "{$userId?:0}";
+        var id            = "{$id?:0}";
+        if (stockCode == "") {
+            layer.msg("请填写股票代码", {icon: 2, time: 1500, shade: .3, shadeClose: true});
+        } else {
+            $.post("{:url('stock/user/saveWalletLog')}", {
+                id: id,
+                stock_code: stockCode,
+                change_money: changeMoney,
+                before_balance: beforeBalance,
+                after_balance: afterBalance,
+                user_id:userId,
+                deal_time: dealTime,
+            }, function (data) {
+                if (data.code == 1) {
+                    layer.msg(data.msg, {icon: 1, time: 1500, shade: .3, shadeClose: true}, function () {
+                        window.location.href = "{:url('wallet_log')}";
+                    });
+                } else {
+                    layer.msg(data.msg, {icon: 2, time: 1500, shade: .3, shadeClose: true});
+                }
+            });
+        }
+
+        return false;
+    });
+});
+</script>
+{/block}

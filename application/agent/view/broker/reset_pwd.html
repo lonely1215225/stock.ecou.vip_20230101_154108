@@ -1,0 +1,81 @@
+{extend name="base/layout"/}
+{block name="main"}
+<div class="content-wrapper">
+    <section class="content-header">
+        <h1>
+            重置密码
+            <small></small>
+        </h1>
+        <ol class="breadcrumb">
+            <li><a href="{:url('index/index')}"><i class="fa fa-home"></i> 首页</a></li>
+            <li><a href="#">经济人管理</a></li>
+            <li class="active">重置密码</li>
+        </ol>
+    </section>
+    <section class="content">
+        <div class="row">
+            <div class="col-xs-12">
+                <form id="agentForm" action="" class="form-horizontal">
+                    <div class="box box-info">
+                        <div class="box-body">
+                            <div class="form-group col-sm-8">
+                                <label class="col-sm-2 control-label">用户名</label>
+                                <div class="col-sm-4">
+                                    <input type="text" name="username" id="username" value="{$brokerInfo.username?:''}" class="form-control" disabled>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="box-body">
+                            <div class="form-group col-sm-8">
+                                <label class="col-sm-2 control-label">新密码</label>
+                                <div class="col-sm-4">
+                                    <input type="text" name="password" id="password" value="" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="box-footer">
+                            <div class="col-sm-8">
+                                <div class="col-sm-offset-2">
+                                    <button type="submit" class="btn btn-primary">保存</button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+</div>
+
+{/block}
+
+{block name="js"}
+<script>
+$(function(){
+    $("#agentForm").submit(function(){
+        var id       = "{$brokerInfo.id?:0}";
+        var password = $("#password").val();
+
+        if (id == 0 && password == '') {
+            layer.msg("请填写用户密码", {icon:2, time:1500, shade:.3, shadeClose:true});
+        }else {
+            $.post("{:url('stock/broker/saveNewPwd')}",{id:id,password:password}, function(data){
+                if(data.code == 1){
+                    layer.msg(data.msg, {icon:1, time:1500, shade:.3, shadeClose:true}, function(){
+                        window.location.href = "{:url('index')}";
+                    });
+                } else {
+                    layer.msg(data.msg, {icon:2, time:1500, shade:.3, shadeClose:true});
+                }
+            });
+        }
+
+        return false;
+    });
+});
+</script>
+{/block}

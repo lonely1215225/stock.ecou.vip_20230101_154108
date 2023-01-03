@@ -1,0 +1,279 @@
+{extend name="base/layout"/}
+
+{block name="main"}
+<style>
+    .tj{
+        background-color: #ecf0f5;
+        font-weight:bold;
+    }
+    .table-scroll-x {
+        box-sizing: border-box;
+        width: 100%;
+        overflow-x: scroll;
+    //white-space:nowrap;
+    }
+    .table-scroll-x-top {
+        overflow-x: scroll;
+        height: 14px;
+    }
+</style>
+<link rel="stylesheet" href="__DASH__/lib/bootstrap-datetimepicker/css/bootstrap-datetimepicker.css">
+<script src="__DASH__/lib/bootstrap-datetimepicker/js/bootstrap-datetimepicker.js"></script>
+<script src="__DASH__/lib/tinyselect/tinyselect.min.js"></script>
+<link rel="stylesheet" type="text/css" href="__DASH__/lib/tinyselect/tinyselect.min.css"/>
+<div class="content-wrapper">
+    <section class="content-header">
+        <h1>平仓结算</h1>
+        <ol class="breadcrumb">
+            <li><a href="{:url('index/index')}"><i class="fa fa-home"></i> 首页</a></li>
+            <li><a href="#">订单管理</a></li>
+            <li class="active">平仓结算</li>
+        </ol>
+    </section>
+    <section class="content">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="box box-info">
+                    <div class="box-header with-border">
+                        <form id="searchInfo" action="{:url('close_position')}" method="get">
+                            <div class="col-sm-12 no-padding">
+                                <div class="search-box">
+                                    <label class="text-right">股票代码</label>
+                                    <div class="search-body"><input class="form-control" name="stock_code" id="stockCode" type="text"  value="{$stock_code?:''}"></div>
+                                </div>
+                                <div class="search-box">
+                                    <label class="text-right">代理商</label>
+                                    <div class="search-body">
+                                        <select class="form-control" id="agentId" name="agent_id" onchange="showBroker(this.value);">
+                                            <option value="">请选择</option>
+                                            {foreach $agentList as $k=>$v}
+                                            <option value="{$k}" {:isset($agent_id) && $k==$agent_id?'selected':''}>{$v}</option>
+                                            {/foreach}
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="search-box">
+                                    <label class="text-right">经纪人</label>
+                                    <div class="search-body"id="brokerInfo">
+                                        <select id="brokerId" name="broker_id" class="form-control" >
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-12 no-padding">
+                                <div class="search-box">
+                                    <label class="text-right">手机号</label>
+                                    <div class="search-body"><input class="form-control" name="mobile" id="mobile" type="text"  value="{$mobile?:''}"></div>
+                                </div>
+                                <div class="search-box">
+                                    <label class="text-right">持仓编号</label>
+                                    <div class="search-body"><input class="form-control" name="id" id="id" type="text"  value="{$id?:''}"></div>
+                                </div>
+                                <div class="search-box">
+                                    <label class="text-right">资金账号</label>
+                                    <div class="search-body"><input class="form-control" name="primary_account" id="primaryAccount" type="text"  value="{$primary_account?:''}"></div>
+                                </div>
+                            </div>
+                            <div class="col-sm-12 no-padding">
+                                <div class="search-box">
+                                    <label class="text-right">开始计算时间</label>
+                                    <div class="search-body">
+                                        <div class="input-group date">
+                                            <div class="input-group-addon">
+                                                <i class="fa fa-calendar"></i>
+                                            </div>
+                                            <input type="text" name="start_date" id="startDate" value="{$start_date?:''}" class="form-control pull-right" readonly />
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="search-box">
+                                    <label class="text-right">最后结算时间</label>
+                                    <div class="search-body">
+                                        <div class="input-group date">
+                                            <div class="input-group-addon">
+                                                <i class="fa fa-calendar"></i>
+                                            </div>
+                                            <input type="text" name="end_date" id="endDate" value="{$end_date?:''}" class="form-control pull-right" readonly />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="search-box">
+                                    <label class="text-right">排除代理商</label>
+                                    <div class="search-body">
+                                        <select id="noAgentId" name="no_agent_id[]" multiple="multiple">
+                                            {foreach $agentList as $k=>$v}
+                                            <option value="{$k}" {:$no_agent_id && in_array($k,$no_agent_id)?'selected':''}>{$v}</option>
+                                            {/foreach}
+                                        </select>
+                                    </div>
+                                    <input type="hidden" name="submit_flag" id="submitFlag" value="2">
+                                </div>
+                                <div class="search-box">
+                                    <label class="text-right">月管理费</label>
+                                    <div class="search-body">
+                                        <select id="is_monthly" name="is_monthly" class="form-control" >
+                                            <option value="">全部</option>
+                                            <option value="false" {:isset($is_monthly) && $is_monthly=='false'?'selected':''}>否</option>
+                                            <option value="true" {:isset($is_monthly) && $is_monthly=='true'?'selected':''}>是</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="search-box">
+                                    <label class="text-right"></label>
+                                    <div class="search-body"><input type="submit" class="btn btn-primary" value="查找"></div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <script type="text/javascript">
+                        function scrollWindow(obj,id)
+                        {
+                            document.getElementById(id).scrollLeft=obj.scrollLeft;
+                        }
+                    </script>
+                    <div id="div1" class="table-scroll-x-top" style="width: 100%" onscroll="scrollWindow(this,'scroll_tab')">
+                        <div class="table-scroll-x-top2" style="width:130%"></div>
+                    </div>
+                    <div class="box-body no-padding table-scroll-x" id="scroll_tab"  onscroll="scrollWindow(this,'div1')">
+                        <table class="table table-bordered table-middle table-center">
+                            <thead>
+                            <tr class="tj">
+                                <td>总计</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td>{$closePositionStatistic.sum_buy_volume?:'0'}</td>
+                                <td>{$closePositionStatistic.sum_sell_volume?:'0'}</td>
+                                <td></td>
+                                <td></td>
+                                <td>{$closePositionStatistic.sum_buy_value_cost?:'0'}</td>
+                                <td>{$closePositionStatistic.sum_sell_value_in?:'0'}</td>
+                                <td>{$closePositionStatistic.s_pal?:'0'}</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            </thead>
+                            <tr>
+                                <th>持仓编号</th>
+                                <th>用户信息</th>
+                                <th>股票详情</th>
+                                <th>结算时间</th>
+                                <th>买入数量</th>
+                                <th>卖出数量</th>
+                                <th>买入均价</th>
+                                <th>卖出均价</th>
+                                <th>总买入市值</th>
+                                <th>总卖出市值</th>
+                                <th>结算盈亏</th>
+                                <th>月管理费</th>
+                                <th>月管理到期时间</th>
+                            </tr>
+                            {foreach $closePositionList['orderPositionList'] as $k=>$v}
+                            <tr>
+                                <td>{$v.id}</td>
+                                <td>
+                                    <a href="{:url('user/index',['mobile'=>$v.mobile])}" target="_blank" title="查看用户信息">
+                                        {$v.mobile}<br>{$v['real_name']?:'未实名'}
+                                    </a>
+                                </td>
+                                <td>
+                                    {$v.market}{$v.stock_code}
+                                    <br>
+                                    {$closePositionList['stockInfo'][$v['market'].$v['stock_code']] ? $closePositionList['stockInfo'][$v['market'].$v['stock_code']]['stock_name']:''}
+                                    <br>
+                                    {$v.primary_account}
+                                </td>
+                                <td>{$v.s_time?date('Y-m-d H:i:s',$v.s_time):''}</td>
+                                <td>{$v.sum_buy_volume}</td>
+                                <td>{$v.sum_sell_volume}</td>
+                                <td>{$v.b_cost_price}</td>
+                                <td>{$v.s_cost_price}</td>
+                                <td>{$v.sum_buy_value_cost}</td>
+                                <td>{$v.sum_sell_value_in}</td>
+                                <td>{$v.s_pal}</td>
+                                <td>{$v.is_monthly?'是':'否'}</td>
+                                <td>{$v.monthly_expire_date}</td>
+                            </tr>
+                            {/foreach}
+                        </table>
+                    </div>
+
+                    <div class="box-footer">
+                        <div class="col-sm-12 no-padding">{:$closePositionList['orderPositionList']->render()}</div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+</div>
+{/block}
+{block name="js"}
+<script src="__DASH__/lib/laydate/laydate.js"></script>
+<script>
+    tinyselect('#noAgentId',{
+        result: {
+            style: {
+                height: '34px',
+                border: '1px solid #ccc'
+            }
+        }
+    });
+    $(function () {
+        // 开始成交时间
+        var amo = laydate.render({
+            elem: '#startDate'
+            , type: 'datetime'
+            , max: Date.now()
+            , format: 'yyyy-MM-dd HH:mm:ss'
+            , btns: ['confirm']
+        });
+
+        // 最后成交时间
+        var amc = laydate.render({
+            elem: '#endDate'
+            , type: 'datetime'
+            , max: Date.now()
+            //,value: new Date(Date.now())
+            , format: 'yyyy-MM-dd HH:mm:ss'
+            , btns: ['confirm']
+        });
+    })
+    $(function(){
+        var agentId  = "{:$agent_id}";
+        var brokerId = "{:$broker_id}";
+        if (agentId) {
+            $.post("{:url('stock/orgFilter/broker')}", {agent_id:agentId,brokerId:brokerId}, function(data){
+                if(data.code == 1){
+                    var str = "<select id=\"brokerId\" name=\"broker_id\" class=\"form-control\"><option value=''>请选择</option>";
+                    $.each(data.data, function (i, el) {
+                        if(i == brokerId){
+                            str +="<option value='"+i+"' selected>"+el+"</option>";
+                        }else{
+                            str +="<option value='"+i+"'>"+el+"</option>";
+                        }
+                    });
+                    str +="</select>";
+                    $("#brokerInfo").html(str);
+                }
+            });
+        }
+    });
+    function showBroker(v) {
+        var brokerId=0;
+        $.post("{:url('stock/orgFilter/broker')}", {agent_id:v,brokerId:brokerId}, function(data){
+            if(data.code == 1){
+                $("#brokerInfo").empty();
+                var str = "<select id=\"brokerId\" name=\"broker_id\" class=\"form-control\"><option value=''>请选择</option>";
+                $.each(data.data, function (i, el) {
+                    str +="<option value='"+i+"'>"+el+"</option>";
+                });
+                str +="</select>";
+                $("#brokerInfo").html(str);
+            }
+        });
+    }
+</script>
+{/block}

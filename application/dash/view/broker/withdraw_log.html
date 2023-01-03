@@ -1,0 +1,247 @@
+{extend name="base/layout"/}
+
+{block name="main"}
+<style>
+.tj{
+    background-color: #ecf0f5;
+    font-weight:bold;
+}
+</style>
+<link rel="stylesheet" href="__DASH__/lib/bootstrap-datetimepicker/css/bootstrap-datetimepicker.css">
+<script src="__DASH__/lib/bootstrap-datetimepicker/js/bootstrap-datetimepicker.js"></script>
+<div class="content-wrapper">
+    <section class="content-header">
+        <h1>提现申请</h1>
+        <ol class="breadcrumb">
+            <li><a href="{:url('index/index')}"><i class="fa fa-home"></i> 首页</a></li>
+            <li><a href="#">用户管理</a></li>
+            <li class="active">提现申请</li>
+        </ol>
+    </section>
+    <section class="content">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="box box-info">
+                    <div class="box-header with-border">
+                        <form id="searchInfo" action="{:url('withdraw_log')}" method="get">
+                            <div class="col-sm-12 no-padding">
+                                <div class="search-box">
+                                    <label class="text-right">代理商</label>
+                                    <div class="search-body">
+                                        <select id="agentId" name="agent_id" class="form-control" onchange="showBroker(this.value);">
+                                            <option value="">请选择</option>
+                                            {foreach $agentInfo as $ak=>$av}
+                                            <option value="{$ak}" {:isset($agent_id) && $ak==$agent_id?'selected':''}>{$av}</option>
+                                            {/foreach}
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="search-box">
+                                    <label class="text-right">经纪人</label>
+                                    <div class="search-body"id="brokerInfo">
+                                        <select id="brokerId" name="broker_id" class="form-control" >
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="search-box">
+                                    <label class="text-right">处理状态</label>
+                                    <div class="search-body">
+                                        <select class="form-control" name="state" id="state">
+                                            <option value="">请选择</option>
+                                            {foreach $stateList as $k=>$v}
+                                            <option value="{$k}" {:isset($state) && $k==$state?'selected':''}>{$v}</option>
+                                            {/foreach}
+                                        </select>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="col-sm-12 no-padding">
+                                <div class="search-box">
+                                    <label class="text-right">开始申请时间</label>
+                                    <div class="search-body">
+                                        <div class="input-group date">
+                                            <div class="input-group-addon">
+                                                <i class="fa fa-calendar"></i>
+                                            </div>
+                                            <input type="text" name="start_date" id="startDate" value="{$start_date?:''}" class="form-control pull-right">
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div class="search-box">
+                                    <label class="text-right">最后申请时间</label>
+                                    <div class="search-body">
+                                        <div class="input-group date">
+                                            <div class="input-group-addon">
+                                                <i class="fa fa-calendar"></i>
+                                            </div>
+                                            <input type="text" name="end_date" id="endDate" value="{$end_date?:''}" class="form-control pull-right">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="search-box">
+                                    <label class="text-right"></label>
+                                    <div class="search-body"><input type="submit" class="btn btn-primary" value="查找"></div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="box-body no-padding">
+                        <table class="table table-bordered table-middle table-center">
+                            <thead>
+                            <tr class="tj">
+                                <td></td>
+                                <td></td>
+                                <td>{$totalWithdraw.money?:0}</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            </thead>
+                            <tr>
+                                <th>NO</th>
+                                <th>用户名</th>
+                                <th>提现金额</th>
+                                <th>状态</th>
+                                <th>申请时间</th>
+                                <th>操作时间</th>
+                                <th>到账时间</th>
+                                <th>审核操作</th>
+                                <th>提现操作</th>
+                            </tr>
+                            {if isset($withdrawLog)}
+                            {foreach $withdrawLog as $k=>$nl}
+                            <tr>
+                                <td>{$k+1}</td>
+                                <td>{$nl['username']?:''}</td>
+                                <td>{$nl['money']?:''}</td>
+                                <td>{$stateList[$nl['state']]}</td>
+                                <td>{:date('Y-m-d H:i:s',$nl.apply_time)}</td>
+                                <td>{:$nl.operation_time?date('Y-m-d H:i:s',$nl.operation_time):''}</td>
+                                <td>{:$nl.success_time?date('Y-m-d H:i:s',$nl.success_time):''}</td>
+                                <td>
+                                    {if ($nl['state']=="agent_checked")}
+                                    <a class="btn btn-sm btn-primary mb5" href="{:url('do_withdraw', ['id' => $nl.id,'money'=>$nl['money'],'username'=>$nl['username']])}">提现处理</a>
+                                    {/if}
+                                </td>
+                                <td>
+                                    {if ($nl['state']=="admin_checked")}
+                                    <a class="btn btn-sm btn-primary mb5" href="#" onclick="doPay('{$nl.id}')">代付</a>
+                                    <a class="btn btn-sm btn-primary mb5" href="#" onclick="manualPay('{$nl.id}')">手动支付</a>
+                                    {/if}
+                                </td>
+                            </tr>
+                            {/foreach}
+                            {/if}
+                        </table>
+                    </div>
+
+                    <div class="box-footer">
+                        <div class="col-sm-12 no-padding">{:$withdrawLog->render()}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+{/block}
+{block name="js"}
+<script>
+$(function () {
+    $('#startDate').datetimepicker({
+        format: 'yyyy-mm-dd 00:00:00',//显示格式
+        minView: "month",//设置只显示到月份
+        initialDate: new Date(),
+        autoclose: true,//选中自动关闭
+        todayBtn: true,//显示今日按钮
+    });
+    $('#endDate').datetimepicker({
+        format: 'yyyy-mm-dd 23:59:59',//显示格式
+        minView: "month",//设置只显示到月份
+        initialDate: new Date(),
+        autoclose: true,//选中自动关闭
+        todayBtn: true,//显示今日按钮!
+    });
+})
+$(function(){
+    var agentId  = "{:$agent_id}";
+    var brokerId = "{:$broker_id}";
+    if (agentId) {
+        $.post("{:url('stock/orgFilter/broker')}", {agent_id:agentId,brokerId:brokerId}, function(data){
+            if(data.code == 1){
+                var str = "<select id=\"brokerId\" name=\"broker_id\" class=\"form-control\"><option value=''>请选择</option>";
+                $.each(data.data, function (i, el) {
+                    if(i == brokerId){
+                        str +="<option value='"+i+"' selected>"+el+"</option>";
+                    }else{
+                        str +="<option value='"+i+"'>"+el+"</option>";
+                    }
+                });
+                str +="</select>";
+                $("#brokerInfo").html(str);
+            }
+        });
+    }
+});
+function showBroker(v) {
+    var brokerId=0;
+    $.post("{:url('stock/orgFilter/broker')}", {agent_id:v,brokerId:brokerId}, function(data){
+        if(data.code == 1){
+            $("#brokerInfo").empty();
+            var str = "<select id=\"brokerId\" name=\"broker_id\" class=\"form-control\"><option value=''>请选择</option>";
+            $.each(data.data, function (i, el) {
+                str +="<option value='"+i+"'>"+el+"</option>";
+            });
+            str +="</select>";
+            $("#brokerInfo").html(str);
+        }
+    });
+}
+function manualPay(id) {
+    layer.confirm('确定要手动支付吗？', {
+        btn: ['确定','取消'] //按钮
+    }, function(){
+        if (id == "") {
+            layer.msg("提现申请id不能为空", {icon: 2, time: 1500, shade: .3, shadeClose: true});
+        } else {
+            $.post("{:url('stock/orgWithdraw/manualPay')}", {id: id}, function (data) {
+                if (data.code == 1) {
+                    layer.msg(data.msg, {icon: 1, time: 1500, shade: .3, shadeClose: true}, function () {
+                        window.location.href = "{:url('withdraw_log')}";
+                    });
+                } else {
+                    layer.msg(data.msg, {icon: 2, time: 1500, shade: .3, shadeClose: true});
+                }
+            });
+        }
+        return false;
+    }, null);
+}
+function doPay(id) {
+    layer.confirm('确定要代付吗？', {
+        btn: ['确定','取消'] //按钮
+    }, function(){
+        if (id == "") {
+            layer.msg("提现申请id不能为空", {icon: 2, time: 1500, shade: .3, shadeClose: true});
+        } else {
+            $.post("{:url('stock/orgWithdraw/doPay')}", {id: id}, function (data) {
+                if (data.code == 1) {
+                    layer.msg(data.msg, {icon: 1, time: 1500, shade: .3, shadeClose: true}, function () {
+                        window.location.href = "{:url('withdraw_log')}";
+                    });
+                } else {
+                    layer.msg(data.msg, {icon: 2, time: 1500, shade: .3, shadeClose: true});
+                }
+            });
+        }
+        return false;
+    }, null);
+}
+</script>
+{/block}

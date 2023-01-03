@@ -1,0 +1,46 @@
+<?php
+namespace app\agent\controller;
+
+use app\stock\controller\AdminIncomeController;
+use app\stock\controller\OrgFilterController;
+
+class IncomeController extends BaseController
+{
+
+    /**
+     * 佣金明细列表
+     *
+     * @return mixed
+     * @throws \think\exception\DbException
+     */
+    public function index()
+    {
+        // 佣金明细列表
+        $adminIncomeApi = new AdminIncomeController();
+        $incomeList     = $adminIncomeApi->listByAgent()->getData();
+        $this->assign('incomeList', $incomeList['code'] == 1 ? $incomeList['data'] : '');
+        // 佣金收入类型
+        $incomeType = $adminIncomeApi->orgIncomeTypeList()->getData();
+        $this->assign('incomeType', $incomeType['data']);
+        // 获取佣金明细汇总
+        $agentStatistic = $adminIncomeApi->agentStatistic()->getData();
+        $this->assign('agentStatistic', $agentStatistic['data']);
+        // 获取经济列表
+        $orgFilter=new OrgFilterController();
+        $brokerList = $orgFilter->broker()->getData();
+        $this->assign('brokerList', $brokerList['data']);
+        $data['mobile']      = input('mobile', '', [FILTER_SANITIZE_STRING, 'trim']);
+        $data['broker_id']   = input('broker_id', 0, FILTER_SANITIZE_NUMBER_INT);
+        $data['income_type'] = input('income_type', '', [FILTER_SANITIZE_STRING, 'trim']);
+        $data['start_date']  = input('start_date', '', [FILTER_SANITIZE_STRING, 'trim']);
+        $data['end_date']    = input('end_date', '', [FILTER_SANITIZE_STRING, 'trim']);
+        $this->assign('mobile', $data['mobile']);
+        $this->assign('brokerId', $data['broker_id']);
+        $this->assign('income_type', $data['income_type']);
+        $this->assign('start_date', $data['start_date']);
+        $this->assign('end_date', $data['end_date']);
+
+        return $this->fetch();
+    }
+
+}

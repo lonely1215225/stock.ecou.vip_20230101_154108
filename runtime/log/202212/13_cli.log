@@ -1,0 +1,1134 @@
+[2022-12-13T23:12:43+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670944363 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000980s ]
+sql
+[2022-12-13T23:12:53+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.010982s ]
+sql
+[2022-12-13T23:12:53+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670944373 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000988s ]
+sql
+[2022-12-13T23:13:03+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.010162s ]
+sql
+[2022-12-13T23:13:03+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670944383 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000896s ]
+sql
+[2022-12-13T23:13:13+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.011260s ]
+sql
+[2022-12-13T23:13:13+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670944393 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.001027s ]
+sql
+[2022-12-13T23:13:23+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.010992s ]
+sql
+[2022-12-13T23:13:23+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670944403 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.001090s ]
+sql
+[2022-12-13T23:13:33+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.010956s ]
+sql
+[2022-12-13T23:13:33+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670944413 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.001108s ]
+sql
+[2022-12-13T23:13:43+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.011133s ]
+sql
+[2022-12-13T23:13:43+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670944423 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000975s ]
+sql
+[2022-12-13T23:13:53+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.011088s ]
+sql
+[2022-12-13T23:13:53+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670944433 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000980s ]
+sql
+[2022-12-13T23:14:03+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.010163s ]
+sql
+[2022-12-13T23:14:03+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670944443 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000922s ]
+sql
+[2022-12-13T23:14:13+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.008564s ]
+sql
+[2022-12-13T23:14:13+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670944453 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000712s ]
+sql
+[2022-12-13T23:14:23+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.021861s ]
+sql
+[2022-12-13T23:14:23+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670944463 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000847s ]
+sql
+[2022-12-13T23:14:33+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.012015s ]
+sql
+[2022-12-13T23:14:33+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670944473 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000753s ]
+sql
+[2022-12-13T23:14:43+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.026062s ]
+sql
+[2022-12-13T23:14:43+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670944483 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000831s ]
+sql
+[2022-12-13T23:14:53+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.024751s ]
+sql
+[2022-12-13T23:14:53+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670944493 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000809s ]
+sql
+[2022-12-13T23:15:03+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.014018s ]
+sql
+[2022-12-13T23:15:03+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670944503 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000512s ]
+sql
+[2022-12-13T23:15:13+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.026354s ]
+sql
+[2022-12-13T23:15:13+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670944513 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000930s ]
+sql
+[2022-12-13T23:15:23+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.028850s ]
+sql
+[2022-12-13T23:15:23+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670944523 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000879s ]
+sql
+[2022-12-13T23:15:33+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.030381s ]
+sql
+[2022-12-13T23:15:33+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670944533 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000941s ]
+sql
+[2022-12-13T23:15:43+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.031435s ]
+sql
+[2022-12-13T23:15:43+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670944543 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000902s ]
+sql
+[2022-12-13T23:15:53+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.031205s ]
+sql
+[2022-12-13T23:15:53+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670944553 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000785s ]
+sql
+[2022-12-13T23:16:03+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.033137s ]
+sql
+[2022-12-13T23:16:03+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670944563 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000781s ]
+sql
+[2022-12-13T23:16:13+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.033753s ]
+sql
+[2022-12-13T23:16:13+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670944573 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000784s ]
+sql
+[2022-12-13T23:16:23+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.031761s ]
+sql
+[2022-12-13T23:16:23+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670944583 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000779s ]
+sql
+[2022-12-13T23:16:33+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.035792s ]
+sql
+[2022-12-13T23:16:33+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670944593 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000845s ]
+sql
+[2022-12-13T23:16:43+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.036245s ]
+sql
+[2022-12-13T23:16:43+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670944603 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000823s ]
+sql
+[2022-12-13T23:16:53+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.046165s ]
+sql
+[2022-12-13T23:16:53+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670944613 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000938s ]
+sql
+[2022-12-13T23:17:03+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.043184s ]
+sql
+[2022-12-13T23:17:03+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670944623 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000919s ]
+sql
+[2022-12-13T23:17:13+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.028974s ]
+sql
+[2022-12-13T23:17:13+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670944633 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000924s ]
+sql
+[2022-12-13T23:17:23+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.028651s ]
+sql
+[2022-12-13T23:17:23+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670944643 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000892s ]
+sql
+[2022-12-13T23:17:33+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.028674s ]
+sql
+[2022-12-13T23:17:33+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670944653 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000897s ]
+sql
+[2022-12-13T23:17:43+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.028432s ]
+sql
+[2022-12-13T23:17:43+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670944663 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000935s ]
+sql
+[2022-12-13T23:17:53+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.026540s ]
+sql
+[2022-12-13T23:17:53+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670944673 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000926s ]
+sql
+[2022-12-13T23:18:03+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.027699s ]
+sql
+[2022-12-13T23:18:03+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670944683 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000962s ]
+sql
+[2022-12-13T23:18:13+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.026867s ]
+sql
+[2022-12-13T23:18:13+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670944693 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000945s ]
+sql
+[2022-12-13T23:18:23+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.026853s ]
+sql
+[2022-12-13T23:18:23+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670944703 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000926s ]
+sql
+[2022-12-13T23:18:33+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.026936s ]
+sql
+[2022-12-13T23:18:33+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670944713 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000971s ]
+sql
+[2022-12-13T23:18:43+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.027083s ]
+sql
+[2022-12-13T23:18:43+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670944723 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000910s ]
+sql
+[2022-12-13T23:18:53+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.025640s ]
+sql
+[2022-12-13T23:18:53+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670944733 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000989s ]
+sql
+[2022-12-13T23:19:03+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.027056s ]
+sql
+[2022-12-13T23:19:03+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670944743 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000940s ]
+sql
+[2022-12-13T23:19:13+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.026531s ]
+sql
+[2022-12-13T23:19:13+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670944753 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000957s ]
+sql
+[2022-12-13T23:19:23+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.026649s ]
+sql
+[2022-12-13T23:19:23+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670944763 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000971s ]
+sql
+[2022-12-13T23:19:33+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.026108s ]
+sql
+[2022-12-13T23:19:33+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670944773 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000933s ]
+sql
+[2022-12-13T23:19:43+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.025768s ]
+sql
+[2022-12-13T23:19:43+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670944783 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000901s ]
+sql
+[2022-12-13T23:19:53+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.023712s ]
+sql
+[2022-12-13T23:19:53+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670944793 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000880s ]
+sql
+[2022-12-13T23:20:03+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.025361s ]
+sql
+[2022-12-13T23:20:03+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670944803 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000948s ]
+sql
+[2022-12-13T23:20:13+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.024384s ]
+sql
+[2022-12-13T23:20:13+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670944813 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000915s ]
+sql
+[2022-12-13T23:20:23+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.024553s ]
+sql
+[2022-12-13T23:20:23+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670944823 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000924s ]
+sql
+[2022-12-13T23:20:33+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.024260s ]
+sql
+[2022-12-13T23:20:33+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670944833 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000892s ]
+sql
+[2022-12-13T23:20:43+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.023477s ]
+sql
+[2022-12-13T23:20:43+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670944843 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000895s ]
+sql
+[2022-12-13T23:20:53+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.021771s ]
+sql
+[2022-12-13T23:20:53+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670944853 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000872s ]
+sql
+[2022-12-13T23:21:03+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.023015s ]
+sql
+[2022-12-13T23:21:03+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670944863 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000930s ]
+sql
+[2022-12-13T23:21:13+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.022160s ]
+sql
+[2022-12-13T23:21:13+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670944873 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000921s ]
+sql
+[2022-12-13T23:21:23+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.022232s ]
+sql
+[2022-12-13T23:21:23+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670944883 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000957s ]
+sql
+[2022-12-13T23:21:33+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.021420s ]
+sql
+[2022-12-13T23:21:33+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670944893 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000977s ]
+sql
+[2022-12-13T23:21:43+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.021417s ]
+sql
+[2022-12-13T23:21:43+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670944903 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000934s ]
+sql
+[2022-12-13T23:21:53+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.019627s ]
+sql
+[2022-12-13T23:21:53+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670944913 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000953s ]
+sql
+[2022-12-13T23:22:03+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.020664s ]
+sql
+[2022-12-13T23:22:03+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670944923 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000947s ]
+sql
+[2022-12-13T23:22:13+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.019744s ]
+sql
+[2022-12-13T23:22:13+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670944933 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000962s ]
+sql
+[2022-12-13T23:22:23+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.019650s ]
+sql
+[2022-12-13T23:22:23+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670944943 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000978s ]
+sql
+[2022-12-13T23:22:33+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.020468s ]
+sql
+[2022-12-13T23:22:33+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670944953 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000926s ]
+sql
+[2022-12-13T23:22:43+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.019179s ]
+sql
+[2022-12-13T23:22:43+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670944963 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000911s ]
+sql
+[2022-12-13T23:22:53+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.017483s ]
+sql
+[2022-12-13T23:22:53+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670944973 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000921s ]
+sql
+[2022-12-13T23:23:03+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.018381s ]
+sql
+[2022-12-13T23:23:03+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670944983 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000899s ]
+sql
+[2022-12-13T23:23:13+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.017922s ]
+sql
+[2022-12-13T23:23:13+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670944993 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000947s ]
+sql
+[2022-12-13T23:23:23+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.017670s ]
+sql
+[2022-12-13T23:23:23+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670945003 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000905s ]
+sql
+[2022-12-13T23:23:33+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.017801s ]
+sql
+[2022-12-13T23:23:33+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670945013 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000872s ]
+sql
+[2022-12-13T23:23:43+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.017301s ]
+sql
+[2022-12-13T23:23:43+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670945023 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000884s ]
+sql
+[2022-12-13T23:23:53+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.015709s ]
+sql
+[2022-12-13T23:23:53+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670945033 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000905s ]
+sql
+[2022-12-13T23:24:03+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.016910s ]
+sql
+[2022-12-13T23:24:03+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670945043 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000876s ]
+sql
+[2022-12-13T23:24:13+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.016733s ]
+sql
+[2022-12-13T23:24:13+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670945053 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000867s ]
+sql
+[2022-12-13T23:24:23+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.018088s ]
+sql
+[2022-12-13T23:24:23+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670945063 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000952s ]
+sql
+[2022-12-13T23:24:33+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.016431s ]
+sql
+[2022-12-13T23:24:33+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670945073 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000880s ]
+sql
+[2022-12-13T23:24:43+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.016078s ]
+sql
+[2022-12-13T23:24:43+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670945083 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000864s ]
+sql
+[2022-12-13T23:24:53+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.014782s ]
+sql
+[2022-12-13T23:24:53+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670945093 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000901s ]
+sql
+[2022-12-13T23:25:03+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.014618s ]
+sql
+[2022-12-13T23:25:03+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670945103 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000940s ]
+sql
+[2022-12-13T23:25:13+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.014721s ]
+sql
+[2022-12-13T23:25:13+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670945113 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000909s ]
+sql
+[2022-12-13T23:25:23+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.014491s ]
+sql
+[2022-12-13T23:25:23+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670945123 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000954s ]
+sql
+[2022-12-13T23:25:33+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.014411s ]
+sql
+[2022-12-13T23:25:33+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670945133 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000928s ]
+sql
+[2022-12-13T23:25:43+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.013902s ]
+sql
+[2022-12-13T23:25:43+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670945143 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000962s ]
+sql
+[2022-12-13T23:25:53+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.013012s ]
+sql
+[2022-12-13T23:25:53+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670945153 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000921s ]
+sql
+[2022-12-13T23:26:03+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.013363s ]
+sql
+[2022-12-13T23:26:03+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670945163 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000956s ]
+sql
+[2022-12-13T23:26:13+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.012965s ]
+sql
+[2022-12-13T23:26:13+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670945173 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000939s ]
+sql
+[2022-12-13T23:26:23+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.012067s ]
+sql
+[2022-12-13T23:26:23+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670945183 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000940s ]
+sql
+[2022-12-13T23:26:33+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.012270s ]
+sql
+[2022-12-13T23:26:33+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670945193 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000914s ]
+sql
+[2022-12-13T23:26:43+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.012636s ]
+sql
+[2022-12-13T23:26:43+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670945203 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000917s ]
+sql
+[2022-12-13T23:26:53+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.012334s ]
+sql
+[2022-12-13T23:26:53+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670945213 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000863s ]
+sql
+[2022-12-13T23:27:03+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.011880s ]
+sql
+[2022-12-13T23:27:03+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670945223 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000945s ]
+sql
+[2022-12-13T23:27:13+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.011861s ]
+sql
+[2022-12-13T23:27:13+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670945233 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000926s ]
+sql
+[2022-12-13T23:27:23+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.012103s ]
+sql
+[2022-12-13T23:27:23+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670945243 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000922s ]
+sql
+[2022-12-13T23:27:33+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.011652s ]
+sql
+[2022-12-13T23:27:33+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670945253 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000931s ]
+sql
+[2022-12-13T23:27:43+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.011465s ]
+sql
+[2022-12-13T23:27:43+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670945263 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000938s ]
+sql
+[2022-12-13T23:27:53+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.011138s ]
+sql
+[2022-12-13T23:27:53+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670945273 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000966s ]
+sql
+[2022-12-13T23:28:03+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.010892s ]
+sql
+[2022-12-13T23:28:03+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670945283 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000920s ]
+sql
+[2022-12-13T23:28:13+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.010951s ]
+sql
+[2022-12-13T23:28:13+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670945293 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000915s ]
+sql
+[2022-12-13T23:28:23+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.011074s ]
+sql
+[2022-12-13T23:28:23+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670945303 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.001006s ]
+sql
+[2022-12-13T23:28:33+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.010683s ]
+sql
+[2022-12-13T23:28:33+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670945313 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000942s ]
+sql
+[2022-12-13T23:28:43+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.010547s ]
+sql
+[2022-12-13T23:28:43+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670945323 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000952s ]
+sql
+[2022-12-13T23:28:53+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.010288s ]
+sql
+[2022-12-13T23:28:53+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670945333 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000956s ]
+sql
+[2022-12-13T23:29:03+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.010587s ]
+sql
+[2022-12-13T23:29:03+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670945343 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000936s ]
+sql
+[2022-12-13T23:29:13+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.010322s ]
+sql
+[2022-12-13T23:29:13+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670945353 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000918s ]
+sql
+[2022-12-13T23:29:23+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.011999s ]
+sql
+[2022-12-13T23:29:23+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670945363 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.001007s ]
+sql
+[2022-12-13T23:29:33+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.010662s ]
+sql
+[2022-12-13T23:29:33+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670945373 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000945s ]
+sql
+[2022-12-13T23:29:43+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.010279s ]
+sql
+[2022-12-13T23:29:43+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670945383 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000941s ]
+sql
+[2022-12-13T23:29:53+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.010380s ]
+sql
+[2022-12-13T23:29:53+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670945393 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000918s ]
+sql
+[2022-12-13T23:30:03+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.010037s ]
+sql
+[2022-12-13T23:30:03+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670945403 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000904s ]
+sql
+[2022-12-13T23:30:13+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.010073s ]
+sql
+[2022-12-13T23:30:13+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670945413 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000916s ]
+sql
+[2022-12-13T23:30:23+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.010237s ]
+sql
+[2022-12-13T23:30:23+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670945423 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000926s ]
+sql
+[2022-12-13T23:30:33+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.010285s ]
+sql
+[2022-12-13T23:30:33+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670945433 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000930s ]
+sql
+[2022-12-13T23:30:43+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.010034s ]
+sql
+[2022-12-13T23:30:43+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670945443 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000889s ]
+sql
+[2022-12-13T23:30:53+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.010252s ]
+sql
+[2022-12-13T23:30:53+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670945453 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000868s ]
+sql
+[2022-12-13T23:31:03+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.009984s ]
+sql
+[2022-12-13T23:31:03+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670945463 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000918s ]
+sql
+[2022-12-13T23:31:13+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.010108s ]
+sql
+[2022-12-13T23:31:13+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670945473 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000923s ]
+sql
+[2022-12-13T23:31:23+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.010205s ]
+sql
+[2022-12-13T23:31:23+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670945483 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000926s ]
+sql
+[2022-12-13T23:31:33+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.010262s ]
+sql
+[2022-12-13T23:31:33+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670945493 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000925s ]
+sql
+[2022-12-13T23:31:43+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.010201s ]
+sql
+[2022-12-13T23:31:43+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670945503 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000929s ]
+sql
+[2022-12-13T23:31:53+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.010401s ]
+sql
+[2022-12-13T23:31:53+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670945513 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000963s ]
+sql
+[2022-12-13T23:32:03+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.009956s ]
+sql
+[2022-12-13T23:32:03+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670945523 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.001000s ]
+sql
+[2022-12-13T23:32:13+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.010098s ]
+sql
+[2022-12-13T23:32:13+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670945533 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000920s ]
+sql
+[2022-12-13T23:32:23+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.010142s ]
+sql
+[2022-12-13T23:32:23+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670945543 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000979s ]
+sql
+[2022-12-13T23:32:33+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.010173s ]
+sql
+[2022-12-13T23:32:33+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670945553 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000901s ]
+sql
+[2022-12-13T23:32:43+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.010165s ]
+sql
+[2022-12-13T23:32:43+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670945563 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000944s ]
+sql
+[2022-12-13T23:32:53+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.010322s ]
+sql
+[2022-12-13T23:32:53+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670945573 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000937s ]
+sql
+[2022-12-13T23:33:03+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.010050s ]
+sql
+[2022-12-13T23:33:03+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670945583 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000963s ]
+sql
+[2022-12-13T23:33:13+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.010147s ]
+sql
+[2022-12-13T23:33:13+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670945593 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000961s ]
+sql
+[2022-12-13T23:33:23+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.010226s ]
+sql
+[2022-12-13T23:33:23+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670945603 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000915s ]
+sql
+[2022-12-13T23:33:33+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.010214s ]
+sql
+[2022-12-13T23:33:33+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670945613 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000946s ]
+sql
+[2022-12-13T23:33:43+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.010024s ]
+sql
+[2022-12-13T23:33:43+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670945623 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000972s ]
+sql
+[2022-12-13T23:33:53+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.010358s ]
+sql
+[2022-12-13T23:33:53+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670945633 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000923s ]
+sql
+[2022-12-13T23:34:03+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.010150s ]
+sql
+[2022-12-13T23:34:03+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670945643 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000930s ]
+sql
+[2022-12-13T23:34:13+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.010152s ]
+sql
+[2022-12-13T23:34:13+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670945653 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000909s ]
+sql
+[2022-12-13T23:34:23+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.011479s ]
+sql
+[2022-12-13T23:34:23+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670945663 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000922s ]
+sql
+[2022-12-13T23:34:33+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.010282s ]
+sql
+[2022-12-13T23:34:33+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670945673 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000939s ]
+sql
+[2022-12-13T23:34:43+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.010351s ]
+sql
+[2022-12-13T23:34:43+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670945683 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000937s ]
+sql
+[2022-12-13T23:34:53+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.010551s ]
+sql
+[2022-12-13T23:34:53+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670945693 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000923s ]
+sql
+[2022-12-13T23:35:03+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.010296s ]
+sql
+[2022-12-13T23:35:03+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670945703 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000924s ]
+sql
+[2022-12-13T23:35:13+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.010319s ]
+sql
+[2022-12-13T23:35:13+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670945713 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000954s ]
+sql
+[2022-12-13T23:35:23+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.010473s ]
+sql
+[2022-12-13T23:35:23+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670945723 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000978s ]
+sql
+[2022-12-13T23:35:33+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.010285s ]
+sql
+[2022-12-13T23:35:33+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670945733 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000926s ]
+sql
+[2022-12-13T23:35:43+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.010263s ]
+sql
+[2022-12-13T23:35:43+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670945743 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.001009s ]
+sql
+[2022-12-13T23:35:53+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.010550s ]
+sql
+[2022-12-13T23:35:53+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670945753 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000969s ]
+sql
+[2022-12-13T23:36:03+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.010402s ]
+sql
+[2022-12-13T23:36:03+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670945763 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000894s ]
+sql
+[2022-12-13T23:36:13+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.010317s ]
+sql
+[2022-12-13T23:36:13+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670945773 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000973s ]
+sql
+[2022-12-13T23:36:23+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.010519s ]
+sql
+[2022-12-13T23:36:23+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670945783 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000918s ]
+sql
+[2022-12-13T23:36:33+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.010219s ]
+sql
+[2022-12-13T23:36:33+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670945793 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000935s ]
+sql
+[2022-12-13T23:36:43+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.010390s ]
+sql
+[2022-12-13T23:36:43+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670945803 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000912s ]
+sql
+[2022-12-13T23:36:53+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.010601s ]
+sql
+[2022-12-13T23:36:53+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670945813 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000911s ]
+sql
+[2022-12-13T23:37:03+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.010292s ]
+sql
+[2022-12-13T23:37:03+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670945823 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000911s ]
+sql
+[2022-12-13T23:37:13+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.010296s ]
+sql
+[2022-12-13T23:37:13+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670945833 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000926s ]
+sql
+[2022-12-13T23:37:23+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.010281s ]
+sql
+[2022-12-13T23:37:23+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670945843 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000924s ]
+sql
+[2022-12-13T23:37:33+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.010230s ]
+sql
+[2022-12-13T23:37:33+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670945853 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000924s ]
+sql
+[2022-12-13T23:37:43+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.010182s ]
+sql
+[2022-12-13T23:37:43+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670945863 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000930s ]
+sql
+[2022-12-13T23:37:53+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.010435s ]
+sql
+[2022-12-13T23:37:53+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670945873 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000982s ]
+sql
+[2022-12-13T23:38:03+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.010217s ]
+sql
+[2022-12-13T23:38:03+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670945883 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000919s ]
+sql
+[2022-12-13T23:38:13+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.010243s ]
+sql
+[2022-12-13T23:38:13+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670945893 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000983s ]
+sql
+[2022-12-13T23:38:23+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.010270s ]
+sql
+[2022-12-13T23:38:23+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670945903 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000927s ]
+sql
+[2022-12-13T23:38:33+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.010274s ]
+sql
+[2022-12-13T23:38:33+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670945913 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000971s ]
+sql
+[2022-12-13T23:38:43+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.010170s ]
+sql
+[2022-12-13T23:38:43+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670945923 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000922s ]
+sql
+[2022-12-13T23:38:53+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.010508s ]
+sql
+[2022-12-13T23:38:53+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670945933 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000942s ]
+sql
+[2022-12-13T23:39:03+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.010339s ]
+sql
+[2022-12-13T23:39:03+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670945943 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000935s ]
+sql
+[2022-12-13T23:39:13+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.010155s ]
+sql
+[2022-12-13T23:39:13+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670945953 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.001167s ]
+sql
+[2022-12-13T23:39:23+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.011545s ]
+sql
+[2022-12-13T23:39:23+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670945963 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000934s ]
+sql
+[2022-12-13T23:39:33+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.010393s ]
+sql
+[2022-12-13T23:39:33+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670945973 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000907s ]
+sql
+[2022-12-13T23:39:43+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.010186s ]
+sql
+[2022-12-13T23:39:43+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670945983 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000903s ]
+sql
+[2022-12-13T23:39:53+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.010268s ]
+sql
+[2022-12-13T23:39:53+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670945993 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000924s ]
+sql
+[2022-12-13T23:40:03+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.009994s ]
+sql
+[2022-12-13T23:40:03+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670946003 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000872s ]
+sql
+[2022-12-13T23:40:13+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.010028s ]
+sql
+[2022-12-13T23:40:13+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670946013 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000912s ]
+sql
+[2022-12-13T23:40:23+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.010170s ]
+sql
+[2022-12-13T23:40:23+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670946023 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000934s ]
+sql
+[2022-12-13T23:40:33+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.010242s ]
+sql
+[2022-12-13T23:40:33+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670946033 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000928s ]
+sql
+[2022-12-13T23:40:43+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.010118s ]
+sql
+[2022-12-13T23:40:43+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670946043 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000941s ]
+sql
+[2022-12-13T23:40:53+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.010406s ]
+sql
+[2022-12-13T23:40:53+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670946053 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000929s ]
+sql
+[2022-12-13T23:41:03+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.010128s ]
+sql
+[2022-12-13T23:41:03+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670946063 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000986s ]
+sql
+[2022-12-13T23:41:13+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.010210s ]
+sql
+[2022-12-13T23:41:13+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670946073 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000906s ]
+sql
+[2022-12-13T23:41:23+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.010221s ]
+sql
+[2022-12-13T23:41:23+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670946083 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000988s ]
+sql
+[2022-12-13T23:41:33+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.010195s ]
+sql
+[2022-12-13T23:41:33+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670946093 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000980s ]
+sql
+[2022-12-13T23:41:43+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.010202s ]
+sql
+[2022-12-13T23:41:43+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670946103 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000914s ]
+sql
+[2022-12-13T23:41:53+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.010571s ]
+sql
+[2022-12-13T23:41:53+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670946113 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000930s ]
+sql
+[2022-12-13T23:42:03+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.010134s ]
+sql
+[2022-12-13T23:42:03+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670946123 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000933s ]
+sql
+[2022-12-13T23:42:13+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.010265s ]
+sql
+[2022-12-13T23:42:13+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670946133 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000902s ]
+sql
+[2022-12-13T23:42:23+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.010192s ]
+sql
+[2022-12-13T23:42:23+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670946143 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.001005s ]
+sql
+[2022-12-13T23:42:33+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.010245s ]
+sql
+[2022-12-13T23:42:33+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670946153 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000929s ]
+sql
+[2022-12-13T23:42:43+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.010152s ]
+sql
+[2022-12-13T23:42:43+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670946163 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000966s ]
+sql
+[2022-12-13T23:42:53+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.010458s ]
+sql
+[2022-12-13T23:42:53+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670946173 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000965s ]
+sql
+[2022-12-13T23:43:03+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.010220s ]
+sql
+[2022-12-13T23:43:03+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670946183 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000948s ]
+sql
+[2022-12-13T23:43:13+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.010042s ]
+sql
+[2022-12-13T23:43:13+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670946193 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000913s ]
+sql
+[2022-12-13T23:43:23+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.010280s ]
+sql
+[2022-12-13T23:43:23+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670946203 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000953s ]
+sql
+[2022-12-13T23:43:33+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.010212s ]
+sql
+[2022-12-13T23:43:33+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670946213 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000935s ]
+sql
+[2022-12-13T23:43:43+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.010073s ]
+sql
+[2022-12-13T23:43:43+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670946223 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000914s ]
+sql
+[2022-12-13T23:43:53+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.010478s ]
+sql
+[2022-12-13T23:43:53+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670946233 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000917s ]
+sql
+[2022-12-13T23:44:03+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.010122s ]
+sql
+[2022-12-13T23:44:03+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670946243 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000923s ]
+sql
+[2022-12-13T23:44:13+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.010037s ]
+sql
+[2022-12-13T23:44:13+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670946253 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000925s ]
+sql
+[2022-12-13T23:44:23+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.011451s ]
+sql
+[2022-12-13T23:44:23+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670946263 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000954s ]
+sql
+[2022-12-13T23:44:33+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.010260s ]
+sql
+[2022-12-13T23:44:33+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670946273 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000975s ]
+sql
+[2022-12-13T23:44:43+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.010257s ]
+sql
+[2022-12-13T23:44:43+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670946283 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000921s ]
+sql
+[2022-12-13T23:44:53+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.010376s ]
+sql
+[2022-12-13T23:44:53+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670946293 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000922s ]
+sql
+[2022-12-13T23:45:03+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.010111s ]
+sql
+[2022-12-13T23:45:03+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670946303 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000942s ]
+sql
+[2022-12-13T23:45:13+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.010155s ]
+sql
+[2022-12-13T23:45:13+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670946313 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000904s ]
+sql
+[2022-12-13T23:45:23+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.010288s ]
+sql
+[2022-12-13T23:45:23+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670946323 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000914s ]
+sql
+[2022-12-13T23:45:33+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.010258s ]
+sql
+[2022-12-13T23:45:33+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670946333 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000951s ]
+sql
+[2022-12-13T23:45:43+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.010131s ]
+sql
+[2022-12-13T23:45:43+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670946343 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000936s ]
+sql
+[2022-12-13T23:45:53+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.010414s ]
+sql
+[2022-12-13T23:45:53+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670946353 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000964s ]
+sql
+[2022-12-13T23:46:03+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.010076s ]
+sql
+[2022-12-13T23:46:03+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670946363 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000991s ]
+sql
+[2022-12-13T23:46:13+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.010167s ]
+sql
+[2022-12-13T23:46:13+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670946373 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000912s ]
+sql
+[2022-12-13T23:46:23+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.010262s ]
+sql
+[2022-12-13T23:46:23+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670946383 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000896s ]
+sql
+[2022-12-13T23:46:33+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.010139s ]
+sql
+[2022-12-13T23:46:33+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670946393 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000912s ]
+sql
+[2022-12-13T23:46:43+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.010066s ]
+sql
+[2022-12-13T23:46:43+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670946403 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000892s ]
+sql
+[2022-12-13T23:46:53+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.010422s ]
+sql
+[2022-12-13T23:46:53+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670946413 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000940s ]
+sql
+[2022-12-13T23:47:03+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.010133s ]
+sql
+[2022-12-13T23:47:03+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670946423 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000953s ]
+sql
+[2022-12-13T23:47:13+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.010140s ]
+sql
+[2022-12-13T23:47:13+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670946433 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000931s ]
+sql
+[2022-12-13T23:47:23+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.010213s ]
+sql
+[2022-12-13T23:47:23+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670946443 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000909s ]
+sql
+[2022-12-13T23:47:33+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.010173s ]
+sql
+[2022-12-13T23:47:33+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670946453 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000941s ]
+sql
+[2022-12-13T23:47:43+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.010072s ]
+sql
+[2022-12-13T23:47:43+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670946463 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000926s ]
+sql
+[2022-12-13T23:47:53+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.010203s ]
+sql
+[2022-12-13T23:47:53+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670946473 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000960s ]
+sql
+[2022-12-13T23:48:03+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.010120s ]
+sql
+[2022-12-13T23:48:03+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670946483 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000985s ]
+sql
+[2022-12-13T23:48:13+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.010238s ]
+sql
+[2022-12-13T23:48:13+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670946493 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000926s ]
+sql
+[2022-12-13T23:48:23+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.010338s ]
+sql
+[2022-12-13T23:48:23+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670946503 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000938s ]
+sql
+[2022-12-13T23:48:33+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.010201s ]
+sql
+[2022-12-13T23:48:33+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670946513 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000966s ]
+sql
+[2022-12-13T23:48:43+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.010119s ]
+sql
+[2022-12-13T23:48:43+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670946523 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000916s ]
+sql
+[2022-12-13T23:48:53+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.010537s ]
+sql
+[2022-12-13T23:48:53+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670946533 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000928s ]
+sql
+[2022-12-13T23:49:03+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.010282s ]
+sql
+[2022-12-13T23:49:03+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670946543 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000943s ]
+sql
+[2022-12-13T23:49:13+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.010307s ]
+sql
+[2022-12-13T23:49:13+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670946553 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000926s ]
+sql
+[2022-12-13T23:49:23+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.011541s ]
+sql
+[2022-12-13T23:49:23+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670946563 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000913s ]
+sql
+[2022-12-13T23:49:33+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.010309s ]
+sql
+[2022-12-13T23:49:33+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670946573 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000941s ]
+sql
+[2022-12-13T23:49:43+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.010227s ]
+sql
+[2022-12-13T23:49:43+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670946583 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000925s ]
+sql
+[2022-12-13T23:49:53+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.010516s ]
+sql
+[2022-12-13T23:49:53+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670946593 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000940s ]
+sql
+[2022-12-13T23:50:03+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.010333s ]
+sql
+[2022-12-13T23:50:03+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670946603 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000945s ]
+sql
+[2022-12-13T23:50:13+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.010257s ]
+sql
+[2022-12-13T23:50:13+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670946613 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000960s ]
+sql
+[2022-12-13T23:50:23+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.010388s ]
+sql
+[2022-12-13T23:50:23+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670946623 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000945s ]
+sql
+[2022-12-13T23:50:33+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.010295s ]
+sql
+[2022-12-13T23:50:33+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670946633 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000915s ]
+sql
+[2022-12-13T23:50:43+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.010337s ]
+sql
+[2022-12-13T23:50:43+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670946643 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000928s ]
+sql
+[2022-12-13T23:50:53+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.010619s ]
+sql
+[2022-12-13T23:50:53+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670946653 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000920s ]
+sql
+[2022-12-13T23:51:03+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.010233s ]
+sql
+[2022-12-13T23:51:03+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670946663 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000955s ]
+sql
+[2022-12-13T23:51:13+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.010292s ]
+sql
+[2022-12-13T23:51:13+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670946673 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000904s ]
+sql
+[2022-12-13T23:51:23+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.010325s ]
+sql
+[2022-12-13T23:51:23+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670946683 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000957s ]
+sql
+[2022-12-13T23:51:33+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.010308s ]
+sql
+[2022-12-13T23:51:33+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670946693 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000949s ]
+sql
+[2022-12-13T23:51:43+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.010307s ]
+sql
+[2022-12-13T23:51:43+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670946703 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000922s ]
+sql
+[2022-12-13T23:51:53+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.010591s ]
+sql
+[2022-12-13T23:51:53+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670946713 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000929s ]
+sql
+[2022-12-13T23:52:03+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.010176s ]
+sql
+[2022-12-13T23:52:03+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670946723 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000935s ]
+sql
+[2022-12-13T23:52:13+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.010207s ]
+sql
+[2022-12-13T23:52:13+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670946733 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000923s ]
+sql
+[2022-12-13T23:52:23+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.010409s ]
+sql
+[2022-12-13T23:52:23+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670946743 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000933s ]
+sql
+[2022-12-13T23:52:33+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.010431s ]
+sql
+[2022-12-13T23:52:33+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670946753 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000941s ]
+sql
+[2022-12-13T23:52:43+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.010277s ]
+sql
+[2022-12-13T23:52:43+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670946763 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000971s ]
+sql
+[2022-12-13T23:52:53+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.010474s ]
+sql
+[2022-12-13T23:52:53+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670946773 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000955s ]
+sql
+[2022-12-13T23:53:03+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.010338s ]
+sql
+[2022-12-13T23:53:03+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670946783 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000943s ]
+sql
+[2022-12-13T23:53:13+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.010301s ]
+sql
+[2022-12-13T23:53:13+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670946793 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000966s ]
+sql
+[2022-12-13T23:53:23+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.010539s ]
+sql
+[2022-12-13T23:53:23+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670946803 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.001091s ]
+sql
+[2022-12-13T23:53:33+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.010331s ]
+sql
+[2022-12-13T23:53:33+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670946813 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000982s ]
+sql
+[2022-12-13T23:53:43+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.010283s ]
+sql
+[2022-12-13T23:53:43+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670946823 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000935s ]
+sql
+[2022-12-13T23:53:53+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.010567s ]
+sql
+[2022-12-13T23:53:53+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670946833 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000894s ]
+sql
+[2022-12-13T23:54:03+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.010270s ]
+sql
+[2022-12-13T23:54:03+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670946843 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000936s ]
+sql
+[2022-12-13T23:54:13+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.010360s ]
+sql
+[2022-12-13T23:54:13+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670946853 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000920s ]
+sql
+[2022-12-13T23:54:23+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.011637s ]
+sql
+[2022-12-13T23:54:23+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670946863 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000942s ]
+sql
+[2022-12-13T23:54:33+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.010269s ]
+sql
+[2022-12-13T23:54:33+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670946873 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000937s ]
+sql
+[2022-12-13T23:54:43+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.010261s ]
+sql
+[2022-12-13T23:54:43+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670946883 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000955s ]
+sql
+[2022-12-13T23:54:53+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.010586s ]
+sql
+[2022-12-13T23:54:53+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670946893 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000922s ]
+sql
+[2022-12-13T23:55:03+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.010070s ]
+sql
+[2022-12-13T23:55:03+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670946903 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000955s ]
+sql
+[2022-12-13T23:55:13+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.010077s ]
+sql
+[2022-12-13T23:55:13+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670946913 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000938s ]
+sql
+[2022-12-13T23:55:23+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.010367s ]
+sql
+[2022-12-13T23:55:23+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670946923 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000950s ]
+sql
+[2022-12-13T23:55:33+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.010370s ]
+sql
+[2022-12-13T23:55:33+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670946933 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000956s ]
+sql
+[2022-12-13T23:55:43+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.010361s ]
+sql
+[2022-12-13T23:55:43+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670946943 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000922s ]
+sql
+[2022-12-13T23:55:53+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.010588s ]
+sql
+[2022-12-13T23:55:53+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670946953 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000931s ]
+sql
+[2022-12-13T23:56:03+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.010235s ]
+sql
+[2022-12-13T23:56:03+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670946963 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000999s ]
+sql
+[2022-12-13T23:56:13+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.010254s ]
+sql
+[2022-12-13T23:56:13+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670946973 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000927s ]
+sql
+[2022-12-13T23:56:23+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.010388s ]
+sql
+[2022-12-13T23:56:23+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670946983 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000948s ]
+sql
+[2022-12-13T23:56:33+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.010298s ]
+sql
+[2022-12-13T23:56:33+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670946993 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000929s ]
+sql
+[2022-12-13T23:56:43+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.010128s ]
+sql
+[2022-12-13T23:56:43+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670947003 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000923s ]
+sql
+[2022-12-13T23:56:53+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.010422s ]
+sql
+[2022-12-13T23:56:53+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670947013 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000901s ]
+sql
+[2022-12-13T23:57:03+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.010065s ]
+sql
+[2022-12-13T23:57:03+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670947023 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000913s ]
+sql
+[2022-12-13T23:57:13+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.010172s ]
+sql
+[2022-12-13T23:57:13+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670947033 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000935s ]
+sql
+[2022-12-13T23:57:23+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.010414s ]
+sql
+[2022-12-13T23:57:23+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670947043 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000920s ]
+sql
+[2022-12-13T23:57:33+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.010336s ]
+sql
+[2022-12-13T23:57:33+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670947053 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000929s ]
+sql
+[2022-12-13T23:57:43+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.010342s ]
+sql
+[2022-12-13T23:57:43+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670947063 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000904s ]
+sql
+[2022-12-13T23:57:53+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.010484s ]
+sql
+[2022-12-13T23:57:53+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670947073 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000938s ]
+sql
+[2022-12-13T23:58:03+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.010287s ]
+sql
+[2022-12-13T23:58:03+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670947083 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000902s ]
+sql
+[2022-12-13T23:58:13+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.010363s ]
+sql
+[2022-12-13T23:58:13+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670947093 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000925s ]
+sql
+[2022-12-13T23:58:23+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.010249s ]
+sql
+[2022-12-13T23:58:23+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670947103 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000917s ]
+sql
+[2022-12-13T23:58:33+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.010184s ]
+sql
+[2022-12-13T23:58:33+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670947113 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000926s ]
+sql
+[2022-12-13T23:58:43+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.010254s ]
+sql
+[2022-12-13T23:58:43+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670947123 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000928s ]
+sql
+[2022-12-13T23:58:53+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.010572s ]
+sql
+[2022-12-13T23:58:53+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670947133 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000922s ]
+sql
+[2022-12-13T23:59:03+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.010429s ]
+sql
+[2022-12-13T23:59:03+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670947143 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000907s ]
+sql
+[2022-12-13T23:59:13+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.010281s ]
+sql
+[2022-12-13T23:59:13+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670947153 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000891s ]
+sql
+[2022-12-13T23:59:23+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.011322s ]
+sql
+[2022-12-13T23:59:23+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670947163 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000947s ]
+sql
+[2022-12-13T23:59:33+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.010113s ]
+sql
+[2022-12-13T23:59:33+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670947173 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000892s ]
+sql
+[2022-12-13T23:59:43+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.010220s ]
+sql
+[2022-12-13T23:59:43+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670947183 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000887s ]
+sql
+[2022-12-13T23:59:53+08:00][ sql ] [ SQL ] UPDATE md_order_position SET volume_for_sell = volume_position , volume_today = 0 WHERE  create_time < 1670828700 [ RunTime:0.010273s ]
+sql
+[2022-12-13T23:59:53+08:00][ sql ] [ SQL ] UPDATE md_condition SET state = 'expire' , update_time = 1670947193 WHERE  ( state = 'ing' or state = 'none' )  AND trading_date = '2022-12-13' [ RunTime:0.000934s ]
+sql

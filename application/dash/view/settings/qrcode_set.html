@@ -1,0 +1,183 @@
+{extend name="base/layout"/}
+
+{block name="main"}
+<link rel="stylesheet" href="__DASH__/dropify/dist/css/dropify.min.css">
+<div class="content-wrapper">
+    <section class="content-header">
+        <h1>二维码设置</h1>
+        <ol class="breadcrumb">
+            <li><a href="{:url('index/index')}"><i class="fa fa-home"></i> 首页</a></li>
+            <li><a href="#">系统设置</a></li>
+            <li class="active">二维码设置</li>
+        </ol>
+    </section>
+    <section class="content">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="box box-info">
+                    <div class="box-header"></div>
+                    <form id="qrcode_set" action="" method="multipart/form-data" class="form-horizontal">
+                        <div class="box-body">
+                            <div class="form-group col-sm-8">
+                                <label class="col-sm-2 control-label">推广海报</label>
+                                <div class="input-group col-sm-8">
+                                    <label for="wechat_customer_service"></label>
+                                    <input type="file" name="wechat_customer_service" id="wechat_customer_service" class="dropify" data-default-file="{$qrcode.wechat_customer_service}" value="{$qrcode.wechat_customer_service}"/>
+                                </div>
+                            </div>
+                            <!--<div class="form-group col-sm-8">
+                                <label class="col-sm-2 control-label">微信公众号</label>
+                                <div class="input-group col-sm-8">
+                                    <label for="wechat_official_account"></label>
+                                    <input type="file" id="wechat_official_account" name="wechat_official_account" class="dropify-event" data-default-file="{$qrcode.wechat_official_account}"/>
+                                </div>
+                            </div>
+                            <div class="form-group col-sm-8">
+                                <label class="col-sm-2 control-label">安卓下载二维码</label>
+                                <div class="input-group col-sm-4">
+                                    <label for="input-file-to-destroy"></label>
+                                    <input type="file" id="input-file-to-destroy" name="wechat_android" class="dropify-event" data-default-file="{$qrcode.wechat_android}"/>
+                                </div>
+                            </div>
+                            <div class="form-group col-sm-8">
+                                <label class="col-sm-2 control-label">苹果下载二维码</label>
+                                <div class="input-group col-sm-4">
+                                    <label for="input-file-french-1"></label>
+                                    <input type="file" id="input-file-french-1" name="wechat_ios" class="dropify-fr" data-default-file="{$qrcode.wechat_ios}" />
+                                </div>
+                            </div>-->
+                        </div>
+                        <div class="box-footer">
+                            <div class="col-sm-8">
+                                <div class="col-sm-offset-2">
+                                    <button type="submit" class="btn btn-primary">提交</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+</div>
+{/block}
+{block name="js"}
+<script src="__DASH__/lib/upload.js"></script>
+<script src="__DASH__/dropify/dist/js/dropify.min.js"></script>
+<script src="__DASH__/lib/laydate/laydate.js"></script>
+<script>
+    $(document).ready(function () {
+        // Basic
+        var drService = $('.dropify').dropify();
+        drService.on('dropify.beforeClear', function (event, element) {
+            if (confirm("您确定要将图片 \"" + element.file.name + "\" 删除吗?")) {
+                var service = '{$qrcode.wechat_customer_service}';
+                if (service) {
+                    deleteQrcode('service', service);
+                }
+            }
+        });
+
+        // Used events
+        var drEvent = $('#wechat_official_account').dropify();
+        drEvent.on('dropify.beforeClear', function (event, element) {
+            if (confirm("您确定要将图片 \"" + element.file.name + "\" 删除吗?")) {
+                var account = '{$qrcode.wechat_official_account}';
+                if (account) {
+                    deleteQrcode('account', account);
+                }
+            }
+        });
+
+        // Used events
+        var drEventAndroid = $('#input-file-to-destroy').dropify();
+        drEventAndroid.on('dropify.beforeClear', function (event, element) {
+            if (confirm("您确定要将图片 \"" + element.file.name + "\" 删除吗?")) {
+                var account = '{$qrcode.wechat_android}';
+                if (account) {
+                    deleteQrcode('wechat_android', account);
+                }
+            }
+        });
+
+        // Translated
+        $('.dropify-fr').dropify({});
+
+        // Used events
+        var drEventIos = $('#input-file-french-1').dropify();
+        drEventIos.on('#wechat_ios dropify.beforeClear', function (event, element) {
+            if (confirm("您确定要将图片 \"" + element.file.name + "\" 删除吗?")) {
+                var account = '{$qrcode.wechat_ios}';
+                alert(account);
+                if (account) {
+                    deleteQrcode('wechat_ios', account);
+                }
+            }
+        });
+
+        drEvent.on('dropify.afterClear', function (event, element) {});
+
+        drEvent.on('dropify.errors', function (event, element) {
+            console.log('Has Errors');
+        });
+
+        var drDestroy = $('#input-file-to-destroy').dropify();
+        drDestroy = drDestroy.data('dropify')
+        $('#toggleDropify').on('click', function (e) {
+            e.preventDefault();
+            if (drDestroy.isDropified()) {
+                drDestroy.destroy();
+            } else {
+                drDestroy.init();
+            }
+        })
+
+    });
+
+    function  deleteQrcode(type, file_path) {
+        $.ajax({
+            url: "{:url('stock/system/deleteQrcode')}",
+            type: 'POST',
+            data: {type: type,file_path: file_path},
+            dataType: 'json',
+            success: function (data) {
+                if (data.code == 1) {
+                    layer.msg(data.msg, {icon: 1, time: 3500, shade: .3, shadeClose: true});
+                    window.location.reload();
+                } else {
+                    layer.msg(data.msg, {icon: 2, time: 1500, shade: .3, shadeClose: true});
+                }
+            },
+            error: function (err) {
+            }
+        });
+    }
+</script>
+<script>
+    $(function () {
+        // 提交
+        $("#qrcode_set").submit(function () {
+            $.ajax({
+                url: "{:url('stock/system/saveQrcode')}",
+                type: 'POST',
+                cache: false,
+                data: new FormData($("#qrcode_set")[0]),
+                processData: false,
+                contentType: false,
+                success: function (data) {
+                    if (data.code == 1) {
+                        layer.msg(data.msg, {icon: 1, time: 1500, shade: .3, shadeClose: true});
+                    } else {
+                        layer.msg(data.msg, {icon: 2, time: 1500, shade: .3, shadeClose: true});
+                    }
+                },
+                error: function (err) {
+                }
+            });
+
+            return false;
+        });
+    });
+</script>
+{/block}

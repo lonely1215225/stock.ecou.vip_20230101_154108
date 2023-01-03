@@ -1,0 +1,162 @@
+{extend name="base/layout"/}
+{block name="main"}
+<div class="content-wrapper">
+    <section class="content-header">
+        <h1>
+            用户详情
+            <small></small>
+        </h1>
+        <ol class="breadcrumb">
+            <li><a href="{:url('index/index')}"><i class="fa fa-home"></i> 首页</a></li>
+            <li><a href="#">用户管理</a></li>
+            <li class="active">用户详情</li>
+        </ol>
+    </section>
+    <section class="content">
+        <div class="row">
+            <div class="col-xs-12">
+                <form id="ruleForm" action="" class="form-horizontal">
+                    <div class="box box-info">
+                        <div class="box-body">
+                            <table class="table table-bordered table-middle">
+                                <tr>
+                                    <td colspan="2" align="center"><strong>用户信息</strong></td>
+                                </tr>
+                                <tr>
+                                    <th width="15%">手机号</th>
+                                    <td>{$userList['userList']['mobile']}</td>
+                                </tr>
+                                <tr>
+                                    <th>是否禁止登陆</th>
+                                    <td>{$userList['userList']['is_deny_login']?'是':'否'}</td>
+                                </tr>
+                                <tr>
+                                    <th>是否禁止提现</th>
+                                    <td>{$userList['userList']['is_deny_cash']?'是':'否'}</td>
+                                </tr>
+                                <tr>
+                                    <th>备注</th>
+                                    <td>{$userList['userList']['remark']}</td>
+                                </tr>
+                                <tr>
+                                    <th>注册IP</th>
+                                    <td>{$userList['userList']['reg_ip']}</td>
+                                </tr>
+                                <tr>
+                                    <th>创建时间</th>
+                                    <td>{$userList['userList']['create_time']}</td>
+                                </tr>
+                                <tr>
+                                    <th>更新时间</th>
+                                    <td>{$userList['userList']['update_time']}</td>
+                                </tr>
+                                <tr>
+                                    <th>是否绑定银行卡</th>
+                                    <td>{$userList['userList']['is_bound_bank_card']?'是':'否'}</td>
+                                </tr>
+                                <tr>
+                                    <th>代理商</th>
+                                    <td>{$userList['adminUser']['agent']?:''}</td>
+                                <tr>
+                                <tr>
+                                    <th>经济人</th>
+                                    <td>{$userList['adminUser']['broker']?:''}</td>
+                                </tr>
+                            </table>
+                        </div>
+
+                        <div class="box-body">
+                            <table class="table table-bordered table-middle">
+                                <tr>
+                                    <td colspan="2" align="center"><strong>用户账户信息</strong></td>
+                                </tr>
+                                <tr>
+                                    <th width="15%">钱包余额</th>
+                                    <td>{$userList['userAccountList']['wallet_balance']?:''}</td>
+                                </tr>
+                                <tr>
+                                    <th>策略金金额</th>
+                                    <td>{$userList['userAccountList']['strategy_balance']?:''}</td>
+                                </tr>
+                                <tr>
+                                    <th>累计充值</th>
+                                    <td>{$userList['userAccountList']['total_recharge']?:''}</td>
+                                </tr>
+                                <tr>
+                                    <th>累计提现</th>
+                                    <td>{$userList['userAccountList']['total_withdraw']?:''}</td>
+                                </tr>
+                                <tr>
+                                    <th>累计盈亏</th>
+                                    <td>{$userList['userAccountList']['total_pal']?:''}</td>
+                                </tr>
+                                <tr>
+                                    <th>创建时间</th>
+                                    <td>{$userList['userAccountList']['create_time']?:''}</td>
+                                </tr>
+                                <th>更新时间</th>
+                                <td>{$userList['userAccountList']['update_time']?:''}</td>
+                                </tr>
+                            </table>
+                        </div>
+
+                        <div class="box-body">
+                            <table class="table table-bordered table-middle">
+                                <tr>
+                                    <td colspan="2" align="center"><strong>绑定银行卡信息</strong></td>
+                                </tr>
+                                <tr>
+                                    <th width="15%">持卡人姓名</th>
+                                    <td>{$userList['userBankCardList']['real_name']?:''}</td>
+                                </tr>
+                                <tr>
+                                    <th>开户行名称</th>
+                                    <td>{$userList['userBankCardList']['bank_name']?:''}</td>
+                                </tr>
+                                <tr>
+                                    <th>开户行所在省</th>
+                                    <td>{$userList['userBankCardList']['province']?$cityInfo[$userList['userBankCardList']['province']]:''}</td>
+                                </tr>
+                                <tr>
+                                    <th>开户行所在市</th>
+                                    <td>{$userList['userBankCardList']['city']?$cityInfo[$userList['userBankCardList']['city']]:''}</td>
+                                </tr>
+                                <tr>
+                                    <th>开户支行名称</th>
+                                    <td>{$userList['userBankCardList']['branch']?:''}</td>
+                                </tr>
+                                <tr>
+                                    <th>银行卡号</th>
+                                    <td>{$userList['userBankCardList']['bank_number']?:''}</td>
+                                </tr>
+                                <tr>
+                                    <th>身份证号</th>
+                                    <td>{$userList['userBankCardList']['id_card_number']?:''}</td>
+                                </tr>
+                                <tr>
+                                    <th>银行预留电话</th>
+                                    <td>{$userList['userBankCardList']['mobile']?:''}</td>
+                                </tr>
+                                <tr>
+                                    <th>创建时间</th>
+                                    <td>{$userList['userBankCardList']['create_time']?:''}</td>
+                                </tr>
+                                <tr>
+                                    <th>更新时间</th>
+                                    <td>{$userList['userBankCardList']['update_time']?:''}</td>
+                                </tr>
+                            </table>
+                        </div>
+
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+</div>
+
+{/block}
+
+{block name="js"}
+
+{/block}

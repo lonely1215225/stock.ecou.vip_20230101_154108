@@ -1,0 +1,117 @@
+{extend name="base/layout"/}
+
+{block name="main"}
+<div class="content-wrapper">
+    <section class="content-header">
+        <h1>交易时间设置</h1>
+        <ol class="breadcrumb">
+            <li><a href="{:url('index/index')}"><i class="fa fa-home"></i> 首页</a></li>
+            <li><a href="#">系统设置</a></li>
+            <li class="active">交易时间设置</li>
+        </ol>
+    </section>
+    <section class="content">
+        <div class="row">
+            <!-- 交易时间 -->
+            <div class="col-sm-12">
+                <div class="box box-info">
+                    <form id="tradingTimeForm" action="" method="post" class="form-horizontal">
+                        <div class="box-body">
+                            <table class="table table-bordered table-middle">
+                                <tr>
+                                    <td colspan="2" align="center"><strong>交易时间</strong></td>
+                                </tr>
+                                <tr>
+                                    <th width="15%">上午开市时间</th>
+                                    <td>
+                                        <input class="form-control" name="am_market_open_time" id="am_market_open_time" value="{$marketTime.am_market_open_time}">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>上午休市时间</th>
+                                    <td>
+                                        <input class="form-control" name="am_market_close_time" id="am_market_close_time" value="{$marketTime.am_market_close_time}">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>下午开市时间</th>
+                                    <td>
+                                        <input class="form-control" name="pm_market_open_time" id="pm_market_open_time" value="{$marketTime.pm_market_open_time}">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>下午休市时间</th>
+                                    <td>
+                                        <input class="form-control" name="pm_market_close_time" id="pm_market_close_time" value="{$marketTime.pm_market_close_time}">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" align="center"><button type="submit" class="btn btn-primary">提交</button></td>
+                                </tr>
+                            </table>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+{/block}
+{block name="js"}
+<script src="__DASH__/lib/laydate/laydate.js"></script>
+<script>
+$(function () {
+    // 上午开市时间选择
+    var amo = laydate.render({
+        elem: '#am_market_open_time'
+        ,type: 'time'
+        ,min: '09:15:00'
+        ,max: '11:30:00'
+        ,format: 'HH:mm'
+        ,btns: ['confirm']
+    });
+
+    // 上午休市时间选择
+    var amc = laydate.render({
+        elem: '#am_market_close_time'
+        ,type: 'time'
+        ,min: '09:30:00'
+        ,max: '11:30:00'
+        ,format: 'HH:mm'
+        ,btns: ['confirm']
+    });
+
+    // 下午开市时间选择
+    var pmo = laydate.render({
+        elem: '#pm_market_open_time'
+        ,type: 'time'
+        ,min: '13:00:00'
+        ,max: '15:00:00'
+        ,format: 'HH:mm'
+        ,btns: ['confirm']
+    });
+
+    // 下午休市时间选择
+    var pmc = laydate.render({
+        elem: '#pm_market_close_time'
+        ,type: 'time'
+        ,min: '13:00:00'
+        ,format: 'HH:mm'
+        ,btns: ['confirm']
+    });
+
+    // 提交
+    $("#tradingTimeForm").submit(function () {
+        $.post("{:url('stock/system/saveMarketTime')}", $(this).serializeArray(), function (data) {
+            if(data.code == 1) {
+                layer.msg(data.msg, {icon:1, time:1500, shade:.3, shadeClose:true});
+            } else {
+                layer.msg(data.msg, {icon:2, time:1500, shade:.3, shadeClose:true});
+            }
+        });
+
+        return false;
+    });
+});
+</script>
+{/block}

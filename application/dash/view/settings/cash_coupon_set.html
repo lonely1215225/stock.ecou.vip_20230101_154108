@@ -1,0 +1,170 @@
+{extend name="base/layout"/}
+
+{block name="main"}
+<style>
+    .box-body {
+        padding: 0px;
+    }
+</style>
+<div class="content-wrapper">
+    <section class="content-header">
+        <h1>代金券设置</h1>
+        <ol class="breadcrumb">
+            <li><a href="{:url('index/index')}"><i class="fa fa-home"></i> 首页</a></li>
+            <li><a href="#">系统设置</a></li>
+            <li class="active">代金券设置</li>
+        </ol>
+    </section>
+    <section class="content">
+        <div class="row">
+            <!-- 交易时间 -->
+            <div class="col-sm-12">
+                <div class="box box-info">
+                    <div class="box-header"></div>
+                    <form id="cashCouponForm" action="" method="post" class="form-horizontal">
+                        <div class="box-body">
+                            <div class="form-group col-sm-8">
+                                <label class="col-sm-2 control-label">是否开启</label>
+                                <div class="col-sm-8 checkbox">
+                                    <label>
+                                        <input type="checkbox" name="is_open" id="is_open" {:isset($cashCoupon) && 1==$cashCoupon.is_open?'checked':''}>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="box-body">
+                            <div class="form-group col-sm-8">
+                                <label class="col-sm-2 control-label">代金券金额</label>
+                                <div class="col-sm-4">
+                                    <input class="form-control" name="cash_coupon_money" id="cash_coupon_money" value="{$cashCoupon['cash_coupon_money']}">
+                                </div>
+                                <div style="float:left;height:34px;line-height:34px;color:#777">操盘可买策略金金额</div>
+                            </div>
+                        </div>
+
+                        <div class="box-body">
+                            <div class="form-group col-sm-8">
+                                <label class="col-sm-2 control-label">有效期时间</label>
+                                <div class="col-sm-4">
+                                    <select id="expiry_time" name="expiry_time" class="form-control">
+                                        {for start='1' end='31' step='1' name='k'}
+                                        <option value="{$k}" {:isset($cashCoupon) && $k==$cashCoupon.expiry_time?'selected':''}>{$k}</option>
+                                        {/for}
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="box-body">
+                            <div class="form-group col-sm-8">
+                                <label class="col-sm-2 control-label">时间单位</label>
+                                <div class="col-sm-4">
+                                    <select id="expiry_unit" name="expiry_unit" class="form-control">
+                                        <option value="0" {:isset($cashCoupon) && 0==$cashCoupon.expiry_unit?'selected':''}>天</option>
+                                        <option value="1" {:isset($cashCoupon) && 1==$cashCoupon.expiry_unit?'selected':''}>月</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="box-body">
+                            <div class="form-group col-sm-8">
+                                <label class="col-sm-2 control-label">否计入亏损</label>
+                                <div class="col-sm-4">
+                                    <select id="in_loss" name="in_loss" class="form-control">
+                                        <option value="0" {:isset($cashCoupon) && 0==$cashCoupon.in_loss?'selected':''}>否</option>
+                                        <option value="1" {:isset($cashCoupon) && 1==$cashCoupon.in_loss?'selected':''}>是</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="box-body">
+                            <div class="form-group col-sm-8">
+                                <label class="col-sm-2 control-label">强平时间</label>
+                                <div class="col-sm-4">
+                                    <input class="form-control" name="close_position_time" id="close_position_time" value="{$cashCoupon['close_position_time']}">
+                                </div>
+                            </div>
+                        </div>
+                        <!--<div class="form-group col-sm-8">
+                            <label class="col-sm-2 control-label">到期日期设置</label>
+                            <div class="input-group col-sm-8">
+                                <input class="form-control" id="endTime" name="end_time" type="text" value="{$end_time?:''}">
+                            </div>
+                        </div>-->
+                        <div class="box-footer">
+                            <div class="col-sm-8">
+                                <div class="col-sm-offset-2">
+                                    <button type="submit" class="btn btn-primary">提交</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="box">
+                    <div class="box-header with-border">
+                        <i class="fa fa-warning text-yellow"></i>
+                        <h3 class="box-title">注：</h3>
+                    </div>
+                    <div class="box-body">
+                        <ol>
+                            <li>代金券<span class="text-red"> 代金券计入亏损时，亏损的金额计入策略金余额，否则只计入盈利</span>。</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+{/block}
+{block name="js"}
+<script src="__DASH__/lib/laydate/laydate.js"></script>
+<script>
+    $(function () {
+        // 平仓时间选择
+        laydate.render({
+            elem: '#close_position_time'
+            ,type: 'time'
+            ,min: '09:30:00'
+            ,max: '15:00:00'
+            ,format: 'HH:mm'
+            ,btns: ['confirm']
+        });
+
+        // 最后成交时间
+        laydate.render({
+            elem: '#endTime'
+            , type: 'datetime'
+            , max: Date.now()
+            //,value: new Date(Date.now())
+            , format: 'yyyy-MM-dd HH:mm:ss'
+            , btns: ['confirm']
+        });
+    });
+    // 提交
+    $("#cashCouponForm").submit(function () {
+        var is_open = $("#is_open").is(":checked") ? 1 : 0;
+        $('#is_open').val(is_open);
+        var expiry_time = $('#expiry_time').val();
+        var expiry_unit = $('#expiry_unit').val();
+        if(expiry_unit == 1) {
+            if(expiry_time > 12) {
+                layer.msg('有效期时间不能大于12个月！', {icon: 2, time: 1500, shade: .3, shadeClose: true});
+            }
+        }
+
+        $.post("{:url('stock/system/saveCashCoupon')}", $(this).serializeArray(), function (data) {
+            if (data.code == 1) {
+                layer.msg(data.msg, {icon: 1, time: 1500, shade: .3, shadeClose: true});
+            } else {
+                layer.msg(data.msg, {icon: 2, time: 1500, shade: .3, shadeClose: true});
+            }
+        });
+
+        return false;
+    });
+</script>
+{/block}

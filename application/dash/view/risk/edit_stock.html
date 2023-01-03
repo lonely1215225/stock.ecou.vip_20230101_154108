@@ -1,0 +1,190 @@
+{extend name="base/layout"/}
+{block name="main"}
+<div class="content-wrapper">
+    <section class="content-header">
+        <h1>
+            {$id?'编辑':'添加'}个股
+            <small></small>
+        </h1>
+        <ol class="breadcrumb">
+            <li><a href="{:url('index/index')}"><i class="fa fa-home"></i> 首页</a></li>
+            <li><a href="#">股票管理</a></li>
+            <li class="active">编辑个股</li>
+        </ol>
+    </section>
+    <section class="content">
+        <div class="row">
+            <div class="col-xs-12">
+                <form id="ruleForm" action="" class="form-horizontal">
+                    <div class="box box-info">
+                        <div class="box-body">
+                            <div class="form-group col-sm-8">
+                                <label class="col-sm-2 control-label">股票代码</label>
+                                <div class="col-sm-4">
+                                    <input type="text" name="stock_code" id="stockCode"
+                                           value="{$stockInfo.stock_code?:''}" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="box-body">
+                            <div class="form-group col-sm-8">
+                                <label class="col-sm-2 control-label">股票名称</label>
+                                <div class="col-sm-4">
+                                    <input type="text" name="stock_name" id="stockName"
+                                           value="{$stockInfo.stock_name?:''}" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="box-body">
+                            <div class="form-group col-sm-8">
+                                <label class="col-sm-2 control-label">是否融资融券</label>
+                                <div class="col-sm-4">
+                                    <select id="isMargin" name="is_margin" class="form-control">
+                                        <option value="0" {:isset($stockInfo) && 0==$stockInfo.is_margin?'selected':''}>否
+                                        </option>
+                                        <option value="1" {:isset($stockInfo) && 1==$stockInfo.is_margin?'selected':''}>是
+                                        </option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="box-body">
+                            <div class="form-group col-sm-8">
+                                <label class="col-sm-2 control-label">证券市场</label>
+                                <div class="col-sm-4">
+                                    <select id="market" name="market" class="form-control">
+                                        <option value="">请选择</option>
+                                        {foreach $marketList as $mk=>$mv}
+                                        <option value="{$mk}" {:isset($stockInfo) &&
+                                                $stockInfo.market==$mk?'selected':''}>{$mv}
+                                        </option>
+                                        {/foreach}
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="box-body">
+                            <div class="form-group col-sm-8">
+                                <label class="col-sm-2 control-label">风险等级</label>
+                                <div class="col-sm-4">
+                                    <select id="riskLevel" name="risk_level" class="form-control">
+                                        {foreach $riskList as $fk=>$fv}
+                                        <option value="{$fk}" {:isset($stockInfo) &&
+                                                $stockInfo.risk_level==$fk?'selected':''}>{$fv}
+                                        </option>
+                                        {/foreach}
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="box-body">
+                            <div class="form-group col-sm-8">
+                                <label class="col-sm-2 control-label">名称首字母</label>
+                                <div class="col-sm-4">
+                                    <input type="text" name="initial" id="initial" value="{$stockInfo.initial?:''}" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="box-body">
+                            <div class="form-group col-sm-8">
+                                <label class="col-sm-2 control-label">是否科创版</label>
+                                <div class="col-sm-4">
+                                    <select id="isKeChuang" name="isKeChuang" class="form-control">
+                                        <option value="false" {:isset($stockInfo) && $stockInfo.is_kechuang==false?'selected':''}>否</option>
+                                        <option value="true" {:isset($stockInfo) && $stockInfo.is_kechuang==true?'selected':''}>是</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="box-body">
+                            <div class="form-group col-sm-8">
+                                <label class="col-sm-2 control-label">是否优选</label>
+                                <div class="col-sm-8 checkbox">
+                                    <label>
+                                        <input type="checkbox" name="is_selective" id="is_selective" {$stockInfo.is_selective?'checked':''}>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="box-footer">
+                            <div class="col-sm-8">
+                                <div class="col-sm-offset-2">
+                                    <button type="submit" class="btn btn-primary">保存</button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+</div>
+
+{/block}
+
+{block name="js"}
+<script>
+$(function () {
+    $("#ruleForm").submit(function () {
+        var stockCode   = $("#stockCode").val();
+        var stockName   = $("#stockName").val();
+        var isMargin    = $("#isMargin").val() ?? 0 ;
+        var isSuspended = $("#isSuspended").val();
+        var is_disabled = $("#isDisabled").val();
+        var riskLevel   = $("#riskLevel").val() ?? 1 ;
+        var market      = $("#market").val();
+        var initial     = $("#initial").val();
+        var isSpecial   = $("#isSpecial").val() ?? 0 ;
+        var isKeChuang  = $("#isKeChuang").val() ?? 0 ;
+
+        if($('#is_selective').is(':checked')) {
+            var is_selective = 'true';
+        }else{
+            var is_selective = 'false';
+        }
+
+        var id = "{$id?:0}";
+        if (stockCode == "") {
+            layer.msg("请填写股票代码", {icon: 2, time: 1500, shade: .3, shadeClose: true});
+        } else if (stockName == "") {
+            layer.msg("请填写股票名称", {icon: 2, time: 1500, shade: .3, shadeClose: true});
+        }  else if (market == "") {
+            layer.msg("请选择证券市场", {icon: 2, time: 1500, shade: .3, shadeClose: true});
+        } else {
+            $.post("{:url('stock/stock/saveStock')}", {
+                id: id,
+                stock_code: stockCode,
+                stock_name: stockName,
+                is_margin: isMargin,
+                is_suspended: isSuspended,
+                risk_level: riskLevel,
+                is_selective: is_selective,
+                is_special: isSpecial,
+                is_kechuang: isKeChuang,
+                market: market,
+                initial:initial
+            }, function (data) {
+                if (data.code == 1) {
+                    layer.msg(data.msg, {icon: 1, time: 1500, shade: .3, shadeClose: true}, function () {
+                        window.location.href = "{:url('index')}";
+                    });
+                } else {
+                    layer.msg(data.msg, {icon: 2, time: 1500, shade: .3, shadeClose: true});
+                }
+            });
+        }
+
+        return false;
+    });
+});
+</script>
+{/block}

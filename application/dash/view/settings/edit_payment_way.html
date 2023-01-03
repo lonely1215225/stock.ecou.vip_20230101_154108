@@ -1,0 +1,120 @@
+{extend name="base/layout"/}
+
+{block name="main"}
+<div class="content-wrapper">
+    <section class="content-header">
+        <h1>
+            编辑支付方式
+            <small>Home</small>
+        </h1>
+        <ol class="breadcrumb">
+            <li><a href="{:url('index/index')}"><i class="fa fa-home"></i> 首页</a></li>
+            <li><a href="#">系统设置</a></li>
+            <li class="active">编辑支付方式</li>
+        </ol>
+    </section>
+    <section class="content">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="box box-info">
+                    <form id="recruitInfo" class="form-horizontal">
+                        <div class="box-body">
+                            <div class="form-group col-sm-8">
+                                <label class="col-sm-2 control-label">开户人姓名</label>
+                                <div class="col-sm-8">
+                                    <input class="form-control" name="to_name" id="toName" value="{$item.to_name?:''}">
+                                </div>
+                            </div>
+
+                            <div class="form-group col-sm-8">
+                                <label class="col-sm-2 control-label">开户行名称</label>
+                                <div class="col-sm-8">
+                                    <input class="form-control" name="to_org_name" id="toOrgName" value="{$item.to_org_name?:''}">
+                                </div>
+                            </div>
+
+                            <div class="form-group col-sm-8">
+                                <label class="col-sm-2 control-label">开户支行</label>
+                                <div class="col-sm-8">
+                                    <input class="form-control" name="to_branch" id="toBranch" value="{$item.to_branch?:''}">
+                                </div>
+                            </div>
+
+                            <div class="form-group col-sm-8">
+                                <label class="col-sm-2 control-label">账号</label>
+                                <div class="col-sm-8">
+                                    <input class="form-control" name="to_account" id="toAccount" value="{$item.to_account?:''}">
+                                </div>
+                            </div>
+
+                            <div class="form-group col-sm-8">
+                                <label class="col-sm-2 control-label">二维码</label>
+                                <div class="col-sm-8">
+                                    {if $item.to_qrcode != ''}
+                                    <img src="{$item.to_qrcode}" height="70">
+                                    {/if}
+                                    <input type="file"  name="file" id="file">
+                                    <input type="hidden" name="id" id="id" value="{$item.id}">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="box-footer">
+                            <div class="col-sm-8">
+                                <div class="col-sm-offset-2">
+                                    <button type="button" class="btn btn-primary" onclick="submitForm();">提交</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+{/block}
+
+{block name="js"}
+<script type="text/javascript">
+function submitForm() {
+    var toName   = $.trim($("input[name='to_name']").val());
+    var toOrgName   = $.trim($("input[name='to_org_name']").val());
+    var toAccount   = $.trim($("input[name='to_account']").val());
+    var form  =document.getElementById('recruitInfo'),
+        formData =  new FormData(form);
+    var url = "{:url('stock/payCompany/editPaymentWay')}";
+    if(toName == "") {
+        layer.msg("请填写开户人姓名", {icon:2, time:1500, shade:.3, shadeClose:true});
+    } else if(toOrgName == ""){
+        layer.msg("请填写开户行名称", {icon:2, time:1500, shade:.3, shadeClose:true});
+    } else if(toAccount == "") {
+        layer.msg("请选择账号", {icon:2, time:1500, shade:.3, shadeClose:true});
+    }else{
+        $.ajax({
+            url:url,
+            type:'post',
+            data:formData,
+            dataType:'json',
+            processData:false,
+            contentType:false,
+            success:function (data) {
+                if(data.code == 1){
+                    layer.msg(data.msg, {icon:1, time:1500, shade:.3, shadeClose:true}, function(){
+                        window.location.href = "{:url('payment_way')}";
+                    });
+                } else {
+                    layer.msg(data.msg, {icon:2, time:1500, shade:.3, shadeClose:true});
+                }
+            },
+            error:function (XMLHttpRequest, textStatus, errorThrown) {
+                console.log('出错啦！');
+                console.log(XMLHttpRequest);
+                console.log(textStatus);
+                console.log(errorThrown);
+            }
+        })
+    }
+    return false;
+}
+</script>
+{/block}
